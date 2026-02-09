@@ -37,7 +37,7 @@ jobs:
           image-ref: ${{ env.CONTAINER_REGISTRY }}/${{ env.CONTAINER_IMAGE_NAME }}:${{ env.CONTAINER_IMAGE_VERSION }}
           format: "cosign-vuln"
           output: "vuln.json"
-      - name: Upload vulm report artifact
+      - name: Upload vuln report artifact
         uses: actions/upload-artifact@v6
         with:
           name: vuln-report
