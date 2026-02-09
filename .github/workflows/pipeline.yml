@@ -95,7 +95,7 @@ jobs:
           key: docker-languagetool-images-cache-${{ env.RUN_ID }}
           restore-keys: docker-images-cache-${{ env.RUN_ID }}
       - name: Get vuln report artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v6
         with:
           name: vuln-report
       - name: load image
