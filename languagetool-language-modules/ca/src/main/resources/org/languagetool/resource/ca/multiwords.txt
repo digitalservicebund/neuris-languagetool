@@ -1,5 +1,10 @@
 #Catalan multiwords file used for chunking
 #separatorRegExp=[\t;]
+Mikel Forcada;NPMSSP0
+Ferran Monegal;NPMSSP0
+Geòrgia-Armènia;NPCNG00
+Iuri Tiniànov;NPMSSP0
+Andrei Màrkov;NPMSSP0
 El Mundo Today;NPMSO00
 premi Hugo;NPMSO00
 premis Hugo;NPMPO00

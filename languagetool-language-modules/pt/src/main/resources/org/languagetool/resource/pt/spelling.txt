@@ -28,6 +28,8 @@ bidonville
 bikini
 bip
 blasé
+Blue
+Blues
 bluff
 body
 boid
@@ -188,6 +190,8 @@ publisher
 pull
 pullover
 raffiné
+Red
+Reds
 redneck
 rentrée
 resupplies
@@ -344,6 +348,8 @@ amiguismo
 amiguismos
 Anduril
 Anthropic
+antipadrão
+antipadrões
 apedeuta
 apedeutas
 arqueologicamente
@@ -400,6 +406,7 @@ coloquialismo
 coloquialismos
 cosupervisor
 cosupervisores
+crioablação
 cruciante
 cruciantes
 Dart
@@ -408,6 +415,8 @@ DeepSeek
 descendentemente
 deslembrança
 deslembranças
+desnorteante
+desnorteantes
 Draw
 egotismo
 egotismos

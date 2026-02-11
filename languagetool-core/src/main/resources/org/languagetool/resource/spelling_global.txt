@@ -11089,6 +11089,8 @@ Filippo Tommaso Marinetti
 Francesco de Sanctis
 Gabriele D'Annunzio
 Gabriele D’Annunzio
+D'Annunzio
+D’Annunzio
 Giosuè Carducci
 Giovanni Verga
 Giuseppe Verdi
@@ -20588,6 +20590,8 @@ Riccardo Giacconi
 Richard E. Taylor
 Robert Andrews Millikan
 Robert B. Laughlin
+Robert Laughlin
+Bob Laughlin
 Robert Coleman Richardson
 Robert Hofstadter
 Robert Woodrow Wilson
@@ -29537,6 +29541,7 @@ RatPac Entertainment
 Brett Ratner
 Olivia Munn
 Mission: Impossible
+Magic: The Gathering
 Deadpool & Wolverine
 Blaise Metreweli
 Jean-Baptiste Senderens
@@ -29588,3 +29593,80 @@ Louis B. Mayer
 Louis Mayer
 Louis Burt Mayer
 L. B. Mayer
+MacKenzie Bezos
+Richard Grenell
+Daniel Clement Dennett
+MicroStrategy
+Oskar Barnack
+Catwoman
+Our World in Data
+Madeleine Westerhout
+Peter Attia
+Paul Bekker
+Hervé Le Tellier
+Konzerthausorchester Berlin
+Berliner Sinfonie-Orchester
+Konzerthaus Berlin
+Lothar Zagrosek
+Christoph Eschenbach
+Jennifer Jason Leigh
+Epstein-Barr
+Lee Meriwether
+Andrew Ross Sorkin
+John J. Raskob
+John Raskob
+John Jakob Raskob
+Robert Trivers
+George H. Mealy
+George Mealy
+Paul Weiss
+Paul, Weiss
+Savannah Guthrie
+Jean-Baptiste Botul
+Guido van Rossum
+Morgan McSweeney
+David Hamilton
+Bernard Mandeville
+Theodore Kaczynski
+Levi's Stadium
+Levi’s Stadium
+Charlotte FC
+Chicago Fire FC
+FC Cincinnati
+Columbus Crew
+D.C. United
+CF Montréal
+Nashville SC
+New England Revolution
+New York City FC
+New York Red Bulls
+Orlando City SC
+Philadelphia Union
+Toronto FC
+Colorado Rapids
+FC Dallas
+Houston Dynamo FC
+Sporting Kansas City
+LA Galaxy
+Los Angeles FC
+Minnesota United FC
+Portland Timbers
+Real Salt Lake
+San Diego FC
+San Jose Earthquakes
+Seattle Sounders FC
+St. Louis City SC
+Vancouver Whitecaps FC
+Quatuor Arod
+John Kennedy Toole
+Frank McCourt
+Francis McCourt
+Patrick Bateman
+Neon Genesis Evangelion
+Evangelion
+Adolphe Sax
+Xander Zayas
+Emiliano Vargas
+Young Miko
+Alix Earle
+God Bless America

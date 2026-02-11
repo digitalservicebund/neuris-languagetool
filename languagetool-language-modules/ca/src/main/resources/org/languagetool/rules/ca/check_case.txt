@@ -198,6 +198,7 @@ Església d'orient
 Església llatina
 Església d'occident
 Església ortodoxa
+una petita església ortodoxa
 Església Cristiana Adventista del Setè Dia
 Església Adventista del Setè Dia
 Conferència Episcopal Espanyola
@@ -2455,3 +2456,7 @@ església matriu
 església sucursal
 #església universal
 Església Evangèlica Espanyola
+Reforma protestant
+D'Annunzio
+Gabriele D'Annunzio
+Super Bowl

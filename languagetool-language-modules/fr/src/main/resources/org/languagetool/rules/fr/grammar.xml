@@ -97234,7 +97234,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token postag="D.*" postag_regexp="yes">
                         <exception scope="next">fois</exception></token>
                 </pattern>
-                <message>Le mot « \4 » ne peut pas être un verbe conjugué après la préposition « <match no="1" case_conversion="alllower"/> ».</message>
+                <message>Avec l’auxiliaire « <match no="1" case_conversion="alllower"/> », le participe passé « \4 » ne s’accorde pas avec ce qui suit.</message>
                 <suggestion><match no="4" postag="V (etre )?(avoir )?ppa ([mfe]) ([sp])" postag_regexp="yes" postag_replace="V $1$2ppa m s"/></suggestion>
                 <example correction="agressé">Abdel vient à la rencontre des deux frères après que ses enfants ont <marker>agressés</marker> le capitaine.</example>
                 <example correction="géré">Je pense que ces deux personnes n'ont pas très bien <marker>gérées</marker> le budget.</example>

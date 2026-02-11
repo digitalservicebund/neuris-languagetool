@@ -130179,6 +130179,12 @@ The accident victim died from her injuries.
             <rule>
                 <antipattern>
                     <token>your</token>
+                    <token regexp="yes">themings?</token>
+                    <token postag="NN.*" postag_regexp="yes"/>
+                    <example>This platform integrates seamlessly with existing tools and services, and your theming API.</example>
+                </antipattern>
+                <antipattern>
+                    <token>your</token>
                     <token regexp="yes">meanings?</token>
                     <token><exception>to</exception></token>
                     <example>They think about your tone, your meaning, and even who you’re writing for.</example>

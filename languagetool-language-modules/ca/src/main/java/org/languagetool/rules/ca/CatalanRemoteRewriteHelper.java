@@ -30,6 +30,9 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import static org.languagetool.tools.StringTools.trimLeadingAndTrailingSpaces;
 
 public class CatalanRemoteRewriteHelper {
@@ -46,6 +49,7 @@ public class CatalanRemoteRewriteHelper {
       TIMEOUT_MS = 5000;
     }
   }
+  private static final Logger logger = LoggerFactory.getLogger(CatalanRemoteRewriteHelper.class);
 
   static boolean isRemoteServiceAvailable() {
     return (SERVER_URL != null && API_KEY !=null && MODEL_ID != null);
@@ -68,12 +72,14 @@ public class CatalanRemoteRewriteHelper {
     }
     HttpURLConnection conn = null;
     System.out.println("Requesting server " + SERVER_URL + " for rule " + ruleid);
+    logger.info("Requesting server " + SERVER_URL + " for rule " + ruleid);
     try {
       JSONObject payload = new JSONObject();
       payload.put("model", MODEL_ID);
       JSONArray messages = new JSONArray();
-      messages.put(new JSONObject().put("role", "system").put("content", PROMPTS.get(ruleid)));
-      messages.put(new JSONObject().put("role", "user").put("content", sentence));
+      //messages.put(new JSONObject().put("role", "system").put("content", PROMPTS.get(ruleid)));
+      //messages.put(new JSONObject().put("role", "user").put("content", sentence));
+      messages.put(new JSONObject().put("role", "user").put("content",  PROMPTS.get(ruleid) + "\n\n" + sentence));
       payload.put("messages", messages);
       byte[] input = payload.toString().getBytes(StandardCharsets.UTF_8);
       URL url = new URL(SERVER_URL);
@@ -116,7 +122,8 @@ public class CatalanRemoteRewriteHelper {
             .getString("content")
             .trim();
         } else {
-          System.err.println("API error (" + code + "): " + response.toString() + "// PAYLOAD: " + payload.toString());
+          System.err.println("API error (" + code + "): " + response + "// PAYLOAD: " + payload.toString());
+          logger.error("API error (" + code + "): " + response);
           return "";
         }
       }
@@ -132,7 +139,11 @@ public class CatalanRemoteRewriteHelper {
   static final Map<String, String> PROMPTS = Map.of(
     "GERUNDI_POSTERIORITAT", "Reescriu les frases sense el gerundi de posterioritat. Respon directament " +
       "amb la frase, sense comentaris ni puntuació extra.",
-    "CA_SPLIT_LONG_SENTENCE", "Aquesta frase és massa llarga. Divideix-la fent els mínims canvis possibles. Respon només amb la frase dividida.");
+    "CA_SPLIT_LONG_SENTENCE", "Aquesta frase és massa llarga. Divideix-la fent els mínims canvis possibles. " +
+      "Respon només amb la frase dividida.",
+  "CA_REMOTE_ESCOLTAR_SENTIR", "Reescriu aquesta frase canviant el verb 'escoltar' pel verb 'sentir', si està mal usat, és a dir, si no vol dir 'parar atenció, atendre o obeir'." +
+      "No canviïs el verb si 'escoltar' vol dir 'parar atenció, atendre o obeir', i per tant està ben usat (p. ex., El vaig escoltar atentament)." +
+      "Respon directament amb la frase reescrita, sense comentaris ni puntuació extra.");
 
   //For testing
   static final Map<String, Map<String, String>> cachedResponses = Map.of("GERUNDI_POSTERIORITAT", Map.ofEntries(
@@ -159,9 +170,17 @@ public class CatalanRemoteRewriteHelper {
     Map.entry("Hi hagué un accident greu a l'autopista entre un camió i un turisme, morint al cap de poc els passatgers del turisme.",
       "Hi hagué un accident greu a l'autopista entre un camió i un turisme, i els passatgers del turisme van morir al cap de poc."),
     Map.entry("Hi hagué un accident greu a l'autopista entre un camió i un turisme, morint els passatgers del turisme al cap de poc.",
-      "Hi hagué un accident greu a l'autopista entre un camió i un turisme i els passatgers del turisme van morir al cap de poc.")
+      "Hi hagué un accident greu a l'autopista entre un camió i un turisme i els passatgers del turisme van morir al cap de poc."),
+    Map.entry("Va arribar tard a l'examen, perdent així després tota oportunitat d'aprovar l'assignatura.",
+        "Va arribar tard a l'examen i, per això, va perdre tota oportunitat d'aprovar l'assignatura.")
+
   ),
     "CA_SPLIT_LONG_SENTENCE", Map.ofEntries(
       Map.entry("En una tarda grisa que avançava sense pressa sobre els carrers estrets de la ciutat, mentre els comerços abaixaven persianes i el soroll del trànsit es diluïa en un murmuri constant, un home caminava pensant en decisions ajornades, en paraules no dites i en projectes que havia volgut compondre amb rigor, però que el cansament havia anat desfigurant i, així i tot, convençut que encara disposava de prou lucidesa per a ordenar les idees, assumir els errors, fer servir l'experiència acumulada com a criteri i continuar avançant amb una determinació menys impulsiva però més sòlida.",
-        "En una tarda grisa que avançava sense pressa sobre els carrers estrets de la ciutat, mentre els comerços abaixaven persianes i el soroll del trànsit es diluïa en un murmuri constant, un home caminava pensant en decisions ajornades, en paraules no dites i en projectes que havia volgut compondre amb rigor, però que el cansament havia anat desfigurant. I, així i tot, convençut que encara disposava de prou lucidesa per a ordenar les idees, assumir els errors, fer servir l'experiència acumulada com a criteri i continuar avançant amb una determinació menys impulsiva però més sòlida.")));
+        "En una tarda grisa que avançava sense pressa sobre els carrers estrets de la ciutat, mentre els comerços abaixaven persianes i el soroll del trànsit es diluïa en un murmuri constant, un home caminava pensant en decisions ajornades, en paraules no dites i en projectes que havia volgut compondre amb rigor, però que el cansament havia anat desfigurant. I, així i tot, convençut que encara disposava de prou lucidesa per a ordenar les idees, assumir els errors, fer servir l'experiència acumulada com a criteri i continuar avançant amb una determinació menys impulsiva però més sòlida.")
+  ),
+    "CA_REMOTE_ESCOLTAR_SENTIR", Map.ofEntries(
+      Map.entry("Vaig escoltar que deien coses inversemblants.","Vaig sentir que deien coses inversemblants."),
+      Map.entry("Vaig escoltar atentament les seves explicacions.","Vaig escoltar atentament les seves explicacions.")
+      ));
 }
