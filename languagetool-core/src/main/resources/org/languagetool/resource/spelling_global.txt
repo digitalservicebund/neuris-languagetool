@@ -2155,6 +2155,7 @@ Konrad Adenauer
 Robert Koch
 Gottlieb Daimler
 Erich Maria Remarque
+Erich Remarque
 Ernst Lubitsch
 Rainer Werner Fassbinder
 Erwin Rommel
@@ -6453,6 +6454,7 @@ Calgary Flames
 Washington Capitals
 Winnipeg Jets
 Detroit Red Wings
+Red Wings
 Philadelphia Flyers
 St. Louis Blues
 Colorado Avalanche
@@ -19885,6 +19887,7 @@ Ichiro Ozawa
 Eisaku Sato
 Zenko Suzuki
 Sanae Takaichi
+Takaichi
 Noboru Takeshita
 Kakuei Tanaka
 Makiko Tanaka
@@ -29662,7 +29665,6 @@ John Kennedy Toole
 Frank McCourt
 Francis McCourt
 Patrick Bateman
-Neon Genesis Evangelion
 Evangelion
 Adolphe Sax
 Xander Zayas
@@ -29670,3 +29672,69 @@ Emiliano Vargas
 Young Miko
 Alix Earle
 God Bless America
+James Bradley
+Taylor Harry Fritz
+Jenő Jandó
+Gordie Howe International Bridge
+Gordie Howe Bridge
+Gordie Howe
+Ilia Malinin
+František Tůma
+Gillian Flynn
+Harry Quebert
+Stephanie Mailer
+Ferdinand Foch
+Marius Borg Høiby
+Durek Verrett
+Thorbjørn Jagland
+Børge Brende
+Liliana Cavani
+Wunmi Mosaku
+Delroy Lindo
+Ludwig Göransson
+Ishmael Reed
+Hans Reichenbach
+Nature
+Anthropic
+Fritz Wolfgang London
+Fritz London
+Eileen Gu
+Casey Wasserman
+West Bromwich Albion Football Club
+West Bromwich Albion FC
+West Bromwich Albion
+West Brom.
+Wolverhampton Wanderers Football Club
+Wolverhampton Wanderers FC
+Wolverhampton Wanderers
+Charlton Athletic Football Club
+Charlton Athletic FC
+Charlton Athletic
+Kelly Johnson
+Malcolm Lowry
+James Whale
+Lewis Milestone
+Cardiff City Football Club
+Cardiff City FC
+Cardiff City
+AS Monaco FC
+AS Monaco
+Association Sportive de Monaco Football Club
+Kevin Barry
+Wajdi Mouawad
+Anne Case
+Hélène Carrère
+Hélène Carrère d'Encausse
+Midnight Cowboy
+Sylvia Miles
+Brenda Vaccaro
+Olaf Stapledon
+John Maddox
+Platinum Games
+Inflection AI
+Germaine Dulac
+Amanda Crew
+Armande de Polignac
+Paul Ehrenfest
+Maneki-neko
+Hello Kitty

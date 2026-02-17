@@ -4223,7 +4223,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='CARRO_AUTOMOVEL_VEICULO' name="Carro → automóvel/veículo" tone_tags='formal' tags='picky'>
+        <rule id='CARRO_AUTOMOVEL_VEICULO' name="Carro → automóvel/veículo" tone_tags='formal' is_goal_specific='true' tags='picky'>
             <antipattern>
                 <token case_sensitive='yes'>Vila</token>
                 <token case_sensitive='yes'>Cova</token>
@@ -4437,38 +4437,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
             <suggestion><match no='1' postag='V.+' postag_regexp='yes'>importunar</match></suggestion>
             <example correction="incomode|importune">Não <marker>chateie</marker> mais os visitantes.</example>
             <example>O Rui importuna os visitantes abusivamente.</example>
-        </rule>
-
-
-        <rule id='DAR_ATRIBUIR_CONFERIR' name="Dar → atribuir/conferir" tone_tags='formal' tags='picky' default='temp_off'>
-            <!-- Used ChatGPT with Reason and DeepSeek-V3 -->
-            <!-- Later expand into two subrules to accept directly the list of words after the "DAR" verb -->
-
-            <pattern>
-                <marker>
-                    <token inflected='yes' regexp='no'>dar<exception postag_regexp='yes' postag='VMSP.+|VMP00.+'/></token>
-                </marker>
-                <token skip='1' regexp='yes'>[ao]s?|um|uns|umas?|&adverbios_de_intensidade;</token>
-                <token inflected='yes' regexp='yes'>acesso|atenção|autoridade|autorização|benefício|cargo|certificação|certificado|clareza|chance|competência|condecoração|credibilidade|designação|destaque|diploma|direito|distinção|distintivo|dom|emblema|ênfase|enfoque|forma|função|garantia|graduação|grau|habilitação|honra|honraria|importância|investidura|liberdade|licença|licitude|lugar|mandato|medalha|mérito|oportunidade|ordem|outorga|patente|permissão|poder|posição|possibilidade|pr[éê]mio|prerrogativa|prioridade|privilégio|propósito|realismo|reconhecimento|responsabilidade|sentido|seriedade|status|título|troféu|valor|vantagem</token>
-            </pattern>
-            <message>Use &quot;dar&quot; para casos gerais, &quot;conferir&quot; para concessões formais e &quot;atribuir&quot; para designações.</message>
-            <suggestion><match no='1' postag='V.+' postag_regexp='yes'>atribuir</match></suggestion>
-            <suggestion><match no='1' postag='V.+' postag_regexp='yes'>conferir</match></suggestion>
-            <example correction="atribuiu|conferiu">O tribunal <marker>deu</marker> a responsabilidade da criança à mãe.</example>
-            <example>A comissão atribuiu a distinção ao melhor candidato.</example>
-            <example>Além disso, os dados fortemente tipados podem ser armazenados no registro.</example>
-            <example>Mas fomos dados uma segunda chance.</example>
-            <example>Dê o lugar, Milton.</example>
-            <example>Corte-o na linha reta, ou seja, dê uma forma quadrada.</example>
-            <example>Dada a oportunidade, você deve negociar ambas as direções</example>
-            <example>Nos dê uma chance.</example>
-            <example>- Todos teriamos dado as mesmas ordens.</example>
-            <example>Se quiser outro, me dê um título em português.</example>
-            <example>Espero que me dês mais atenção da próxima vez.</example>
-            <example>Dê-me uma outra chance.</example>
-            <example>Deem-me uma outra chance.</example>
-            <example>Foi-me dada a permissão de utilizar este carro.</example>
-            <example>Eu gostaria que desse uma chance aos dois.</example>
         </rule>
 
 
@@ -9391,19 +9359,35 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='SEM_DAR_NAS_VISTAS' name="discretamente">
-            <!--      Created by Marco A.G.Pinto, Portuguese rule      -->
-            <pattern>
-                <token>sem</token>
-                <token inflected='yes'>dar</token>
-                <token min="0">muito</token>
-                <token>nas</token>
-                <token>vistas</token>
-            </pattern>
-            <message>&informal_msg;</message>
-            <suggestion>discretamente</suggestion>
-            <example correction="discretamente">Limpa o chão <marker>sem dar nas vistas</marker>.</example>
-        </rule>
+        <rulegroup id='SEM_DAR_NAS_VISTAS_V2' name="Sem dar nas vistas → discretamente">
+            <!-- ChatGPT 5 and new disambiguator for 2026+ -->
+
+            <rule> <!-- #1: with intensifiers -->
+                <pattern>
+                    <token>sem</token>
+                    <token inflected='yes'>dar</token>
+                    <token regexp='yes'>&adverbios_de_intensidade;</token>
+                    <token>nas</token>
+                    <token>vistas</token>
+                </pattern>
+                <message>&informal_msg;</message>
+                <suggestion>\3 discretamente</suggestion>
+                <example correction="muito discretamente">Limpa o chão <marker>sem dar muito nas vistas</marker>.</example>
+            </rule>
+
+            <rule> <!-- #2: without intensifiers -->
+                <pattern>
+                    <token>sem</token>
+                    <token inflected='yes'>dar</token>
+                    <token>nas</token>
+                    <token>vistas</token>
+                </pattern>
+                <message>&informal_msg;</message>
+                <suggestion>discretamente</suggestion>
+                <example correction="discretamente">Limpa o chão <marker>sem dar nas vistas</marker>.</example>
+            </rule>
+        </rulegroup>
+
 
         <rule id='À_BOCADO' name="Há bocado">
             <!--      Created by Marco A.G.Pinto, Portuguese rule      -->
@@ -9586,6 +9570,22 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
     <category id='ACADEMIC' name='Linguagem acadêmica' type='style' tone_tags="academic">
+
+
+        <rule id='OBTER_ALCANCAR' name="Obter → alcançar" type='style' tone_tags='academic' is_goal_specific='true'>
+            <!-- ChatGPT 5 and new disambiguator for 2026+ -->
+            <pattern>
+                <marker>
+                    <token skip='1' inflected='yes'>obter</token>
+                </marker>
+                <token skip='1' regexp='yes'>a|o</token>
+                <token regexp='yes'>vitória|objetivo|objectivo|meta|finalidade</token>
+            </pattern>
+            <message>Num contexto formal/científico, prefira &quot;alcançar&quot; a &quot;obter&quot; quando se refere a metas, objetivos, ou vitória.</message>
+            <suggestion><match no='1' postag='V.+' postag_regexp='yes'>alcançar</match></suggestion>
+            <example correction="alcançar">Num conflito o objetivo é <marker>obter</marker> a vitória.</example>
+            <example correction="alcançar">O Zé vai <marker>obter</marker> rapidamente o objetivo proposto.</example>
+        </rule>
 
 
         <rule id='VERBO_O_USO_DE_X_X' name="Verbo + 'o uso de X' → X" type='style' tone_tags='academic' is_goal_specific='true'>
@@ -10193,23 +10193,50 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
             </rule>
         </rulegroup>
 
-        <rule id='PERSISTIR_AO_LONGO_DE_TEMPO' name="Persistir + há + tempo" tone_tags="academic">
-            <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-05-25 (Enhanced) (17-MAR-2021+)      -->
-            <pattern>
-                <token inflected='yes'>persistir</token>
-                <marker>
-                    <token>ao</token>
-                    <token>longo</token>
-                    <token regexp='yes'>de|d[ao]s</token>
-                    <token min="0" max="1" postag='Z0.+|DI.+|AQ0.+|NC.+' postag_regexp='yes'/>
-                    <token regexp='yes'>segundos|minutos|horas|dias|semanas|meses|anos|décadas|séculos|milénios|gerações|tempos|sessões</token>
-                </marker>
-            </pattern>
-            <message>Substitua por</message>
-            <suggestion>há \5 \6</suggestion>
-            <suggestion>durante \5 \6</suggestion>
-            <example correction="há décadas|durante décadas">Estas deficiências persistem <marker>ao longo de décadas</marker>.</example>
-        </rule>
+
+        <rulegroup id='PERSISTIR_AO_LONGO_DE_TEMPO_V2' name="Persistir + há + tempo" tone_tags='academic'>
+            <!-- ChatGPT 5 and new disambiguator for 2026+ -->
+
+            <rule> <!-- #1: Simple -->
+                <pattern>
+                    <token regexp='yes' inflected='yes'>persistir|manter|permanecer|continuar|prolongar|arrastar|subsistir|perdurar|prevalecer|repetir|verificar|registar|manifestar|observar|existir</token>
+                    <token min='0' max='1' postag='RG'/>
+                    <marker>
+                        <token>ao</token>
+                        <token>longo</token>
+                        <token regexp='yes'>de|d[ao]s</token>
+                        <token postag='NC.P.+' postag_regexp='yes' regexp='yes' inflected='yes'>&expressoes_de_tempo;</token>
+                    </marker>
+                </pattern>
+                <message>Substitua por</message>
+                <suggestion>há \6</suggestion>
+                <suggestion>durante \6</suggestion>
+                <suggestion>desde há \6</suggestion>
+                <example correction="há décadas|durante décadas|desde há décadas">Estas deficiências persistem <marker>ao longo de décadas</marker>.</example>
+            </rule>
+
+            <rule> <!-- #2: Complex -->
+                <pattern>
+                    <token regexp='yes' inflected='yes'>persistir|manter|permanecer|continuar|prolongar|arrastar|subsistir|perdurar|prevalecer|repetir|verificar|registar|manifestar|observar|existir</token>
+                    <token min='0' max='1' postag='RG'/>
+                    <marker>
+                        <token>ao</token>
+                        <token>longo</token>
+                        <token regexp='yes'>de|d[ao]s</token>
+                        <token postag='Z0.+|DI.+|AQ.+|NC.+' postag_regexp='yes'/>
+                        <token postag='NC.P.+' postag_regexp='yes' regexp='yes' inflected='yes'>&expressoes_de_tempo;</token>
+                    </marker>
+                </pattern>
+                <message>Substitua por</message>
+                <suggestion>há \6 \7</suggestion>
+                <suggestion>durante \6 \7</suggestion>
+                <suggestion>desde há \6 \7</suggestion>
+                <example correction="há muitas décadas|durante muitas décadas|desde há muitas décadas">As deficiências persistem <marker>ao longo de muitas décadas</marker>.</example>
+            </rule>
+
+        </rulegroup>
+
+
         <rule id='ERRO_TRADUÇÃO_COBRIR_ABRANGER' name="[Erro tradução] cobrir → abranger" tone_tags="academic">
             <pattern>
                 <token regexp='yes' inflected='yes'>alinha|artigo|assunto|matéria|ponto|problema|problemática|questão|tema|temática|termo|tópico</token>
@@ -11297,22 +11324,40 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rulegroup>
 
 
-        <rule id='CIENTÍFICO_DAR_CONFERIR' name="[Universitário][Científico] dar → conferir" type="style" tone_tags="academic">
+        <rule id='DAR_ATRIBUIR_CONFERIR_V2' name="[Universitário][Científico] dar → conferir" type='style' tone_tags='academic'>
+            <!-- ChatGPT 5 and new disambiguator for 2026+ -->
+
+            <antipattern>
+                <token skip='2' inflected='yes' postag_regexp='yes' postag='V.+'>dar</token>
+                <token>benefício</token>
+                <token>da</token>
+                <token>dúvida</token>
+                <example>e neste caso eu prefiro dar o benefício da dúvida.</example>
+            </antipattern>
+            <antipattern>
+                <token postag='SENT_START|_PUNCT' postag_regexp='yes'/>
+                <token skip='2' regexp='yes'>dad[ao]s?</token>
+                <token inflected='yes' regexp='yes' postag_regexp='yes' postag='NC.+'>acesso|autoridade|benefício|cargo|certificação|certificado|competência|condecoração|credibilidade|designação|diploma|direito|distinção|distintivo|emblema|graduação|grau|habilitação|honraria|investidura|liberdade|mandato|medalha|outorga|patente|poder|prêmio|prémio|prerrogativa|privilégio|responsabilidade|troféu|título</token>
+                <example>, dado ao oráculo acesso a formula_16</example>
+            </antipattern>
+            <antipattern>
+                <token inflected='yes' regexp='yes'>ter|haver</token>
+                <token skip='2' regexp='yes'>dad[ao]s?</token>
+                <token inflected='yes' regexp='yes' postag_regexp='yes' postag='NC.+'>acesso|autoridade|benefício|cargo|certificação|certificado|competência|condecoração|credibilidade|designação|diploma|direito|distinção|distintivo|emblema|graduação|grau|habilitação|honraria|investidura|liberdade|mandato|medalha|outorga|patente|poder|prêmio|prémio|prerrogativa|privilégio|responsabilidade|troféu|título</token>
+                <example>Esta pode ter dado um acesso secundário ao piso superior do solar original.</example>
+            </antipattern>
+
             <pattern>
                 <marker>
-                    <token inflected='yes'>dar</token>
+                    <token inflected='yes' postag_regexp='yes' postag='V.+'>dar<exception scope='next' regexp='no'>de</exception></token>
                 </marker>
-                <and>
-                    <token regexp='yes'>.*de|.*ez
-                        <exception regexp='yes'>continuidade|oportunidade|prioridade|saúde|visibilidade</exception>
-                    </token>
-                    <token postag='NC.+|AQ.+' postag_regexp='yes'/>
-                </and>
-                <token regexp='yes'>[aà]s?|aos?</token>
+                <token skip='1' min='0' max='1' postag='SPS00|(SPS00:)?D[AI].+' postag_regexp='yes'/>
+                <token inflected='yes' regexp='yes' postag_regexp='yes' postag='NC.+'>acesso|autoridade|benefício|cargo|certificação|certificado|competência|condecoração|credibilidade|designação|diploma|direito|distinção|distintivo|emblema|graduação|grau|habilitação|honraria|investidura|liberdade|mandato|medalha|outorga|patente|poder|prêmio|prémio|prerrogativa|privilégio|responsabilidade|troféu|título</token>
             </pattern>
-            <message>Num contexto formal/científico, é preferível escrever &quot;conferir&quot;.</message>
+            <message>Considere &quot;atribuir&quot; (designação) ou &quot;conferir&quot; (concessão formal) em vez de &quot;dar&quot;.</message>
+            <suggestion><match no='1' postag='V.+' postag_regexp='yes'>atribuir</match></suggestion>
             <suggestion><match no='1' postag='V.+' postag_regexp='yes'>conferir</match></suggestion>
-            <example correction="confere">Esta equação <marker>dá</marker> aleatoriedade ao jogo.</example>
+            <example correction="atribuiu|conferiu">O tribunal <marker>deu</marker> a responsabilidade da criança à mãe.</example>
         </rule>
 
 
@@ -11551,7 +11596,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='PHD_TESE_PROCURAR_PROVAR_PROVARA' name="[Universitário] Evitar expressões do tipo 'procura provar'" type='style' tags='picky' tone_tags='academic'>
+        <rule id='PHD_TESE_PROCURAR_PROVAR_PROVARA' name="[Universitário] Evitar expressões do tipo 'procura provar'" type='style' tags='picky' tone_tags='academic' is_goal_specific='true'>
             <!-- Used ChatGPT 4o for enhancements and extra accuracy -->
 
             <antipattern> <!-- Remove interrogation sentences -->
@@ -13076,6 +13121,28 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
     <category id='SHORTEN_IT' name="Linguagem concisa" type="style">
+
+
+        <rule id='CAIR_CEDER_COLAPSAR' name="Estrutura cair → ceder/colapsar" tone_tags='objective'>
+        <!-- ChatGPT 5 and new disambiguator for 2026+ -->
+            <pattern>
+                <token skip='2' regexp='yes' inflected='yes'>estrutura|edifício|prédio|ponte|viaduto|muro|parede|fachada|telhado|teto|cobertura|laje|viga|pilar|coluna|fundação|alicerce|sapata|estaca|aterro|terrapleno|barragem|dique|túnel|galeria|escavação|poço|andaime|plataforma|passarela|varanda|sacada|marquise|cais|doca|pavimento|piso|estrada|rodovia|autoestrada|via|travessia|trilho|carril|armação|suporte|escoramento|contenção|paredão|cortina|painel|placa|bloco|maciço|torre|antena|poste|mastro<exception scope='next' regexp='yes'>sem|e|ou</exception></token>
+                <marker>
+                    <token postag_regexp='yes' postag='V.+' inflected='yes'>cair
+                        <exception scope='previous' postag_regexp='no' postag='_PUNCT_COMMA'/>
+                        <exception postag_regexp='yes' postag='VMP00.+'/></token>
+                </marker>
+            </pattern>
+            <message>Substitua &quot;cair&quot; por &quot;ceder&quot; ou &quot;colapsar&quot; quando o sujeito for uma estrutura física (ex.: prédio, ponte, muro).</message>
+            <suggestion><match no='2' postag='V.+' postag_regexp='yes'>ceder</match></suggestion>
+            <suggestion><match no='2' postag='V.+' postag_regexp='yes'>colapsar</match></suggestion>
+            <example correction="cedeu|colapsou">A estrutura <marker>caiu</marker> ontem.</example>
+            <example>Nas imagens é possível perceber que apenas uma parte da estrutura já estava caída.</example>
+            <example>O jogador deve tentar colocar um certo número de tijolos em sua torre sem deixar cair muitos e perder a saúde.</example>
+            <example>Uma criatura de quatro patas chamada "The Doodler" numa série de intermináveis plataformas sem cair.</example>
+            <example>Cole pode muito facilmente escalar edifícios e outras estruturas e cair de grandes alturas sem sofrer danos.</example>
+            <example>E também pelo fato de termos errado a estrada, caindo inclusive no atoleiro.</example>
+        </rule>
 
 
         <rulegroup id='OUTRA_ALTERNATIVA' name="Simplificar: Outra opção/hipótese/possibilidade/solução/via/saída → alternativa">

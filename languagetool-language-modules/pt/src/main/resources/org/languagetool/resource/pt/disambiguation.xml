@@ -2423,6 +2423,36 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     <rule>
       <pattern>
         <marker>
+          <token regexp='yes'>[-]</token>
+        </marker>
+      </pattern>
+      <disambig action="add">
+        <wd pos="_PUNCT_HYPHEN"/>
+      </disambig>
+    </rule>
+    <rule>
+      <pattern>
+        <marker>
+          <token regexp='yes'>[–]</token>
+        </marker>
+      </pattern>
+      <disambig action="add">
+        <wd pos="_PUNCT_ENDASH"/>
+      </disambig>
+    </rule>
+    <rule>
+      <pattern>
+        <marker>
+          <token regexp='yes'>[—]</token>
+        </marker>
+      </pattern>
+      <disambig action="add">
+        <wd pos="_PUNCT_EMDASH"/>
+      </disambig>
+    </rule>
+    <rule>
+      <pattern>
+        <marker>
           <token>,</token>
         </marker>
       </pattern>
@@ -3888,6 +3918,41 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
           <disambig action="remove"><wd lemma="farar"/></disambig>
       </rule>
   </rulegroup>
+
+  <rule id="PELA_VERB_20260217" name="Pela is not a verb, it is always SPS.+">
+    <!-- ChatGPT 5 -->
+    <pattern>
+      <marker>
+        <and>
+          <token regexp='yes'>pelas?</token>
+          <token postag='SPS.+' postag_regexp='yes'/>
+        </and>
+      </marker>
+      <token min='0' max='1' postag='[DP].+' postag_regexp='yes'/>
+      <token postag='AQ.+|N.+|VMP00.+' postag_regexp='yes'/>
+    </pattern>
+    <disambig action="remove" postag="V.*"/>
+      <!--
+      Examples:
+               O jogo foi um amistoso válido pela simbólica "taça guarani".
+               Pela seleção, marcou mais de mil gols.
+               O município é constituído pela comuna-sede, correspondente à cidade de Namacunde, e pela comuna de Chiede.
+               No entanto, conhecemos o real também pela intuição.
+               Pela convocação, Fermo recebeu muitos cumprimentos, e faz questão de manifestar seus agradecimentos.
+               Se tem a possibilidade e condições, opte sempre pela maior titulação, no caso, o da Federal.
+               O cidadão será avisado por telefone ou pela internet.
+               Durante um bom tempo fiquei mal: pela confiança, pela traição, depois de quase dois anos de convivência.
+               Não porque eu não o soubesse, apenas pela cortesia de me relembrar que o mundo não está feito para ter sol.
+               Mais uma vez muito obrigado, pela resposta.
+               O patinho estava sendo bicado não apenas pelos patos, mas também pelas galinhas.
+               Mas ele tropeçou: algo havia-o agarrado pelas pernas.
+               Tom me apunhalou pelas costas.
+               Alimentado pelas chuvas recentes, o rio cresce e ruge.
+               Na Convenção, a Gironda dividiu-se: alguns optaram por um indulto, outros pela pena de morte.
+               Fazia tudo pela calada e aparentava indiferença.
+               Tem pessoas que desprezam as outras pela simples razão de não terem dinheiro.
+      -->
+  </rule>
 
   <rule id="ANTES_VERB_20251104" name="Antes can't be a verb and an RG, it is always RG">
     <!-- ChatGPT 5 -->
@@ -5973,10 +6038,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
   <rule id="VERB_VMIS2S0_TO_SPS_20260211_RARE" name="It is SPS.+">
     <pattern>
       <token postag_regexp='yes' postag='V.+|RG'/>
-      <token min='0' max='1' postag='RG|RM|RN|NC.+|AQ.+' postag_regexp='yes'/>
+      <token min='0' max='1' postag='RG|RM|RN|NC.+|AQ.+|VMP00.+' postag_regexp='yes'/>
       <marker>
         <and>
-          <token postag='VMIS2.+' postag_regexp='yes'/>
+          <token postag='VMIS.+|VMSI.+' postag_regexp='yes'/>
           <token postag='SPS.+' postag_regexp='yes'/>
         </and>
       </marker>
@@ -5995,6 +6060,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
              Apesar deste tão longo tempo afastado deste blog, e de algumas outras atividades, eu estou vivo.
              Você precisa deste livro?
              Eu nunca me esquecerei deste acontecimento até o dia de minha morte.
+             A partir desse momento, as posições de Vargas e da UDN tornaram-se cada vez mais conflituosas.
+             Doze contingentes de várias forças para-militares da Índia e forças policiais também participam desse desfile.
+             O Marcos me disse que você você gosta desse tipo de música.
+             Tom foi obrigado a desistir desse plano.
+             Paulo é desses caras.
       -->
   </rule>
 

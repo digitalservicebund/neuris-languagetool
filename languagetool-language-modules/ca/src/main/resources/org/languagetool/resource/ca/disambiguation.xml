@@ -4295,6 +4295,12 @@ Copyright (C) 2012 Jaume Ortolà i Font
     </rulegroup>
     <rule id="ENTRE" name="entre (verb)">
         <antipattern>
+            <!-- aquest antipattern no funciona, hi ha un bug? -->
+            <token>entre</token>
+            <token>a</token>
+            <token>i</token>
+        </antipattern>
+        <antipattern>
             <token>en</token>
             <!-- nom de persona -->
             <token regexp="yes" skip="20">\p{Lu}.*</token>
@@ -4310,8 +4316,10 @@ Copyright (C) 2012 Jaume Ortolà i Font
                 <token postag="V.*" postag_regexp="yes">entre</token>
             </marker>
             <token regexp="yes">en|a</token>
+            <token><exception>i</exception></token>
         </pattern>
         <disambig action="filter" postag="V.*"/>
+        <example type="untouched">Aquesta és la causa de la relació entre A i B.</example>
     </rule>
     <rule id="ES_CASA" name="es casa">
         <pattern>
@@ -11429,18 +11437,21 @@ Copyright (C) 2012 Jaume Ortolà i Font
         <antipattern>
             <token regexp="yes">de|d'</token>
             <token min="0" postag="A..[FC]S." postag_regexp="yes"/>
-            <token>manera</token>
+            <token regexp="yes">manera|forma</token>
         </antipattern>
         <pattern>
             <marker>
                 <and>
                     <token postag="V.*" postag_regexp="yes"/>
-                    <token postag="N.*" postag_regexp="yes" regexp="yes" inflected="yes">nota|signe|barreja|mescla|taxa</token>
+                    <token postag="N.*" postag_regexp="yes" regexp="yes" inflected="yes">nota|signe|barreja|mescla|taxa|llista</token>
                 </and>
             </marker>
-            <token regexp="yes">de|d'</token>
+            <token regexp="yes">de|d'<exception postag="LOC_ADV"/></token>
         </pattern>
         <disambig action="filter" postag="[^V].*"/>
+        <!--<example type="untouched">Es nota de seguida.</example>-->
+        <example type="untouched">Es nota de manera clara.</example>
+        <example type="untouched">Es nota de forma immediata.</example>
     </rule>
     <rulegroup id="qui_les_porta" name="qui pronom verb 3a persona sing">
         <antipattern>
@@ -21680,6 +21691,35 @@ Copyright (C) 2012 Jaume Ortolà i Font
                 <marker>
                     <token inflected="yes">es</token>
                 </marker>
+                <token postag="V.[SI].3S.." postag_regexp="yes" inflected="yes">anar</token>
+                <token>a</token>
+                <token postag="D.*" postag_regexp="yes" min="0"/>
+                <token regexp="yes">llit|casa|cine|cinema|teatre|classe|escola|col·legi</token>
+            </pattern>
+            <disambig action="add">
+                <wd pos="_es_personal_sg"/>
+            </disambig>
+        </rule>
+        <rule>
+            <pattern>
+                <marker>
+                    <token inflected="yes">es</token>
+                </marker>
+                <token postag="VA[SI].3S.." postag_regexp="yes"/>
+                <token inflected="yes">anar</token>
+                <token>a</token>
+                <token postag="D.*" postag_regexp="yes" min="0"/>
+                <token regexp="yes">llit|casa|cine|cinema|teatre|classe|escola|col·legi</token>
+            </pattern>
+            <disambig action="add">
+                <wd pos="_es_personal_sg"/>
+            </disambig>
+        </rule>
+        <rule>
+            <pattern>
+                <marker>
+                    <token inflected="yes">es</token>
+                </marker>
                 <token postag="VA[SI].3S.." postag_regexp="yes" min="0"/>
                 <token postag="VM[NP].*|VM[SI].3S.." postag_regexp="yes" inflected="yes">anar</token>
                 <token postag="_PUNCT.*" postag_regexp="yes"/>
@@ -22182,7 +22222,7 @@ Copyright (C) 2012 Jaume Ortolà i Font
         <rule>
             <pattern>
                 <marker>
-                    <token regexp="yes">seguit|bunga|jugant</token>
+                    <token regexp="yes">seguit|bunga|jugant|brandant</token>
                     <token><match no="0"/></token>
                 </marker>
             </pattern>
@@ -23057,8 +23097,8 @@ Copyright (C) 2012 Jaume Ortolà i Font
         <rule>
             <pattern>
                 <marker>
-                    <token>-</token>
-                    <token regexp="yes" spacebefore="no">ista|isme|ir|ar|er|re</token>
+                    <token spacebefore="yes">-</token>
+                    <token regexp="yes" spacebefore="no">ista|isme|ir|ar|er|re|íssim|íssima|aci|àcia</token>
                 </marker>
             </pattern>
             <disambig action="immunize"/>
