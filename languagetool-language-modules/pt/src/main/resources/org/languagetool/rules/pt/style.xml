@@ -3740,6 +3740,22 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rulegroup>
 
 
+        <rule id='UNS_ALGUNS_UMAS_ALGUMAS' name="uns/umas → alguns/algumas" type='style' tone_tags='formal'>
+            <!-- ChatGPT 5 and new disambiguator for 2026+ -->
+            <pattern>
+                <token regexp='yes' inflected='yes'>fazer|haver</token>
+                <marker>
+                    <token regexp='yes'>uns|umas</token>
+                </marker>
+                <token postag='NC.P.+' postag_regexp='yes' regexp='yes' inflected='yes'>&expressoes_de_tempo;</token>
+            </pattern>
+            <message>&quot;Uns/umas&quot; são formas informais. Em contextos mais formais, prefira &quot;alguns/algumas&quot;.</message>
+            <suggestion><match no='2' postag='DI.+' postag_regexp='yes'>algum</match></suggestion>
+            <example correction="alguns">Isso aconteceu há <marker>uns</marker> minutos.</example>
+            <example correction="algumas">Isso aconteceu há <marker>umas</marker> horas.</example>
+        </rule>
+
+
         <rule id='COMO_SEGUNDO_CONFORME' name="Como/segundo → conforme" type='style' tone_tags='formal'>
             <!-- ChatGPT 5 and new disambiguator for 2026+ -->
             <pattern>
@@ -9572,6 +9588,24 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     <category id='ACADEMIC' name='Linguagem acadêmica' type='style' tone_tags="academic">
 
 
+        <rule id='AO_LONGO_DO_TEMPO' name="Ao longo do tempo → gradualmente/progressivamente" type='style' tone_tags='academic' is_goal_specific='true'>
+            <!-- ChatGPT 5 and new disambiguator for 2026+ -->
+            <pattern>
+                <token skip='1' regexp='yes' inflected='yes'>evoluir|desenvolver|transformar|modificar|alterar|adaptar|aperfeiçoar|refinar|consolidar|amadurecer|emergir|surgir|tornar|complexificar|diferenciar</token>
+                <marker>
+                    <token>ao</token>
+                    <token>longo</token>
+                    <token>do</token>
+                    <token>tempo</token>
+                </marker>
+            </pattern>
+            <message>&quot;Ao longo do tempo&quot; pode ser redundante com verbos que já implicam progressão (ex.: &quot;evoluir&quot;). Considere remover ou substituir por &quot;gradualmente&quot; ou &quot;progressivamente&quot;.</message>
+            <suggestion>gradualmente</suggestion>
+            <suggestion>progressivamente</suggestion>
+            <example correction="gradualmente|progressivamente">É assim que o sistema evolui <marker>ao longo do tempo</marker>.</example>
+        </rule>
+
+
         <rule id='OBTER_ALCANCAR' name="Obter → alcançar" type='style' tone_tags='academic' is_goal_specific='true'>
             <!-- ChatGPT 5 and new disambiguator for 2026+ -->
             <pattern>
@@ -9664,7 +9698,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='APAGAR_INDELÉVEL' name="[Universitário][Científico] Não conseguir apagar → Indelével" tone_tags="academic" is_goal_specific="true">
+        <rule id='APAGAR_INDELÉVEL' name="🎓[Científico] Não conseguir apagar → Indelével" tone_tags="academic" is_goal_specific="true">
             <pattern>
                 <marker>
                     <token>que
@@ -9682,7 +9716,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='BÁSICO_ELEMENTAR' name="[Universitário][Científico] Básico → Elementar" tone_tags="academic" is_goal_specific="true">
+        <rule id='BÁSICO_ELEMENTAR' name="🎓[Científico] Básico → Elementar" tone_tags="academic" is_goal_specific="true">
             <antipattern>
                 <token regexp='yes'>unidades?</token>
                 <token regexp='yes'>básicas?</token>
@@ -9713,7 +9747,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='MUITO_BASTANTE_EXTENSIVAMENTE' name="[Universitário][Científico] Muito/bastante/enormemente → Extensivamente/amplamente" tone_tags="academic" is_goal_specific="true" tags="picky">
+        <rule id='MUITO_BASTANTE_EXTENSIVAMENTE' name="🎓[Científico] Muito/bastante/enormemente → Extensivamente/amplamente" tone_tags="academic" is_goal_specific="true" tags="picky">
             <pattern>
                 <token inflected='yes' regexp='yes'>ter|ser</token>
                 <token min='0' regexp='yes'>sido|es[st][ae]s?|aquel[ae]s?</token>
@@ -9768,7 +9802,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rulegroup>
 
 
-       <rule id='FICAR_PARADO_TEMPO_ESTAGNAR' name="[Universitário][formal] 'Ficar parado no tempo' → estagnar" tone_tags="academic" is_goal_specific="true">
+       <rule id='FICAR_PARADO_TEMPO_ESTAGNAR' name="🎓[formal] 'Ficar parado no tempo' → estagnar" tone_tags="academic" is_goal_specific="true">
             <pattern>
                 <marker>
                     <token inflected='yes'>ficar</token>
@@ -9784,7 +9818,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='TOMAR_ASSUMIR' name="[Universitário][Científico] V. Tomar → V. Assumir" tone_tags="academic" is_goal_specific="true">
+        <rule id='TOMAR_ASSUMIR' name="🎓[Científico] V. Tomar → V. Assumir" tone_tags="academic" is_goal_specific="true">
             <pattern>
                 <token postag='SENT_START|AQ.+|NC.+|NP.+|CS|CC' postag_regexp='yes'/>
                 <marker>
@@ -9898,7 +9932,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
             </rule>
         </rulegroup>
 
-       <rule id='SER_CONSISTIR_RESIDIR' name="[Universitário][Científico] V.Ser → V.Consistir/V.Residir" tone_tags="academic" is_goal_specific="true">
+       <rule id='SER_CONSISTIR_RESIDIR' name="🎓[Científico] V.Ser → V.Consistir/V.Residir" tone_tags="academic" is_goal_specific="true">
             <pattern>
                 <token regexp='yes' inflected='yes'>assimetria|diferença|dissemelhança|disparidade|distinção|oposição|oposto</token>
                 <token min='0' max='1' postag='NC.+|AQ.+|V.+' postag_regexp='yes'>
@@ -11263,7 +11297,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rulegroup>
 
 
-        <rulegroup id="AJUDAR_AUXILIAR" name="[Universitário][Científico] ajudar → auxiliar" type='style' tags='picky' tone_tags="academic">
+        <rulegroup id="AJUDAR_AUXILIAR" name="🎓[Científico] ajudar → auxiliar" type='style' tags='picky' tone_tags="academic">
             <!-- Created by Marco A.G.Pinto with Ricardo Joseh Lima suggestions, Portuguese rule 2023-05-12/26/27 (2-MAR-2023+) -->
             <!--
             SUBRULE 1:
@@ -11324,7 +11358,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rulegroup>
 
 
-        <rule id='DAR_ATRIBUIR_CONFERIR_V2' name="[Universitário][Científico] dar → conferir" type='style' tone_tags='academic'>
+        <rule id='DAR_ATRIBUIR_CONFERIR_V2' name="🎓[Científico] dar → conferir" type='style' tone_tags='academic'>
             <!-- ChatGPT 5 and new disambiguator for 2026+ -->
 
             <antipattern>
@@ -11361,7 +11395,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rulegroup id='SER_SIGNIFICATIVO' name="[Universitário][Científico] 'fazer toda a diferença' → 'ser significativo/expressivo'" type="style" tone_tags="academic" is_goal_specific="true" tags="picky">
+        <rulegroup id='SER_SIGNIFICATIVO' name="🎓[Científico] 'fazer toda a diferença' → 'ser significativo/expressivo'" type="style" tone_tags="academic" is_goal_specific="true" tags="picky">
 
             <!-- #1: é significativo -->
             <rule>
@@ -11410,7 +11444,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rulegroup>
 
 
-        <rule id='FAZER_EXERCER' name="[Universitário][Científico] Verbo Fazer → Verbo Exercer" type="style" tone_tags="academic" is_goal_specific="true" tags="picky">
+        <rule id='FAZER_EXERCER' name="🎓[Científico] Verbo Fazer → Verbo Exercer" type="style" tone_tags="academic" is_goal_specific="true" tags="picky">
             <antipattern>
                 <token postag='V.+' postag_regexp='yes'/>
                 <token min='0' max='1' postag='D[AI].+|NC.+|AQ.+' postag_regexp='yes'/>
@@ -11471,7 +11505,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
         <!-- NÃO SE PODE APAGAR é indelével -->
-        <rule id='NÃO_SE_PODE_APAGAR_É_INDELÉVEL' name="[Universitário][Científico] 'não se pode apagar' → 'é indelével'" type="style">
+        <rule id='NÃO_SE_PODE_APAGAR_É_INDELÉVEL' name="🎓[Científico] 'não se pode apagar' → 'é indelével'" type="style">
             <!-- Created by Marco A.G.Pinto with Ricardo Joseh Lima suggestions, Portuguese rule 2023-05-29 (2-MAR-2023+) -->
             <!--
             Eu queria, mas não se pode apagar o passado. → Eu queria, mas o passado é indelével.
@@ -11494,7 +11528,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='EVIDENCIAR_COMPROVAR_DEMONSTRAR' name="[Universitário] Mostrar → evidenciar/comprovar/demonstrar/indicar" type='style' tags='picky' tone_tags='academic'>
+        <rule id='EVIDENCIAR_COMPROVAR_DEMONSTRAR' name="🎓 Mostrar → evidenciar/comprovar/demonstrar/indicar" type='style' tags='picky' tone_tags='academic'>
             <!-- ChatGPT 5 and new disambiguator for 2026+ -->
 
             <antipattern>
@@ -11519,7 +11553,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='PHD_TESE_FICOU_DEMONSTRADO_QUE_DEMONSTRÁMOS_QUE' name="[Universitário] Expressões do tipo 'ficou demonstrado que' → ‘demonstrámos que'" type='style' tags="picky" tone_tags="academic" is_goal_specific="true">
+        <rule id='PHD_TESE_FICOU_DEMONSTRADO_QUE_DEMONSTRÁMOS_QUE' name="🎓 Expressões do tipo 'ficou demonstrado que' → ‘demonstrámos que'" type='style' tags="picky" tone_tags="academic" is_goal_specific="true">
             <pattern>
                 <marker>
                     <and>
@@ -11540,7 +11574,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='PHD_TESE_PARA_AJUDAR_A_VINFINITIVO_PARA_VINFINITIVO' name="[Universitário] Para Ajudar a + V.Inf. → Para V.Inf." type='style' tone_tags="academic">
+        <rule id='PHD_TESE_PARA_AJUDAR_A_VINFINITIVO_PARA_VINFINITIVO' name="🎓 Para Ajudar a + V.Inf. → Para V.Inf." type='style' tone_tags="academic">
             <pattern>
                 <marker>
                     <token>para</token>
@@ -11557,7 +11591,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='PHD_TESE_POSSA_POSSAM_PÔR' name="[Universitário] Evitar expressões do tipo 'possa(m) pôr’ → 'ponha(m)'" type='style' tags="picky" tone_tags="academic">
+        <rule id='PHD_TESE_POSSA_POSSAM_PÔR' name="🎓 Evitar expressões do tipo 'possa(m) pôr’ → 'ponha(m)'" type='style' tags="picky" tone_tags="academic">
             <!-- Created by Marco A.G.Pinto with Ricardo Joseh Lima and Susana Boatto suggestions, Portuguese rule 2022-11-30 (25-JUL-2022+) -->
             <!--
             Para impedir que o radical possa pôr em perigo o ocidente. → Para impedir que o radical ponha em perigo o ocidente.
@@ -11596,7 +11630,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='PHD_TESE_PROCURAR_PROVAR_PROVARA' name="[Universitário] Evitar expressões do tipo 'procura provar'" type='style' tags='picky' tone_tags='academic' is_goal_specific='true'>
+        <rule id='PHD_TESE_PROCURAR_PROVAR_PROVARA' name="🎓 Evitar expressões do tipo 'procura provar'" type='style' tags='picky' tone_tags='academic' is_goal_specific='true'>
             <!-- Used ChatGPT 4o for enhancements and extra accuracy -->
 
             <antipattern> <!-- Remove interrogation sentences -->
@@ -11692,7 +11726,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='PHD_TESE_REFERIREMOS_A_SEGUIR_REFERIDAS_REFERIDOS' name="[Universitário] Expressões do tipo 'que/como referiremos a seguir' → 'referidas a seguir'" type="style" tags="picky" tone_tags="academic">
+        <rule id='PHD_TESE_REFERIREMOS_A_SEGUIR_REFERIDAS_REFERIDOS' name="🎓 Expressões do tipo 'que/como referiremos a seguir' → 'referidas a seguir'" type="style" tags="picky" tone_tags="academic">
             <pattern>
                 <marker>
                     <token regexp='yes'>que|como</token>
@@ -11713,7 +11747,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
             <example correction="referidas a seguir|referidos a seguir">Existem algumas críticas ao modelo, <marker>como referiremos de seguida</marker>.</example>
         </rule>
 
-        <rulegroup id='PHD_TESE_PODE_SER_PART_PASS_É_PART_PASS' name="[Universitário] Expressões do tipo 'pode ser usado' → 'é usado'" type="style" tags='picky' default='off' tone_tags="academic">
+        <rulegroup id='PHD_TESE_PODE_SER_PART_PASS_É_PART_PASS' name="🎓 Expressões do tipo 'pode ser usado' → 'é usado'" type="style" tags='picky' default='off' tone_tags="academic">
             <rule>
                 <pattern>
                     <marker>
@@ -14089,6 +14123,24 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       Foi considerado por muitos cientistas como sendo o pai da Matemática. → Foi considerado por muitos cientistas o pai da Matemática.
       Uma sessão de login é considerada como sendo a vida útil de um processo de usuário. → Uma sessão de login é considerada a vida útil de um processo de usuário.
       -->
+
+            <antipattern>
+                <token postag='VMP00.+' postag_regexp='yes'/>
+                <token>como</token>
+                <token>sendo</token>
+                <token postag='(SPS00:)?D[AI].+' postag_regexp='yes'/>
+                <token postag='N.+|AQ.+' postag_regexp='yes'/>
+                <token min='0' max='1'>de</token>
+                <token min='0' max='1' postag='N.+|AQ.+' postag_regexp='yes'/>
+                <token postag='SENT_END|_PUNCT|CC|SPS00|SPS00:D[AI].+' postag_regexp='yes'/>
+                <example>O “Pilar” é classificado como sendo um obstáculo.</example>
+                <example>O arvoredo foi mantido como sendo um terreno.</example>
+                <example>Os terroristas retaliam contra Estados encarados como sendo os inimigos.</example>
+                <example>Um argumento é definido como sendo um raciocínio para provar algo.</example>
+                <example>Ela é definida como sendo a função principal.</example>
+                <example>O Sistema de Crenças é definido como sendo o conjunto de argumentos e os respetivos pesos.</example>
+            </antipattern>
+
             <antipattern>
                 <token><exception postag='V.+' postag_regexp='yes'/></token>
                 <token min="0" max="1" postag='DI.+|RG|NC.+|AQ.+|NP.+' postag_regexp='yes'/>
@@ -14097,31 +14149,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
                 <token>como</token>
                 <token>sendo</token>
                 <token/>
-                <example>...ndo que o profeta da Era do peixe seria o Messias; e é por isso que os judeus nunca aceitaram Jesus como sendo um Deus humano.</example>
-                <example>...os de representações sociais como nesse trabalho, enfocam-se significações, sentimentos e conceitos como sendo a própria realidade.</example>
+                <example>É por isso que os judeus nunca aceitaram Jesus como sendo um Deus humano.</example>
+                <example>Enfocam-se significações, sentimentos e conceitos como sendo a própria realidade.</example>
                 <example>Parece que muitas vezes, em nossa cabeça, interpretamos outras religiões cristãs como sendo outros deuses.</example>
-                <example>* (j) Monarca discutível como sendo o verdadeiro Chefe de Estado.</example>
-            </antipattern>
-
-            <antipattern>
-                <token postag='VMIS.+|NC.+|AQ.+|NP.+' postag_regexp='yes'/>
-                <token postag='VMP00.+' postag_regexp='yes'/>
-                <token>como</token>
-                <token>sendo</token>
-                <token/>
-                <example>O arvoredo foi mantido como sendo um terreno.</example>
-                <example>Os terroristas retaliam contra Estados encarados como sendo os inimigos.</example>
-            </antipattern>
-
-            <antipattern>
-                <token regexp='yes'>definid[ao]s?</token>
-                <token>como</token>
-                <token>sendo</token>
-                <token postag='[DP].+' postag_regexp='yes'/>
-                <token postag='N.+|AQ.+' postag_regexp='yes'/>
-                <example>Um argumento é definido como sendo um raciocínio para provar algo.</example>
-                <example>Ela é definida como sendo a função principal.</example>
-                <example>O Sistema de Crenças é definido como sendo o conjunto de argumentos e os respetivos pesos.</example>
+                <example>Monarca discutível como sendo o verdadeiro Chefe de Estado.</example>
             </antipattern>
 
             <pattern>
@@ -16880,27 +16911,21 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <!-- TER FORMA DE ter como -->
-        <rule id='TER_FORMA_DE_TER_COMO' name="[Simplificar] Ter forma de → Ter como" type="style">
+        <rule id='TER_FORMA_DE_TER_COMO' name="[Simplificar] Ter/haver 'forma de' → 'como'" type='style'>
             <!--IDEA shorten_it-->
-            <!-- Created by Marco A.G.Pinto with Ricardo Joseh Lima suggestions, Portuguese rule 2023-01-06 (25-JUL-2022+) -->
-            <!--
-      Após 8 meses de baixa não tinha forma de os contactar. → Após 8 meses de baixa não tinha como os contactar.
-      Após acabar o curso já tinha forma de os contactar. → Após acabar o curso já tinha como os contactar.
-      -->
+            <!-- ChatGPT 5 and new disambiguator for 2026+ -->
             <pattern>
-                <token inflected='yes'>ter</token>
+                <token regexp='yes' inflected='yes'>ter|haver</token>
                 <marker>
                     <token>forma</token>
                     <token>de</token>
                 </marker>
-                <token><exception postag_regexp='yes' postag='NC.+|AQ.+|DI.+|Z0.+'/></token>
+                <token postag='DA.+|PP.+|V.+|RM' postag_regexp='yes'/>
             </pattern>
             <message>&simplify_msg;</message>
             <suggestion>como</suggestion>
             <example correction="como">Após 8 meses de baixa não tinha <marker>forma de</marker> os contactar.</example>
             <example correction="como">Após acabar o curso já tinha <marker>forma de</marker> os contactar.</example>
-            <example>Esta pedra tem forma de um animal.</example>
         </rule>
 
 

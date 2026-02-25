@@ -2078,7 +2078,7 @@ Copyright (C) 2012 Jaume Ortolà i Font
             <pattern>
                 <token regexp="yes">a|per|de|amb|vers|devers</token>
                 <marker>
-                    <token regexp="yes">cals?</token>
+                    <token regexp="yes">cals?<exception postag="NP.*" postag_regexp="yes"></exception></token>
                 </marker>
             </pattern>
             <disambig action="replace" postag="contraccio"/>
@@ -3741,15 +3741,6 @@ Copyright (C) 2012 Jaume Ortolà i Font
             <token spacebefore="no">-</token>
         </pattern>
         <disambig action="ignore_spelling"/>
-    </rule>
-    <rule id="sufixos_ortografia" name="ignora l'ortografia de sufixos">
-        <pattern>
-            <token spacebefore="yes">-</token>
-            <marker>
-                <token regexp="yes" spacebefore="no">indre|ldre|ns|scs|scos|igs|ix|eix|é|ena|è|it|ert|ir|ar|er|re|ívola?</token>
-            </marker>
-        </pattern>
-        <disambig action="immunize"/>
     </rule>
     <rule id="pre_post" name="prefix pre- post">
         <pattern>
@@ -7725,6 +7716,35 @@ Copyright (C) 2012 Jaume Ortolà i Font
             <wd lemma="podar"/>
         </disambig>
     </rule>
+    <rulegroup id="GRANS" name="grans de cereals...">
+        <rule>
+            <pattern>
+                <marker>
+                    <token postag="NCMP000">grans</token>
+                </marker>
+                <token regexp="yes">de|d'</token>
+                <token postag="NC.*" postag_regexp="yes" inflected="yes" regexp="yes">all|blat|cereal|dacsa|panís</token>
+            </pattern>
+            <disambig action="filter" postag="NCMP000"/>
+            <example type="untouched">Són fragments grans de membrana.</example>
+        </rule>
+        <rule>
+            <antipattern>
+                <token postag="N..P.*" postag_regexp="yes"/>
+                <token postag="RG.*|LOC_ADV" postag_regexp="yes" min="0" max="3"/>
+                <token>grans</token>
+            </antipattern>
+            <pattern>
+                <marker>
+                    <token postag="NCMP000">grans<exception scope="previous" postag="NC.P.*" postag_regexp="yes"/></token>
+                </marker>
+                <token regexp="yes">de|d'</token>
+                <token postag="NC.*" postag_regexp="yes"><exception regexp="yes">bracet|formes</exception></token>
+            </pattern>
+            <disambig action="filter" postag="N.*"/>
+            <example type="untouched">Són fragments grans de membrana.</example>
+        </rule>
+    </rulegroup>
     <rule id="caldre_calar" name="caldre/calar + infinitiu">
         <pattern>
             <marker>
@@ -18663,17 +18683,6 @@ Copyright (C) 2012 Jaume Ortolà i Font
         </pattern>
         <disambig action="filter" postag="[^P].*"/>
     </rule>
-    <rule id="GRANS" name="grans de cereals...">
-        <pattern>
-            <marker>
-                <token postag="NC.*" postag_regexp="yes">grans<exception scope="previous" postag="NC.P.*" postag_regexp="yes"/></token>
-            </marker>
-            <token regexp="yes">de|d'</token>
-            <token postag="NC.*" postag_regexp="yes"/>
-        </pattern>
-        <disambig action="filter" postag="N.*"/>
-        <example type="untouched">Són fragments grans de membrana.</example>
-    </rule>
     <rule id="clara_d_ou" name="clara d'ou">
         <pattern>
             <marker>
@@ -23096,8 +23105,17 @@ Copyright (C) 2012 Jaume Ortolà i Font
     <rulegroup id="sufixos_prefixos" name="sufixos i prefixos">
         <rule>
             <pattern>
+                <token spacebefore="yes">-</token>
                 <marker>
-                    <token spacebefore="yes">-</token>
+                    <token regexp="yes" spacebefore="no">indre|ldre|ns|scs|scos|igs|ix|eix|é|ena|è|it|ert|ir|ar|er|re|ívola?</token>
+                </marker>
+            </pattern>
+            <disambig action="immunize"/>
+        </rule>
+        <rule>
+            <pattern>
+                <marker>
+                    <token>-</token>
                     <token regexp="yes" spacebefore="no">ista|isme|ir|ar|er|re|íssim|íssima|aci|àcia</token>
                 </marker>
             </pattern>

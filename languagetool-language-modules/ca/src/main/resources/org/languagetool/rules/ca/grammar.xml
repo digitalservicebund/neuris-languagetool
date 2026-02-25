@@ -20154,6 +20154,37 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             <example>Per a expressar molt millor expressions fins llavors ocultes.</example>
             <example>Per a conèixer una mica millor zones del país.</example>
         </rule>
+        <rulegroup id="MILLORS_MILLOR" name="millors -> millor">
+            <antipattern>
+                <token postag="DA.*" postag_regexp="yes"/>
+                <token postag="PX.*" postag_regexp="yes" min="0"/>
+                <token>millors</token>
+            </antipattern>
+            <rule>
+                <pattern>
+                    <token postag="_GN_MP"/>
+                    <marker>
+                        <token>millors</token>
+                    </marker>
+                    <token postag="A..[MC]P.|V.P..PM." postag_regexp="yes"/>
+                </pattern>
+                <message>Probablement cal dir <suggestion>millor</suggestion> (adverbi) o <suggestion>més ben</suggestion> davant d'un adjectiu.</message>
+                <example correction="millor|més ben">Són els treballadors públics <marker>millors</marker> pagats.</example>
+                <example>Un dels millors musicals de tots els temps.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token postag="_GN_FP"/>
+                    <marker>
+                        <token>millors</token>
+                    </marker>
+                    <token postag="A..[FC]P.|V.P..PF." postag_regexp="yes"/>
+                </pattern>
+                <message>Probablement cal dir <suggestion>millor</suggestion> (adverbi) o <suggestion>més ben</suggestion> davant d'un adjectiu.</message>
+                <example correction="millor|més ben">Són les treballadores públiques <marker>millors</marker> pagades.</example>
+                <example>Convoquen un concurs per a premiar les millors instantànies.</example>
+            </rule>
+        </rulegroup>
         <rulegroup id="MAL_MALAMENT" name="mal/malament">
             <rule>
                 <pattern>
@@ -25203,7 +25234,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                         <token>com<exception postag="allow_com"/></token>
                     </marker>
                     <token min="0" regexp="yes">['"‘“«]</token>
-                    <token postag="NC.*|AQ.*" postag_regexp="yes" regexp="yes" inflected="yes">(ex)?(&gentilicis_ONU;|&genticis_ALTRES;|.*parlant)</token>
+                    <token postag="NC.*|AQ.*" postag_regexp="yes" regexp="yes" inflected="yes">(ex)?(&gentilicis_ONU;|&gentilicis_ALTRES;|.*parlant)</token>
                 </pattern>
                 <message>Probablement cal escriure <suggestion>com a</suggestion> ('en qualitat de').</message>
                 <example correction="Com a"><marker>Com</marker> argentí, em provoca un fàstic doble.</example>
@@ -33655,6 +33686,63 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         </rule>
     </category>
     <category id="CONFUSIONS" name="Confusions" type="grammar">
+        <rule id="BASKONIA" name="Baskonia">
+            <pattern>
+                <token postag="D..MS." postag_regexp="yes"/>
+                <marker>
+                    <token>Bascònia</token>
+                </marker>
+            </pattern>
+            <message>Per a referir-nos a l'equip de bàsquet, escrivim <suggestion>Baskonia</suggestion>.</message>
+            <example correction="Baskonia">El <marker>Bascònia</marker> va ser superior durant tot el partit.</example>
+        </rule>
+        <rulegroup id="CAPA_CAP_A" name="capa -> cap a">
+            <antipattern>
+                <token postag_regexp="yes" postag="SPS00|LOC_PREP"/>
+                <token postag="D.*" postag_regexp="yes" min="0"/>
+                <token>capa</token>
+            </antipattern>
+            <antipattern>
+                <token regexp="yes">el|la|els|les</token>
+                <token min="0" max="2" postag_regexp="yes" postag="&pronom_feble;"/>
+                <token postag="V.[IS].*" postag_regexp="yes"/>
+                <example>La capa els voleiava a l'altura de la cintura.</example>
+            </antipattern>
+            <antipattern>
+                <token>capa</token>
+                <token regexp="yes">per|a|en</token>
+                <token>capa</token>
+            </antipattern>
+            <rule>
+                <pattern>
+                    <token>capa<exception postag="_GN_FS|LOC_ADV" postag_regexp="yes"/></token>
+                    <token>a</token>
+                    <token regexp="yes">ls?</token>
+                </pattern>
+                <message>¿Volíeu dir <suggestion>cap \2\3</suggestion>?</message>
+                <example correction="cap al">Vindran <marker>capa al</marker> final de la sessió.</example>
+                <example type="triggers_error">Casc amb plomes, capa al vent i clavant-li la llança al drac.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token>capa<exception postag="_GN_FS|LOC_ADV" postag_regexp="yes"/></token>
+                    <token regexp="yes">els?</token>
+                </pattern>
+                <message>¿Volíeu dir <suggestion>cap <match no="2" regexp_match="(?iu)e(ls?)" regexp_replace="a$1" case_conversion="preserve"/></suggestion>?</message>
+                <example correction="cap al">Vindran <marker>capa el</marker> final de la sessió.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <marker>
+                        <token>capa<exception postag="_GN_FS|LOC_ADV" postag_regexp="yes"/></token>
+                    </marker>
+                    <token postag="D.*" postag_regexp="yes"/>
+                </pattern>
+                <message>¿Volíeu dir <suggestion>cap a</suggestion>?</message>
+                <example correction="cap a">Vindran <marker>capa</marker> les 17 h.</example>
+                <example correction="cap a">Vindran <marker>capa</marker> dos quarts.</example>
+            </rule>
+        </rulegroup>
         <rulegroup id="CONTA_CONTRA" name="conta -> contra">
             <rule>
                 <pattern>
@@ -38328,6 +38416,16 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example>El cop de fuet que li feria la cara</example>
             </rule>
         </rulegroup>
+        <rule id="VEM_VAM" name="vem anar -> vam anar">
+            <pattern>
+                <marker>
+                    <token>vem</token>
+                </marker>
+                <token postag="V.N.*" postag_regexp="yes"/>
+            </pattern>
+            <message>¿Volíeu dir <suggestion>vam</suggestion> (per a indicar temps passat)?</message>
+            <example correction="Vam"><marker>Vem</marker> votar i vam guanyar.</example>
+        </rule>
         <rulegroup id="VEU_VAU" name="veu dir -> vau dir">
             <rule>
                 <pattern>
@@ -45377,8 +45475,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <token spacebefore="no">no</token>
             </pattern>
             <message>¿Volíeu dir <suggestion>\1-ho</suggestion>?</message>
+            <suggestion>\1-nos</suggestion>
             <suggestion>\1-ne</suggestion>
-            <example correction="poder-ho|poder-ne">No <marker>poder-no</marker> fer.</example>
+            <example correction="poder-ho|poder-nos|poder-ne">No <marker>poder-no</marker> fer.</example>
         </rule>
         <rule id="PEL_QUE_FA_EL" name="pel que fa *el/al">
             <antipattern>
@@ -51199,7 +51298,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         <rule id="SAN_SANT" name="san -> sant">
             <antipattern>
                 <token>san</token>
-                <token regexp="yes">Antonio|Pedro|José|Diego|Fernando|Miguel|Francisco|Giovanni|Jorge|Dalmazzo|Carlos|Callisto|Jerónimo|Cristóbal|Severino|Tomás|Pietro|Lorenzo|Lee|Fructuoso|Bartolomé|Espiridión|Giorgio|Biagio|Raimundo|Guinzo|Felipe|Marco|Vito</token>
+                <token regexp="yes">Antonio|Pedro|José|Diego|Fernando|Miguel|Francisco|Giovanni|Jorge|Dalmazzo|Carlos|Callisto|Jerónimo|Cristóbal|Severino|Tomás|Pietro|Lorenzo|Lee|Fructuoso|Bartolomé|Espiridión|Giorgio|Biagio|Raimundo|Guinzo|Felipe|Marco|Vito|Salvador</token>
             </antipattern>
             <antipattern>
                 <token>san</token>
@@ -58410,6 +58509,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </rule>
         </rulegroup>
         <rulegroup id="ELEMENTS_REPETITS" name="repetició: també... també">
+            <antipattern>
+                <token>molt</token>
+                <token>però</token>
+                <token>molt</token>
+            </antipattern>
             <rule>
                 <antipattern>
                     <marker>
@@ -59671,13 +59775,14 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         <rulegroup id="CAL_APOSTROFAR" name="apostrofació: ca l'Enric, de ca l'ample">
             <rule>
                 <pattern>
-                    <token>cal</token>
+                    <token>cal<exception postag="NP.*" postag_regexp="yes"/></token>
                     <token postag="NPMSSP0" regexp="yes">h?[aeiouàèéíòóú].*<exception regexp="yes">h?[ui][aeioàèéóò].+|&mots_HAC_ASPIRADA;|&mots_HAC_ASPIRADA2;</exception><exception postag="hac_aspirada|mot_foraster|UNKNOWN|NP..000" postag_regexp="yes"/></token>
                 </pattern>
                 <message>Cal apostrofar.</message>
                 <suggestion>ca l'<match no="2"/></suggestion>
                 <example correction="ca l'Enric"><marker>cal Enric</marker></example>
                 <example>ca l'Antoni</example>
+                <example>El Petit de Cal Eril.</example>
             </rule>
             <rule>
                 <pattern>
@@ -60210,6 +60315,18 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <filter class="org.languagetool.rules.spelling.multitoken.MultitokenSpellerFilter" args="requireRegexp:- keepSpaces:false"/>
                 <message>Possible error d'ortografia.</message>
                 <example correction="Rimski-Kórsakov"><marker>Rinsky-Korsakov</marker>.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token postag="UNKNOWN|_english_ignore_" postag_regexp="yes" regexp="yes">\p{L}..*<exception regexp="yes">&exceptions_multitoken_spell;|&particles_of;|.*\d.*</exception></token>
+                    <token>-</token>
+                    <token regexp="yes">\p{L}..*</token>
+                    <token>-</token>
+                    <token regexp="yes">\p{L}..*<exception regexp="yes">&exceptions_multitoken_spell;|&particles_of;|.*\d.*|sant</exception></token>
+                </pattern>
+                <filter class="org.languagetool.rules.spelling.multitoken.MultitokenSpellerFilter" args="requireRegexp:- keepSpaces:false"/>
+                <message>Possible error d'ortografia.</message>
+                <example correction="Abd al-Rahman|Abd-al-Rahman"><marker>Abd-al-Raḥmān</marker>.</example>
             </rule>
         </rulegroup>
     </category>
@@ -80056,6 +80173,71 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         </rule>
     </category>
     <category id="CASING" name="Majúscules i minúscules" type="typographical">
+        <rulegroup id="GOVERN" name="govern Francès -> govern francès">
+            <antipattern case_sensitive="yes">
+                <token>Govern</token>
+                <token>Balear</token>
+            </antipattern>
+            <rule>
+                <pattern>
+                    <token case_sensitive="yes">govern</token>
+                    <marker>
+                        <and>
+                            <token case_sensitive="yes" regexp="yes">\p{Lu}.*</token>
+                            <token regexp="yes" inflected="yes">&gentilicis_ONU;|&gentilicis_ALTRES;</token>
+                        </and>
+                    </marker>
+                </pattern>
+                <message>S'escriu en minúscula.</message>
+                <suggestion><match no="2" case_conversion="alllower"/></suggestion>
+                <example correction="francés">El govern <marker>Francés</marker> enacara no s'ha pronunciat.</example>
+            </rule>
+            <rule default="temp_off">
+                <pattern>
+                    <token postag="SENT_START|_PUNCT_SENT_START" postag_regexp="yes"/>
+                    <token case_sensitive="yes">Govern</token>
+                    <marker>
+                        <and>
+                            <token case_sensitive="yes" regexp="yes">\p{Lu}.*</token>
+                            <token regexp="yes" inflected="yes">&gentilicis_ONU;|&gentilicis_ALTRES;</token>
+                        </and>
+                    </marker>
+                </pattern>
+                <message>Si no forma part d'un nom propi, s'escriu en minúscula.</message>
+                <suggestion><match no="3" case_conversion="alllower"/></suggestion>
+                <example correction="francés">Govern <marker>Francés</marker>.</example>
+            </rule>
+            <rule default="temp_off">
+                <pattern>
+                    <token><exception postag="SENT_START|_PUNCT_SENT_START" postag_regexp="yes"/></token>
+                    <marker>
+                        <token case_sensitive="yes">Govern</token>
+                        <and>
+                            <token case_sensitive="yes" regexp="yes">\p{Lu}.*</token>
+                            <token regexp="yes" inflected="yes">&gentilicis_ONU;|&gentilicis_ALTRES;</token>
+                        </and>
+                    </marker>
+                </pattern>
+                <message>Si no forma part d'un nom propi, s'escriu en minúscula.</message>
+                <suggestion><match no="2" case_conversion="alllower"/> <match no="3" case_conversion="alllower"/></suggestion>
+                <example correction="govern francès">El <marker>Govern Francès</marker> s'hi va oposar.</example>
+            </rule>
+            <rule default="temp_off">
+                <!-- Cas molt dubtós. Pot ser el nom oficial en molts casos. -->
+                <pattern>
+                    <token><exception postag="SENT_START|_PUNCT_SENT_START" postag_regexp="yes"/></token>
+                    <marker>
+                        <token case_sensitive="yes">Govern</token>
+                    </marker>
+                    <token regexp="yes">de|d'</token>
+                    <token min="0" postag_regexp="yes" postag="DA.*"/>
+                    <token postag="NP..G.*" postag_regexp="yes"/>
+                </pattern>
+                <message>Si no forma part d'un nom propi, s'escriu en minúscula.</message>
+                <suggestion><match no="2" case_conversion="alllower"/></suggestion>
+                <example correction="govern">El <marker>Govern</marker> de França s'hi va oposar.</example>
+            </rule>
+        </rulegroup>
         <rulegroup id="DALAI_LAMA" name="dalai-lama">
             <rule>
                 <pattern>
@@ -80826,7 +81008,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 </antipattern>
                 <pattern>
                     <token>constitució</token>
-                    <token regexp="yes" inflected="yes">&gentilicis_ONU;|&genticis_ALTRES;</token>
+                    <token regexp="yes" inflected="yes">&gentilicis_ONU;|&gentilicis_ALTRES;</token>
                 </pattern>
                 <message>Majúscules i minúscules recomanades.</message>
                 <suggestion>Constitució <match no="2" case_conversion="alllower"/></suggestion>
@@ -95434,18 +95616,33 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             <example correction="Posats a fer"><marker>Ja posats</marker>, anem fins al final.</example>
             <example correction="Posats a fer"><marker>Ja posats</marker> podrien haver arribat fins al final.</example>
         </rule>
-        <rule id="DENT_ALL" name="dent d'all -> gra d'all">
-            <pattern>
-                <token inflected="yes">dent</token>
-                <token>d'</token>
-                <token>all</token>
-            </pattern>
-            <message>Expressió incorrecta.</message>
-            <suggestion><match no="1" postag="NC.(.).*" postag_regexp="yes" postag_replace="NCM$1000">gra</match> d'all</suggestion>
-            <suggestion><match no="1" postag="NC.(.).*" postag_regexp="yes" postag_replace="NCM$1000">all</match></suggestion>
-            <example correction="gra d'all|all">Hi vam posar una <marker>dent d'all</marker>.</example>
-            <example correction="grans d'all|alls">Hi vam posar tres <marker>dents d'all</marker>.</example>
-        </rule>
+        <rulegroup id="DENT_ALL" name="dent d'all -> gra d'all">
+            <rule>
+                <pattern>
+                    <token postag="D.*" postag_regexp="yes"/>
+                    <token inflected="yes">dent</token>
+                    <token>d'</token>
+                    <token>all</token>
+                </pattern>
+                <message>Expressió incorrecta.</message>
+                <suggestion><match no="1" postag_regexp="yes" postag="(D..).(.*)" postag_replace="$1M$2"/> <match no="2" postag="NC.(.).*" postag_regexp="yes" postag_replace="NCM$1000">gra</match> d'all</suggestion>
+                <suggestion><match no="1" postag_regexp="yes" postag="(D..).(.*)" postag_replace="$1M$2"/> <match no="2" postag="NC.(.).*" postag_regexp="yes" postag_replace="NCM$1000">all</match></suggestion>
+                <example correction="un gra d'all|un all">Hi vam posar <marker>una dent d'all</marker>.</example>
+                <example correction="dos grans d'all|dos alls">Hi vam posar <marker>dues dents d'all</marker>.</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token inflected="yes">dent</token>
+                    <token>d'</token>
+                    <token>all</token>
+                </pattern>
+                <message>Expressió incorrecta.</message>
+                <suggestion><match no="1" postag="NC.(.).*" postag_regexp="yes" postag_replace="NCM$1000">gra</match> d'all</suggestion>
+                <suggestion><match no="1" postag="NC.(.).*" postag_regexp="yes" postag_replace="NCM$1000">all</match></suggestion>
+                <example correction="gra d'all|all">Hi vam posar una <marker>dent d'all</marker>.</example>
+                <example correction="grans d'all|alls">Hi vam posar tres <marker>dents d'all</marker>.</example>
+            </rule>
+        </rulegroup>
         <rule id="BOCATERROSA" name="de bocaterrosa">
             <pattern>
                 <token>bocaterrosa<exception scope="previous">de</exception><exception postag="_GN_FS"/><exception scope="previous" regexp="yes" inflected="yes">ser|estar|romander|quedar|restar</exception></token>
@@ -111350,7 +111547,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <marker>
                         <token postag_regexp="yes" postag="NC.*|AQ.*" inflected="yes">homònim</token>
                     </marker>
-                    <token inflected="yes" regexp="yes">&gentilicis_ONU;|&genticis_ALTRES;</token>
+                    <token inflected="yes" regexp="yes">&gentilicis_ONU;|&gentilicis_ALTRES;</token>
                 </pattern>
                 <message>Per a parlar d'una persona amb un càrrec equivalent a una altra, el terme adequat és <suggestion><match no="2" postag="(NC|AQ0)(..).*" postag_regexp="yes" postag_replace="AQ0$20">homòleg</match></suggestion>.</message>
                 <example correction="homòleg">Amb el seu <marker>homònim</marker> català.</example>
@@ -117464,6 +117661,20 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <suggestion><match no="2" postag="(V.*)" postag_regexp="yes" postag_replace="$1">sentir</match></suggestion>
                 <example correction="senti">Ho posaré més fort perquè tothom ho <marker>escolti</marker> bé.</example>
             </rule>
+            <rule>
+                <pattern>
+                    <token regexp="yes" inflected="yes" skip="3">quedar|restar|romandre</token>
+                    <token>sense</token>
+                    <token min="0">poder</token>
+                    <marker>
+                        <token inflected="yes">escoltar</token>
+                    </marker>
+                </pattern>
+                <message>&msg_escoltar_sentir;</message>
+                <suggestion>sentir</suggestion>
+                <example correction="sentir">Ens vam quedar sense <marker>escoltar</marker>-lo.</example>
+                <example correction="sentir">Ens vam quedar sense poder <marker>escoltar</marker>-lo.</example>
+            </rule>
         </rulegroup>
         <rule id="TOTA_VEGADA_QUE" name="tota vegada que">
             <pattern>
@@ -120043,7 +120254,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </rule>
             <rule>
                 <pattern>
-                    <token>grans</token>
+                    <token regexp="yes">grans|sistemes</token>
                     <marker>
                         <token regexp="yes">complexes|reflexes|annexes</token>
                     </marker>
@@ -120052,6 +120263,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <message>¿Volíeu dir <suggestion><match no="2" regexp_match="(?iu)(.+)es" regexp_replace="$1os"/></suggestion> (nom masc. pl.) en comptes de "<match no="2"/>" (adj. fem. sing.)?</message>
                 <short>Possible confusió</short>
                 <example correction="reflexos">És un porter de grans <marker>reflexes</marker>, seguretat i personalitat.</example>
+                <example correction="complexos">Aconseguir incursions exitoses en sistemes <marker>complexes</marker>.</example>
             </rule>
             <rule>
                 <antipattern>
@@ -122523,7 +122735,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <marker>
                         <token regexp="yes">medis?|mitjos</token>
                     </marker>
-                    <token inflected="yes" regexp="yes">&gentilicis_ONU;|&genticis_ALTRES;</token>
+                    <token inflected="yes" regexp="yes">&gentilicis_ONU;|&gentilicis_ALTRES;</token>
                 </pattern>
                 <message>Si us referiu a mitjans de comunicació, cal dir <suggestion><match no="1" postag="(NC|D..)(M[SP]).*" postag_regexp="yes" postag_replace="NC$2000">mitjà</match></suggestion>.</message>
                 <short>Expressió incorrecta</short>
@@ -127262,7 +127474,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token>majoria</token>
                     <token>de</token>
                     <token min="0">les</token>
-                    <token regexp="yes">vegades|voltes</token>
+                    <token regexp="yes">vegades|voltes|dades</token>
                 </pattern>
                 <message>Val més usar una altra expressió.</message>
                 <suggestion>la major part de les \5</suggestion>
@@ -152725,6 +152937,11 @@ No t'ho explicaré, no cal que em burxis més-->
                 <token>pero</token>
                 <token regexp="yes">i|o|ni</token>
             </antipattern>
+            <antipattern>
+                <token>molt</token>
+                <token>pero</token>
+                <token>molt</token>
+            </antipattern>
             <rule>
                 <pattern>
                     <marker>
@@ -152802,6 +153019,11 @@ No t'ho explicaré, no cal que em burxis més-->
                 <token regexp="yes" skip="3">més|menys|poc</token>
                 <token postag="_PUNCT.*" postag_regexp="yes"/>
                 <example>Menys impulsiva però més sòlida.</example>
+            </antipattern>
+            <antipattern>
+                <token>molt</token>
+                <token>però</token>
+                <token>molt</token>
             </antipattern>
             <rule>
                 <pattern>

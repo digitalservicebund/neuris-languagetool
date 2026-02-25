@@ -111,8 +111,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     <!-- Unification rules retrieved from galician grammar.xml - END  -->
 
 
-    <category id="EUROPEAN_PORTUGUESE_PT_PT" name="[pt-PT] Português de Portugal">
-        <rule id='A_APRENDIZ' name="[pt-PT] Concordância: Variação (p.ex. juiz/juíza)">
+    <category id="EUROPEAN_PORTUGUESE_PT_PT" name="🇵🇹 Português de Portugal">
+        <rule id='A_APRENDIZ' name="🇵🇹 Concordância: Variação (p.ex. juiz/juíza)">
         <!--      Created by Marco A.G.Pinto, Portuguese rule      -->
             <pattern>
                 <token negate_pos="yes" postag="VMP.+|N.+|AQ.+" postag_regexp="yes"/>
@@ -132,7 +132,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
         <!-- DAR NA VISTA das nas vistas -->
         <!--      Created by Marco A.G.Pinto, Portuguese rule 2020-10-26 (21-OCT-2020+)     -->
-        <rule id='DAR_NA_VISTA' name="[pt-PT] Dar nas vistas">
+        <rule id='DAR_NA_VISTA' name="🇵🇹 Dar nas vistas">
             <pattern>
                 <token inflected='yes'>dar</token>
                 <marker>
@@ -145,7 +145,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rulegroup id="ARTICLES_PRECEDING_LOCATIONS" name="[pt-PT] Nomes geográficos que requerem artigo">
+        <rulegroup id="ARTICLES_PRECEDING_LOCATIONS" name="🇵🇹 Nomes geográficos que requerem artigo">
             <!-- Based on Catalan grammar.xml by Tiago F. Santos,  2017-09-05      -->
             <url>https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/toponimos-com-ou-sem-artigo/24569</url>
             <!--
@@ -397,7 +397,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
   <!-- ME DISSE Disse-me / ME DISSERAM Disseram-me / TE PODERIA Poder-te-ia / NOS PODERIAM Poder-nos-iam -->
-  <rulegroup id='PROCLISE_COMECO_FRASE' name="[pt-PT] Próclise começo frase">
+  <rulegroup id='PROCLISE_COMECO_FRASE' name="🇵🇹 Próclise começo frase">
       <!--      Created by Ricardo Joseh Lima and improved by Marco A.G.Pinto, Portuguese rule 2021-11-25 + 2021-12-02 (25-JUN-2021+)      -->
       <!--
           Me disse que ele veio. → Disse-me que ele veio.
@@ -567,7 +567,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
   </rulegroup>
 
-  <rule id="ACEITO_ACEITE" name="[pt-PT] aceito → aceite" >
+  <rule id="ACEITO_ACEITE" name="🇵🇹 aceito → aceite" >
       <pattern>
           <token regexp='yes' inflected='yes'>ser|estar|ficar|permanecer|parecer
           <exception>seres</exception></token>
@@ -583,7 +583,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
   </rule>
 
 
-  <rule id="EFEITO_ESTUFA" name="[pt-PT] Hifenização: Efeito-estufa">
+  <rule id="EFEITO_ESTUFA" name="🇵🇹 Hifenização: Efeito-estufa">
       <!-- Created by Marco A.G.Pinto, Portuguese rule, 2017-01-25 -->
       <pattern>
           <token regexp='yes'>efeitos?</token>
@@ -597,7 +597,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       <example correction="efeito de estufa|efeito estufa">O calor deve-se ao <marker>efeito-estufa</marker>.</example><!-- TODO Confirm if this is a case of AO changes. VOP (AO90) has 'efeito de estufa'. Verify per-AO. -->
   </rule>
 
-  <rulegroup id='INVARIABLE_NOUNS' name="[pt-PT] Substantivos invariáveis">
+  <rulegroup id='INVARIABLE_NOUNS' name="🇵🇹 Substantivos invariáveis">
       <!-- Created by Tiago F. Santos, Portuguese rule, 2017-06-18 -->
       <short>Expressão invariável</short>
       <rule>
@@ -800,7 +800,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-      <rule id='INVARIABLE_NOUNS_ÀS_CUSTAS_DA_DAS_DO_DOS' name="[pt-PT][Confusão] 'às custas'/'à custa'">
+      <rule id='INVARIABLE_NOUNS_ÀS_CUSTAS_DA_DAS_DO_DOS' name="🇵🇹[Confusão] 'às custas'/'à custa'">
       <!-- Created by Marco A.G.Pinto, Portuguese rule 2022-09-20 (Checked/Enhanced) (25-JUL-2022+) -->
           <pattern>
               <marker>
@@ -817,7 +817,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-      <rule id='INVARIABLE_NOUNS_POR_MOMENTO_POR_MOMENTOS' name="[pt-PT] 'por momento'/'por momentos'">
+      <rule id='INVARIABLE_NOUNS_POR_MOMENTO_POR_MOMENTOS' name="🇵🇹 'por momento'/'por momentos'">
           <pattern>
               <marker>
                   <token>por</token>
@@ -835,7 +835,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
   <!-- MEIO CHEIA meio-cheia -->
-  <rule id='MEIO_ADJETIVO_HÍFEN_PT_PT' name="[pt-PT] Hifenizar 'meio' + adjetivo">
+  <rule id='MEIO_ADJETIVO_HÍFEN_PT_PT' name="🇵🇹 Hifenizar 'meio' + adjetivo">
       <!-- Created by Marco A.G.Pinto with Ricardo Joseh Lima suggestions, Portuguese rule 2022-11-11 (25-JUL-2022+) -->
       <!--
           A garrafa está meio cheia. → A garrafa está meio-cheia.
@@ -857,7 +857,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
   </rule>
 
 
-  <rule id='PHRASAL_VERB_RESIDIR_EM' name='[pt-PT] Regência verbal: Residir em'>
+  <rule id='PHRASAL_VERB_RESIDIR_EM' name='🇵🇹 Regência verbal: Residir em'>
       <!--      Created by Tiago F. Santos, 2018-09-19      -->
       <!--antipattern>
           <token regexp='yes'>residentes?|morador(?:es)?</token>
@@ -922,7 +922,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
   </rule>
 
 
-  <rulegroup id="POSSESSIVE_WITHOUT_ARTICLE" name="[pt-PT] Determinante possessivo sem artigo">
+  <rulegroup id="POSSESSIVE_WITHOUT_ARTICLE" name="🇵🇹 Determinante possessivo sem artigo">
       <!-- Improved by Tiago F. Santos, Portuguese rule, 2016-10-18 -->
       <!--     Base rule id="A_SUA" name="a sua" by Marco Pinto -->
       <!--
@@ -1701,7 +1701,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
   </rulegroup>
 
 
-  <rule id='SEQUER_WITHOUT_NEGATIVE' name='[pt-PT] Sequer sem negativa'>
+  <rule id='SEQUER_WITHOUT_NEGATIVE' name='🇵🇹 Sequer sem negativa'>
       <!--      Created by Tiago F. Santos, 2017-03-05      -->
       <antipattern>
           <token regexp='yes' skip='-1'>&negacoes;</token>
@@ -1724,7 +1724,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rule>
 
 
-    <rule id='TODOS_FOLLOWED_BY_NOUN_SINGULAR' name="[pt-PT] Expressão: Todo + 'nome sem artigo'">
+    <rule id='TODOS_FOLLOWED_BY_NOUN_SINGULAR' name="🇵🇹 Expressão: Todo + 'nome sem artigo'">
         <!-- FIXME: too many matches -->
         <!-- Created by Tiago F. Santos, 2017-10-12 -->
         <antipattern>
@@ -1769,7 +1769,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 </rule>
 
 
-<rule id="VERBO_GENERAL_VERB_AGREEMENT_ERRORS_PT" name="[pt-PT] Erro de concordância verbal">
+<rule id="VERBO_GENERAL_VERB_AGREEMENT_ERRORS_PT" name="🇵🇹 Erro de concordância verbal">
     <antipattern>
         <token regexp='yes' case_sensitive='yes'>e|ou</token>
         <token>tu</token>
@@ -1787,7 +1787,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 </rule>
 
 
-<rulegroup id='VERBO_HIFENIZADOR_VERBOS_1' name='[pt-PT] Colocações pronominais: mesóclise'>
+<rulegroup id='VERBO_HIFENIZADOR_VERBOS_1' name='🇵🇹 Colocações pronominais: mesóclise'>
     <!-- Created by Tiago F. Santos , Portuguese rule, 2016-11-04 -->
     <url>https://pt.wikipedia.org/wiki/Coloca%C3%A7%C3%A3o_pronominal</url>
     <short>Erro de colocação pronominal</short>
@@ -1815,7 +1815,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 </rulegroup>
 
 
-<rulegroup id='VERBO_HIFENIZADOR_VERBOS_2' name='[pt-PT] Colocações pronominais dois termos'>
+<rulegroup id='VERBO_HIFENIZADOR_VERBOS_2' name='🇵🇹 Colocações pronominais dois termos'>
     <!-- Created by Tiago F. Santos , Portuguese rule, 2016-11-04 -->
     <!-- Brazilian Portuguese has some inverted colocations  -->
     <!--
@@ -2858,7 +2858,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
   </rulegroup>
 
-<rule id="CLITIC_AS_SUBJECT_TE_SER" name="[pt-PT] te → tu (sujeito)">
+<rule id="CLITIC_AS_SUBJECT_TE_SER" name="🇵🇹 te → tu (sujeito)">
   <pattern>
     <token postag="SENT_START" postag_regexp="no"/>
     <marker>
@@ -2871,7 +2871,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
   <example correction="Tu"> <marker>Te</marker> és muito inteligente.</example>
 </rule>
 
-<rule id="CLITIC_AS_SUBJECT_ME_SER" name="[pt-PT] me → eu (sujeito)">
+<rule id="CLITIC_AS_SUBJECT_ME_SER" name="🇵🇹 me → eu (sujeito)">
   <pattern>
     <token postag="SENT_START" postag_regexp="no"/>
     <marker>
@@ -2886,7 +2886,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
   <!-- LHE(S)/TE/VOS + VERB verb-lhe(s)/me/te/vos -->
-  <rule id='VERBO_PRONOME_PESSOAL_VERB' name="[pt-PT] Pron. Pessoal + Verbo → Verbo + - + Pron. Pessoal">
+  <rule id='VERBO_PRONOME_PESSOAL_VERB' name="🇵🇹 Pron. Pessoal + Verbo → Verbo + - + Pron. Pessoal">
       <!-- Created by Marco A.G.Pinto, Portuguese rule 2022-09-19 (Checked/Enhanced) (25-JUL-2022+) -->
       <!--
           Lhe amo muito. → Amo-lhe muito.
@@ -2945,7 +2945,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rule>
 
 
-    <rulegroup id='PRECISAR_DE_PT_PT_V2' name="[pt-PT] Verbo precisar de">
+    <rulegroup id='PRECISAR_DE_PT_PT_V2' name="🇵🇹 Verbo precisar de">
         <!-- ChatGPT 5 and new disambiguator for 2026+ -->
 
         <antipattern> <!-- Verb "ser"/"estar" -->
@@ -3021,7 +3021,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rulegroup>
 
 
-    <rule id="ZERO_MEDIDA_SINGULAR" name="[pt-PT] Concordância de número: 'zero grau'">
+    <rule id="ZERO_MEDIDA_SINGULAR" name="🇵🇹 Concordância de número: 'zero grau'">
         <!-- Created by Tiago F. Santos, Portuguese rule, 2017-09-23 -->
 
         <!-- MARCOAGPINTO 2022-09-21 (Checked/Enhanced) (25-JUL-2022+) *START* -->
@@ -3065,7 +3065,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         <example>Assim, com a divisão de valores mais próximos do zero, o resultado será o zero absoluto.</example>
         <example>Teoricamente, ao cessar a agitação térmica das moléculas a pressão é nula, e atinge-se o zero absoluto.</example>
     </rule>
-    <rule id='DAÍ' name="[pt-PT] Contração: de aí">
+    <rule id='DAÍ' name="🇵🇹 Contração: de aí">
         <!-- Created by Marco A.G. Pinto, Portuguese rule -->
         <pattern>
             <marker>
@@ -3079,7 +3079,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rule>
 
     <!-- TROCAS-TE trocaste -->
-    <rulegroup id='HIFEN_INTRUSIVO' name="[pt-PT] Verbo com hífen intrusivo">
+    <rulegroup id='HIFEN_INTRUSIVO' name="🇵🇹 Verbo com hífen intrusivo">
         <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-03-30 + 2021-03-31 + 2021-05-31 (17-MAR-2021+)      -->
         <rule>
             <!--
@@ -3121,7 +3121,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
     </rulegroup>
 
-    <rulegroup id='REFLEXIVO_CONJUNTIVO' name='[pt-PT] Confusão de Tempo Verbal: Conjuntivo - Reflexivo' default='off'><!-- XXX rethink rule. too many false positives -->
+    <rulegroup id='REFLEXIVO_CONJUNTIVO' name='🇵🇹 Confusão de Tempo Verbal: Conjuntivo - Reflexivo' default='off'><!-- XXX rethink rule. too many false positives -->
         <!-- Created by Tiago F. Santos, 2017-08-25 -->
         <url>https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/as-formas-verbais-com-sse-ou-com--se/11603</url>
         <rule>
@@ -3174,10 +3174,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 </category>
 
 
-<category id="CONTRACTIONS_PT_PT" name="[pt-PT] Contrações">
+<category id="CONTRACTIONS_PT_PT" name="🇵🇹 Contrações">
 
 
-    <rulegroup type='grammar' id="CONTRAÇÕES_2_PT_PT" name="[pt-PT] Contrações" default='on'>
+    <rulegroup type='grammar' id="CONTRAÇÕES_2_PT_PT" name="🇵🇹 Contrações" default='on'>
         <!-- Created by Tiago F. Santos, Portuguese rule, 2016-10-31 -->
         <!-- XXX Default off to avoid alarm fatigue. Reactivate when there is a color code/custom highlight system working on LibreOffice -->
         <url>https://pt.wiktionary.org/wiki/Ap%C3%AAndice:Combina%C3%A7%C3%B5es_e_contra%C3%A7%C3%B5es_do_portugu%C3%AAs</url>
@@ -3200,7 +3200,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
             <token>de</token>
         </antipattern>
 
-        <rule id='CONTRAÇÃO_DOUTREM_PT_PT' name='[pt-PT][Contração] De outro/outrem → doutro/doutrem' default='off'>
+        <rule id='CONTRAÇÃO_DOUTREM_PT_PT' name='🇵🇹[Contração] De outro/outrem → doutro/doutrem' default='off'>
             <pattern>
                 <token>de</token>
                 <token case_sensitive="yes" regexp='yes'>outrem|outr[ao]s?</token>
@@ -3213,7 +3213,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
             <example correction='doutras'><marker>de outras</marker>.</example>
         </rule>
 
-        <rule id='CONTRAÇÃO_DUM2_PT_PT' name='[pt-PT][Contração] De um(a)(s)/uns → dum(a)(s)/duns' default='off'>
+        <rule id='CONTRAÇÃO_DUM2_PT_PT' name='🇵🇹[Contração] De um(a)(s)/uns → dum(a)(s)/duns' default='off'>
             <pattern>
                 <marker>
                     <token>de</token>
@@ -3229,7 +3229,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
             <example correction='duns'><marker>de uns</marker> rios.</example>
         </rule>
 
-        <rule id='CONTRAÇÃO_EM_UM_NUM_PT_PT' name='[pt-PT][Contração] Em um(a) → num(a)' default='on'>
+        <rule id='CONTRAÇÃO_EM_UM_NUM_PT_PT' name='🇵🇹[Contração] Em um(a) → num(a)' default='on'>
             <!-- MARCOAGPINTO 2023-02-03 (Checked/Enhanced) (25-JUL-2022+) *START* -->
             <antipattern>
                 <token regexp="no">em</token>
@@ -3262,7 +3262,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rulegroup>
 
 
-    <rulegroup id='O_FACTO_DA_AÇÃO' name="[pt-PT] Contração: expressão invariável com contração (p.ex. o facto da/de a)" default='off'>
+    <rulegroup id='O_FACTO_DA_AÇÃO' name="🇵🇹 Contração: expressão invariável com contração (p.ex. o facto da/de a)" default='off'>
         <url>https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/preposicao-seguida-de-artigo-definido-sem-contracao/32586</url>
         <!-- Created by Marco A.G. Pinto, Portuguese rule -->
         <rule>
@@ -3313,10 +3313,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
   </category>
 
 
-  <category id='REGIONALISMS_PT_PT' name='[pt-PT] Regionalismos'>
+  <category id='REGIONALISMS_PT_PT' name='🇵🇹 Regionalismos'>
 
 
-      <rule id='BRASILEIRISMO_ATERRISAR' name='[pt-PT][Brasileirismo] aterrisar → aterrar'>
+      <rule id='BRASILEIRISMO_ATERRISAR' name='🇵🇹[Brasileirismo] aterrisar → aterrar'>
           <!-- Created by Tiago F. Santos , Portuguese rule, 2017-04-12 -->
           <pattern>
               <token regexp='yes'>aterri(?:z|ss?).+</token>
@@ -3326,7 +3326,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-      <rule id='BRASILEIRISMO_CONTROLO_CONTROLE' name='[pt-PT][Brasileirismo] controle → controlo'>
+      <rule id='BRASILEIRISMO_CONTROLO_CONTROLE' name='🇵🇹[Brasileirismo] controle → controlo'>
           <!-- Created by Marco A.G.Pinto , Portuguese rule -->
           <pattern>
               <token regexp="yes">(?:d|n|outr|pel)?os?|de|(?:alg|d|n)?(?:um|uns)|em</token>
@@ -3340,7 +3340,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-      <rule id='BRASILEIRISMO_CONTROLO_CONTROLE_SOB' name="[pt-PT][Brasileirismo] 'sob controle' → 'sob controlo'">
+      <rule id='BRASILEIRISMO_CONTROLO_CONTROLE_SOB' name="🇵🇹[Brasileirismo] 'sob controle' → 'sob controlo'">
           <!-- Created by Marco A.G.Pinto , Portuguese rule -->
           <pattern>
               <token>sob</token>
@@ -3351,7 +3351,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-      <rule id='BRASILEIRISMO_DECOLAR' name='[pt-PT][Brasileirismo] decolar → descolar'>
+      <rule id='BRASILEIRISMO_DECOLAR' name='🇵🇹[Brasileirismo] decolar → descolar'>
           <!-- Created by Tiago F. Santos , Portuguese rule, 2017-04-12 -->
           <pattern>
               <token regexp='yes'>decol.+</token>
@@ -3361,7 +3361,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-      <rule id="EQUIPES" name="[pt-PT][Brasileirismo] equipes → equipas">
+      <rule id="EQUIPES" name="🇵🇹[Brasileirismo] equipes → equipas">
           <!-- Created by Marco A.G.Pinto , Portuguese rule -->
           <pattern>
               <token regexp="yes">(?:d|n|outr|pel)?[ao]s?|(?:alg|d|n)?(?:um(a|as)?|uns)|em|(?:sua|[nv]ossa|tua)s?</token>
@@ -3375,7 +3375,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-      <rule id='BRASILEIRISMO_EXPERIMENTO' name='[pt-PT][Brasileirismo] experimento → experiência'>
+      <rule id='BRASILEIRISMO_EXPERIMENTO' name='🇵🇹[Brasileirismo] experimento → experiência'>
           <!-- Created by Tiago F. Santos , Portuguese rule, 2017-04-12 -->
           <pattern>
               <token postag="[AD]..M[SP].+" postag_regexp='yes'/>
@@ -3389,7 +3389,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-     <rule id='BRASILEIRISMO_ESTAR_DE_SACO_CHEIO' name="[pt-PT][Brasileirismo] estar 'de saco cheio' → farto/saturado">
+     <rule id='BRASILEIRISMO_ESTAR_DE_SACO_CHEIO' name="🇵🇹[Brasileirismo] estar 'de saco cheio' → farto/saturado">
           <pattern>
               <token skip='2' postag='VM.+' postag_regexp='yes' inflected='yes' regexp='no'>estar</token>
               <marker>
@@ -3410,7 +3410,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-     <rule id='BRASILEIRISMO_MACHUCAR' name="[pt-PT][Brasileirismo] machucar → magoar/aleijar/ferir">
+     <rule id='BRASILEIRISMO_MACHUCAR' name="🇵🇹[Brasileirismo] machucar → magoar/aleijar/ferir">
           <pattern>
               <token inflected='yes' regexp='no'>machucar</token>
           </pattern>
@@ -3422,7 +3422,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-      <rule id='BRASILEIRISMO_PRIVADA' name="[pt-PT][Brasileirismo] 'privada sanitária', 'vaso sanitário' → retrete">
+      <rule id='BRASILEIRISMO_PRIVADA' name="🇵🇹[Brasileirismo] 'privada sanitária', 'vaso sanitário' → retrete">
           <!-- Created by Tiago F. Santos , Portuguese rule, 2017-04-12 -->
           <pattern>
               <token regexp='yes'>privada|vaso</token>
@@ -3434,7 +3434,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-      <rule id='BRASILEIRISMO_REVISAR' name='[pt-PT][Brasileirismo] revisar → rever'>
+      <rule id='BRASILEIRISMO_REVISAR' name='🇵🇹[Brasileirismo] revisar → rever'>
           <!-- Created by Tiago F. Santos , Portuguese rule, 2017-04-12 -->
           <pattern>
               <token inflected='yes'>revisar</token>
@@ -3444,7 +3444,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-      <rule id="BRASILEIRISMO_SOBRADO" name="[pt-PT][Brasileirismo] sobrado → vivenda">
+      <rule id="BRASILEIRISMO_SOBRADO" name="🇵🇹[Brasileirismo] sobrado → vivenda">
           <!-- Created by Tiago F. Santos , Portuguese rule, 2017-04-12 -->
           <pattern>
               <token case_sensitive='yes'>sobrado
@@ -3455,7 +3455,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
   </rule>
 
 
-  <rule id='BRASILEIRISMO_TIMES' name='[pt-PT][Brasileirismo] time → equipa'>
+  <rule id='BRASILEIRISMO_TIMES' name='🇵🇹[Brasileirismo] time → equipa'>
       <!-- Created by Tiago F. Santos , Portuguese rule, 2017-04-12 -->
       <antipattern>
           <token regexp='yes'>part|full</token>
@@ -3471,7 +3471,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
   </rule>
 
 
-  <rule id='BRASILEIRISMO_XINGAR' name='[pt-PT][Brasileirismo] xingar → gozar'>
+  <rule id='BRASILEIRISMO_XINGAR' name='🇵🇹[Brasileirismo] xingar → gozar'>
       <!-- Created by Tiago F. Santos , Portuguese rule, 2017-04-12 -->
       <pattern case_sensitive='yes'>
           <token regexp='yes'>xing.+</token>
@@ -3482,7 +3482,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
   </rule>
 
 
-  <rule id='ZERO_IN_DAYS_OF_THE_MONTH' name="[pt-PT] Datas: zeros nos dias do mês">
+  <rule id='ZERO_IN_DAYS_OF_THE_MONTH' name="🇵🇹 Datas: zeros nos dias do mês">
       <!--       Created by Tiago F. Santos,  2019-09-05      -->
       <pattern>
           <token regexp='yes'>0\d</token>
@@ -3499,10 +3499,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
   </category>
 
 
-  <category id="AO90_RULES_PT_PT" name="[pt-PT] Regras do Acordo Ortográfico de 90 (pós-AO90)" type="misspelling" default='on'>
+  <category id="AO90_RULES_PT_PT" name="🇵🇹 Regras do Acordo Ortográfico de 90 (pós-AO90)" type="misspelling" default='on'>
 
 
-      <rulegroup id="AO90_AVÉ_MARIA" name="[pt-PT][AO90] avé/ave Maria">
+      <rulegroup id="AO90_AVÉ_MARIA" name="🇵🇹[AO90] avé/ave Maria">
       <!-- Created by Marco A.G.Pinto, Portuguese rule 2022-08-13 (Checked/Enhanced) (25-JUL-2022+) -->
           <rule>        
               <pattern>
@@ -3531,7 +3531,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rulegroup>
 
 
-      <rule id="AO90_TONIC_SYLLABLES" name="[pt-PT][AO90] Terminações sem acento">
+      <rule id="AO90_TONIC_SYLLABLES" name="🇵🇹[AO90] Terminações sem acento">
           <pattern>
               <token regexp='yes'>.+((?:óid[oae]|óic[oa]|ói[ao])s?)$
               <exception postag_regexp='yes' postag='NP.+'/></token>
@@ -3547,7 +3547,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
   </rule>
 
 
-  <rulegroup id='AO90_COMPOUNDS_GENERIC_PREFIX' name='[pt-PT][AO90] Hifenizador de palavras'>
+  <rulegroup id='AO90_COMPOUNDS_GENERIC_PREFIX' name='🇵🇹[AO90] Hifenizador de palavras'>
       <!--            COMPOSTAS DO NOVO ACORDO ORTOGRÁFICO          -->
       <!-- Created by Tiago F. Santos , Portuguese rule, 2016-12-02 -->
       <!--  <url>http://www.portaldalinguaportuguesa.org/INDEX.PHP?action=vop&page=crit1</url>
@@ -3972,7 +3972,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 </rulegroup>
 
 
-<rulegroup id='AO90_ACCENTUATED_PREFIXES' name='[pt-PT][AO90] Prefixos acentuados'>
+<rulegroup id='AO90_ACCENTUATED_PREFIXES' name='🇵🇹[AO90] Prefixos acentuados'>
     <!-- Created by Tiago F. Santos , Portuguese rule, 2017-08-15 -->
     <rule>
         <pattern>
@@ -4013,7 +4013,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 </rulegroup>
 
 
-<rule id='AO90_HIPHEN_REMOVALS' name='[pt-PT][AO90] Palavras que deixam de ser hifenizadas'>
+<rule id='AO90_HIPHEN_REMOVALS' name='🇵🇹[AO90] Palavras que deixam de ser hifenizadas'>
     <!-- Created by Tiago F. Santos , Portuguese rule, 2017-04-19 -->
     <regexp>(?:c(?:a(?:b(?:e(?:ça(?:-(?:de-(?:c(?:a(?:r(?:neiro|taz)|valo|sal)|obra)|a(?:(?:lho-choch|sn)o|bóbora|velã)|(?:t(?:remoç|urc)|burr|vent)o|p(?:o(?:nte|rco)|rego|au)|m(?:edusa|otim)|s(?:ecção|érie)|lista)|no-ar)|s-(?:de-(?:c(?:a(?:r(?:neiro|taz)|sal)|obra)|s(?:(?:anto-antóni|ecçã)o|érie)|a(?:lho-chocho|bóbora|velã)|(?:t(?:remoç|urc)|vent)o|p(?:onte|rego|au)|m(?:edusa|otim)|lista)|no-ar))|lo(?:s-d(?:e-(?:raposa|anjo)|as-feiticeiras)|-d(?:as-feiticeiras|e-anjo)))|os?-de-(?:esquad|guer)ra)|(?:p(?:it(?:ão-de-(?:(?:mar-e-guer|bandei)r|(?:corve|fraga)t)|ões-de-(?:(?:mar-e-guer|bandei)r|fragat))|a-de-chuv)|chorros?-da-arei|gas?-na-saquinh)a|ixa(?:-d(?:e-(?:r(?:essonância|ufo)|(?:pirolit|ócul)os|música|ar)|os-pirolitos)|s-de-(?:(?:pirolit|ócul)os|música|rufo|ar))|r(?:a(?:s-de-(?:nó-cego|pau)|-de-(?:nó-cego|pau))|t(?:(?:ões|ão)-de-visita|as?-de-prego)|ne-de-so(?:is|l)|reiras?-de-tiro)|mi(?:sa(?:-d(?:e-(?:(?:onze-vara|vénu)s|forças?)|o-pano)|s-de-(?:(?:onze-var|forç)a|vénu)s)|nhos?-de-ferro)|v(?:alo(?:-d(?:e-(?:batalh|fris)a|o-cão)|s-d(?:e-batalha|o-cão))|eiras?-da-noite)|s(?:ca(?:s-de-(?:carvalho|noz)|-de-(?:carvalho|noz))|acos?-de-couro)|n(?:a(?:(?:is|l)-d[ae]-arei|-de-roc)a|to(?:-d[eo]|s-de)-cisne)|tingas?-de-bode)|o(?:r(?:es-de-(?:(?:tijol|vinh)o|laranja)|-de-(?:(?:tijol|vinh)o|laranja)|po-a-corpo)|nto(?:s-d(?:a-carochinha|o-vigário)|-d(?:a-carochinha|o-vigário))|va(?:-do-ladr(?:ões|ão)|s-do-ladrão)|m(?:idas?-de-urso|es?-e-dorme)|letes?-de-forças)|h(?:a(?:péu(?:-de-(?:so(?:is|l)|chuva)|s-de-(?:chuva|sol))|lotinhas-do-gerês)|uvas?-de-ouro|efe-de-fila)|(?:ent(?:áureas?-menor-perfolhad|ro-de-mes)|éus?-da-boc)a|â(?:nhamos?-de-manila|maras?-de-ar)|u(?:rral-de-trapiche|s?-de-judas)|ravagem-do-centeio)|p(?:a(?:i(?:-d(?:e-(?:(?:velhac|menin|tod)os|santo)|os-meninos)|s-d(?:e-(?:velhacos|santo)|os-meninos))|u(?:-(?:d(?:e-(?:(?:cabe|fi)leira|sabão)|o-ar)|a-pique)|s-(?:de-sabão|a-pique))|po(?:-de-(?:anjo|peru|rola)|s-de-(?:anjo|peru))|l(?:pos-de-aranha|ha-de-abade)|ssarinho-a-olhar|z(?:es)?-de-alma|r-ou-pernão)|e(?:d(?:r(?:a(?:-d(?:e-(?:(?:a(?:mol|fi)|cev)ar|(?:sang|toq)ue|águia|raio)|a(?:s-amazonas|-lua)|o-(?:so(?:is|l)|ar))|s-d(?:e-(?:(?:a(?:mol|fi)|cev)ar|águia|toque|raio)|o-(?:sol|ar)|a-lua))|inha-na-boca)|aços?-de-asno)|rna(?:-de-(?:serra|pau)|s-de-pau)|ito-de-(?:canga|morte)|les?-de-vinho)|é(?:-de-(?:c(?:a(?:n(?:(?:tig)?a|deeiro)|valo|bra)|humbo)|a(?:l(?:feres|tar)|tleta|migo)|(?:galinh|danç)a|(?:molequ|lebr)e|(?:ven|pa)to|b(?:anco|oi))|s-de-(?:(?:galinh|atlet)a|c(?:humbo|abra)|lebre|vento|boi))|ã(?:o-(?:d(?:e-(?:(?:passarinh|gal)o|aç(?:ú|u)car|l(?:eite|ó))|o-chile)|por-Deus)|es-d(?:e-(?:(?:passarinh|gal)o|l(?:eite|ó)|açucar)|o-chile))|i(?:n(?:go(?:-de-tocha|s-de-ovos)|ho-de-flandres)|(?:(?:ões|ão)-das-nica|anos?-dos-preto)s|olho-de-cobra)|o(?:r(?:ta(?:-(?:a-port|da-ru)|s-a-port)a|es-do-sol)|mo(?:-de-ad(?:ões|ão)|s-de-adão)|ntas?-de-lança)|r(?:e(?:ss(?:ões|ão)-de-ar|tos?-e-branco)|ontos?-a-(?:vesti|come)r|íncipe-de-gales)|ó(?:-de-(?:(?:sapat|talc)o|chipre|arroz|goa)|s-de-(?:chipre|arroz|goa))|ôr(?:-do-so(?:is|l)|s-do-sol))|b(?:i(?:c(?:h(?:o(?:s-d(?:o-(?:burac|ouvid|mat)o|e-sete-cabeças)|-d(?:o-(?:burac|ouvid|mat)o|e-sete-cabeças))|a(?:s-de-(?:sete-cabeças|rabear)|-de-(?:sete-cabeças|rabear)))|o(?:-de-(?:p(?:a(?:pagai|t)o|omba)|g(?:avião|ás)|mocho|obra)|s-de-(?:p(?:a(?:pagai|t)o|omba)|g(?:avião|ás)|obra)))|lhete(?:s-de-(?:identidade|visita)|-de-(?:identidade|visita))|fe-de-caneca)|o(?:ca(?:-de-(?:f(?:avas|ogo)|si(?:no|ri)|incêndio)|s-de-(?:(?:incêndi|fog|lob)o|si(?:no|ri)))|(?:t(?:(?:ões|ão)-de-our|as?-de-elástic)|(?:ns|m)-de-bic)o|la(?:s-(?:ao-cesto|de-neve)|-(?:ao-cesto|de-neve))|a-vai-ela)|a(?:r(?:riga(?:s-de-(?:freira|bicho)|-de-(?:freira|bicho))|ba-de-baleia|ca-de-ouro)|ba(?:-de-(?:camelo|moça)|s-de-camelo)|l(?:ões|ão)-de-ensaio|irros?-de-lata)|ra(?:ço(?:-de-(?:preguiça|armas|ferro)|s-de-(?:preguiça|ferro))|vos?-de-mundão|nco-de-baleia)|(?:ênç(?:ões|ão)-de-deu|uchas?-dos-caçadore)s|e(?:xigas?-de-lobo|ijos?-de-moça)|álsamo-do-canadá)|f(?:o(?:go(?:-d(?:e-(?:sant(?:o-ant(?:ões|ão)|elmo)|(?:bengal|vist)a|artifício)|o-ar)|s-d(?:e-(?:(?:sant(?:o-antã|elm)|artifíci)o|(?:bengal|vist)a)|o-ar))|cinho(?:s-de-(?:(?:burr|porc)o|tenca)|-de-(?:(?:burr|porc)o|tenca))|ra(?:s-d(?:e-jogo|a-lei)|-d(?:e-jogo|a-lei))|lh(?:a-de-flandres|os-de-sinhá))|a(?:to(?:-de-(?:(?:saia-e-cas|mac)ac|trein|banh)|s-de-(?:macac|trein|banh))o|c(?:es?-a-face|a-de-mato)|rinhas?-de-pau|zs?-de-conta)|i(?:(?:lho-d(?:e-parid|a-terr)|sca(?:is|l)-de-linh|(?:ns|m)-de-seman)a|o(?:s-de-(?:prumo|ovos)|-de-prumo))|e(?:bre-d(?:os-(?:três-dia|feno)s|e-malta)|rro-de-(?:engomar|romã)|zes-de-ouro)|r(?:adinho-d[ae]-mão-furada|entes?-a-frente|utos-do-mar)|u(?:mos?-da-terra|la-de-gabu)|lor-de-enxofre)|m(?:a(?:r(?:i(?:a-da(?:s-pernas-compridas|-fonte)|do-de-bolas)|c(?:o-de-colónia|a-de-judas)|mita-de-gigante)|nga-de-(?:alpaca|eixo)|çã-de-ad(?:ões|ão)|tutas?-e-meia)|e(?:s(?:tre(?:-de-(?:cerimóni|arm|obr)|s-de-(?:cerimóni|obr))as|(?:inha|as?)-de-cabeceira)|nina-d(?:e-cinco-olhos|o-olho)|adinha-de-ouro|ias?-de-leite)|ã(?:e(?:-d(?:e-(?:aluguer|santo)|a-lua)|s-d(?:e-santo|a-lua))|o(?:-de-(?:(?:barc|obr)a|judas)|s-de-obra))|o(?:scas-de-mil(?:ões|ão)|ços?-de-forcado|ntes?-de-vénus|rtes?-em-pé)|ulhers?-a-dias)|a(?:z(?:u(?:is-d(?:a-prússia|e-metileno)|l-d(?:a-prússia|e-metileno))|eite(?:s-de-(?:cheiro|pau)|-de-(?:cheiro|pau)))|l(?:godão-(?:d(?:as-(?:laranj|oliv)eiras|e-vidro)|em-rama)|m(?:écega-do-brasi[ls]|as?-do-padeiro)|finetes?-de-ama)|r(?:co(?:-d(?:a-(?:alianç|chuv)a|e-deus)|s-da-(?:alianç|chuv)a)|r(?:uda-dos-muros|oz-de-cuxá))|judante(?:s-de-(?:ordens|campo)|-de-(?:ordens|campo))|n(?:gus?-de-caroço|jos?-da-guarda)|m(?:igos?-da-onça|a-de-leite)|çúcar-de-madeira|chas?-de-armas|utos?-de-fé)|t(?:e(?:rra(?:-(?:de-(?:s(?:evilh|ien)a|ninguém)|a-terra)|s-a-terra)|sta(?:s-de-(?:ferro|ponte)|-de-(?:ferro|ponte)))|i(?:nta(?:s-d(?:os-pobres|a-china)|-d(?:os-pobres|a-china))|r(?:as?-que-ti|o-de-guer)ra)|o(?:r(?:rão-de-alicante|nas?-e-torna)|ucinhos?-do-céu|pas?-a-tudo)|r(?:o(?:(?:uxas?|ixa)-de-ovos|mba-de-boi)|intas?-e-um)|êtes?-à-tête|énis-de-mesa)|r(?:abo(?:s-de-(?:(?:a(?:ndorinh|rrai)|sai)a|(?:cav|g)alo|leque|tatu)|-de-(?:(?:a(?:ndorinh|rrai)|sai)a|(?:cav|g)alo|leque|tatu))|e(?:lógio(?:s-d(?:a-morte|e-ponto)|-d(?:a-morte|e-ponto))|sina-de-jalapa)|o(?:sa-d(?:e-o[iu]ro|os-ventos)|upa-de-franceses)|és-do-ch(?:ões|ão))|s(?:a(?:l-de-(?:s(?:eldlitz|aturno)|(?:júpit|glaub)er|azedas|epsom|vichy)|c(?:a-de-carv(?:ões|ão)|o-de-areia)|ída-de-(?:banho|praia)|is-de-azedas)|o(?:p(?:inha-de-massa|a-de-urso)|l-(?:de-gata|e-dó))|ul-rio-grandense)|v(?:i(?:n(?:ho(?:-de-(?:c(?:heiro|aju)|maçãs?|palma)|s-de-(?:cheiro|maçãs))|t(?:e-e-(?:quatro-horas|um)|ém-de-santo-antónio))|ola-d(?:e-a(?:rame|mor)|a-terra)|dro-de-cheiro)|erbos?-de-encher|olta-no-meio)|l(?:i(?:xa(?:s-de-(?:lei|pau)|-de-(?:lei|pau))|mpas?-pára-brisas|nha-de-água)|íngua(?:-de-(?:(?:vead|gat)o|trapos|sogra)|s-de-gato)|ua(?:-de-me(?:is|l)|s-de-mel)|eite-de-ca(?:is|l))|o(?:lho(?:-de-(?:mosquito|sogra|tigre|boi)|s-de-boi)|co(?:-do-coraç(?:ões|ão)|s-do-coração)|ficia(?:is|l)-às-ordens|itavos-de-fina(?:is|l)|relhas-de-abade)|g(?:(?:aitas?-de-(?:beiço|fole)|rosso-de-nápole|ás-dos-pântano|essos?-de-pari)s|u(?:inchos?-da-tainha|arda-de-corpo))|á(?:gua(?:s-de-(?:(?:forç|mes)a|végeto|lume)|-de-(?:(?:forç|mes)a|végeto|lume))|rvores?-da-vida)|d(?:ente(?:s-de-(?:serra|lobo)|-de-coelho)|(?:anças?-de-são-vit|oenças?-do-son)o|ia-a-dia)|zé(?:s-(?:d(?:os-anzóis|a-véstia)|faz-formas)|-(?:d(?:os-anzóis|a-véstia)|faz-formas))|n(?:(?:egros?-de-fum|ós?-de-adã)o|ortes?-rio-grandense|ão-sei-quês?|ariz-de-cera)|j(?:uiz(?:s-de-(?:campo|linha)|-de-(?:campo|linha))|ardi(?:ns|m)-de-infância)|qu(?:arto(?:s-de-fina(?:is|l)|-de-fina(?:is|l))|eijinho-do-céu)|u(?:(?:nhas?-de-fom|p-to-dat)e|mbigo-de-freira)|e(?:aus?-de-toilette|spuma-do-mar)|hás?-de-haver|és-não-és)</regexp>
     <message>Esta palavra já não é hifenizada.</message>
@@ -4024,7 +4024,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 </rule>
 
 
-<rule id='AO90_MONTHS_CASING' type='grammar' name='[pt-PT][AO90] Capitalização de Meses e Estações do Ano'>
+<rule id='AO90_MONTHS_CASING' type='grammar' name='🇵🇹[AO90] Capitalização de Meses e Estações do Ano'>
     <!-- Created by Tiago F. Santos , Portuguese rule, 2017-01-25 -->
     <antipattern>
         <token>Rio</token>
@@ -4068,7 +4068,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 </rule>
 
 
-<rulegroup id='AO90_WEEKDAYS_CASING_PT_PT' type='grammar' name='[pt-PT][AO90] Capitalização dos Dias da Semana'>
+<rulegroup id='AO90_WEEKDAYS_CASING_PT_PT' type='grammar' name='🇵🇹[AO90] Capitalização dos Dias da Semana'>
     <!-- Created by Tiago F. Santos , Portuguese rule, 2017-01-26 -->
 
     <rule>
@@ -4149,7 +4149,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 </rulegroup>
 
 
-<rule id='AO90_CARDINAL_POINTS_CASING' type='grammar' name='[pt-PT][AO90] Capitalização de Pontos Cardeais'>
+<rule id='AO90_CARDINAL_POINTS_CASING' type='grammar' name='🇵🇹[AO90] Capitalização de Pontos Cardeais'>
     <!-- Created by Tiago F. Santos , Portuguese rule, 2017-01-26 -->
     <antipattern case_sensitive='yes'>
         <token>Médio</token>
@@ -4208,7 +4208,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rule>
 
 
-    <rulegroup id='AO90_BEM_FEITO' name='[pt-PT][AO90] Bem-feito/Bem feito!'>
+    <rulegroup id='AO90_BEM_FEITO' name='🇵🇹[AO90] Bem-feito/Bem feito!'>
         <rule>
             <antipattern>
                 <token postag='SENT_START'/>
@@ -4241,7 +4241,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rulegroup>
 
 
-    <rulegroup id='AO90_HAVER_DE' name='[pt-PT][AO90] Haver + de'>
+    <rulegroup id='AO90_HAVER_DE' name='🇵🇹[AO90] Haver + de'>
         <!-- Created by Tiago F. Santos , Portuguese rule, 2017-01-07 -->
         <url>https://ciberduvidas.iscte-iul.pt/consultorio/perguntas/sobre-supressao-do-hifen-na-forma-verbal-ha-de-depois-do-novo-acordo/29531</url>
         <rule>
@@ -4294,7 +4294,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rulegroup>
 
 
-    <rule id="AO90_POLO_CAPITALIZATION" name="[pt-PT][AO90] Polo Norte/Sul">
+    <rule id="AO90_POLO_CAPITALIZATION" name="🇵🇹[AO90] Polo Norte/Sul">
     <!-- Created by Tiago F. Santos , Portuguese rule, 2017-08-08 -->
         <antipattern case_sensitive='yes'>
             <token regexp='yes'>P[oó]lo</token>
@@ -4315,9 +4315,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 </category>
 
 
-<category id="AO45_RULES_PT_PT" name="[pt-PT] Regras do Acordo Ortográfico de 45 (pré-AO90)" type="misspelling" default='off'>
+<category id="AO45_RULES_PT_PT" name="🇵🇹 Regras do Acordo Ortográfico de 45 (pré-AO90)" type="misspelling" default='off'>
 
-    <rule id='AO45_MONTHS_CASING' type='grammar' name='[pt-PT][AO45] Capitalização de Meses e Estações do Ano'>
+    <rule id='AO45_MONTHS_CASING' type='grammar' name='🇵🇹[AO45] Capitalização de Meses e Estações do Ano'>
         <!-- Created by Tiago F. Santos , Portuguese rule, 2017-01-26 -->
         <pattern case_sensitive='yes'>
             <token regexp='yes'>(?:&meses_ano_pt_pt;)s?|(?:&meses_ano_abrev_pt_pt;)|invernos?|primaveras?|ver(?:ão|ões)|estios?|outonos?
@@ -4333,7 +4333,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 </rule>
 
 
-<rulegroup id='AO45_WEEKDAYS_CASING' type='grammar' name='[pt-PT][AO45] Capitalização dos Dias da Semana'>
+<rulegroup id='AO45_WEEKDAYS_CASING' type='grammar' name='🇵🇹[AO45] Capitalização dos Dias da Semana'>
     <!-- Created by Tiago F. Santos , Portuguese rule, 2017-01-26 -->
     <rule>
         <pattern case_sensitive='yes'>
@@ -4359,7 +4359,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 </rulegroup>
 
 
-<rulegroup id='AO45_CARDINAL_POINTS_CASING' type='grammar' name='[pt-PT][AO45] Capitalização de Pontos Cardeais'>
+<rulegroup id='AO45_CARDINAL_POINTS_CASING' type='grammar' name='🇵🇹[AO45] Capitalização de Pontos Cardeais'>
 
               <antipattern>
                   <token regexp='yes'>que|e|ou</token>
@@ -4413,7 +4413,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rulegroup>
 
 
-    <rule id='AO45_HAVER_DE' name='[pt-PT][AO45] Haver-de'>
+    <rule id='AO45_HAVER_DE' name='🇵🇹[AO45] Haver-de'>
         <pattern>
             <marker>
                 <token regexp='yes'>heis?|hás?|hão</token>
@@ -4428,7 +4428,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rule>
 
 
-    <rule id="AO45_PELO_PÊLO" name="[pt-PT][AO45] pelo/pêlo" default="off">
+    <rule id="AO45_PELO_PÊLO" name="🇵🇹[AO45] pelo/pêlo" default="off">
     <!-- Created by Marco A.G. Pinto   -->
         <pattern>
             <token>muito</token>
@@ -4443,9 +4443,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 </category>
 
 
-<category id='CONFUSED_WORDS_PT_PT' name="[pt-PT] Confusão de Palavras">
+<category id='CONFUSED_WORDS_PT_PT' name="🇵🇹 Confusão de Palavras">
 
-    <rule id='PARONYM_PREMIO_252_PT' name='[pt-PT] Parónimo: premio'>
+    <rule id='PARONYM_PREMIO_252_PT' name='🇵🇹 Parónimo: premio'>
         <pattern>
             <token regexp='yes'>&art_detecao_paronimos;</token>
             <token min='0' postag='A.+' postag_regexp='yes'/>
@@ -4457,7 +4457,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         <example correction='no prémio'><marker>no premio</marker>.</example>
         <example correction='nos prémios'><marker>nos premios</marker>.</example>
     </rule>
-    <rule id='PARONYM_PREMIO_252_PT2' name='[pt-PT] Parónimo: premio'>
+    <rule id='PARONYM_PREMIO_252_PT2' name='🇵🇹 Parónimo: premio'>
         <pattern>
             <token regexp='yes' inflected="yes">&verbos_auxiliares_part_passado;|dever|poder|querer|costumar</token>
             <marker>
@@ -4472,7 +4472,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rule>
 
 
-    <rule id='AUTO-FALANTE' name="[pt-PT] Confusão: Auto-falante/Altifalante">
+    <rule id='AUTO-FALANTE' name="🇵🇹 Confusão: Auto-falante/Altifalante">
         <pattern>
             <token>auto</token>
             <token regexp='yes' min='0'>&tracos_de_separacao;</token>
@@ -4486,7 +4486,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rule>
 
 
-    <rule id='CRIAR_QUERER' name="[pt-PT] Confusão: Criar/Querer">
+    <rule id='CRIAR_QUERER' name="🇵🇹 Confusão: Criar/Querer">
         <pattern>
             <marker>
                 <token regexp='yes'>cria[ms]?|criamos</token>
@@ -4509,11 +4509,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
 
-    <category id='TRANSLATION_ERRORS_PT_PT' name="[pt-PT] Erros de Tradução" type="mistranslation" tone_tags="academic">
+    <category id='TRANSLATION_ERRORS_PT_PT' name="🇵🇹 Erros de Tradução" type="mistranslation" tone_tags="academic">
         <!-- IDEA foreign_terms -->
 
 
-        <rule id='ERRO_TRADUÇÃO_ESTIMAÇÃO_MÁXIMA_SEMELHANÇA_PT_PT' name="[pt-PT] Erro tradução: estimação máxima 'semelhança' → 'verosimilhança'(PT)">
+        <rule id='ERRO_TRADUÇÃO_ESTIMAÇÃO_MÁXIMA_SEMELHANÇA_PT_PT' name="🇵🇹 Erro tradução: estimação máxima 'semelhança' → 'verosimilhança'(PT)">
             <!--
                 In pt_PT: verosimilhança
                 In pt_BR: verossimilhança
@@ -4531,7 +4531,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='ERRO_TRADUÇÃO_FURTO_ROUBO_IDENTIDADE' name="[pt-PT] Erro tradução: 'furto' de identidade → 'usurpação'">
+        <rule id='ERRO_TRADUÇÃO_FURTO_ROUBO_IDENTIDADE' name="🇵🇹 Erro tradução: 'furto' de identidade → 'usurpação'">
             <pattern>
                 <marker>
                     <token skip="4" inflected='yes' regexp='yes'>furtar|roubar</token>
@@ -4551,8 +4551,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
 
-<category id="TYPOGRAPHY" name="[pt-PT] Tipografia">
-    <rule type="locale-violation" id='CURRENCY_PLACEMENT_PT_FOREIGN' name="[pt-PT] Posição dos símbolos de moeda: '100£ (£100)">
+<category id="TYPOGRAPHY" name="🇵🇹 Tipografia">
+    <rule type="locale-violation" id='CURRENCY_PLACEMENT_PT_FOREIGN' name="🇵🇹 Posição dos símbolos de moeda: '100£ (£100)">
         <pattern>
             <token regexp="yes">\d+([,.]\d+)*</token>
             <token regexp="yes">&currency_symbols;
@@ -4568,7 +4568,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     <example>Preciso de 400€.</example>
 </rule>
 
-<rule type="locale-violation" id='CURRENCY_PLACEMENT_EUR' name="[pt-PT] Posição do símbolo do euro: '€100 (100 €)">
+<rule type="locale-violation" id='CURRENCY_PLACEMENT_EUR' name="🇵🇹 Posição do símbolo do euro: '€100 (100 €)">
     <pattern>
         <token>€</token>
         <token regexp="yes">\d+([,.]\d+)*</token>
@@ -4580,7 +4580,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     <example correction="100&nbsp;€">Deve <marker>€100</marker>.</example>
 </rule>
 
-<rule type="locale-violation" id='CURRENCY_SPACE_PT_FOREIGN' name="[pt-PT] Espaçamento entre símbolos e valores monetários: '$ 100' ($100)">
+<rule type="locale-violation" id='CURRENCY_SPACE_PT_FOREIGN' name="🇵🇹 Espaçamento entre símbolos e valores monetários: '$ 100' ($100)">
     <pattern>
         <token regexp="yes">&currency_symbols;
         <exception>€</exception>
@@ -4594,7 +4594,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 <example correction="R$100">Custa <marker>R$ 100</marker>.</example>
       </rule>
 
-      <rule type="locale-violation" id='CURRENCY_SPACE_EUR' name="[pt-PT] Espaçamento entre o símbolo do euro e valores monetários: '100€' (100 €)">
+      <rule type="locale-violation" id='CURRENCY_SPACE_EUR' name="🇵🇹 Espaçamento entre o símbolo do euro e valores monetários: '100€' (100 €)">
           <pattern>
               <token regexp="yes">\d+([,.]\d+)*</token>
               <token spacebefore="no">€</token>

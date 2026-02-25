@@ -21392,13 +21392,22 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <token>nach</token>
             </antipattern>
             <antipattern>
+                <token regexp="yes">nach|vor</token>
+                <token regexp="yes">und|oder|&amp;</token>
                 <token>nach</token>
-                <token>und</token>
+            </antipattern>
+            <antipattern>
+                <token>viertel</token>
+                <token>nach</token>
+            </antipattern>
+            <antipattern>
+                <token>um</token>
+                <token regexp="yes">\d+</token>
                 <token>nach</token>
             </antipattern>
             <pattern>
                 <token case_sensitive="yes">nach</token>
-                <token min="0">zu</token>
+                <token min="0" case_sensitive="yes">zu</token>
                 <token inflected="yes">
                     geben
                     <exception case_sensitive="yes" regexp="yes">Geben|GEBEN</exception>

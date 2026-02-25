@@ -84,25 +84,48 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
 <rules lang="pt" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/languagetool-org/languagetool/master/languagetool-core/src/main/resources/org/languagetool/rules/rules.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <category id="STYLE" name="[pt-PT] Regras de Estilo" type="style">
+    <category id="STYLE" name="🇵🇹 Regras de Estilo" type="style">
 
 
-    <rule id='CONFUSÃO_CAIXA_EMBALAGEM' name="[pt-PT] Confusão: Caixa/embalagem (fármacos)" tone_tags="objective">
-        <!-- Used ChatGPT 4o for enhancements and extra accuracy -->
-        <pattern>
-            <token skip='4' regexp='yes' inflected='yes'>administrar|dosar|ingerir|injec?tar|prescrever|ministrar|tomar</token>
-            <marker>
-                <token regexp='yes'>caixas?<exception scope='previous' postag='_PUNCT'/></token>
-            </marker>
-        </pattern>
-        <message>Se estiver a referir-se a fármacos ou afins, empregue o termo &quot;embalagem&quot;.</message>
-        <suggestion><match no='5' postag='NC.(.)000' postag_replace='NCF$1000'>embalagem</match></suggestion>
-        <example correction="embalagem">Vou tomar uma <marker>caixa</marker> de Xanax.</example>
-        <example correction="embalagens">Vou tomar várias <marker>caixas</marker> de Xanax.</example>
-    </rule>
+      <rulegroup id="CONFUSAO_CAIXA_EMBALAGEM_FARMACOS" name="🇵🇹 Confusão: caixa/embalagem (fármacos)" tone_tags='objective'>
+      <!-- ChatGPT 5 and new disambiguator for 2026+ -->
+
+            <!-- #1: (mais comum): verbo + caixa + medicamento (alta precisão) -->
+            <rule>
+                <pattern>
+                    <token skip='3' regexp='yes' inflected='yes'>administrar|dosar|ingerir|injec?tar|prescrever|ministrar|tomar|receitar|indicar|instituir|iniciar|reiniciar|manter|suspender|descontinuar|substituir|ajustar|titrar|aplicar|instilar|inalar|perfundir|infundir|vacinar|dispensar|aviar|fornecer|renovar|cumprir|autoadministrar|medicar</token>
+                    <marker>
+                        <token regexp='yes'>caixas?</token>
+                    </marker>
+                    <token min='0' max='1' regexp='yes'>de|d[ao]s?</token> <!-- ligação opcional -->
+                    <token regexp='yes' case_sensitive='no'>xanax|alprazolam|lexotan|bromazepam|valium|diazepam|ativan|lorazepam|brufen|ibuprofeno|voltaren|diclofenac|benuron|ben-u-ron|paracetamol|aspirina|acetilsalicílico|augmentin|amoxicilina|clavulânico|omeprazol|pantoprazol|lansoprazol|zoloft|sertralina|prozac|fluoxetina|citalopram|escitalopram|keflex|cefalexina|azitromicina|claritromicina|metformina|atorvastatina|sinvastatina|ventolin|salbutamol|symbicort|synthroid|levotiroxina|cápsulas?|comprimidos?|drageias?|pílulas?|contracep?tivos?|preservativos?</token> <!-- medicamento (marca ou DCI), acrescentei tokens no final -->
+                </pattern>
+                <message>Se estiver a referir-se a fármacos, prefira &quot;embalagem&quot; em vez de &quot;caixa&quot;.</message>
+                <suggestion><match no='2' postag="NC.(.)000" postag_replace="NCF$1000">embalagem</match></suggestion>
+                <example correction="embalagem">Vou tomar uma <marker>caixa</marker> de Xanax.</example>
+                <example correction="embalagens">Foram prescritas várias <marker>caixas</marker> de ibuprofeno.</example>
+            </rule>
 
 
-    <rule id='PRAZER_GOSTO' name="[pt-PT] 'prazer' em → 'gosto'" tone_tags="formal">
+            <!-- #2: (caso invertido):  medicamento + caixa + verbo (alta precisão) -->
+            <rule>
+                <pattern>
+                    <token skip='3' regexp='yes' case_sensitive='no'>xanax|alprazolam|lexotan|bromazepam|valium|diazepam|ativan|lorazepam|brufen|ibuprofeno|voltaren|diclofenac|benuron|ben-u-ron|paracetamol|aspirina|acetilsalicílico|augmentin|amoxicilina|clavulânico|omeprazol|pantoprazol|lansoprazol|zoloft|sertralina|prozac|fluoxetina|citalopram|escitalopram|keflex|cefalexina|azitromicina|claritromicina|metformina|atorvastatina|sinvastatina|ventolin|salbutamol|symbicort|synthroid|levotiroxina|cápsulas?|comprimidos?|drageias?|pílulas?|contracep?tivos?|preservativos?</token> <!-- medicamento (marca ou DCI), acrescentei tokens no final -->
+                    <marker>
+                        <token skip='3' regexp='yes'>caixas?</token>
+                    </marker>
+                    <token regexp='yes' inflected='yes'>administrar|dosar|ingerir|injec?tar|prescrever|ministrar|tomar|receitar|indicar|instituir|iniciar|reiniciar|manter|suspender|descontinuar|substituir|ajustar|titrar|aplicar|instilar|inalar|perfundir|infundir|vacinar|dispensar|aviar|fornecer|renovar|cumprir|autoadministrar|medicar</token>
+                </pattern>
+                <message>Se estiver a referir-se a fármacos, prefira &quot;embalagem&quot; em vez de &quot;caixa&quot;.</message>
+                <suggestion><match no='2' postag="NC.(.)000" postag_replace="NCF$1000">embalagem</match></suggestion>
+                <example correction="embalagem">Xanax: uma <marker>caixa</marker> para tomar à noite.</example>
+                <example correction="embalagens">Ibuprofeno: duas <marker>caixas</marker> a tomar após as refeições.</example>
+          </rule>
+
+      </rulegroup>
+
+
+    <rule id='PRAZER_GOSTO' name="🇵🇹 'prazer' em → 'gosto'" tone_tags="formal">
         <pattern>
             <token skip='4' regexp='yes' inflected='yes'>ser|ter</token>
             <marker>
@@ -119,7 +142,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rule>
 
 
-    <rule id='CICLO_VICIOSO' name="[pt-PT] Calinada: 'ciclo' vicioso → 'círculo'" tone_tags='objective'>
+    <rule id='CICLO_VICIOSO' name="🇵🇹 Calinada: 'ciclo' vicioso → 'círculo'" tone_tags='objective'>
        <!-- ChatGPT 5 and new disambiguator for 2026+ -->
        <pattern>
             <marker>
@@ -136,7 +159,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rule>
 
 
-    <rule id='AVOID_GERUND' name='[pt-PT] Evitar o Gerúndio (perifrásico)' type='style' tone_tags='objective'>
+    <rule id='AVOID_GERUND' name='🇵🇹 Evitar o Gerúndio (perifrásico)' type='style' tone_tags='objective'>
         <!-- Created by Tiago F. Santos , Portuguese rule, 2016-11-24 -->
 
         <antipattern> <!-- Add number agreement exceptions so that rule ID:GENERAL_VERB_AGREEMENT_ERRORS is triggered -->
@@ -223,7 +246,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
       <!-- EVITAR O GERÚNDIO Evitar o gerúndio em pt-PT -->
       <!-- Created by Tiago F. Santos , Portuguese rule, 2016-11-24 -->
-      <rule id='AVOID_GERUND_ALL' name='[pt-PT] Evitar o Gerúndio (completo)' default='off' type='style' tone_tags='objective'>
+      <rule id='AVOID_GERUND_ALL' name='🇵🇹 Evitar o Gerúndio (completo)' default='off' type='style' tone_tags='objective'>
           <pattern>
               <token postag='V.G0+' postag_regexp='yes'><exception postag='V.G0+' postag_regexp='yes' negate_pos='yes'/></token>
           </pattern>
@@ -236,7 +259,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
         <!-- EM DETALHE detalhadamente -->
-        <rule id='EM_DETALHE_DETALHADAMENTE_PT_PT' name="[pt-PT][Simplificar] 'em detalhe' → detalhadamente" type='style' tone_tags="objective">
+        <rule id='EM_DETALHE_DETALHADAMENTE_PT_PT' name="🇵🇹[Simplificar] 'em detalhe' → detalhadamente" type='style' tone_tags="objective">
             <!-- Created by Marco A.G.Pinto, Portuguese rule 2023-03-10 (2-MAR-2023+) -->
             <!--
                 Queira explicar em detalhe o tema. → Queira explicar detalhadamente o tema.
@@ -259,7 +282,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
         <!-- EM RELAÇÃO À SITUAÇÃO relativamente à situação -->
-        <rulegroup id='EM_RELAÇÃO_RELATIVAMENTE_PT_PT' name="[pt-PT][Simplificar] Em relação → relativamente" type='style' tone_tags='objective'>
+        <rulegroup id='EM_RELAÇÃO_RELATIVAMENTE_PT_PT' name="🇵🇹[Simplificar] Em relação → relativamente" type='style' tone_tags='objective'>
         <!-- Created by Marco A.G.Pinto, Portuguese rule 2023-01-25 + 2023-02-14 (25-JUL-2022+) -->
         <!--
             O que fazer em relação a esta situação? → O que fazer relativamente a esta situação?
@@ -328,7 +351,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 </rulegroup>
 
 
-    <rule id='VELHA_ESCOLA_VELHA_GUARDA' name="[pt-PT] Velha 'escola' → guarda" tone_tags='formal'>
+    <rule id='VELHA_ESCOLA_VELHA_GUARDA' name="🇵🇹 Velha 'escola' → guarda" tone_tags='formal'>
         <pattern>
             <token inflected='yes'>ser</token>
             <token>da</token>
@@ -342,7 +365,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rule>
 
 
-    <rulegroup id="PORTUGUESE_ADDRESSES" name="[pt-PT] Formato de endereços em Portugal" type="style" tone_tags="formal">
+    <rulegroup id="PORTUGUESE_ADDRESSES" name="🇵🇹 Formato de endereços em Portugal" type="style" tone_tags="formal">
         <!--  Localized from French, by Tiago F. Santos, 2017-10-01      -->
         <rule>
             <regexp type="exact" mark="1">\b(?:Rua|R\.|Arruamento|Avenida|Av\.|Praça|Pr\.|Cruzamento|Caminho|Via|Estrada|Piso)[  ][^,\n]+\s*[,\n]\s*(\p{Lu}[^,%\d\n]+[  ]\d{4}(?:\-\d{3})?)\s*[,\n]\s*(?:PORTUGAL|PORTOGALLO|PORTOGALIA)\b</regexp>
@@ -373,7 +396,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rulegroup>
 
 
-    <rule id='ALUGAR_CASA' name="[pt-PT] 'alugar' imóvel → 'arrendar'" type='style' tone_tags="objective">
+    <rule id='ALUGAR_CASA' name="🇵🇹 'alugar' imóvel → 'arrendar'" type='style' tone_tags="objective">
         <pattern>
             <marker>
                 <token skip='4' inflected='yes'>alugar</token>
@@ -386,7 +409,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rule>
 
 
-    <rule id='BARBARISMS_PT_PT_V3' name="[pt-PT] Estrangeirismos específicos pt_PT" type="style">
+    <rule id='BARBARISMS_PT_PT_V3' name="🇵🇹 Estrangeirismos específicos pt_PT" type="style">
         <!-- IDEA foreign_terms -->
         <!--
             This rule is only available to pt-PT. Dissertations, theses and academic papers in European Portuguese use this.
@@ -508,7 +531,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 </rule>
 
 
-<rulegroup id='ORDINAL_ABREVIATION' name="[pt-PT] Abreviatura de ordinais: 1º → 1.º" tone_tags="formal">
+<rulegroup id='ORDINAL_ABREVIATION' name="🇵🇹 Abreviatura de ordinais: 1º → 1.º" tone_tags="formal">
     <!--  Created by Tiago F. Santos, 20-07-2017 -->
     <url>https://ciberduvidas.iscte-iul.pt/artigos/rubricas/idioma/ainda-sobre-a-abreviatura-do-numeral-ordinal-com-ou-sem-o-sobrescrito-sublinhado/2680</url>
     <antipattern>
@@ -597,10 +620,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
 
-    <category id='FORMAL_SPEECH_PT_PT' name='[pt-PT] Linguagem Formal' type='register' tone_tags="formal">
+    <category id='FORMAL_SPEECH_PT_PT' name='🇵🇹 Linguagem Formal' type='register' tone_tags="formal">
 
 
-        <rulegroup id='INFORMALITIES' name="[pt-PT][Formal] Evitar linguagem informal" default="on" tags="picky" tone_tags="formal">
+        <rulegroup id='INFORMALITIES' name="🇵🇹[Formal] Evitar linguagem informal" default="on" tags="picky" tone_tags="formal">
             <!-- Created by Tiago F. Santos, Portuguese rule, 2017-05-09 -->
             <url>https://pt.wiktionary.org/wiki/Categoria:Coloquialismo_(Portugu%C3%AAs)</url>
             <rule>
@@ -1277,7 +1300,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 </rulegroup>
 
 
-    <rulegroup id='COLOQUIALISMOS_PT_PT' name="[pt-PT][Formal] Coloquialismos: evitar expressões orais" default='on' tone_tags='formal'>
+    <rulegroup id='COLOQUIALISMOS_PT_PT' name="🇵🇹[Formal] Coloquialismos: evitar expressões orais" default='on' tone_tags='formal'>
 
         <rule>
             <pattern>
@@ -2190,7 +2213,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rulegroup>
 
 
-        <rulegroup id='GASTAR_DESPENDER_DESEMBOLSAR' name='[pt-PT][Formal] gastar → despender/desembolsar' tone_tags='formal' is_goal_specific='true'>
+        <rulegroup id='GASTAR_DESPENDER_DESEMBOLSAR' name='🇵🇹[Formal] gastar → despender/desembolsar' tone_tags='formal' is_goal_specific='true'>
         <!-- Used ChatGPT 4o for enhancements and extra accuracy -->
 
             <rule> <!-- #1: No past participle of "gastar" -->
@@ -2247,7 +2270,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rulegroup>
 
 
-        <rule id='DIFICULDADES_PROVAÇÕES' name="[pt-PT][Formal] Passar 'dificuldades' → 'provações'" tags='picky' tone_tags='formal'>
+        <rule id='DIFICULDADES_PROVAÇÕES' name="🇵🇹[Formal] Passar 'dificuldades' → 'provações'" tags='picky' tone_tags='formal'>
             <pattern>
                 <token skip='4' inflected='yes'>passar</token>
                 <marker>
@@ -2264,7 +2287,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
          </rule>
 
 
-        <rule id='É_IGUAL_AO_LITRO' name="[pt-PT][Formal] 'igual ao litro' → 'indiferente'" tone_tags="formal">
+        <rule id='É_IGUAL_AO_LITRO' name="🇵🇹[Formal] 'igual ao litro' → 'indiferente'" tone_tags="formal">
             <pattern>
                 <token>é</token>
                 <marker>
@@ -2280,7 +2303,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='CHUMBAR_REPROVAR_PT_PT' name="[pt-PT][Formal] Chumbar → reprovar" type='style' tone_tags='formal' tags='picky'>
+        <rule id='CHUMBAR_REPROVAR_PT_PT' name="🇵🇹[Formal] Chumbar → reprovar" type='style' tone_tags='formal' tags='picky'>
             <antipattern>
                 <token skip='2' regexp='yes'>chumbos?</token>
                 <token regexp='yes' case_sensitive='yes'>Pb|pb|PB</token>
@@ -2328,7 +2351,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-      <rulegroup id='NÃO_TER_REUNIDAS_CONDIÇÕES_PARA' name="[pt-PT][Formal] não 'ter' condições para → 'ver reunidas'" tone_tags='formal'>
+      <rulegroup id='NÃO_TER_REUNIDAS_CONDIÇÕES_PARA' name="🇵🇹[Formal] não 'ter' condições para → 'ver reunidas'" tone_tags='formal'>
           <!-- ChatGPT 5 and new disambiguator for 2026+ -->
           <rule>
               <pattern>
@@ -2366,7 +2389,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rulegroup>
 
 
-    <rule id='PÔR_FIM_TERMO' name="[pt-PT][Formal] pôr 'fim' → 'termo/término'" tags="picky" tone_tags="formal">
+    <rule id='PÔR_FIM_TERMO' name="🇵🇹[Formal] pôr 'fim' → 'termo/término'" tags="picky" tone_tags="formal">
         <pattern>
             <token skip='4' inflected='yes'>pôr</token>
             <marker>
@@ -2387,7 +2410,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rule>
 
 
-      <rule id='TER_QUE_DE' name="[pt-PT][Formal] Ter 'que' infinitivo → 'de'" tone_tags='formal'>
+      <rule id='TER_QUE_DE' name="🇵🇹[Formal] Ter 'que' infinitivo → 'de'" tone_tags='formal'>
           <!-- ChatGPT 5 and new disambiguator for 2026+ -->
           <pattern>
               <token inflected='yes'>ter</token>
@@ -2402,7 +2425,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-        <rule id='FORMAL_DEPRECIATIVO' name="[pt-PT][Formal] Termos depreciativos">
+        <rule id='FORMAL_DEPRECIATIVO' name="🇵🇹[Formal] Termos depreciativos">
             <!-- IDEA inclusive -->
             <pattern>
                 <token regexp='yes' inflected="yes">&depreciativo_pt_pt;<exception postag_regexp='yes' postag='NP.+'/></token>
@@ -2415,7 +2438,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
     <!-- TODO Add antipattern for dash and quotations -->
-    <rulegroup id='FORMAL_T-V_DISTINCTION' name='[pt-PT][Formal] Tratamento formal: Tu,Você; Vós,Vocês' default='on' tags='picky'>
+    <rulegroup id='FORMAL_T-V_DISTINCTION' name='🇵🇹[Formal] Tratamento formal: Tu,Você; Vós,Vocês' default='on' tags='picky'>
         <!-- Created by Tiago F. Santos , Portuguese rule, 2016-12-28 -->
         <url>https://pt.wikipedia.org/wiki/Distin%C3%A7%C3%A3o_t-v</url>
 
@@ -3230,7 +3253,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
 
-<rulegroup id='FORMAL_T-V_DISTINCTION_ALL' name='[pt-PT][Formal] Tratamento formal: Todas as formas na segunda pessoa, sem salvaguardas' default='off'>
+<rulegroup id='FORMAL_T-V_DISTINCTION_ALL' name='🇵🇹[Formal] Tratamento formal: Todas as formas na segunda pessoa, sem salvaguardas' default='off'>
     <!-- Created by Tiago F. Santos , Portuguese rule, 2016-12-28 -->
     <!-- MARCOAGPINTO inserted global antipatterns for all subrules on top -->
 
@@ -3336,7 +3359,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
 <!-- COM A GENTE connosco COM NÓS connosco -->
-<rulegroup id='FORMAL_COM_A_GENTE_COM_NÓS_CONNOSCO_PT_PT' name="[pt-PT][Formal] 'com a gente'/'com nós' → connosco">
+<rulegroup id='FORMAL_COM_A_GENTE_COM_NÓS_CONNOSCO_PT_PT' name="🇵🇹[Formal] 'com a gente'/'com nós' → connosco">
 <!-- Created by Tiago F. Santos (2016-12-28) and improved by Marco A.G.Pinto, Portuguese rule 2023-04-09 (2-MAR-2023+) -->
 <!--
     MARCOAGPINTO inserted global antipatterns for all subrules on top using the logic (2-MAR-2023+)
@@ -3396,7 +3419,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rulegroup>
 
 
-        <rule id='FORMAL_MONTES_DE' name="[pt-PT][Formal] 'montes de' → inúmeros/imensos">
+        <rule id='FORMAL_MONTES_DE' name="🇵🇹[Formal] 'montes de' → inúmeros/imensos">
         <!-- Created by Marco A.G.Pinto, Portuguese rule 2023-03-05 (Checked/Enhanced) (2-MAR-2023+) -->
         <!--
             Perdi montes de tempo. → Perdi imenso tempo.
@@ -3418,7 +3441,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='PARA_NADA_DESNECESSARIAMENTE' name="[pt-PT][Formal] Para nada → desnecessariamente" tone_tags='formal'>
+        <rule id='PARA_NADA_DESNECESSARIAMENTE' name="🇵🇹[Formal] Para nada → desnecessariamente" tone_tags='formal'>
             <!-- Used ChatGPT 4o for enhancements and extra accuracy -->
             <antipattern>
                 <token>não</token>
@@ -3443,7 +3466,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rulegroup id='PASSAR_TEMPO_DECORRER_TEMPO' name="[pt-PT][Formal] 'passar' tempo → decorrer">
+        <rulegroup id='PASSAR_TEMPO_DECORRER_TEMPO' name="🇵🇹[Formal] 'passar' tempo → decorrer">
 
             <antipattern>
                 <token regexp='yes'>&expressoes_de_tempo_simples;
@@ -3578,7 +3601,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rulegroup>
 
 
-        <rule id='PERANTE_O_MESMO_IDENTICO' name="[pt-PT][Formal] Perante 'o mesmo' → idêntico">
+        <rule id='PERANTE_O_MESMO_IDENTICO' name="🇵🇹[Formal] Perante 'o mesmo' → idêntico">
             <pattern>
                 <token regexp='yes'>ante|diante|perante</token>
                 <marker>
@@ -3597,7 +3620,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-      <rule id='FAZER_DESPORTO_V2' name="[pt-PT][Formal] 'Fazer' desporto → Praticar" tone_tags='formal'>
+      <rule id='FAZER_DESPORTO_V2' name="🇵🇹[Formal] 'Fazer' desporto → Praticar" tone_tags='formal'>
           <!-- ChatGPT 5 and new disambiguator for 2026+ -->
           <pattern>
               <marker>
@@ -3613,7 +3636,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-    <rule id='TIVER_ESTIVER' name='[pt-PT][Formal] tiver/estiver' tone_tags="formal">
+    <rule id='TIVER_ESTIVER' name='🇵🇹[Formal] tiver/estiver' tone_tags="formal">
         <antipattern>
             <token postag='NC.+|AQ.+|CS|RG' postag_regexp='yes'/>
             <token regexp='yes'>teve|tiveste|tiver|tiveres|tiverem|tivermos|tiveram</token>
@@ -3649,10 +3672,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
 
-    <category id='ACADEMIC_SCIENTIFIC_PT_PT' name="[pt-PT] Regras académicas e científicas" type="other">
+    <category id='ACADEMIC_SCIENTIFIC_PT_PT' name="🇵🇹 Regras académicas e científicas" type="other">
 
 
-    <rule id='CONCLUIR_UM_CURSO' name="[pt-PT] 'acabar/terminar' um curso → 'concluir'" type='style' tone_tags='academic'>
+    <rule id='CONCLUIR_UM_CURSO' name="🇵🇹 'acabar/terminar' um curso → 'concluir'" type='style' tone_tags='academic'>
         <!-- Used ChatGPT 4o for enhancements and extra accuracy -->
         <pattern>
             <marker>
@@ -3676,7 +3699,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rule>
 
 
-        <rulegroup id='ENSINO_SUPERIOR_V2' name="[pt-PT][Científico] 'Educação' Superior → 'Ensino'" type="style" tone_tags="academic">
+        <rulegroup id='ENSINO_SUPERIOR_V2' name="🇵🇹[Científico] 'Educação' Superior → 'Ensino'" type="style" tone_tags="academic">
         <!-- Used ChatGPT 4o for enhancements and extra accuracy -->
 
             <rule> <!-- à -->
@@ -3724,7 +3747,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rulegroup>
 
 
-        <rule id='CIENTÍFICO_DETERMINADAS_ESPECÍFICAS' name="[pt-PT][Científico] Determinados → Específicos" type="style" tone_tags="academic">
+        <rule id='CIENTÍFICO_DETERMINADAS_ESPECÍFICAS' name="🇵🇹[Científico] Determinados → Específicos" type="style" tone_tags="academic">
             <pattern>
                 <token regexp="yes">para|como|por</token>
                 <token skip='4' postag='V.+' postag_regexp='yes'/>
@@ -3739,7 +3762,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='CIENTÍFICO_MAIS_IMPORTANTE_CHAVE_V3' name="[pt-PT][Científico] mais conhecidos/importantes → -chave" type="style">
+        <rule id='CIENTÍFICO_MAIS_IMPORTANTE_CHAVE_V3' name="🇵🇹[Científico] mais conhecidos/importantes → -chave" type="style">
             <pattern>
                 <marker>
                     <token postag='NC.+' postag_regexp='yes' regexp='yes' inflected='yes'>adversário|área|aspec?to|ac?tividade|autor|batalha|carac?terística|categoria|cientista|cineasta|conceito|contribuição|decisão|descoberta|detalhe|domínio|elemento|escritor|escultor|etapa|evento|exemplo|fac?to|fac?tor|feito|ferramenta|figura|homem|ideia|indústria|informação|instituição|investigador|jogador|jornalista|líder|local|lugar|membro|momento|movimento|mulher|objec?tivo|objec?to|palavra|papel|peça|pergunta|período|pessoa|pesquisador|ponto|problema|questão|sec?tor|tarefa|tema|tópico|trabalho|vitória</token>
@@ -3753,7 +3776,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='HABILITAÇÕES_LITERÁRIAS_ACADÉMICAS' name="[pt-PT] Habilitações 'literárias' → 'académicas'" type="style">
+        <rule id='HABILITAÇÕES_LITERÁRIAS_ACADÉMICAS' name="🇵🇹 Habilitações 'literárias' → 'académicas'" type="style">
             <pattern>
                 <token skip='4'>habilitações</token>
                 <marker>
@@ -3766,7 +3789,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rulegroup id='GRANDES_ENORMES_RECURSOS_FINANCEIROS_AVULTADOS' name="[pt-PT][Científico] 'grandes/enormes' recursos financeiros → avultados" type="style" tags="picky">
+        <rulegroup id='GRANDES_ENORMES_RECURSOS_FINANCEIROS_AVULTADOS' name="🇵🇹[Científico] 'grandes/enormes' recursos financeiros → avultados" type="style" tags="picky">
             <rule>
                 <pattern>
                     <token regexp='yes'>recursos?|ganhos?|proveitos?|meios?|quantias?|perdas?|quebras?|prejuízos?</token>
@@ -3804,11 +3827,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
 
-    <category id='REDUNDANCY_PT_PT' name="[pt-PT] Pleonasmos/Redundância" tone_tags="clarity">
+    <category id='REDUNDANCY_PT_PT' name="🇵🇹 Pleonasmos/Redundância" tone_tags="clarity">
         <!-- IDEA shorten_it -->
 
 
-        <rule id='REDUNDANCY_24' name="[pt-PT][Pleonasmo] 24 horas por dia">
+        <rule id='REDUNDANCY_24' name="🇵🇹[Pleonasmo] 24 horas por dia">
             <pattern>
                 <token>24</token>
                 <token regexp='yes'>horas?</token>
@@ -3821,7 +3844,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_5_AGRAVAR' name='[pt-PT][Pleonasmo] agravar ainda mais'>
+        <rule id='REDUNDANCY_5_AGRAVAR' name='🇵🇹[Pleonasmo] agravar ainda mais'>
             <pattern>
                 <token inflected='yes'>agravar</token>
                 <token>ainda</token>
@@ -3833,7 +3856,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_8_AUMENTAR' name='[pt-PT][Pleonasmo] aumentar ainda mais'>
+        <rule id='REDUNDANCY_8_AUMENTAR' name='🇵🇹[Pleonasmo] aumentar ainda mais'>
             <pattern>
                 <token inflected='yes'>aumentar</token>
                 <token>ainda</token>
@@ -3845,7 +3868,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_11_AVISAR' name='[pt-PT][Pleonasmo] avisar com antecedência'>
+        <rule id='REDUNDANCY_11_AVISAR' name='🇵🇹[Pleonasmo] avisar com antecedência'>
             <pattern>
                 <token inflected='yes'>avisar</token>
                 <token>com</token>
@@ -3857,7 +3880,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_PALMAS' name="[pt-PT][Pleonasmo] Bater palmas">
+        <rule id='REDUNDANCY_PALMAS' name="🇵🇹[Pleonasmo] Bater palmas">
             <pattern>
                 <token inflected='yes'>bater</token>
                 <token>palmas</token>
@@ -3871,7 +3894,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_12_CLASSIFICAR' name='[pt-PT][Pleonasmo] classificar em grupos'>
+        <rule id='REDUNDANCY_12_CLASSIFICAR' name='🇵🇹[Pleonasmo] classificar em grupos'>
             <pattern>
                 <token inflected='yes'>classificar</token>
                 <token>em</token>
@@ -3883,7 +3906,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_11_COMPARECER' name='[pt-PT][Pleonasmo] Comparecer em pessoa'>
+        <rule id='REDUNDANCY_11_COMPARECER' name='🇵🇹[Pleonasmo] Comparecer em pessoa'>
             <pattern>
                 <token inflected='yes'>comparecer</token>
                 <token>em</token>
@@ -3895,7 +3918,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_COMPARECER' name="[pt-PT][Pleonasmo] Comparecer pessoalmente">
+        <rule id='REDUNDANCY_COMPARECER' name="🇵🇹[Pleonasmo] Comparecer pessoalmente">
             <pattern>
                 <token inflected='yes'>comparecer</token>
                 <token>pessoalmente</token>
@@ -3906,7 +3929,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_16_COMPETIR' name='[pt-PT][Pleonasmo] competir uns com os outros'>
+        <rule id='REDUNDANCY_16_COMPETIR' name='🇵🇹[Pleonasmo] competir uns com os outros'>
             <pattern>
                 <token inflected='yes'>competir</token>
                 <token>uns</token>
@@ -3920,7 +3943,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_CONVIVER' name="[pt-PT][Pleonasmo] Conviver juntos">
+        <rule id='REDUNDANCY_CONVIVER' name="🇵🇹[Pleonasmo] Conviver juntos">
             <pattern>
                 <token inflected='yes'>conviver</token>
                 <token regexp='yes'>juntos?</token>
@@ -3931,7 +3954,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_CRIAR' name="[pt-PT][Pleonasmo] Criar novas">
+        <rule id='REDUNDANCY_CRIAR' name="🇵🇹[Pleonasmo] Criar novas">
             <pattern>
                 <token inflected='yes'>criar</token>
                 <token min='0' regexp='yes'>u[nm]a?s?</token>
@@ -3944,7 +3967,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_CHAPEU' name="[pt-PT][Pleonasmo] De chapéu">
+        <rule id='REDUNDANCY_CHAPEU' name="🇵🇹[Pleonasmo] De chapéu">
             <pattern>
                 <token>de</token>
                 <token inflected='yes'>chapéu</token>
@@ -3957,7 +3980,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_19_DETALHES' name='[pt-PT][Pleonasmo] Detalhes minuciosos'>
+        <rule id='REDUNDANCY_19_DETALHES' name='🇵🇹[Pleonasmo] Detalhes minuciosos'>
             <pattern>
                 <token regexp='yes'>detalhes?</token>
                 <token regexp='yes'>minuciosos?</token>
@@ -3968,7 +3991,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_ELO' name="[pt-PT][Pleonasmo] Elo de ligação">
+        <rule id='REDUNDANCY_ELO' name="🇵🇹[Pleonasmo] Elo de ligação">
             <pattern>
                 <token inflected='yes'>elo</token>
                 <token>de</token>
@@ -3980,7 +4003,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_27_EXPRESSAMENTE' name='[pt-PT][Pleonasmo] Expressamente proibido'>
+        <rule id='REDUNDANCY_27_EXPRESSAMENTE' name='🇵🇹[Pleonasmo] Expressamente proibido'>
             <pattern>
                 <token>expressamente</token>
                 <token regexp='yes'>proibid[ao]s?</token>
@@ -3991,7 +4014,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_28_EXULTAR' name='[pt-PT][Pleonasmo] Exultar de alegria'>
+        <rule id='REDUNDANCY_28_EXULTAR' name='🇵🇹[Pleonasmo] Exultar de alegria'>
             <pattern>
                 <token regexp='yes'>exult.+</token>
                 <token>de</token>
@@ -4003,7 +4026,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_22_EXULTAR' name='[pt-PT][Pleonasmo] exultar de felicidade'>
+        <rule id='REDUNDANCY_22_EXULTAR' name='🇵🇹[Pleonasmo] exultar de felicidade'>
             <pattern>
                 <token inflected='yes'>exultar</token>
                 <token>de</token>
@@ -4015,7 +4038,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_32_HABITAT' name='[pt-PT][Pleonasmo] Habitat natural'>
+        <rule id='REDUNDANCY_32_HABITAT' name='🇵🇹[Pleonasmo] Habitat natural'>
             <pattern>
                 <token regexp='yes'>habitats?</token>
                 <token regexp='yes'>natura(?:l|is)</token>
@@ -4026,7 +4049,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_NAO_HAVER_MAIS' name="[pt-PT][Pleonasmo] Já não há mais">
+        <rule id='REDUNDANCY_NAO_HAVER_MAIS' name="🇵🇹[Pleonasmo] Já não há mais">
             <pattern>
                 <token>já</token>
                 <token>não</token>
@@ -4039,7 +4062,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_34_JUNTAMENTE' name='[pt-PT][Pleonasmo] Juntamente com'>
+        <rule id='REDUNDANCY_34_JUNTAMENTE' name='🇵🇹[Pleonasmo] Juntamente com'>
             <pattern>
                 <token inflected='yes'>juntamente</token>
                 <token>com</token>
@@ -4050,7 +4073,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_35_LIVRE' name='[pt-PT][Pleonasmo] Livre escolha' default='off'>
+        <rule id='REDUNDANCY_35_LIVRE' name='🇵🇹[Pleonasmo] Livre escolha' default='off'>
             <pattern>
                 <token inflected='yes'>livre</token>
                 <token>escolha</token>
@@ -4061,7 +4084,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_24_MANTER' name='[pt-PT][Pleonasmo] manter a mesma'>
+        <rule id='REDUNDANCY_24_MANTER' name='🇵🇹[Pleonasmo] manter a mesma'>
             <pattern>
                 <token inflected='yes'>manter</token>
                 <token regexp='yes'>[ao]s?</token>
@@ -4073,7 +4096,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_39_OPINIÃO' name='[pt-PT][Pleonasmo] Opinião individual'>
+        <rule id='REDUNDANCY_39_OPINIÃO' name='🇵🇹[Pleonasmo] Opinião individual'>
             <pattern>
                 <token regexp='yes'>opini(?:ão|ões)</token>
                 <token regexp='yes'>individu(?:al|ais)</token>
@@ -4084,7 +4107,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_PAÍSES' name="[pt-PT][Pleonasmo] Países do mundo">
+        <rule id='REDUNDANCY_PAÍSES' name="🇵🇹[Pleonasmo] Países do mundo">
             <antipattern>
                 <token><exception postag='Z.+|DI.+|DA.+' postag_regexp='yes'/></token>
                 <token inflected='yes'>país</token>
@@ -4105,7 +4128,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_48_PROPRIEDADES' name='[pt-PT][Pleonasmo] Propriedades características'>
+        <rule id='REDUNDANCY_48_PROPRIEDADES' name='🇵🇹[Pleonasmo] Propriedades características'>
             <pattern>
                 <token regexp='yes'>propriedades?</token>
                 <token regexp='yes'>carac?terísticas?</token>
@@ -4116,7 +4139,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_32_RECORDAR' name='[pt-PT][Pleonasmo] recordar o passado'>
+        <rule id='REDUNDANCY_32_RECORDAR' name='🇵🇹[Pleonasmo] recordar o passado'>
             <pattern>
                 <token inflected='yes'>recordar</token>
                 <token>o</token>
@@ -4128,7 +4151,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_37_REPETIR' name='[pt-PT][Pleonasmo] repetir novamente'>
+        <rule id='REDUNDANCY_37_REPETIR' name='🇵🇹[Pleonasmo] repetir novamente'>
             <pattern>
                 <token inflected='yes'>repetir</token>
                 <token>novamente</token>
@@ -4139,7 +4162,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_SEGUIR_EM_FRENTE' name="[pt-PT][Pleonasmo] Seguir em frente">
+        <rule id='REDUNDANCY_SEGUIR_EM_FRENTE' name="🇵🇹[Pleonasmo] Seguir em frente">
             <pattern>
                 <marker>
                     <token inflected='yes'>seguir</token>
@@ -4154,7 +4177,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_SI_MESMO' name="[pt-PT][Pleonasmo] Si mesmo" default="off">
+        <rule id='REDUNDANCY_SI_MESMO' name="🇵🇹[Pleonasmo] Si mesmo" default="off">
             <pattern>
                 <token>si</token>
                 <token inflected='yes'>mesmo</token>
@@ -4165,7 +4188,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_41_SOLETRAR' name='[pt-PT][Pleonasmo] soletrar em detalhe'>
+        <rule id='REDUNDANCY_41_SOLETRAR' name='🇵🇹[Pleonasmo] soletrar em detalhe'>
             <pattern>
                 <token inflected='yes'>soletrar</token>
                 <token min='0'>em</token>
@@ -4177,7 +4200,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_42_TESTEMUNHAR' name='[pt-PT][Pleonasmo] testemunhar in loco o facto'>
+        <rule id='REDUNDANCY_42_TESTEMUNHAR' name='🇵🇹[Pleonasmo] testemunhar in loco o facto'>
             <pattern>
                 <token inflected='yes'>testemunhar</token>
                 <token min='0' regexp='yes'>os?</token>
@@ -4193,7 +4216,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='REDUNDANCY_63_VIVER' name='[pt-PT][Pleonasmo] Viver a vida'>
+        <rule id='REDUNDANCY_63_VIVER' name='🇵🇹[Pleonasmo] Viver a vida'>
             <pattern>
                 <token inflected='yes'>viver</token>
                 <token>a</token>
@@ -4207,10 +4230,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
 
-    <category id='SHORTEN_IT_PT_PT' name="[pt-PT] Linguagem concisa" type="style">
+    <category id='SHORTEN_IT_PT_PT' name="🇵🇹 Linguagem concisa" type="style">
 
 
-    <rulegroup id='SIMPLIFICAR_DE_VOCÊS_VOSSO_SEU' name="[pt-PT][Simplificar] 'de vocês' → vosso/seu" tone_tags='objective'>
+    <rulegroup id='SIMPLIFICAR_DE_VOCÊS_VOSSO_SEU' name="🇵🇹[Simplificar] 'de vocês' → vosso/seu" tone_tags='objective'>
         <!-- ChatGPT 5 and new disambiguator for 2026+ -->
 
         <rule> <!-- #1: é/são de você -> é/são sua(s)/seu(s) -->
@@ -4293,7 +4316,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rulegroup>
 
 
-    <rule id='AVIÃO_DE_COMBATE_PT_PT' name="[pt-PT][Simplificar] Avião de combate → caça" tone_tags="objective">
+    <rule id='AVIÃO_DE_COMBATE_PT_PT' name="🇵🇹[Simplificar] Avião de combate → caça" tone_tags="objective">
         <!-- Used ChatGPT 4o for enhancements and extra accuracy -->
         <!-- With "aeronave" there was the problem of it being a female word messing the suggestions -->
         <pattern>
@@ -4308,7 +4331,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rule>
 
 
-    <rule id='CHEGAR_AO_FIM_FINDAR_TERMINAR' name="[pt-PT][Simplificar] Chegar ao fim → findar/terminar/acabar" type='style' tone_tags='objective'>
+    <rule id='CHEGAR_AO_FIM_FINDAR_TERMINAR' name="🇵🇹[Simplificar] Chegar ao fim → findar/terminar/acabar" type='style' tone_tags='objective'>
         <!-- ChatGPT 5 and new disambiguator for 2026+ -->
         <antipattern>
             <token postag='V.+|N.+|AQ.+|UNKNOWN|RN|SPS00' postag_regexp='yes'/>
@@ -4341,7 +4364,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rule>
 
 
-      <rule id='DEPOIS_É_QUE_VERBO_DEPOIS_VERBO_PT_PT' name="[pt-PT][Simplificar] Depois é que → depois" type='style' tone_tags='objective'>
+      <rule id='DEPOIS_É_QUE_VERBO_DEPOIS_VERBO_PT_PT' name="🇵🇹[Simplificar] Depois é que → depois" type='style' tone_tags='objective'>
           <!-- ChatGPT 5 and new disambiguator for 2026+ -->
           <pattern>
               <token regexp='yes'>só|apenas|somente</token>
@@ -4360,7 +4383,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-    <rulegroup id='SIMPLIFICAR_E_ESTAS_ESTES_QUE_PT_PT' name="[pt-PT][Simplificar] E est(a/e)(s) → que" type='style'>
+    <rulegroup id='SIMPLIFICAR_E_ESTAS_ESTES_QUE_PT_PT' name="🇵🇹[Simplificar] E est(a/e)(s) → que" type='style'>
     <!-- IDEA shorten_it -->
     <!-- Created by Marco A.G.Pinto with Ricardo Joseh Lima suggestions, Portuguese rule 2022-10-12 (25-JUL-2022+) -->
     <!--
@@ -4437,7 +4460,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rulegroup>
 
 
-      <rulegroup id='SIMPLIFICAR_É_NECESSÁRIO_TER_REQUER' name="[pt-PT][Simplificar] é necessário ter → requer" type='style'>
+      <rulegroup id='SIMPLIFICAR_É_NECESSÁRIO_TER_REQUER' name="🇵🇹[Simplificar] é necessário ter → requer" type='style'>
           <!-- ChatGPT 5 and new disambiguator for 2026+ -->
 
           <rule> <!-- #1: Remove comma -->
@@ -4477,7 +4500,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rulegroup>
 
 
-<rule id='E_QUE_VERBO_REMOVER_E_PT_PT' name="[pt-PT][Simplificar] E que → que" type="style">
+<rule id='E_QUE_VERBO_REMOVER_E_PT_PT' name="🇵🇹[Simplificar] E que → que" type="style">
     <!-- IDEA shorten_it -->
     <!-- Created by Marco A.G.Pinto with Ricardo Joseh Lima suggestions, Portuguese rule 2022-11-06 (25-JUL-2022+) -->
     <!--
@@ -4558,7 +4581,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-    <rulegroup id='SIMPLIFICAR_REPETICAO_AUXILIAR_VERBO' name="[pt-PT][Simplificar] Eliminação da redundância de auxiliar" type='style' tone_tags="objective">
+    <rulegroup id='SIMPLIFICAR_REPETICAO_AUXILIAR_VERBO' name="🇵🇹[Simplificar] Eliminação da redundância de auxiliar" type='style' tone_tags="objective">
         <!-- IDEA shorten_it -->
         <!-- Created by Marco A.G.Pinto with Ricardo Joseh Lima suggestions, Portuguese rule 2022-10-14 (25-JUL-2022+) -->
         <!--
@@ -4610,7 +4633,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rulegroup>
 
 
-    <rule id='SIMPLIFICAR_TAMBÉM_O_VERBO_PT_PT' name="[pt-PT][Simplificar] Evitar redundância de adjetivos" tone_tags='clarity'>
+    <rule id='SIMPLIFICAR_TAMBÉM_O_VERBO_PT_PT' name="🇵🇹[Simplificar] Evitar redundância de adjetivos" tone_tags='clarity'>
         <!-- IDEA shorten_it -->
         <!-- ChatGPT 5 and new disambiguator for 2026+ -->
         <pattern>
@@ -4633,7 +4656,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rule>
 
 
-    <rule id='SIMPLIFICAR_A_SER_PP_A_INF' name="[pt-PT][Simplificar] há + Adv. intensidade + 'a ser Part.P.' → 'a Inf.'" type="style">
+    <rule id='SIMPLIFICAR_A_SER_PP_A_INF' name="🇵🇹[Simplificar] há + Adv. intensidade + 'a ser Part.P.' → 'a Inf.'" type="style">
         <!-- IDEA shorten_it -->
         <pattern>
             <token inflected='yes'>haver</token>
@@ -4652,7 +4675,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rule>
 
 
-    <rule id='PARA_SER_MELHORADA_A_MELHORAR' name="[pt-PT][Simplificar] A ser melhorado → a melhorar">
+    <rule id='PARA_SER_MELHORADA_A_MELHORAR' name="🇵🇹[Simplificar] A ser melhorado → a melhorar">
     <!-- IDEA shorten_it -->
         <!-- ChatGPT 5 and new disambiguator for 2026+ -->
         <pattern>
@@ -4670,7 +4693,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rule>
 
 
-    <rulegroup id='SIMPLIFICAR_POR_ISSO_AÍ_ASSIM_DAÍ_ISSO_PT' name="[pt-PT][Simplificar] por isso → aí/assim/daí/isso" type='style'>
+    <rulegroup id='SIMPLIFICAR_POR_ISSO_AÍ_ASSIM_DAÍ_ISSO_PT' name="🇵🇹[Simplificar] por isso → aí/assim/daí/isso" type='style'>
     <!-- IDEA shorten_it -->
     <!--      Created by Marco A.G.Pinto, Portuguese rule 2022-01-24/25 (Checked/Enhanced) (1-JAN-2022+)      -->
     <!--
@@ -4719,7 +4742,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rulegroup>
 
 
-    <rulegroup id='SIMPLIFICAR_PP_OBJ_IND_V2' name="[pt-PT][Simplificar] Pronome pessoal no dativo" type='style' tone_tags="objective">
+    <rulegroup id='SIMPLIFICAR_PP_OBJ_IND_V2' name="🇵🇹[Simplificar] Pronome pessoal no dativo" type='style' tone_tags="objective">
         <!-- IDEA shorten_it -->
         <!-- Created by Marco A.G.Pinto, Portuguese rule 2022-09-16/20 (Checked/Enhanced) (25-JUL-2022+) -->
         <!--
@@ -4839,7 +4862,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rulegroup>
 
 
-    <rule id='SIMPLIFICAR_QUE_VERBO_A_VERBOINFINITIVO' name="[pt-PT][Simplificar] Que + V. → A + V. Infinitivo" type="style">
+    <rule id='SIMPLIFICAR_QUE_VERBO_A_VERBOINFINITIVO' name="🇵🇹[Simplificar] Que + V. → A + V. Infinitivo" type="style">
         <pattern>
             <token postag='NC.+|AQ.+' postag_regexp='yes'><exception scope='previous' postag_regexp='yes' postag='VMN000.+'/></token>
             <marker>
@@ -4865,7 +4888,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rule>
 
 
-        <rule id='QUE_SE_VERBO_PART_PASSADO' name="[pt-PT][Simplificar] 'Que se Verbo' → Verbo Part. Passado">
+        <rule id='QUE_SE_VERBO_PART_PASSADO' name="🇵🇹[Simplificar] 'Que se Verbo' → Verbo Part. Passado">
            <pattern>
                 <token postag='NC[^C].+' postag_regexp='yes'><exception postag_regexp='yes' postag='RG|SPS0.+'/></token>
                 <marker>
@@ -4884,7 +4907,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-    <rulegroup id='SIMPLIFICAR_SER_IGUAL_IGUALAR' name="[pt-PT][Simplificar] Ser igual a → igualar" type='style'>
+    <rulegroup id='SIMPLIFICAR_SER_IGUAL_IGUALAR' name="🇵🇹[Simplificar] Ser igual a → igualar" type='style'>
         <!-- IDEA shorten_it -->
         <!-- Created by Marco A.G.Pinto, Portuguese rule 2022-10-15 (25-JUL-2022+) -->
         <!--
@@ -5036,7 +5059,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rulegroup>
 
 
-    <rulegroup id='VERBO_PARA_PRONOME_PESSOAL_V2' name="[pt-PT][Simplificar] Verbo + para + pronome → verbo com pronome hifenizado" type='style' tone_tags='formal'>
+    <rulegroup id='VERBO_PARA_PRONOME_PESSOAL_V2' name="🇵🇹[Simplificar] Verbo + para + pronome → verbo com pronome hifenizado" type='style' tone_tags='formal'>
         <!-- Used ChatGPT 4o for enhancements and extra accuracy -->
         <!-- 2026: Replace the pronouns in the APs with PP.+ and test, also try to use all verbs after disambiguator is all fixed -->
 
@@ -5192,7 +5215,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rulegroup>
 
 
-    <rule id='VERBO_PRONOMINAL_DE_V3' name="[pt-PT][Simplificar] 'V. Pronominal + de' → V. Pronominal" type="style" tone_tags="formal">
+    <rule id='VERBO_PRONOMINAL_DE_V3' name="🇵🇹[Simplificar] 'V. Pronominal + de' → V. Pronominal" type="style" tone_tags="formal">
         <!-- IDEA shorten_it -->
         <!-- Used ChatGPT 4o for enhancements and extra accuracy -->
         <pattern>
@@ -5222,7 +5245,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rule>
 
 
-    <rule id='VERBO_SER_ÚTIL_PARA_SERVIR_PARA' name="[pt-PT][Simplificar] Ser útil para → servir para" type="style">
+    <rule id='VERBO_SER_ÚTIL_PARA_SERVIR_PARA' name="🇵🇹[Simplificar] Ser útil para → servir para" type="style">
         <!-- ChatGPT 5 and new disambiguator for 2026+ -->
         <pattern>
             <marker>

@@ -215,9 +215,6 @@ Al-Zaqāziq*
 al-Àndalus*
 Al-Àqaba*
 Al-Ǧifāra*
-Al-Ḥasā*
-Al-Ḥiǧāz*
-Al-Ḥudayda*
 ala-roges*
 ala-roig*
 ala-roigs*
@@ -874,7 +871,6 @@ kala-azar*
 kala-azars*
 Kamensk-Šakhtinskij*
 Kohtla-Järve*
-Komsomol's-na-Amur*
 Konk-Kerme*
 Kzyl-Orda*
 l-anarcotina*

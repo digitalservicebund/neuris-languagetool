@@ -19434,6 +19434,21 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
                 <token regexp="yes" spacebefore='no'>”|»|&quot;</token>
             </antipattern>
 
+            <antipattern>
+                <token postag='SENT_START'/>
+                <token min='1' max='2' postag_regexp='yes' postag='I|NC.+|AQ.+|V.+|RG'><exception postag_regexp='yes' postag='NP.+|SPS.+'/></token>
+                <token regexp='yes'>pelas?</token>
+                <token min='1' max='3' postag_regexp='yes' postag='N.+|AQ.+|AO.+|SPS00|CS|[DP].+|UNKNOWN'/>
+                <token postag_regexp='yes' postag='SENT_END|_PUNCT|SPS00:DA.+'/>
+                <example>Muito obrigada pela visita Gia!</example>
+                <example>Temerosos pela reação de Deméter, os deuses recusavam-se a revelar o paradeiro de sua filha.</example>
+                <example>Grato pela correção.</example>
+                <example>Muito obrigada pela tua carta.</example>
+                <example>Muito obrigada pela ajuda.</example>
+                <example>Grato pela resposta minuciosa.</example>
+                <example>Grato pela ajuda.</example>
+            </antipattern>
+
             <!-- MARCOAGPINTO 2022-01-26 (1-JAN-2022+) *START* -->
             <!--
       NOTICE THE ANTIPATTERN CREATED HERE IN THE COMMA "MAS" RULE, SO THAT IT TRIGGERS THE RULE CONFUSÃO_MAS_MAIS.
@@ -43149,6 +43164,26 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
                 <token case_sensitive='yes'>C2</token>
                 <example>Militarmente temos estruturas de C2.</example>
                 <example>As forças estão organizadas numa hierarquia C2.</example>
+            </antipattern>
+
+            <antipattern> <!-- #1: Monte/Montanha K2 -->
+                <token skip='5' postag='NC.+' postag_regexp='yes' regexp='yes'>montes?|montanhas?</token>
+                <token case_sensitive='yes'>K2</token>
+                <example>O monte K2 fica na cadeia do Caracoram.</example>
+                <example>Você já ouviu falar do monte K2?</example>
+            </antipattern>
+            <antipattern> <!-- #2: Monte/Montanha K2 -->
+                <token skip='5' case_sensitive='yes'>K2</token>
+                <token postag='NC.+' postag_regexp='yes' regexp='yes'>montes?|montanhas?</token>
+                <example>O K2 é o segundo monte mais alto da Terra, após o Everest.</example>
+            </antipattern>
+
+            <antipattern> <!-- Mobile phone Samsung Galaxy series S -->
+                <token skip='5' case_sensitive='yes'>Galaxy</token>
+                <token case_sensitive='yes' regexp='yes'>S\d+\+?</token>
+                <example>Como o Galaxy S7 já foi formulado para funcionar com o Android 6.0, ele leva o ponto nesse quesito.</example>
+                <example>O Galaxy S9+ não tem uma câmara a mais.</example>
+                <example>O novo telemóvel Galaxy S9 da Samsung tem uma câmara mesmo boa.</example>
             </antipattern>
 
             <antipattern>

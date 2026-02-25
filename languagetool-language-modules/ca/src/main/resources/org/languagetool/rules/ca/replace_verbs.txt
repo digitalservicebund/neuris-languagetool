@@ -436,3 +436,4 @@ socorrer|socorrir=socórrer
 transcurrir|transcorrir|trascurrir|trascorrir=transcórrer
 ficcionalitzar=ficcionar
 hipervincular|hiperenllaçar=enllaçar
+randomitzar|randomizar=aleatoritzar
