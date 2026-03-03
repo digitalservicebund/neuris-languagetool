@@ -3756,6 +3756,31 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
+        <rule id='PROXIMO_ZERO_PRATICAMENTE_NULO' name="próximo do zero → quase inexistente/praticamente nulo" type='style' tone_tags='formal'>
+            <!-- ChatGPT 5 and new disambiguator for 2026+ -->
+            <pattern>
+                <token postag='NC.+' postag_regexp='yes'>
+                    <exception postag_regexp='yes' postag='SPS.+|[DP].+|RG|V.+|NP.+'/>
+                    <exception regexp='yes' inflected='yes'>probabilidade|possibilidade|chance|risco|taxa|percentagem|proporção|rácio|índice|nível|valor|quantidade|montante|volume|massa|peso|densidade|concentração|intensidade|amplitude|frequência|velocidade|aceleração|temperatura|pressão|tensão|voltagem|corrente|resistência|potência|energia|força|momento|impulso|carga|campo|fluxo|gradiente|diferença|variação|desvio|erro|incerteza|precisão|exatidão|resolução|latência|tempo|duração|intervalo|distância|comprimento|altura|largura|profundidade|área|perímetro|diâmetro|raio|coeficiente|constante|parâmetro|métrica|medida|resultado|score|pontuação|classificação|ranking|desempenho|eficiência|eficácia|produtividade|rendimento|capacidade|limite|limiar|threshold</exception></token>
+                <token min='0' max='3' postag='(SPS00:)?[DP].+|N.+' postag_regexp='yes'><exception regexp='yes' inflected='yes'>probabilidade|possibilidade|chance|risco|taxa|percentagem|proporção|rácio|índice|nível|valor|quantidade|montante|volume|massa|peso|densidade|concentração|intensidade|amplitude|frequência|velocidade|aceleração|temperatura|pressão|tensão|voltagem|corrente|resistência|potência|energia|força|momento|impulso|carga|campo|fluxo|gradiente|diferença|variação|desvio|erro|incerteza|precisão|exatidão|resolução|latência|tempo|duração|intervalo|distância|comprimento|altura|largura|profundidade|área|perímetro|diâmetro|raio|coeficiente|constante|parâmetro|métrica|medida|resultado|score|pontuação|classificação|ranking|desempenho|eficiência|eficácia|produtividade|rendimento|capacidade|limite|limiar|threshold</exception></token>
+                <token min='0' max='1' regexp='yes' inflected='yes'>ser|estar</token>
+                <marker>
+                    <token regexp='yes'>próxim[ao]s?</token>
+                    <token regexp='yes'>de|do</token>
+                    <token regexp='yes'>zero|0</token>
+                </marker>
+            </pattern>
+            <message>Em sentido figurado, prefira &quot;praticamente nulo(a)&quot;/&quot;quase inexistente&quot; a &quot;próximo(a) de/do zero&quot;.</message>
+            <suggestion>quase <match no='4' postag='AQ0(.)(.)0' postag_replace='AQ0C$20'>inexistente</match></suggestion>
+            <suggestion>praticamente <match no='4' postag='AQ.+' postag_regexp='yes'>nulo</match></suggestion>
+            <example correction="quase inexistente|praticamente nula">A ética dessa pessoa é <marker>próxima do zero</marker>.</example>
+            <example correction="quase inexistente|praticamente nula">A ética dela é <marker>próxima do zero</marker>.</example>
+            <example correction="quase inexistente|praticamente nula">A ética da Ana é <marker>próxima do zero</marker>.</example>
+            <example correction="quase inexistente|praticamente nula">Ela tem uma ética <marker>próxima do zero</marker>.</example>
+            <example correction="quase inexistentes|praticamente nulas">Ela tem uma moral e ética <marker>próximas do zero</marker>.</example>
+        </rule>
+
+
         <rule id='COMO_SEGUNDO_CONFORME' name="Como/segundo → conforme" type='style' tone_tags='formal'>
             <!-- ChatGPT 5 and new disambiguator for 2026+ -->
             <pattern>
@@ -9302,7 +9327,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
         <!-- TENHO PENA lamento -->
-        <rulegroup id='TER_PENA_LAMENTAR' name="[Formal] Ter pena → Lamentar" tags="picky">
+        <rulegroup id='TER_PENA_LAMENTAR' name="👔 Ter pena → Lamentar" tags="picky">
             <!-- Created by Marco A.G.Pinto with Ricardo Joseh Lima suggestions, Portuguese rule 2023-03-04 (2-MAR-2023+) -->
             <!--
             Subrule1:
@@ -9585,7 +9610,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </category>
 
 
-    <category id='ACADEMIC' name='Linguagem acadêmica' type='style' tone_tags="academic">
+    <category id='ACADEMIC' name='🎓 Linguagem acadêmica' type='style' tone_tags="academic">
 
 
         <rule id='AO_LONGO_DO_TEMPO' name="Ao longo do tempo → gradualmente/progressivamente" type='style' tone_tags='academic' is_goal_specific='true'>
@@ -9698,7 +9723,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='APAGAR_INDELÉVEL' name="🎓[Científico] Não conseguir apagar → Indelével" tone_tags="academic" is_goal_specific="true">
+        <rule id='APAGAR_INDELÉVEL' name="🎓🔬 Não conseguir apagar → Indelével" tone_tags="academic" is_goal_specific="true">
             <pattern>
                 <marker>
                     <token>que
@@ -9716,7 +9741,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='BÁSICO_ELEMENTAR' name="🎓[Científico] Básico → Elementar" tone_tags="academic" is_goal_specific="true">
+        <rule id='BÁSICO_ELEMENTAR' name="🎓🔬 Básico → Elementar" tone_tags="academic" is_goal_specific="true">
             <antipattern>
                 <token regexp='yes'>unidades?</token>
                 <token regexp='yes'>básicas?</token>
@@ -9747,7 +9772,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='MUITO_BASTANTE_EXTENSIVAMENTE' name="🎓[Científico] Muito/bastante/enormemente → Extensivamente/amplamente" tone_tags="academic" is_goal_specific="true" tags="picky">
+        <rule id='MUITO_BASTANTE_EXTENSIVAMENTE' name="🎓🔬 Muito/bastante/enormemente → Extensivamente/amplamente" tone_tags="academic" is_goal_specific="true" tags="picky">
             <pattern>
                 <token inflected='yes' regexp='yes'>ter|ser</token>
                 <token min='0' regexp='yes'>sido|es[st][ae]s?|aquel[ae]s?</token>
@@ -9818,7 +9843,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='TOMAR_ASSUMIR' name="🎓[Científico] V. Tomar → V. Assumir" tone_tags="academic" is_goal_specific="true">
+        <rule id='TOMAR_ASSUMIR' name="🎓🔬 V. Tomar → V. Assumir" tone_tags="academic" is_goal_specific="true">
             <pattern>
                 <token postag='SENT_START|AQ.+|NC.+|NP.+|CS|CC' postag_regexp='yes'/>
                 <marker>
@@ -9932,7 +9957,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
             </rule>
         </rulegroup>
 
-       <rule id='SER_CONSISTIR_RESIDIR' name="🎓[Científico] V.Ser → V.Consistir/V.Residir" tone_tags="academic" is_goal_specific="true">
+       <rule id='SER_CONSISTIR_RESIDIR' name="🎓🔬 V.Ser → V.Consistir/V.Residir" tone_tags="academic" is_goal_specific="true">
             <pattern>
                 <token regexp='yes' inflected='yes'>assimetria|diferença|dissemelhança|disparidade|distinção|oposição|oposto</token>
                 <token min='0' max='1' postag='NC.+|AQ.+|V.+' postag_regexp='yes'>
@@ -10360,7 +10385,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
             </rule>
         </rulegroup>
 
-        <rule id='CIENTÍFICO_CONTRÁRIO_OPOSTO' name="[Científico] Contrário → Oposto" type="style" tags="picky" tone_tags="academic" is_goal_specific="true">
+        <rule id='CIENTÍFICO_CONTRÁRIO_OPOSTO' name="🔬 Contrário → Oposto" type="style" tags="picky" tone_tags="academic" is_goal_specific="true">
             <pattern>
                 <token postag='V.+' postag_regexp='yes'/>
                 <token min="0" max="1" postag='RM'/>
@@ -10374,7 +10399,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
             <example correction="oposto">A Ana percebeu exatamente o <marker>contrário</marker>.</example>
         </rule>
 
-        <rule id='CIENTÍFICO_CORRIGIR_ERROS_FALHAS_IMPRECISÕES' name="[Científico] Corrigir 'erros/falhas' → 'imprecisões'" type="style" tone_tags="academic" default="off">
+        <rule id='CIENTÍFICO_CORRIGIR_ERROS_FALHAS_IMPRECISÕES' name="🔬 Corrigir 'erros/falhas' → 'imprecisões'" type="style" tone_tags="academic" default="off">
             <pattern>
                 <token inflected='yes'>corrigir</token>
                 <token regexp='yes' inflected='yes'>&adverbios_de_intensidade;|algum|inúmero|pequeno</token>
@@ -10387,7 +10412,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
             <example type='incorrect'>Vou corrigir algumas <marker>falhas</marker> no texto.</example>
         </rule>
 
-        <rulegroup id='DE_PROPOSITO_DELIBERADAMENTE' name="[Científico] 'de propósito' → 'deliberadamente'" type="style" tags="picky" tone_tags="formal">
+        <rulegroup id='DE_PROPOSITO_DELIBERADAMENTE' name="🔬 'de propósito' → 'deliberadamente'" type="style" tags="picky" tone_tags="formal">
             <rule>
                 <pattern>
                     <token inflected='yes'>fazer</token>
@@ -10406,7 +10431,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rulegroup>
 
 
-        <rule id='CIENTÍFICO_EMPREGAR_TERMO' name="[Científico] 'usar/utilizar' termo → empregar" type='style' tags='picky' tone_tags='formal' is_goal_specific='true'>
+        <rule id='CIENTÍFICO_EMPREGAR_TERMO' name="🔬 'usar/utilizar' termo → empregar" type='style' tags='picky' tone_tags='formal' is_goal_specific='true'>
             <!-- ChatGPT 5 and new disambiguator for 2026+ -->
 
             <pattern>
@@ -10424,7 +10449,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rulegroup id='CIENTÍFICO_FAZER_EFETUAR_REALIZAR_CONDUZIR_CONCRETIZAR_ELABORAR' name="[Científico] Fazer → efetuar/realizar/conduzir/concretizar/elaborar" default="on" type="style" tags="picky" tone_tags="academic" is_goal_specific="true">
+        <rulegroup id='CIENTÍFICO_FAZER_EFETUAR_REALIZAR_CONDUZIR_CONCRETIZAR_ELABORAR' name="🔬 Fazer → efetuar/realizar/conduzir/concretizar/elaborar" default="on" type="style" tags="picky" tone_tags="academic" is_goal_specific="true">
             <antipattern>
                 <token inflected='yes' skip='3'>fazer</token>
                 <token regexp='yes'>&vocativos;|calor|frio|d*</token>
@@ -11023,7 +11048,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
             </rule>
         </rulegroup>
 
-        <rulegroup id='CIENTÍFICO_PARA_CONCLUIR_EM_SUMA' name="[Científico] Para concluir/resumidamente → em suma" type="style" tags='picky' tone_tags="academic" is_goal_specific="true">
+        <rulegroup id='CIENTÍFICO_PARA_CONCLUIR_EM_SUMA' name="🔬 Para concluir/resumidamente → em suma" type="style" tags='picky' tone_tags="academic" is_goal_specific="true">
             <rule>
                 <pattern>
                     <or>
@@ -11070,7 +11095,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
         <!-- PENSAR EM ponderar -->
-        <rule id='CIENTÍFICO_PENSAR_EM_PONDERAR' name="[Científico] Pensar em → ponderar" type="style" tags="picky" tone_tags="academic" is_goal_specific="true">
+        <rule id='CIENTÍFICO_PENSAR_EM_PONDERAR' name="🔬 Pensar em → ponderar" type="style" tags="picky" tone_tags="academic" is_goal_specific="true">
             <pattern>
                 <or>
                     <token/>
@@ -11095,7 +11120,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
         <!-- PRECISÃO CIENTÍFICA rigor científico -->
-        <rule id='CIENTÍFICO_PRECISAO_RIGOR_CIENTIFICO' name="[Científico] Precisão/rigor científico" type="style" tags="picky">
+        <rule id='CIENTÍFICO_PRECISAO_RIGOR_CIENTIFICO' name="🔬 Precisão/rigor científico" type="style" tags="picky">
             <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-10-22 (25-JUN-2021+)      -->
             <!--
             Isto deve ser feito com precisão científica. → Isto deve ser feito com rigor científico.
@@ -11113,7 +11138,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rulegroup id='CIENTÍFICO_TER_NOME_DESIGNAÇÃO' name="[Científico] Ter 'nome' → 'designação'" type="style" tone_tags="formal">
+        <rulegroup id='CIENTÍFICO_TER_NOME_DESIGNAÇÃO' name="🔬 Ter 'nome' → 'designação'" type="style" tone_tags="formal">
                         <rule>
                 <pattern>
                     <token postag='NC[FM].+' postag_regexp='yes'/>
@@ -11175,7 +11200,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
         <!-- OS TERMOS TÉCNICOS a terminologia -->
-        <rulegroup id='CIENTÍFICO_TERMOS_TÉCNICOS_TERMINOLOGIA' name="[Científico] termos técnicos → terminologia" type='style'>
+        <rulegroup id='CIENTÍFICO_TERMOS_TÉCNICOS_TERMINOLOGIA' name="🔬 termos técnicos → terminologia" type='style'>
             <!-- Created by Marco A.G.Pinto with Ricardo Joseh Lima suggestions, Portuguese rule 2023-02-07 (25-JUL-2022+) -->
             <!--
             #1
@@ -11297,7 +11322,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rulegroup>
 
 
-        <rulegroup id="AJUDAR_AUXILIAR" name="🎓[Científico] ajudar → auxiliar" type='style' tags='picky' tone_tags="academic">
+        <rulegroup id="AJUDAR_AUXILIAR" name="🎓🔬 ajudar → auxiliar" type='style' tags='picky' tone_tags="academic">
             <!-- Created by Marco A.G.Pinto with Ricardo Joseh Lima suggestions, Portuguese rule 2023-05-12/26/27 (2-MAR-2023+) -->
             <!--
             SUBRULE 1:
@@ -11358,7 +11383,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rulegroup>
 
 
-        <rule id='DAR_ATRIBUIR_CONFERIR_V2' name="🎓[Científico] dar → conferir" type='style' tone_tags='academic'>
+        <rule id='DAR_ATRIBUIR_CONFERIR_V2' name="🎓🔬 dar → conferir" type='style' tone_tags='academic'>
             <!-- ChatGPT 5 and new disambiguator for 2026+ -->
 
             <antipattern>
@@ -11395,7 +11420,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rulegroup id='SER_SIGNIFICATIVO' name="🎓[Científico] 'fazer toda a diferença' → 'ser significativo/expressivo'" type="style" tone_tags="academic" is_goal_specific="true" tags="picky">
+        <rulegroup id='SER_SIGNIFICATIVO' name="🎓🔬 'fazer toda a diferença' → 'ser significativo/expressivo'" type="style" tone_tags="academic" is_goal_specific="true" tags="picky">
 
             <!-- #1: é significativo -->
             <rule>
@@ -11444,7 +11469,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rulegroup>
 
 
-        <rule id='FAZER_EXERCER' name="🎓[Científico] Verbo Fazer → Verbo Exercer" type="style" tone_tags="academic" is_goal_specific="true" tags="picky">
+        <rule id='FAZER_EXERCER' name="🎓🔬 Verbo Fazer → Verbo Exercer" type="style" tone_tags="academic" is_goal_specific="true" tags="picky">
             <antipattern>
                 <token postag='V.+' postag_regexp='yes'/>
                 <token min='0' max='1' postag='D[AI].+|NC.+|AQ.+' postag_regexp='yes'/>
@@ -11505,7 +11530,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
         <!-- NÃO SE PODE APAGAR é indelével -->
-        <rule id='NÃO_SE_PODE_APAGAR_É_INDELÉVEL' name="🎓[Científico] 'não se pode apagar' → 'é indelével'" type="style">
+        <rule id='NÃO_SE_PODE_APAGAR_É_INDELÉVEL' name="🎓🔬 'não se pode apagar' → 'é indelével'" type="style">
             <!-- Created by Marco A.G.Pinto with Ricardo Joseh Lima suggestions, Portuguese rule 2023-05-29 (2-MAR-2023+) -->
             <!--
             Eu queria, mas não se pode apagar o passado. → Eu queria, mas o passado é indelével.
@@ -11792,10 +11817,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rulegroup>
     </category>
 
-    <category id="SCIENTIFIC" name="Linguagem científica" type="style" tone_tags="scientific">
+    <category id="SCIENTIFIC" name="🔬 Linguagem científica" type="style" tone_tags="scientific">
 
 
-        <rule id='LINHA_RETA_RETA_V2' name="Traçar 'linha reta' → reta" type='style' tone_tags='scientific' is_goal_specific='true'>
+        <rule id='LINHA_RETA_RETA_V2' name="🔬 Traçar 'linha reta' → reta" type='style' tone_tags='scientific' is_goal_specific='true'>
             <!-- ChatGPT 5 and new disambiguator for 2026+ -->
             <pattern>
                 <token skip='3' regexp='yes' inflected='yes'>traçar|desenhar|riscar</token>
@@ -11812,7 +11837,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rulegroup id="NUMERO_DE_MOLS" name="Número de mols → massa molecular" tags="picky" is_goal_specific="true">
+        <rulegroup id="NUMERO_DE_MOLS" name="🔬 Número de mols → massa molecular" tags="picky" is_goal_specific="true">
             <rule>
                 <pattern>
                     <token postag_regexp="yes" postag="(SP.+:)?D.+MS.*" min="0"/>
@@ -11840,7 +11865,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
             </rule>
         </rulegroup>
 
-        <rulegroup id="PESO_MOLECULAR" name="Peso molecular → massa molecular" tags="picky" is_goal_specific="true">
+        <rulegroup id="PESO_MOLECULAR" name="🔬 Peso molecular → massa molecular" tags="picky" is_goal_specific="true">
             <rule>
                 <pattern>
                     <token postag_regexp="yes" postag="(SP.+:)?D.+MS.*" min="0"/>
@@ -11867,7 +11892,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
             </rule>
         </rulegroup>
 
-        <rule id="NUMERO_DE_AVOGADRO" name="Número de Avogadro → constante" tags="picky" is_goal_specific="true">
+        <rule id="NUMERO_DE_AVOGADRO" name="🔬 Número de Avogadro → constante" tags="picky" is_goal_specific="true">
             <pattern>
                 <token postag_regexp="yes" postag="(SP.+:)?D.+MS.*" min="0"/>
                 <token>número</token>
@@ -11879,7 +11904,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
             <example correction="a constante de Avogadro">Calculamos com <marker>o número de Avogadro</marker>.</example>
         </rule>
 
-        <rule id="GRAU_CENTIGRADO" name="Preferir 'grau Celsius' a 'grau centígrado'.">
+        <rule id="GRAU_CENTIGRADO" name="🔬 Preferir 'grau Celsius' a 'grau centígrado'.">
             <pattern>
                 <token regexp="yes">graus?</token>
                 <marker>
@@ -13089,67 +13114,52 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </category>
 
 
-    <category id='POSITIVE' name='Linguagem positiva' type='style' tone_tags="positive">
-        <!-- NÃO MILITARES civis -->
-        <!--      Created by Marco A.G.Pinto, Portuguese rule 2020-10-18 (2-JUL-2020+)     -->
-        <rulegroup id='NAO_MILITARES' name="Civil/Civis" tags='picky' tone_tags="positive">
+
+    <category id='POSITIVE' name='🎯 Linguagem positiva' type='style' tone_tags="positive">
+
+
+        <rule id='NAO_MILITARES_CIVIS' name="🎯 Entidade não militar → civil" tone_tags='positive'>
+            <!-- ChatGPT 5 and new disambiguator for 2026+ -->
             <!--IDEA shorten_it-->
-            <rule>
-                <antipattern>
-                    <token>,</token>
+            <pattern>
+                <token skip='2' regexp='yes' inflected='yes'>empresa|organização|entidade|instituição|agência|associação|ONG|sec?tor|administração</token>
+                <marker>
                     <token>não</token>
-                    <token>militar</token>
-                    <example>É de responsabilidade civil, e não militar</example>
-                </antipattern>
-                <pattern>
-                    <token postag='N.+|AQ.+' postag_regexp='yes'/>
-                    <marker>
-                        <token>não</token>
-                        <token>militar</token>
-                    </marker>
-                </pattern>
-                <message>Veja se pretende referir uma organização/empresa civil.</message>
-                <suggestion>civil</suggestion>
-                <example correction="civil">Há uma empresa <marker>não militar</marker> a criar simuladores.</example>
-            </rule>
-            <rule>
-                <pattern>
-                    <token postag='N.+|AQ.+' postag_regexp='yes'/>
-                    <marker>
-                        <token>não</token>
-                        <token>militares</token>
-                    </marker>
-                </pattern>
-                <message>Veja se pretende referir uma organização/empresa civil.</message>
-                <suggestion>civis</suggestion>
-                <example correction="civis">Há empresas <marker>não militares</marker> a criar simuladores.</example>
-            </rule>
-        </rulegroup>
-        <!-- PERDER semanas a/para demorar semanas a/para -->
-        <rule id='PERDER_DEMORAR_LEVAR' name="Perder → Demorar/levar" type='style' tone_tags="positive">
-            <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-08-16 (25-JUN-2021+)      -->
-            <!--
-            Perdi meses a escrever o livro. → Demorei meses a escrever o livro.
-            Perdi vários meses a escrever o livro. → Demorei vários meses a escrever o livro.
-            -->
+                    <token regexp='yes'>milita(r|res)</token>
+                </marker>
+            </pattern>
+            <message>Veja se pretende referir uma entidade civil.</message>
+            <suggestion><match no='3' postag='AQ.+' postag_regexp='yes'>civil</match></suggestion>
+            <example correction="civil">Há uma empresa <marker>não militar</marker> a criar simuladores.</example>
+            <example correction="civis">Há empresas <marker>não militares</marker> a criar simuladores.</example>
+            <example>Há uma organização muito reconhecida civil.</example>
+        </rule>
+
+
+        <rule id='PERDER_DEMORAR_LEVAR_ESTAR' name="🎯 Perder → Demorar/levar/estar" type='style' tone_tags='positive'>
+            <!-- ChatGPT 5 and new disambiguator for 2026+ -->
             <pattern>
                 <marker>
-                    <token inflected='yes'>perder</token>
+                    <token skip='1' postag='V.+' postag_regexp='yes' inflected='yes'>perder</token>
                 </marker>
-                <or>
-                    <token min="0" max="1" regexp='yes' inflected='yes'>&adverbios_de_intensidade;</token>
-                    <token postag='Z0.+' postag_regexp='yes'/>
-                </or>
-                <token regexp='yes' inflected='yes'>&expressoes_de_tempo;</token>
-                <token regexp="yes">a|para</token>
+                <token regexp='yes' inflected='yes'>&expressoes_de_tempo;<exception regexp='no'>tempo</exception></token>
+                <token regexp='yes'>a|para</token>
                 <token postag='V.+' postag_regexp='yes'/>
             </pattern>
-            <message>Nesta situação o verbo &quot;perder&quot; pode ser depreciativo. Utilize um alternativo.</message>
+            <message>Considere usar &quot;demorar&quot;, &quot;levar&quot; ou &quot;estar&quot; em vez de &quot;perder&quot;.</message>
             <suggestion><match no='1' postag='V.+' postag_regexp='yes'>demorar</match></suggestion>
             <suggestion><match no='1' postag='V.+' postag_regexp='yes'>levar</match></suggestion>
             <suggestion><match no='1' postag='V.+' postag_regexp='yes'>estar</match></suggestion>
             <example correction="Demorei|Levei|Estive"><marker>Perdi</marker> meses a escrever o livro.</example>
+            <example correction="Demorei|Levei|Estive"><marker>Perdi</marker> vários anos a escrever o livro.</example>
+            <example correction="Demorei|Levei|Estive"><marker>Perdi</marker> 5 anos para escrever o livro.</example>
+            <example>Ele não perdeu tempo para voltar.</example>
+            <example>Você está perdendo seu tempo a tentar convencê-lo.</example>
+            <example>Além disso, perderemos muito tempo para falar sobre os vários assuntos.</example>
         </rule>
+
+
+
     </category>
 
 

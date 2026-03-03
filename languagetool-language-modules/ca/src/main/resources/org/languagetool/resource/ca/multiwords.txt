@@ -1,5 +1,2191 @@
 #Catalan multiwords file used for chunking
 #separatorRegExp=[\t;]
+Santa Mònica;NPCSO00
+Santa Monica;NPCSG00 # esadir topònims, confusió amb Santa Mònica
+Santa Monica Pier;NPMSG00
+A Cañiza;NPCSG00 # esadir topònims
+A Mariña;NPCSG00 # esadir topònims
+A Peroxa;NPCSG00 # esadir topònims
+A Pobra do Brollón;NPCSG00 # esadir topònims
+A Pobra do Caramiñal;NPCSG00 # esadir topònims
+A Toxa;NPCSG00 # esadir topònims
+Abanto Zierbena;NPCSG00 # esadir topònims
+Abasan al-Kabira;NPCSG00 # esadir topònims
+Abasan al-Saghira;NPCSG00 # esadir topònims
+Abu Gosh;NPCSG00 # esadir topònims
+Abu Kamal;NPCSG00 # esadir topònims
+Abu Kammash;NPCSG00 # esadir topònims
+Abu Musa;NPCSG00 # esadir topònims
+Abu Tor;NPCSG00 # esadir topònims
+Acqui Terme;NPCSG00 # esadir topònims
+Ain al-Delb;NPCSG00 # esadir topònims
+Ain al-Hilweh;NPCSG00 # esadir topònims
+Ain Beida;NPCSG00 # esadir topònims
+Ain Guezzam;NPCSG00 # esadir topònims
+Ain Salah;NPCSG00 # esadir topònims
+Ain Sefra;NPCSG00 # esadir topònims
+Alhama de Aragón;NPCSG00 # esadir topònims
+Alonei HaBashan;NPCSG00 # esadir topònims
+Anak Krakatoa;NPCSG00 # esadir topònims
+Angoor Adda;NPCSG00 # esadir topònims
+Appenzell Ausserrhoden;NPCSG00 # esadir topònims
+Appenzell Innerrhoden;NPCSG00 # esadir topònims
+Argamasilla de Calatrava;NPCSG00 # esadir topònims
+Arquata del Tronto;NPCSG00 # esadir topònims
+Arunachal Pradesh;NPCSG00 # esadir topònims
+Azad Caixmir;NPCSG00 # esadir topònims
+Bab al-Hawa;NPCSG00 # esadir topònims
+Bad Aibling;NPCSG00 # esadir topònims
+Bad Neuenahr-Ahrweiler;NPCSG00 # esadir topònims
+Bagno di Romagna;NPCSG00 # esadir topònims
+Bandar Torkaman;NPCSG00 # esadir topònims
+Banhèras de Bigòrra;NPCSG00 # esadir topònims
+Banhèras de Luishon;NPCSG00 # esadir topònims
+Bassano del Grappa;NPCSG00 # esadir topònims
+Batang Kali;NPCSG00 # esadir topònims
+Beit El;NPCSG00 # esadir topònims
+Beit Jala;NPCSG00 # esadir topònims
+Beit Kama;NPCSG00 # esadir topònims
+Beit Meir;NPCSG00 # esadir topònims
+Beitar Illit;NPCSG00 # esadir topònims
+Beli Manastir;NPCSG00 # esadir topònims
+Ben Gardane;NPCSG00 # esadir topònims
+Beni Abbès;NPCSG00 # esadir topònims
+Bhasan Char;NPCSG00 # esadir topònims
+Bila Tserkva;NPCSG00 # esadir topònims
+Bint Jbeil;NPCSG00 # esadir topònims
+Birnin Kebbi;NPCSG00 # esadir topònims
+Boca Chica;NPCSG00 # esadir topònims
+Boca Raton;NPCSG00 # esadir topònims
+Bolxoi Log;NPCSG00 # esadir topònims
+Bord Khun;NPCSG00 # esadir topònims
+Bordj Bou Arreridj;NPCSG00 # esadir topònims
+Bordj Omar Driss;NPCSG00 # esadir topònims
+Borgofranco d'Ivrea;NPCSG00 # esadir topònims
+bosc de Belaveja;NPCSG00 # esadir topònims
+bosc de Sambisa;NPCSG00 # esadir topònims
+bosc de Shakahola;NPCSG00 # esadir topònims
+Bou Saada;NPCSG00 # esadir topònims
+Braunau am Inn;NPCSG00 # esadir topònims
+Brea de Aragón;NPCSG00 # esadir topònims
+Broad Peak;NPCSG00 # esadir topònims
+Camigliatello Silano;NPCSG00 # esadir topònims
+Campi Bisenzio;NPCSG00 # esadir topònims
+Campobello di Mazara;NPCSG00 # esadir topònims
+Canha de Mar;NPCSG00 # esadir topònims
+cap Bascuñán;NPCSG00 # esadir topònims
+cap Vírgenes;NPCSG00 # esadir topònims
+Casale Monferrato;NPCSG00 # esadir topònims
+Casamicciola Terme;NPCSG00 # esadir topònims
+Casas de Miravete;NPCSG00 # esadir topònims
+Cassano Magnago;NPCSG00 # esadir topònims
+Castel di Sangro;NPCSG00 # esadir topònims
+Castel San Giovanni;NPCSG00 # esadir topònims
+castell d'Elmau;NPCSG00 # esadir topònims
+Castellammare di Stabia;NPCSG00 # esadir topònims
+Castelnovo ne' Monti;NPCSG00 # esadir topònims
+Castelsantangelo sul Nera;NPCSG00 # esadir topònims
+Castiglione delle Stiviere;NPCSG00 # esadir topònims
+Castèthnau de Manhoac;NPCSG00 # esadir topònims
+Caudiers de Fenollet;NPCSG00 # esadir topònims
+Caunetas en Val;NPCSG00 # esadir topònims
+Ceglie Messapica;NPCSG00 # esadir topònims
+Ceresole Reale;NPCSG00 # esadir topònims
+Cernusco sul Naviglio;NPCSG00 # esadir topònims
+Cesano Maderno;NPCSG00 # esadir topònims
+Chao Phraya;NPCSG00 # esadir topònims
+Chilia Veche;NPCSG00 # esadir topònims
+Ciudad Bolívar;NPCSG00 # esadir topònims
+Ciudad Guayana;NPCSG00 # esadir topònims
+Ciudad Ojeda;NPCSG00 # esadir topònims
+Ciudad Victoria;NPCSG00 # esadir topònims
+Cividale del Friuli;NPCSG00 # esadir topònims
+coll d'Agnes;NPCSG00 # esadir topònims
+coll de la Couillole;NPCSG00 # esadir topònims
+coll de Pèira Sorda;NPCSG00 # esadir topònims
+Coronel Moldes;NPCSG00 # esadir topònims
+corredor de Mefalsim;NPCSG00 # esadir topònims
+corredor de Netzarim;NPCSG00 # esadir topònims
+corredor de Zangezur;NPCSG00 # esadir topònims
+corredor Magen Oz;NPCSG00 # esadir topònims
+corredor Philadelphi;NPCSG00 # esadir topònims
+Cusano Mutri;NPCSG00 # esadir topònims
+Darat Izza;NPCSG00 # esadir topònims
+Davídiv Brid;NPCSG00 # esadir topònims
+Deir al-Asafir;NPCSG00 # esadir topònims
+Deir al-Hatab;NPCSG00 # esadir topònims
+Deir Hanna;NPCSG00 # esadir topònims
+Desenzano del Garda;NPCSG00 # esadir topònims
+desert de Dahnà;NPCSG00 # esadir topònims
+desert de Dasht-e Margo;NPCSG00 # esadir topònims
+desert de Karakum;NPCSG00 # esadir topònims
+desert de Nafud;NPCSG00 # esadir topònims
+Distaghil Sar;NPCSG00 # esadir topònims
+Dur Sharrukin;NPCSG00 # esadir topònims
+Ein HaShlosha;NPCSG00 # esadir topònims
+Ejea de los Caballeros;NPCSG00 # esadir topònims
+El Bayadh;NPCSG00 # esadir topònims
+El Cajon;NPCSG00 # esadir topònims
+El Fahs;NPCSG00 # esadir topònims
+El Harrouch;NPCSG00 # esadir topònims
+El Meghaier;NPCSG00 # esadir topònims
+El Oued;NPCSG00 # esadir topònims
+el Panjshir;NPCSG00 # esadir topònims
+El Tarajal;NPCSG00 # esadir topònims
+Erribera Beitia;NPCSG00 # esadir topònims
+Espartza Zaraitzu;NPCSG00 # esadir topònims
+estret de Malaca;NPCSG00 # esadir topònims
+estret de Menai;NPCSG00 # esadir topònims
+Farra d'Alpago;NPCSG00 # esadir topònims
+Fiera di Primiero;NPCSG00 # esadir topònims
+Fiume Veneto;NPCSG00 # esadir topònims
+Foiano di Val Fortore;NPCSG00 # esadir topònims
+Folgoso do Courel;NPCSG00 # esadir topònims
+Gerlachovsky Stít;NPCSG00 # esadir topònims
+Gonbad-e Qabus;NPCSG00 # esadir topònims
+Goriatxi Kliutx;NPCSG00 # esadir topònims
+Gorzów Wielkopolski;NPCSG00 # esadir topònims
+Gran Comore;NPCSG00 # esadir topònims
+Green River;NPCSG00 # esadir topònims
+Greve in Chianti;NPCSG00 # esadir topònims
+Haltern am See;NPCSG00 # esadir topònims
+Haret Hreik;NPCSG00 # esadir topònims
+Hassi Messaoud;NPCSG00 # esadir topònims
+Hassi R'Mel;NPCSG00 # esadir topònims
+Hayli Gubbi;NPCSG00 # esadir topònims
+Hola Prístan;NPCSG00 # esadir topònims
+Hunga Tonga;NPCSG00 # esadir topònims
+Hàfar al-Batin;NPCSG00 # esadir topònims
+illa d'Oléron;NPFSG00 # esadir topònims
+illa de La Juventud;NPFSG00 # esadir topònims
+illa de Ré;NPFSG00 # esadir topònims
+illes Camotes;NPFPG00 # esadir topònims
+illes Dahlak;NPFPG00 # esadir topònims
+San Andrés, Providencia i Santa Catalina;NPCNG00 # esadir topònims
+illes Desventuradas;NPFPG00 # esadir topònims
+illes Farasan;NPFPG00 # esadir topònims
+illes Paracel;NPFPG00 # esadir topònims
+illes Scarborough Shoal;NPFPG00 # esadir topònims
+illes Yasawa;NPFPG00 # esadir topònims
+In Salah;NPCSG00 # esadir topònims
+Inn Din;NPCSG00 # esadir topònims
+Iruña Oka;NPCSG00 # esadir topònims
+Isola di Capo Rizzuto;NPCSG00 # esadir topònims
+Jatsu Garazi;NPCSG00 # esadir topònims
+Jisr al-Shughur;NPCSG00 # esadir topònims
+Johor Bahru;NPCSG00 # esadir topònims
+Juhor ad-Dik;NPCSG00 # esadir topònims
+Kafr al-Sheikh;NPCSG00 # esadir topònims
+Kafr Malik;NPCSG00 # esadir topònims
+Kafr Nabl;NPCSG00 # esadir topònims
+Kafr Nabudah;NPCSG00 # esadir topònims
+Kafr Zita;NPCSG00 # esadir topònims
+Kampong Chhnang;NPCSG00 # esadir topònims
+Kapustin Iar;NPCSG00 # esadir topònims
+Karrantza Harana;NPCSG00 # esadir topònims
+Karà Tepé;NPCSG00 # esadir topònims
+Kfar Aza;NPCSG00 # esadir topònims
+Kfar Giladi;NPCSG00 # esadir topònims
+Khyber Pakhtunkhwa;NPCSG00 # esadir topònims
+Kiryat Arba;NPCSG00 # esadir topònims
+Kiryat Ata;NPCSG00 # esadir topònims
+Kiryat Bialik;NPCSG00 # esadir topònims
+Kiryat Gat;NPCSG00 # esadir topònims
+Kiryat Malakhi;NPCSG00 # esadir topònims
+Kozatxa Lópan;NPCSG00 # esadir topònims
+Krasni Bor;NPCSG00 # esadir topònims
+Krasni Liman;NPCSG00 # esadir topònims
+Krasni Lutx;NPCSG00 # esadir topònims
+Kriví Rih;NPCSG00 # esadir topònims
+Kràsnaia Poliana;NPCSG00 # esadir topònims
+Kuh-e Bandaka;NPCSG00 # esadir topònims
+la Bekaa;NPFSG00 # esadir topònims
+La Canau;NPFSG00 # esadir topònims
+La Capèla de Marival;NPFSG00 # esadir topònims
+La Caumeta;NPFSG00 # esadir topònims
+La Ceja;NPFSG00 # esadir topònims
+la Charanta;NPFSG00 # esadir topònims
+la Charanta Marítima;NPFSG00 # esadir topònims
+La Concha;NPFSG00 # esadir topònims
+La Goulette;NPFSG00 # esadir topònims
+La Orotava;NPFSG00 # esadir topònims
+La Pola Llaviana;NPFSG00 # esadir topònims
+La Roche-sur-Foron;NPFSG00 # esadir topònims
+La Soufrière;NPFSG00 # esadir topònims
+La Spezia;NPFSG00 # esadir topònims
+La Unión;NPFSG00 # esadir topònims
+La Vaur;NPFSG00 # esadir topònims
+Las Hurdes;NPFPG00 # esadir topònims
+Las Rozas;NPFPG00 # esadir topònims
+Las Tejerías;NPFPG00 # esadir topònims
+Le Château-d'Oléron;NPMSG00 # esadir topònims
+Le Portel;NPMSG00 # esadir topònims
+Le Touquet;NPMSG00 # esadir topònims
+Les Cayes;NPCPG00 # esadir topònims
+Granges de Shebaa;NPFPG00 # esadir topònims
+Les Sables-d'Olonne;NPCPG00 # esadir topònims
+llac Balaton;NPMSG00 # esadir topònims
+llac de Payolle;NPMSG00 # esadir topònims
+llac Kariba;NPMSG00 # esadir topònims
+llac Kyoga;NPMSG00 # esadir topònims
+llac Laceno;NPMSG00 # esadir topònims
+llac Natron;NPMSG00 # esadir topònims
+llac Peipus;NPMSG00 # esadir topònims
+llac Päijänne;NPCSG00 # esadir topònims
+llac Sevana;NPMSG00 # esadir topònims
+llacs de Plitvice;NPMPG00 # esadir topònims
+Lo Telh;NPCSG00 # esadir topònims
+Los Llanos de Aridane;NPMPG00 # esadir topònims
+Los Perdidos;NPMPG00 # esadir topònims
+Maarat al-Numan;NPCSG00 # esadir topònims
+Maasai Mara;NPCSG00 # esadir topònims
+Madhya Pradesh;NPCSG00 # esadir topònims
+Madinat al-Awda;NPCSG00 # esadir topònims
+Mahmud-e Raqi;NPCSG00 # esadir topònims
+Maidan Shar;NPCSG00 # esadir topònims
+Majdal Shams;NPCSG00 # esadir topònims
+Mali Pozarevac;NPCSG00 # esadir topònims
+Malo Orasje;NPCSG00 # esadir topònims
+Malà Tokmatxka;NPCSG00 # esadir topònims
+Manerba del Garda;NPCSG00 # esadir topònims
+Mariánské Lázně;NPCSG00 # esadir topònims
+Maroun al-Ras;NPCSG00 # esadir topònims
+Masafer Yatta;NPCSG00 # esadir topònims
+Mazar-e Xarif;NPCSG00 # esadir topònims
+Mazara del Vallo;NPCSG00 # esadir topònims
+Mevasséret Tsiyyon;NPCSG00 # esadir topònims
+Minas de Riotinto;NPCSG00 # esadir topònims
+Misano Adriatico;NPCSG00 # esadir topònims
+Misgav Am;NPCSG00 # esadir topònims
+Mocímboa da Praia;NPCSG00 # esadir topònims
+Mokri Ialí;NPCSG00 # esadir topònims
+mont Atos;NPMSG00 # esadir topònims
+mont Augal;NPMSG00 # esadir topònims
+mont Epomeo;NPMSG00 # esadir topònims
+mont Himet;NPMSG00 # esadir topònims
+mont Kerinci;NPMSG00 # esadir topònims
+mont Kumgang;NPMSG00 # esadir topònims
+mont Naranco;NPMSG00 # esadir topònims
+mont Paektu;NPMSG00 # esadir topònims
+mont Ruang;NPMSG00 # esadir topònims
+mont Ventor;NPMSG00 # esadir topònims
+Montenero di Bisaccia;NPCSG00 # esadir topònims
+Monterey Park;NPMSG00 # esadir topònims
+monts Bakony;NPMPG00 # esadir topònims
+Monza i Brianza;NPCSG00 # esadir topònims
+Mount Desert;NPMSG00 # esadir topònims
+Muadamiyat al-Sham;NPCSG00 # esadir topònims
+Nabi Salih;NPCSG00 # esadir topònims
+Nahal Oz;NPCSG00 # esadir topònims
+Nahr al-Kabir;NPCSG00 # esadir topònims
+Nea Ankhíalos;NPCSG00 # esadir topònims
+Nea Makri;NPCSG00 # esadir topònims
+Neeltje Jans;NPCSG00 # esadir topònims
+Nerkin Khndzoresk;NPCSG00 # esadir topònims
+Nevado del Ruiz;NPCSG00 # esadir topònims
+Nevado Mateo;NPCSG00 # esadir topònims
+Nir Am;NPCSG00 # esadir topònims
+Nir Oz;NPCSG00 # esadir topònims
+Nova Gorica;NPFSG00 # esadir topònims
+Novi Beograd;NPCSG00 # esadir topònims
+Novi Bíkiv;NPCSG00 # esadir topònims
+Novi Iarílovitxi;NPCSG00 # esadir topònims
+Novi Ligure;NPCSG00 # esadir topònims
+Nueva Italia;NPCSG00 # esadir topònims
+Nur Shams;NPCSG00 # esadir topònims
+Níjnia Duvanka;NPCSG00 # esadir topònims
+O Porriño;NPCSG00 # esadir topònims
+Oberndorf am Neckar;NPCSG00 # esadir topònims
+Oltza Zendea;NPCSG00 # esadir topònims
+Orador de Glana;NPCSG00 # esadir topònims
+Oum el-Bouaghi;NPCSG00 # esadir topònims
+Pangkalan Bun;NPCSG00 # esadir topònims
+Pao de Açúcar;NPCSG00 # esadir topònims
+pas de l'Stelvio;NPMSG00 # esadir topònims
+pas del Brocon;NPMSG00 # esadir topònims
+península de Iamal;NPFSG00 # esadir topònims
+península de Kinburn;NPFSG00 # esadir topònims
+península de Malaca;NPFSG00 # esadir topònims
+Pergine Valsugana;NPCSG00 # esadir topònims
+Petah Tikva;NPCSG00 # esadir topònims
+Petilla de Aragón;NPCSG00 # esadir topònims
+Phnom Aural;NPCSG00 # esadir topònims
+Piazzola sul Brenta;NPFSG00 # esadir topònims
+Pieve Torina;NPCSG00 # esadir topònims
+Pol-e Charkhi;NPCSG00 # esadir topònims
+pont Allenby;NPMSG00 # esadir topònims
+pont de Tienditas;NPMSG00 # esadir topònims
+pont Morandi;NPMSG00 # esadir topònims
+Ponte di Legno;NPMSG00 # esadir topònims
+Port El Kantaoui;NPMSG00 # esadir topònims
+Port Macquarie;NPMSG00 # esadir topònims
+Porto Santo;NPMSG00 # esadir topònims
+Pradèlas en Val;NPCSG00 # esadir topònims
+Prati di Tivo;NPCSG00 # esadir topònims
+Prats de Blèuna Auta;NPCSG00 # esadir topònims
+Preah Sihanouk;NPCSG00 # esadir topònims
+Preah Vihear;NPCSG00 # esadir topònims
+Puerto Cabezas;NPCSG00 # esadir topònims
+Puli Khumri;NPCSG00 # esadir topònims
+punta Angamos;NPFSG00 # esadir topònims
+Qala-e Naw;NPCSG00 # esadir topònims
+Qalaat al-Madiq;NPCSG00 # esadir topònims
+Quintana Roo;NPCSG00 # esadir topònims
+Radda in Chianti;NPCSG00 # esadir topònims
+Ramal·lah i Al-Bireh;NPCSG00 # esadir topònims
+Rapolano Terme;NPCSG00 # esadir topònims
+Ras Abu Aboud;NPCSG00 # esadir topònims
+Ras al-Ayn;NPCSG00 # esadir topònims
+Ras al-Khayma;NPCSG00 # esadir topònims
+Ras al-Naba'a;NPCSG00 # esadir topònims
+Ras an-Naqab;NPCSG00 # esadir topònims
+Ras Tanura;NPCSG00 # esadir topònims
+Rincón de la Victoria;NPMSG00 # esadir topònims
+Rot am See;NPCSG00 # esadir topònims
+Rui Vaz;NPCSG00 # esadir topònims
+Ruska Lozovà;NPCSG00 # esadir topònims
+RusSki Gorki;NPCSG00 # esadir topònims
+ruïnes de Zelve;NPFPG00 # esadir topònims
+Râmnicu Vâlcea;NPCSG00 # esadir topònims
+Río Cuarto;NPCSG00 # esadir topònims
+Sabbio Chiese;NPCSG00 # esadir topònims
+Saint Petersburg;NPCSG00 # esadir topònims
+San Agustín;NPCSG00 # esadir topònims
+San Andrés y Sauces;NPCSG00 # esadir topònims
+San Daniele del Friuli;NPCSG00 # esadir topònims
+San Francisco Javier;NPCSG00 # esadir topònims
+San Giovanni Rotondo;NPCSG00 # esadir topònims
+San Luis del Palmar;NPCSG00 # esadir topònims
+San Martino di Castrozza;NPCSG00 # esadir topònims
+San Michele all'Adige;NPCSG00 # esadir topònims
+San Miguel Totolapan;NPCSG00 # esadir topònims
+San Pedro Garza García;NPCSG00 # esadir topònims
+San Ysidro;NPCSG00 # esadir topònims
+Sant Laurenç de la Cabrerissa;NPCSG00 # esadir topònims
+Sant Martin de Vesúbia;NPCSG00 # esadir topònims
+Sant Nari;NPCSG00 # esadir topònims
+Sant Pau de Tricastin;NPCSG00 # esadir topònims
+Sant Tropetz;NPCSG00 # esadir topònims
+Santa Catarina Pinula;NPCSG00 # esadir topònims
+Santa Juana;NPCSG00 # esadir topònims
+São Félix do Araguaia;NPCSG00 # esadir topònims
+São Nicolau;NPCSG00 # esadir topònims
+Sar-e Pol;NPCSG00 # esadir topònims
+Sarpol-e Zahab;NPCSG00 # esadir topònims
+Satu Mare;NPCSG00 # esadir topònims
+Savignano sul Rubicone;NPCSG00 # esadir topònims
+Sayyidah Zaynab;NPCSG00 # esadir topònims
+Sefid Rud;NPCSG00 # esadir topònims
+Sent Gaudenç;NPCSG00 # esadir topònims
+Sent Ginièis de Malgoiriés;NPCSG00 # esadir topònims
+Sent Gironç;NPCSG00 # esadir topònims
+Sent Liunard;NPCSG00 # esadir topònims
+Sent Milion;NPCSG00 # esadir topònims
+Sent Sifret;NPCSG00 # esadir topònims
+Sheikh Jarrah;NPCSG00 # esadir topònims
+Sheikh Zuweid;NPCSG00 # esadir topònims
+Shokat as-Sufi;NPCSG00 # esadir topònims
+Sidi bel Abbès;NPCSG00 # esadir topònims
+Sidi Bou Saïd;NPCSG00 # esadir topònims
+Siem Reap;NPCSG00 # esadir topònims
+Simbach am Inn;NPCSG00 # esadir topònims
+Sofíivska Borsxahivka;NPCSG00 # esadir topònims
+Solac de Mar;NPCSG00 # esadir topònims
+Souk Ahras;NPCSG00 # esadir topònims
+Spin Boldak;NPCSG00 # esadir topònims
+Stara Zagora;NPCSG00 # esadir topònims
+Staria Hramiki;NPCSG00 # esadir topònims
+Steccato di Cutro;NPCSG00 # esadir topònims
+Svay Rieng;NPCSG00 # esadir topònims
+Sveti Stefan;NPCSG00 # esadir topònims
+Sérguiev Possad;NPCSG00 # esadir topònims
+Tal Afar;NPCSG00 # esadir topònims
+Taposiris Magna;NPCSG00 # esadir topònims
+Tarazona de la Mancha;NPCSG00 # esadir topònims
+Tassili n'Ajjer;NPCSG00 # esadir topònims
+Taybat al-Imam;NPCSG00 # esadir topònims
+Tayr Harfa;NPCSG00 # esadir topònims
+Tell Abyad;NPCSG00 # esadir topònims
+Tell Rifaat;NPCSG00 # esadir topònims
+Tenango del Valle;NPCSG00 # esadir topònims
+Termas de Río Hondo;NPCSG00 # esadir topònims
+Terme Luigiane;NPCSG00 # esadir topònims
+Tham Luang;NPCSG00 # esadir topònims
+Tizi Ouzou;NPCSG00 # esadir topònims
+Tria de Baïsa;NPCSG00 # esadir topònims
+Tristan da Cunha;NPCSG00 # esadir topònims
+Tuz Khurmatu;NPCSG00 # esadir topònims
+Txàssiv Iar;NPCSG00 # esadir topònims
+Ubon Ratchathani;NPCSG00 # esadir topònims
+Uharte Garazi;NPCSG00 # esadir topònims
+Umm al-Fahm;NPCSG00 # esadir topònims
+Umm al-Kilab;NPCSG00 # esadir topònims
+Usnarz Górny;NPCSG00 # esadir topònims
+Val di Zoldo;NPCSG00 # esadir topònims
+Valencia de Alcántara;NPCSG00 # esadir topònims
+Vanua Balavu;NPCSG00 # esadir topònims
+Velika Komixuvakha;NPCSG00 # esadir topònims
+Velika Kostromka;NPCSG00 # esadir topònims
+Velika Novossilka;NPCSG00 # esadir topònims
+Veliki Burluk;NPCSG00 # esadir topònims
+Venaria Reale;NPCSG00 # esadir topònims
+Verkhni Lars;NPCSG00 # esadir topònims
+Vic de Fesensac;NPCSG00 # esadir topònims
+Vila Nova de Famalicao;NPFSG00 # esadir topònims
+Vila Pouca de Aguiar;NPFSG00 # esadir topònims
+Vilanuèva d'Òlt;NPFSG00 # esadir topònims
+Vilanòva de Magalona;NPFSG00 # esadir topònims
+Villa Carlos Paz;NPFSG00 # esadir topònims
+Villa de Mazo;NPFSG00 # esadir topònims
+Vire Normandie;NPCSG00 # esadir topònims
+Vysné Nemecké;NPCSG00 # esadir topònims
+Vérkhniaia Pixmà;NPCSG00 # esadir topònims
+Wadi ad-Dawasir;NPCSG00 # esadir topònims
+Wadi ar-Rummah;NPCSG00 # esadir topònims
+Wadi as-Salqa;NPCSG00 # esadir topònims
+Wadi Hanifa;NPCSG00 # esadir topònims
+Yad Mordechai;NPCSG00 # esadir topònims
+Zielona Góra;NPCSG00 # esadir topònims
+Zolotà Balka;NPCSG00 # esadir topònims
+Zubin Potok;NPCSG00 # esadir topònims
+Ars Poetica;NPFSO00
+Sant Tomàs;NPMSSP0
+Sant Cebrià de Vallalta;NPCSG00
+Pierre Benoit;NPMSSP0
+Sant Quiri;NPMSG00
+Sant Dalmai;NPMSG00
+Maria Magdalena;NPFSSP0
+Abu Hassan;NPMSSP0
+Sant Joan d'Arsós;NPMSG00
+Sant Joan d'Arròs;NPMSG00
+1I/ʻOumuamua;NPMSO00
+Ana Botella;NPFSSP0
+Ana Botella Serrano;NPFSSP0
+46P/Wirtanen;NPCN000 # wikidata
+4P/Faye;NPCN000 # wikidata
+8P/Tuttle;NPCN000 # wikidata
+A/UX;NPCN000 # wikidata
+A5/2;NPCN000 # wikidata
+AC/DC;NPCN000 # wikidata
+AN/SPY-6;NPCN000 # wikidata
+CDS/ISIS;NPCN000 # wikidata
+CDU/CSU;NPCN000 # wikidata
+CP/M-86;NPCN000 # wikidata
+Cabello/Carceller;NPCN000 # wikidata
+Celerina/Schlarigna;NPCN000 # wikidata
+DOS/360;NPCN000 # wikidata
+De/Vision;NPCN000 # wikidata
+Disentis/Mustér;NPCN000 # wikidata
+Domat/Ems;NPCN000 # wikidata
+Drama/Mex;NPCN000 # wikidata
+EB/Streymur;NPCN000 # wikidata
+Eb/N0;NPCN000 # wikidata
+Eskuak/Ukabilak;NPCN000 # wikidata
+Fosse/Verdon;NPCN000 # wikidata
+Gelabert/Azzopardi;NPCN000 # wikidata
+HTTP/3;NPCN000 # wikidata
+ISIS/Draw;NPCN000 # wikidata
+Ilium/Olympos;NPCN000 # wikidata
+J/80;NPCN000 # wikidata
+K/DA;NPCN000 # wikidata
+LabWindows/CVI;NPCN000 # wikidata
+Lantsch/Lenz;NPCN000 # wikidata
+MP/M;NPCN000 # wikidata
+NSDAP/AO;NPCN000 # wikidata
+Neuhausen/Spree;NPCN000 # wikidata
+OS/360;NPCN000 # wikidata
+PDF/A;NPCN000 # wikidata
+PL/M;NPCN000 # wikidata
+PL/SQL;NPCN000 # wikidata
+Página/12;NPCN000 # wikidata
+RDF/XML;NPCN000 # wikidata
+Rainbow/PUSH;NPCN000 # wikidata
+Revelling/Reckoning;NPCN000 # wikidata
+SHERPA/RoMEO;NPCN000 # wikidata
+Tele/Estel;NPCN000 # wikidata
+Vaz/Obervaz;NPCN000 # wikidata
+Vida/Perra;NPCN000 # wikidata
+WIN/GIA;NPCN000 # wikidata
+Waltensburg/Vuorz;NPCN000 # wikidata
+X/Open;NPCN000 # wikidata
+/dev/null;NPCN000 # wikidata
+14P/Wolf;NPCN000 # wikidata
+177P/Barnard;NPCN000 # wikidata
+19P/Borrelly;NPCN000 # wikidata
+46P/Wirtanen;NPCN000 # wikidata
+MFC Ayat;NPMSO00
+José R. Pascual-Vilaplana;NPMSSP0
+José Rafael Pascual-Vilaplana;NPMSSP0
+José Pascual-Vilaplana;NPMSSP0
+Pascual-Vilaplana;NPMSSP0
+Morad el-Khattouti el-Horami;NPMSSP0
+Alfons Durán-Pich;NPMSSP0
+Hospital Al-Ahli;NPMSG00
+Hospital Gemelli;NPMSG00
+Hospital Ibn Sina;NPMSG00
+Theodore von Kármán;NPMSSP0
+Birendra Bir Bikram Shah Dev;NPMSSP0
+Abbas El Fassi;NPMSSP0 # esadir Marroc
+Abdel Aziz Rantisi;NPMSSP0 # esadir país desconegut
+Abdelbaki es-Satty;NPMSSP0 # esadir Marroc
+Abdelkader Bensalah;NPMSSP0 # esadir Algèria
+Abdelsalam Majali;NPMSSP0 # esadir Jordània
+Abdolreza Shahlaei;NPMSSP0 # esadir Iran
+Abdrabbuh Mansour Hadi;NPMSSP0 # esadir Iemen
+Abdullah Çatli;NPMSSP0 # esadir Turquia
+Abel Mariné Font;NPMSSP0 # esadir Catalunya
+Abel Mariné;NPMSSP0 # esadir Catalunya
+Ablaye Mbaye;NPMSSP0 # esadir Senegal
+Abu al-Hussein al-Husseini al-Qurashi;NPMSSP0 # esadir país desconegut
+Abu al-Hussein al-Qurashi;NPMSSP0 # esadir país desconegut
+Abu Ayyub al-Masri;NPMSSP0 # esadir país desconegut
+Abu Bakar Ba'asyir;NPMSSP0 # esadir Indonèsia
+Abu Bakar Ba’asyir;NPMSSP0 # esadir Indonèsia
+Abu Ibrahim al-Hashimi al-Qurashi;NPMSSP0 # esadir Iraq
+Abu Ibrahim al-Qurayshi;NPMSSP0 # esadir Iraq
+Adam Szlapka;NPMSSP0 # esadir Polònia
+Adelaida Sarukhan;NPFSSP0 # esadir Catalunya
+Adina-Ioana Vălean;NPFSSP0 # esadir Romania
+Adou Peter Tayoro;NPMSSP0 # esadir Costa d'Ivori
+Adou Peter;NPMSSP0 # esadir Costa d'Ivori
+Adri Embarba;NPMSSP0 # esadir Espanya
+Adrian der Gregorian;NPMSSP0 # esadir Regne Unit
+Adrian Năstase;NPMSSP0 # esadir Romania
+Adrià Ortolà;NPMSSP0 # esadir País Valencià
+Adrián Embarba Blázquez;NPMSSP0 # esadir Espanya
+Adrián Sola Basterra;NPMSSP0 # esadir Espanya
+Adrián Sola;NPMSSP0 # esadir Espanya
+Agbéyomé Kodjo;NPMSSP0 # esadir Togo
+Agnieszka Radwańska;NPFSSP0 # esadir Polònia
+Agostina Smimmero;NPFSSP0 # esadir Itàlia
+Agostinangelo Marras;NPMSSP0 # esadir Itàlia
+Ahmad Khalaf Massadeh;NPMSSP0 # esadir Jordània
+Ahmad Massoud;NPMSSP0 # esadir Afganistan
+Ahmad Tejan Kabbah;NPMSSP0 # esadir Sierra Leone
+Ahmed Karzai;NPMSSP0 # esadir Afganistan
+Ahmed Qurei;NPMSSP0 # esadir Palestina
+Ahmed Safar;NPMSSP0 # esadir Líbia
+Ahmet Davutoğlu;NPMSSP0 # esadir Turquia
+Aigars Kalvītis;NPMSSP0 # esadir Letònia
+Ajla Tomljanović;NPFSSP0 # esadir Austràlia
+Akin Öztürk;NPMSSP0 # esadir Turquia
+Al-Saadi Gaddafi;NPMSSP0 # esadir Líbia
+Alaa Al Aswani;NPMSSP0 # esadir Egipte
+Alan Gaglóiev;NPMSSP0 # esadir Geòrgia
+Alba Vilajeliu Balagué;NPFSSP0 # esadir Catalunya
+Alba Vilajeliu;NPFSSP0 # esadir Catalunya
+Albert Attenelle;NPMSSP0 # esadir Catalunya
+Albert Benaiges;NPMSSP0 # esadir Catalunya
+Albert Guðmundsson;NPMSSP0 # esadir Islàndia
+Albert Malcolm Ranjith Patabandige Don;NPMSSP0 # esadir Sri Lanka
+Alberto Miguélez Rouco;NPMSSP0 # esadir Espanya
+Alejandro Davidovich Fokina;NPMSSP0 # esadir Espanya
+Alejandro Davidovich;NPMSSP0 # esadir Espanya
+Aleksandar Pantić;NPMSSP0 # esadir Sèrbia
+Aleksandar Vučić;NPMSSP0 # esadir Sèrbia
+Aleksandar Šapić;NPMSSP0 # esadir Sèrbia
+Aleksander Čeferin;NPMSSP0 # esadir Eslovènia
+Aleksandrs Antoņenko;NPMSSP0 # esadir Letònia
+Aleksandër Meksi;NPMSSP0 # esadir Albània
+Aleksei Razumovski;NPMSSP0 # esadir Rússia
+Aleksei Txali;NPMSSP0 # esadir Crimea
+Alen Halilović;NPMSSP0 # esadir Croàcia
+Alen Omić;NPMSSP0 # esadir Eslovènia
+Alex de Miñaur;NPMSSP0 # esadir Austràlia
+Alex Oxlade-Chamberlain;NPMSSP0 # esadir Regne Unit
+Alex Oxlade;NPMSSP0 # esadir Regne Unit
+Alexander Dubček;NPMSSP0 # esadir Eslovàquia
+Alexander Hleb;NPMSSP0 # esadir Bielorússia
+Alexander Ullman;NPMSSP0 # esadir Regne Unit
+Alexandra Sherman;NPFSSP0 # esadir Rússia
+Alexandre Acsensi;NPMSSP0 # esadir Catalunya
+Alexandre Baty;NPMSSP0 # esadir França
+Alexandre Ferdinand N'Guendet;NPMSSP0 # esadir República Centreafricana
+Alexandre Ferdinand N’Guendet;NPMSSP0 # esadir República Centreafricana
+Alexandru Visinescu;NPMSSP0 # esadir Romania
+Alfonso Carlos Comín Ros;NPMSSP0 # esadir Catalunya
+Alfonso Comín;NPMSSP0 # esadir Catalunya
+Algirdas Butkevičius;NPMSSP0 # esadir Lituània
+Ali Agca;NPMSSP0 # esadir Turquia
+Ali Benflis;NPMSSP0 # esadir Algèria
+Ali Keshtmand;NPMSSP0 # esadir Afganistan
+Ali Muhammad Mujawar;NPMSSP0 # esadir Iemen
+Ali Mujawar;NPMSSP0 # esadir Iemen
+Ali Shadmani;NPMSSP0 # esadir Iran
+Ali Yazici;NPMSSP0 # esadir Turquia
+Alija Izetbegović;NPMSSP0 # esadir Bòsnia i Hercegovina
+Aliona Bolsova;NPFSSP0 # esadir Catalunya
+Alissa Margulis;NPFSSP0 # esadir Alemanya
+Almazbek Atambayev;NPMSSP0 # esadir Kirguizstan
+Alwaleed bin Talal bin Abdulaziz al-Saud;NPMSSP0 # esadir Aràbia Saudita
+Alwaleed de l'Aràbia Saudita;NPMSSP0 # esadir Aràbia Saudita
+Alés Adamóvitx;NPMSSP0 # esadir Bielorússia
+Alícia Moriana López;NPFSSP0 # esadir Catalunya
+Alícia Moriana;NPFSSP0 # esadir Catalunya
+Amadou Haya Sanogo;NPMSSP0 # esadir Mali
+Amarouch Azbir;NPMSSP0 # esadir Catalunya
+Aminatou Haidar;NPMSSP0 # esadir país desconegut
+Amélie Angebault;NPFSSP0 # esadir França
+Américo Aguiar;NPMSSP0 # esadir Portugal
+Américo Manuel Alves Aguiar;NPMSSP0 # esadir Portugal
+Ana Briongos;NPFSSP0 # esadir Catalunya
+Ana Crnogorcevic;NPFSSP0 # esadir Suïssa
+Ana Ivanovic;NPFSSP0 # esadir Sèrbia
+Ana María Briongos Guadayol;NPFSSP0 # esadir Catalunya
+Ana Pérez-Lorente Ynzenga;NPFSSP0 # esadir Espanya
+Ana Pérez-Lorente;NPFSSP0 # esadir Espanya
+Anair Lomba;NPFSSP0 # esadir Espanya
+Anaitz Arbilla Zabala;NPMSSP0 # esadir Espanya
+Anaitz Arbilla;NPMSSP0 # esadir Espanya
+Anar Eyvazov;NPMSSP0 # esadir Azerbaidjan
+Anatoli Fedoruk;NPMSSP0 # esadir Ucraïna
+Anaïr Lomba Álvarez;NPFSSP0 # esadir Espanya
+Andrea Petkovic;NPFSSP0 # esadir Alemanya
+Andrei Ioniță;NPMSSP0 # esadir Romania
+Andrej Babiš;NPMSSP0 # esadir República Txeca
+Andrej Plenković;NPMSSP0 # esadir Croàcia
+Andris Bērziņš;NPMSSP0 # esadir Letònia
+Andriy Viytovych;NPMSSP0 # esadir Ucraïna
+Andrzej Domanski;NPMSSP0 # esadir Polònia
+Andrzej Filonczyk;NPMSSP0 # esadir Polònia
+André Risopoulos;NPMSSP0 # esadir Grècia
+Andrés Esono Ondo;NPMSSP0 # esadir Guinea Equatorial
+Andrés Esono;NPMSSP0 # esadir Guinea Equatorial
+Andrés Maluenda Martínez;NPMSSP0 # esadir Catalunya
+Andrés Maluenda;NPMSSP0 # esadir Catalunya
+Andrí Desxítsia;NPMSSP0 # esadir Ucraïna
+Andrí Sadoví;NPMSSP0 # esadir Ucraïna
+Andrí Sibiha;NPMSSP0 # esadir Ucraïna
+Ann Perelló;NPFSSP0 # esadir illes Balears
+Anna Balletbò Puig;NPFSSP0 # esadir Catalunya
+Anna Balletbò;NPFSSP0 # esadir Catalunya
+Anna de Clèves;NPMSSP0 # esadir Regne Unit
+Anna Fenninger;NPFSSP0 # esadir Àustria
+Anna Maria Prammer;NPFSSP0 # esadir Àustria
+Anna Naghdalyan;NPFSSP0 # esadir Armènia
+Ana Ramón Rubio;NPFSSP0 # esadir País Valencià
+Ana Ramón;NPFSSP0 # esadir País Valencià
+Anna Tobella;NPFSSP0 # esadir Catalunya
+Ante Pavelić;NPMSSP0 # esadir Croàcia
+Ante Tomić;NPMSSP0 # esadir Croàcia
+Ante Ćorić;NPMSSP0 # esadir Croàcia
+Anton Barakhovsky;NPMSSP0 # esadir Rússia
+Anton Krassovski;NPMSSP0 # esadir Rússia
+Antoni Fogué Moya;NPMSSP0 # esadir Catalunya
+Antoni Fogué;NPMSSP0 # esadir Catalunya
+Antoni Ros Marbà;NPMSSP0 # esadir Catalunya
+Antonia Ružić;NPFSSP0 # esadir Croàcia
+Antonino Siragusa;NPMSSP0 # esadir Itàlia
+Antonio Basagoiti Pastor;NPMSSP0 # esadir Espanya
+Antonio Basagoiti;NPMSSP0 # esadir Espanya
+Antonín Dvořák;NPMSSP0 # esadir República Txeca
+Antonín Leopold Dvorák;NPMSSP0 # esadir República Txeca
+Antxon Alonso;NPMSSP0 # esadir Espanya
+Antònia Carré-Pons;NPFSSP0 # esadir Catalunya
+Aram Khachaturian;NPMSSP0 # esadir Geòrgia
+Arcadi Calzada;NPMSSP0 # esadir Catalunya
+Ares Masip Ibáñez;NPMSSP0 # esadir Catalunya
+Ares Masip;NPMSSP0 # esadir Catalunya
+Argelia Queralt Jiménez;NPFSSP0 # esadir Catalunya
+Argelia Queralt;NPFSSP0 # esadir Catalunya
+Arisa Fujita;NPFSSP0 # esadir Japó
+Armando Calderón Sol;NPMSSP0 # esadir El Salvador
+Armando Calderón;NPMSSP0 # esadir El Salvador
+Arnaldur Indriðason;NPMSSP0 # esadir Islàndia
+Arpad Sterbik;NPMSSP0 # esadir Espanya
+Artem Pustovyi;NPMSSP0 # esadir Ucraïna
+Artur Ruciński;NPMSSP0 # esadir Polònia
+Arturs Krisjanis Karins;NPMSSP0 # esadir Letònia
+Aslan Bjània;NPMSSP0 # esadir Geòrgia
+Assunçao Cristas;NPFSSP0 # esadir Portugal
+Aureli de Luna;NPMSSP0 # esadir Catalunya
+Aurora Masip;NPFSSP0 # esadir Catalunya
+Avigdor Lieberman;NPMSSP0 # esadir Israel
+Bakir Izetbegović;NPMSSP0 # esadir Bòsnia i Hercegovina
+Barbora Krejcíková;NPFSSP0 # esadir República Txeca
+Beata Szydło;NPFSSP0 # esadir Polònia
+Beatriz Talegón Ramos;NPFSSP0 # esadir país desconegut
+Beatriz Talegón;NPFSSP0 # esadir país desconegut
+Benjamin Verbič;NPMSSP0 # esadir Eslovènia
+Benoît Cœuré;NPMSSP0 # esadir França
+Bernard Feringa;NPMSSP0 # esadir Països Baixos
+Bernard Lucas Feringa;NPMSSP0 # esadir Països Baixos
+Bernat Lavaquiol Colell;NPMSSP0 # esadir Catalunya
+Bernat Lavaquiol;NPMSSP0 # esadir Catalunya
+Bertrand Laude;NPMSSP0 # esadir França
+Beto Martín;NPMSSP0 # esadir Catalunya
+Bidhya Bhandari;NPFSSP0 # esadir Nepal
+Bidya Devi Bhandari;NPFSSP0 # esadir Nepal
+Bidzina Ivanishvili;NPMSSP0 # esadir Geòrgia
+Bilawal Bhutto Zardari;NPMSSP0 # esadir Pakistan
+Bilawal Bhutto;NPMSSP0 # esadir Pakistan
+Blanka Vlašić;NPFSSP0 # esadir Croàcia
+Blaž Janc;NPMSSP0 # esadir Eslovènia
+Boban Minic;NPMSSP0 # esadir Bòsnia i Hercegovina
+Bogdan Lobonț;NPMSSP0 # esadir Romania
+Bogić Bogićević;NPMSSP0 # esadir Bòsnia i Hercegovina
+Bojan Bogdanović;NPMSSP0 # esadir Croàcia
+Bojan Krkić Pérez;NPMSSP0 # esadir Catalunya
+Bojan Krkić;NPMSSP0 # esadir Catalunya
+Boris Miletic;NPMSSP0 # esadir Croàcia
+Boris Tsilevitch;NPMSSP0 # esadir Letònia
+Boris Vujčić;NPMSSP0 # esadir Croàcia
+Borjana Krišto;NPFSSP0 # esadir Bòsnia i Hercegovina
+Borna Ćorić;NPMSSP0 # esadir Croàcia
+Borís Pugo;NPMSSP0 # esadir Rússia
+Boštjan Nachbar;NPMSSP0 # esadir Eslovènia
+Božo Petrov;NPMSSP0 # esadir Croàcia
+Branislav Ivanović;NPMSSP0 # esadir Sèrbia
+Branko Milanović;NPMSSP0 # esadir Sèrbia
+Bratislav Gasic;NPMSSP0 # esadir Sèrbia
+Brian Oliván Herrero;NPMSSP0 # esadir Catalunya
+Brian Oliván;NPMSSP0 # esadir Catalunya
+Bronisław Komorowski;NPMSSP0 # esadir Polònia
+Bruno De Simone;NPMSSP0 # esadir Itàlia
+Burhan Ozbilici;NPMSSP0 # esadir Turquia
+Bénéwendé Sankara;NPMSSP0 # esadir Burkina Faso
+Bénéwendé Stanislas Sankara;NPMSSP0 # esadir Burkina Faso
+Caren Kargill;NPFSSP0 # esadir Regne Unit
+Carles Daza;NPMSSP0 # esadir Catalunya
+Carlos Díaz Arkotxa;NPMSSP0 # esadir Espanya
+Carlos Eduardo del Castillo del Carpio;NPMSSP0 # esadir Bolívia
+Carlos Iturgaiz;NPMSSP0 # esadir Espanya
+Carlos José Iturgaiz Angulo;NPMSSP0 # esadir Espanya
+Carlos Mir Puig;NPMSSP0 # esadir Catalunya
+Carlos Mir;NPMSSP0 # esadir Catalunya
+Carma Casulá;NPFSSP0 # esadir Catalunya
+Carme Contreras Verdiales;NPFSSP0 # esadir Catalunya
+Carme Contreras;NPFSSP0 # esadir Catalunya
+Carmen Cabezas Peña;NPFSSP0 # esadir Catalunya
+Carmen Cabezas;NPFSSP0 # esadir Catalunya
+Carolina Recio Cáceres;NPFSSP0 # esadir Catalunya
+Carolina Recio;NPFSSP0 # esadir Catalunya
+Carsten Wittmoser;NPMSSP0 # esadir Alemanya
+Cary Fukunaga;NPMSSP0 # esadir Estats Units
+Casper Mortensen;NPMSSP0 # esadir Dinamarca
+Cayetana d'Alba;NPFSSP0 # esadir Espanya
+Cayetana Fitz-James Stuart;NPFSSP0 # esadir Espanya
+Cenk Şahin;NPMSSP0 # esadir Turquia
+Christian Kluxen;NPMSSP0 # esadir Dinamarca
+Christine Wolff;NPFSSP0 # esadir Alemanya
+Christoph Rahn;NPMSSP0 # esadir Alemanya
+Chung Mong-joon;NPMSSP0 # esadir Corea del Sud
+Claude Makélélé;NPMSSP0 # esadir França
+Claudelice Silva dos Santos;NPFSSP0 # esadir Brasil
+Claudelice Silva;NPFSSP0 # esadir Brasil
+Clifton Forbis;NPMSSP0 # esadir Estats Units
+Concepción Espejel;NPFSSP0 # esadir Espanya
+Constantin Dăscălescu;NPMSSP0 # esadir Romania
+Constantin Gâlcă;NPMSSP0 # esadir Romania
+Constantina Theofanopoulou;NPFSSP0 # esadir Estats Units
+Corneliu Mănescu;NPMSSP0 # esadir Romania
+Cristian Elsner;NPMSSP0 # esadir Alemanya
+Cristian Măcelaru;NPMSSP0 # esadir Romania
+Cristina BanBan;NPFSSP0 # esadir Catalunya
+Cristine Rice;NPFSSP0 # esadir Estats Units
+Cüneyt Çakır;NPMSSP0 # esadir Turquia
+Călin Georgescu;NPMSSP0 # esadir Romania
+Călin Popescu-Tăriceanu;NPMSSP0 # esadir Romania
+Dacian Cioloș;NPMSSP0 # esadir Romania
+Dalia Grybauskaitė;NPFSSP0 # esadir Lituània
+Dalia Kutkaitė;NPFSSP0 # esadir Lituània
+Damir Džumhur;NPMSSP0 # esadir Bòsnia i Hercegovina
+Daniel arap Moi;NPMSSP0 # esadir Kenya
+Daniel Chițoiu;NPMSSP0 # esadir Romania
+Daniel de Alfonso;NPMSSP0 # esadir Catalunya
+Daniel Gil de Tejada;NPMSSP0 # esadir País Valencià
+Daniel Kwan;NPMSSP0 # esadir Estats Units
+Daniel Léveillé;NPMSSP0 # esadir Canadà
+Daniel Steegmann Mangrané;NPMSSP0 # esadir Catalunya
+Daniel Steegmann;NPMSSP0 # esadir Catalunya
+Daniela Dessì;NPFSSP0 # esadir Itàlia
+Danijel Šarić;NPMSSP0 # esadir Croàcia
+Dante Canonica;NPMSSP0 # esadir Suïssa
+Daria Mieloszynska;NPFSSP0 # esadir Polònia
+Dario Krešić;NPMSSP0 # esadir Croàcia
+Darko Pajović;NPMSSP0 # esadir Montenegro
+Dasa Drndic;NPFSSP0 # esadir Croàcia
+David Arakhàmia;NPMSSP0 # esadir Ucraïna
+David García Ilundain;NPMSSP0 # esadir Catalunya
+David Ilundain;NPMSSP0 # esadir Catalunya
+David James Thouless;NPMSSP0 # esadir Regne Unit
+David Lamy;NPMSSP0 # esadir Regne Unit
+David Thouless;NPMSSP0 # esadir Regne Unit
+Davíd Oddsson;NPMSSP0 # esadir Islàndia
+Deborah Myers;NPFSSP0 # esadir Regne Unit
+Dejan Dražić;NPMSSP0 # esadir Sèrbia
+Dejan Lazić;NPMSSP0 # esadir Croàcia
+Dejan Lekić;NPMSSP0 # esadir Sèrbia
+Denis Bećirović;NPMSSP0 # esadir Bòsnia i Hercegovina
+Denis Buntić;NPMSSP0 # esadir Croàcia
+Denis Suárez;NPMSSP0 # esadir Espanya
+Dennis Russell Davies;NPMSSP0 # esadir Estats Units
+Denys Proshayev;NPMSSP0 # esadir Bielorússia
+Denís Kapustin;NPMSSP0 # esadir país desconegut
+Denís Prokopenko;NPMSSP0 # esadir Ucraïna
+Diana Iovanovici Șoșoacă;NPFSSP0 # esadir Romania
+Diana Șoșoacă;NPFSSP0 # esadir Romania
+Diego Herchhoren;NPMSSP0 # esadir Espanya
+Diego Ravelli;NPMSSP0 # esadir Itàlia
+Dietmar Bruckmayr;NPMSSP0 # esadir Àustria
+Dimitry Ivashchenko;NPMSSP0 # esadir Rússia
+Diógenes Randes;NPMSSP0 # esadir Brasil
+Djordje Cikusa;NPMSSP0 # esadir Catalunya
+Dmitró Iàroix;NPMSSP0 # esadir Ucraïna
+Dmitró Jivitski;NPMSSP0 # esadir Ucraïna
+Dmitró Kotsiubailo;NPMSSP0 # esadir Ucraïna
+Dobrica Ćosić;NPMSSP0 # esadir Sèrbia
+Doku Umàrov;NPMSSP0 # esadir Rússia
+Domingos Simoes;NPMSSP0 # esadir Guinea-Bissau
+Dominik Livaković;NPMSSP0 # esadir Croàcia
+Donát Hávar;NPMSSP0 # esadir Alemanya
+Douae Ouboukir;NPFSSP0 # esadir Catalunya
+Dragan Gajić;NPMSSP0 # esadir Eslovènia
+Dragan Pantelić;NPMSSP0 # esadir Sèrbia
+Dragan Čović;NPMSSP0 # esadir Bòsnia i Hercegovina
+Dragoș Tudorache;NPMSSP0 # esadir Romania
+Draško Stanivuković;NPMSSP0 # esadir Bòsnia i Hercegovina
+Duan Ai'ai;NPFSSP0 # esadir Xina
+Dunja Mijatović;NPFSSP0 # esadir Bòsnia i Hercegovina
+Dušan Tadić;NPMSSP0 # esadir Sèrbia
+Dušan Vlahović;NPMSSP0 # esadir Sèrbia
+Duško Ivanović;NPMSSP0 # esadir Montenegro
+Duško Marković;NPMSSP0 # esadir Montenegro
+Désirée Rancatore;NPFSSP0 # esadir Itàlia
+Dāvis Bertāns;NPMSSP0 # esadir Letònia
+Džanan Musa;NPMSSP0 # esadir Bòsnia i Hercegovina
+Eddy Bellegueule;NPMSSP0 # esadir França
+Edin Džeko;NPMSSP0 # esadir Bòsnia i Hercegovina
+Eduard Arranz-Bravo;NPMSSP0 # esadir Catalunya
+Eduard Bassurin;NPMSSP0 # esadir Ucraïna
+Eduardo del Castillo;NPMSSP0 # esadir Bolívia
+Eduardo Torres-Dulce Lifante;NPMSSP0 # esadir Espanya
+Eduardo Torres-Dulce;NPMSSP0 # esadir Espanya
+Effie Defrin;NPMSSP0 # esadir Israel
+Eiríkur Örn Norddahl;NPMSSP0 # esadir Islàndia
+Eivind Adland;NPMSSP0 # esadir Noruega
+Eiður Guðjohnsen;NPMSSP0 # esadir Islàndia
+Ejup Ganić;NPMSSP0 # esadir Bòsnia i Hercegovina
+Ekmeleddin İhsanoğlu;NPMSSP0 # esadir Turquia
+Ekrem İmamoğlu;NPMSSP0 # esadir Turquia
+el Petit Nicolás;NPMSSP0 # esadir Espanya
+Elio Orciuolo;NPMSSP0 # esadir Itàlia
+Elisabeth Adkins;NPFSSP0 # esadir Estats Units
+Elizabeth Castro;NPFSSP0 # esadir Catalunya
+Ellen Johnson Sirleaf;NPFSSP0 # esadir Libèria
+Elpidio José Silva Pacheco;NPMSSP0 # esadir Espanya
+Elpídio Silva;NPMSSP0 # esadir Espanya
+Elvio Paolorosso;NPMSSP0 # esadir Argentina
+Elīna Garanča;NPFSSP0 # esadir Letònia
+Emili Rousaud;NPMSSP0 # esadir Catalunya
+Emilienne Malfatto;NPFSSP0 # esadir França
+Emilio Jesús Sánchez Ulled;NPMSSP0 # esadir Catalunya
+Emilio Sánchez Ulled;NPMSSP0 # esadir Catalunya
+Emmanuel Faraldo;NPMSSP0 # esadir Argentina
+Endrick Felipe Moreira de Sousa;NPMSSP0 # esadir Brasil
+Engelbert Humperdinck;NPMSSP0 # esadir Alemanya
+Enma López Araújo;NPFSSP0 # esadir Espanya
+Enma López;NPFSSP0 # esadir Espanya
+Ennatu Domingo Soler;NPFSSP0 # esadir Catalunya
+Ennatu Domingo;NPFSSP0 # esadir Catalunya
+Enric Franch Miret;NPMSSP0 # esadir Catalunya
+Enric Franch;NPMSSP0 # esadir Catalunya
+Enric Lacalle Coll;NPMSSP0 # esadir Catalunya
+Enric Lacalle;NPMSSP0 # esadir Catalunya
+Enric Larreula Vidal;NPMSSP0 # esadir Catalunya
+Enric Larreula;NPMSSP0 # esadir Catalunya
+Enric Magoo;NPMSSP0 # esadir Catalunya
+Enrique Arnaldo Alcubilla;NPMSSP0 # esadir Espanya
+Enrique Arnaldo;NPMSSP0 # esadir Espanya
+Enrique Castro González;NPMSSP0 # esadir Espanya
+Ericka Ovette;NPFSSP0 # esadir Estats Units
+Ernest von Freyberg;NPMSSP0 # esadir Alemanya
+Esperanza Casteleiro Llamazares;NPFSSP0 # esadir Espanya
+Esperanza Casteleiro;NPFSSP0 # esadir Espanya
+Estel Solé Casadellà;NPFSSP0 # esadir Catalunya
+Estel Solé;NPFSSP0 # esadir Catalunya
+Esther Martín Roque;NPFSSP0 # esadir Catalunya
+Esther Martín;NPFSSP0 # esadir Catalunya
+Eugeni Gay Montalvo;NPMSSP0 # esadir Catalunya
+Eugeni Gay;NPMSSP0 # esadir Catalunya
+Eugenie Bouchard;NPFSSP0 # esadir Canadà
+Eugenio Trías Sagnier;NPMSSP0 # esadir Catalunya
+Eugenio Trías;NPMSSP0 # esadir Catalunya
+Evika Siliņa;NPFSSP0 # esadir Letònia
+Ewa Podleś;NPFSSP0 # esadir Polònia
+Eñaut Barruetabeña;NPMSSP0 # esadir Catalunya
+Fabricio Alvarado Muñoz;NPMSSP0 # esadir Costa Rica
+Fabricio Alvarado;NPMSSP0 # esadir Costa Rica
+Faisal Mekdad;NPMSSP0 # esadir Síria
+Farran James;NPMSSP0 # esadir Canadà
+Fathi Hangari;NPMSSP0 # esadir Líbia
+Fazıl Say;NPMSSP0 # esadir Turquia
+Felip de Marichalar;NPMSSP0 # esadir Espanya
+Feliu Elias Bracons;NPMSSP0 # esadir Catalunya
+Feliu Elias;NPMSSP0 # esadir Catalunya
+Ferdinand Magellan;NPMSSP0 # esadir Portugal
+Fermí Delfa;NPMSSP0 # esadir Catalunya
+Fermí Herrero Delfa;NPMSSP0 # esadir Catalunya
+Fermí Reixach Garcia;NPMSSP0 # esadir Catalunya
+Fermí Reixach;NPMSSP0 # esadir Catalunya
+Fermín Morales Prats;NPMSSP0 # esadir Catalunya
+Fermín Morales;NPMSSP0 # esadir Catalunya
+Ferran Bassas Navarra;NPMSSP0 # esadir Catalunya
+Ferran Formatjé Cuyàs;NPMSSP0 # esadir Catalunya
+Ferran Formatjé;NPMSSP0 # esadir Catalunya
+Ferrucio Furlanetto;NPMSSP0 # esadir Itàlia
+Ferrán Bassas;NPMSSP0 # esadir Catalunya
+Figen Yüksekdag;NPFSSP0 # esadir Turquia
+Fikret Abdić;NPMSSP0 # esadir Bòsnia i Hercegovina
+Filip Kostić;NPMSSP0 # esadir Sèrbia
+Filip Mladenović;NPMSSP0 # esadir Sèrbia
+Filippo Di Pierro;NPMSSP0 # esadir Itàlia
+Filo Cañete;NPFSSP0 # esadir Catalunya
+Filomena Cañete Carrillo;NPFSSP0 # esadir Catalunya
+Fiokla Tolstaia;NPFSSP0 # esadir Rússia
+Firass Abiad;NPMSSP0 # esadir Líban
+Florin Răducioiu;NPMSSP0 # esadir Romania
+Fouad Massoum;NPMSSP0 # esadir Iraq
+Fouad Mebazaa;NPMSSP0 # esadir Tunísia
+Francesc Gordo Lorente;NPMSSP0 # esadir Catalunya
+Francesc Gordo;NPMSSP0 # esadir Catalunya
+Francesc Lucchetti Farré;NPMSSP0 # esadir Catalunya
+Francesc Lucchetti;NPMSSP0 # esadir Catalunya
+Francesc Martínez-Soria Ramos;NPMSSP0 # esadir Catalunya
+Francesc Martínez-Soria;NPMSSP0 # esadir Catalunya
+Francesc Sanchez;NPMSSP0 # esadir Catalunya
+Francisco Trincão;NPMSSP0 # esadir Portugal
+Franck Kessié;NPMSSP0 # esadir Costa d'Ivori
+Franck Yannick Kessie;NPMSSP0 # esadir Costa d'Ivori
+Franjo Gregurić;NPMSSP0 # esadir Croàcia
+Franko Škugor;NPMSSP0 # esadir Croàcia
+Frantisek Cermák;NPMSSP0 # esadir República Txeca
+František Vláčil;NPMSSP0 # esadir República Txeca
+Franz Joseph Selig;NPMSSP0 # esadir Alemanya
+François-Adrien Boieldieu;NPMSSP0 # esadir França
+Fred Vergnoux;NPMSSP0 # esadir França
+Fridolin Ambongo Besungu;NPMSSP0 # esadir República Democràtica del Congo
+Fridolin Ambongo;NPMSSP0 # esadir República Democràtica del Congo
+Frédéric Péchier;NPMSSP0 # esadir França
+Fàtima Ofkir;NPFSSP0 # esadir Catalunya
+Fábio Coentrao;NPMSSP0 # esadir Portugal
+Félix Alejandro Maradiaga Blandón;NPMSSP0 # esadir Nicaragua
+Félix Maradiaga;NPMSSP0 # esadir Nicaragua
+Gabriel Ferraté Pascual;NPMSSP0 # esadir Catalunya
+Gabriel Ferraté;NPMSSP0 # esadir Catalunya
+Gabriel Magalhães;NPMSSP0 # esadir Portugal
+Gašper Marguč;NPMSSP0 # esadir Eslovènia
+Genís Sinca;NPMSSP0 # esadir Catalunya
+George Petrou;NPMSSP0 # esadir Grècia
+George Pratt Shultz;NPMSSP0 # esadir Estats Units
+George Tupou V;NPMSSP0 # esadir Tonga
+Georges Abdallah;NPMSSP0 # esadir Líban
+Georges Ibrahim Abdallah;NPMSSP0 # esadir Líban
+Gergely Rozsavölgyi;NPMSSP0 # esadir Hongria
+Ghanim Al-Muftah;NPMSSP0 # esadir Qatar
+Gholam Ali Rashid;NPMSSP0 # esadir Iran
+Giampaolo Bisanti;NPMSSP0 # esadir Itàlia
+Giovan Tomaso;NPMSSP0 # esadir Itàlia
+Gitanas Nausėda;NPMSSP0 # esadir Lituània
+Gnassingbé Eyadéma;NPMSSP0 # esadir Togo
+Gonzalo Delacámara Andrés;NPMSSP0 # esadir Espanya
+Gonzalo Delacámara;NPMSSP0 # esadir Espanya
+Goran Bregović;NPMSSP0 # esadir Bòsnia i Hercegovina
+Goran Hadžić;NPMSSP0 # esadir Croàcia
+Goukoye Abdul Karimou;NPMSSP0 # esadir Níger
+Grace Geyoro;NPFSSP0 # esadir França
+Guadalupe Porras Ayuso;NPFSSP0 # esadir Espanya
+Guadalupe Porras;NPFSSP0 # esadir Espanya
+Gudjón Oskarsson;NPMSSP0 # esadir Islàndia
+Gudjón Valur Sigurdsson;NPMSSP0 # esadir Islàndia
+Gudni Jóhannesson;NPMSSP0 # esadir Islàndia
+Guennadi Ianàiev;NPMSSP0 # esadir Rússia
+Guennadi Trukhànov;NPMSSP0 # esadir Ucraïna
+Gustav Belacek;NPMSSP0 # esadir Eslovàquia
+Guy Nader;NPMSSP0 # esadir país desconegut
+Guðni Thorlacius Jóhannesson;NPMSSP0 # esadir Islàndia
+Gyula Orendt;NPMSSP0 # esadir Hongria
+Göran Fröst;NPMSSP0 # esadir Suècia
+Habib el-Adly;NPMSSP0 # esadir Egipte
+Habib Ibrahim el-Adly;NPMSSP0 # esadir Egipte
+Haitham Maleh;NPMSSP0 # esadir Síria
+Hakan Çalhanoğlu;NPMSSP0 # esadir Turquia
+Hakim Boularbah;NPMSSP0 # esadir Bèlgica
+Hamad al-Thani;NPMSSP0 # esadir Qatar
+Hamad bin Isa Al Khalifa;NPMSSP0 # esadir Bahrain
+Hamad bin Khalifa Al Thani;NPMSSP0 # esadir Qatar
+Hamad de Bahrain;NPMSSP0 # esadir Bahrain
+Hamad Medjedovic;NPMSSP0 # esadir Sèrbia
+Hamit Altıntop;NPMSSP0 # esadir Turquia
+Hamza Yalçin;NPMSSP0 # esadir Turquia
+Hamzah de Jordània;NPMSSP0 # esadir Jordània
+Hamzah Zainudin;NPMSSP0 # esadir Malàisia
+Hana Blazíková;NPFSSP0 # esadir República Txeca
+Hana Rícná;NPFSSP0 # esadir República Txeca
+Hanna Hérman;NPFSSP0 # esadir Ucraïna
+Hanna Maliar;NPFSSP0 # esadir Ucraïna
+Hanne Ørstavik;NPFSSP0 # esadir Noruega
+Hanus Domansky;NPMSSP0 # esadir Eslovàquia
+Haris Silajdžić;NPMSSP0 # esadir Bòsnia i Hercegovina
+Harith al-Nadhari;NPMSSP0 # esadir Iemen
+Harold F. Summey;NPMSSP0 # esadir Estats Units
+Hassan al-Turabi;NPMSSP0 # esadir Sudan
+Hazem El Beblawi;NPMSSP0 # esadir Egipte
+He Jiankui;NPMSSP0 # esadir Xina
+Helena Ek;NPFSSP0 # esadir Suècia
+Helena Trestíková;NPFSSP0 # esadir República Txeca
+Helge Rønning;NPMSSP0 # esadir Noruega
+Henrick Lündström;NPMSSP0 # esadir Suècia
+Henryk Jabłoński;NPMSSP0 # esadir Polònia
+Heydar Aliyev;NPMSSP0 # esadir Azerbaidjan
+Hikmat al-Hijri;NPMSSP0 # esadir Síria
+Hirahi Afonso;NPMSSP0 # esadir Espanya
+Hirokazu Kore-eda;NPMSSP0 # esadir Japó
+Hiroo Sato;NPMSSP0 # esadir Japó
+Horia Tecău;NPMSSP0 # esadir Romania
+Hu Chenyun;NPMSSP0 # esadir Xina
+Hugh Cutting;NPMSSP0 # esadir Regne Unit
+Hugo Stuven;NPMSSP0 # esadir Xile
+Hussein al-Ezzi;NPMSSP0 # esadir Iemen
+Hussein al-Majali;NPMSSP0 # esadir Jordània
+Hyo-Sun Lim;NPFSSP0 # esadir Corea del Sud
+Hyun-jung Lim;NPFSSP0 # esadir Corea del Sud
+Hérman Halusxenko;NPMSSP0 # esadir Ucraïna
+Ibrahim al-Bakraoui;NPMSSP0 # esadir Bèlgica
+Ibrahim de Johor;NPMSSP0 # esadir Malàisia
+Icíar Bollaín;NPFSSP0 # esadir Espanya
+Idi Amin Dada;NPMSSP0 # esadir Uganda
+Idoia Mendia Cueva;NPFSSP0 # esadir Espanya
+Idoia Mendia;NPFSSP0 # esadir Espanya
+Iegor Kuróptev;NPMSSP0 # esadir Rússia
+Iga Świątek;NPFSSP0 # esadir Polònia
+Ignacio Solozábal;NPMSSP0 # esadir Catalunya
+Ignasi Farreres;NPMSSP0 # esadir Catalunya
+Igor Luksic;NPMSSP0 # esadir Montenegro
+Igor Tuveri;NPMSSP0 # esadir Itàlia
+Iliana Iotova;NPFSSP0 # esadir Bulgària
+Illia Zabarnyi;NPMSSP0 # esadir Ucraïna
+Ilmars Rimsevics;NPMSSP0 # esadir Letònia
+Indira Sinanovic;NPFSSP0 # esadir Bòsnia i Hercegovina
+Indulis Bērziņš;NPMSSP0 # esadir Letònia
+Inga Ruginienė;NPFSSP0 # esadir Lituània
+Ingrida Šimonytė;NPFSSP0 # esadir Lituània
+Inmaculada Montalbán Huertas;NPFSSP0 # esadir Espanya
+Inmaculada Montalbán;NPFSSP0 # esadir Espanya
+Inés de Ramón;NPFSSP0 # esadir Estats Units
+Irina Venedíktova;NPFSSP0 # esadir Ucraïna
+Irina Veresxuk;NPFSSP0 # esadir Ucraïna
+Irineu Esteve;NPMSSP0 # esadir Andorra
+Isa Krejcí;NPMSSP0 # esadir República Txeca
+Isabel Faraldo Calvo;NPFSSP0 # esadir Espanya
+Isabel Faraldo;NPFSSP0 # esadir Espanya
+Ismail Kadare;NPMSSP0 # esadir Albània
+Ismaïl Omar Guelleh;NPMSSP0 # esadir Djibouti
+Issiaka Sidibé;NPMSSP0 # esadir Mali
+Iuri Klimenko;NPMSSP0 # esadir Ucraïna
+Iuri Lutsenko;NPMSSP0 # esadir Ucraïna
+Iuri Prilipko;NPMSSP0 # esadir Ucraïna
+Iuri Vitrenko;NPMSSP0 # esadir Ucraïna
+Iuri Xevtxenko;NPMSSP0 # esadir Rússia
+Ivan Gašparovič;NPMSSP0 # esadir Eslovàquia
+Ivan Korčok;NPMSSP0 # esadir Eslovàquia
+Ivan Massagué Horta;NPMSSP0 # esadir Catalunya
+Ivan Massagué;NPMSSP0 # esadir Catalunya
+Ivan Rakitić;NPMSSP0 # esadir Croàcia
+Ivan Čupić;NPMSSP0 # esadir Croàcia
+Ivan Šaponjić;NPMSSP0 # esadir Sèrbia
+Iveta Radicová;NPFSSP0 # esadir Eslovàquia
+Ivica Dačić;NPMSSP0 # esadir Sèrbia
+Ivo Josipović;NPMSSP0 # esadir Croàcia
+Ivo Stanchev;NPMSSP0 # esadir Bulgària
+Izaskun Arretxe;NPFSSP0 # esadir Catalunya
+Izet Hajrović;NPMSSP0 # esadir Bòsnia i Hercegovina
+Iñaki Goioaga;NPMSSP0 # esadir Espanya
+Iúlia Galiàmina;NPFSSP0 # esadir Rússia
+İlkay Gündoğan;NPMSSP0 # esadir Alemanya
+İlker Başbuğ;NPMSSP0 # esadir Turquia
+İsmail Kahraman;NPMSSP0 # esadir Turquia
+J. R. Jayewardene;NPMSSP0 # esadir Sri Lanka
+Jafar Montazeri;NPMSSP0 # esadir Iran
+Jaime Palomera;NPMSSP0 # esadir Catalunya
+Jaka Blažič;NPMSSP0 # esadir Eslovènia
+Jaka Lakovič;NPMSSP0 # esadir Eslovènia
+Jakob Ingebrigtsen;NPMSSP0 # esadir Noruega
+Jakub Błaszczykowski;NPMSSP0 # esadir Polònia
+Jakub Hrůša;NPMSSP0 # esadir República Txeca
+Jambyl Ahmetbekov;NPMSSP0 # esadir Kazakhstan
+James Wani Igga;NPMSSP0 # esadir Sudan del Sud
+James Wani;NPMSSP0 # esadir Sudan del Sud
+Jan Veselý;NPMSSP0 # esadir República Txeca
+Jan Zaryn;NPMSSP0 # esadir Polònia
+Jana Cepelová;NPFSSP0 # esadir Eslovàquia
+Jana Vörösová;NPFSSP0 # esadir República Txeca
+Janez Brajkovič;NPMSSP0 # esadir Eslovènia
+Janez Drnovšek;NPMSSP0 # esadir Eslovènia
+Janez Janša;NPMSSP0 # esadir Eslovènia
+Janez Lenarčič;NPMSSP0 # esadir Eslovènia
+Janja da Silva;NPFSSP0 # esadir Brasil
+Janusz Piechociński;NPMSSP0 # esadir Polònia
+Jarosław Kaczyński;NPMSSP0 # esadir Polònia
+Jasone Agirre;NPFSSP0 # esadir Espanya
+Jaume Hurtado Perea;NPMSSP0 # esadir País Valencià
+Jaume Hurtado;NPMSSP0 # esadir País Valencià
+Jaume Olivé Puyuelo;NPMSSP0 # esadir Catalunya
+Jaume Olivé;NPMSSP0 # esadir Catalunya
+Jaume Perich Escala;NPMSSP0 # esadir Catalunya
+Jaume Perich;NPMSSP0 # esadir Catalunya
+Jaume Veray Cama;NPMSSP0 # esadir Catalunya
+Jaume Veray;NPMSSP0 # esadir Catalunya
+Javad Zarif;NPMSSP0 # esadir Iran
+Javier de Andrés Guerra;NPMSSP0 # esadir Espanya
+Javier de Andrés;NPMSSP0 # esadir Espanya
+Javier Godó Muntañola;NPMSSP0 # esadir Catalunya
+Javier Godó;NPMSSP0 # esadir Catalunya
+Javier Remírez Apesteguía;NPMSSP0 # esadir Espanya
+Javier Remírez;NPMSSP0 # esadir Espanya
+Jean Marie Dongou Tsafack;NPMSSP0 # esadir Camerun
+Jean Marie Dongou;NPMSSP0 # esadir Camerun
+Jean-Jacques Sempé;NPMSSP0 # esadir França
+Jeanne Nacatche Banyere;NPFSSP0 # esadir República Democràtica del Congo
+Jeanne Nacatche;NPFSSP0 # esadir República Democràtica del Congo
+Jeannine Abella Chica;NPFSSP0 # esadir Catalunya
+Jeannine Abella;NPFSSP0 # esadir Catalunya
+Jelena Trivić;NPFSSP0 # esadir Bòsnia i Hercegovina
+Jeno Jandó;NPMSSP0 # esadir Hongria
+Jesper Nøddesbo;NPMSSP0 # esadir Dinamarca
+Jessica Vall;NPFSSP0 # esadir Catalunya
+Jessie Diggins;NPFSSP0 # esadir Estats Units
+Jeļena Ostapenko;NPFSSP0 # esadir Letònia
+Jhon Mejía;NPMSSP0 # esadir Catalunya
+Jhonny Fernández;NPMSSP0 # esadir Bolívia
+Ji Myung-hoon;NPMSSP0 # esadir Corea del Sud
+Jiesun Lim;NPFSSP0 # esadir Corea del Sud
+Jigme Singye Wangchuck;NPMSSP0 # esadir Bhutan
+Jim Gómez;NPFSSP0 # esadir Catalunya
+Jimena Gómez;NPFSSP0 # esadir Catalunya
+Jimmie Åkesson;NPMSSP0 # esadir Suècia
+Jina Amini;NPFSSP0 # esadir Iran
+Jindřich Trpišovský;NPMSSP0 # esadir República Txeca
+Jiří Bělohlávek;NPMSSP0 # esadir República Txeca
+Jiří Dienstbier;NPMSSP0 # esadir República Txeca
+Jiří Drahoš;NPMSSP0 # esadir República Txeca
+Jiří Gemrot;NPMSSP0 # esadir República Txeca
+Jiří Hynek;NPMSSP0 # esadir República Txeca
+Jiří Lehečka;NPMSSP0 # esadir República Txeca
+Jiří Paroubek;NPMSSP0 # esadir República Txeca
+Jiří Rožeň;NPMSSP0 # esadir República Txeca
+Jiří Rusnok;NPMSSP0 # esadir República Txeca
+Joan Antoni Flecha;NPMSSP0 # esadir Catalunya
+Joan Bayén Pérez;NPMSSP0 # esadir Catalunya
+Joan Bayén;NPMSSP0 # esadir Catalunya
+Joan García González;NPMSSP0 # esadir Catalunya
+Joan García;NPMSSP0 # esadir Catalunya
+Joan Maria Clavaguera Llauradó;NPMSSP0 # esadir Catalunya
+Joan Maria Clavaguera;NPMSSP0 # esadir Catalunya
+Joan Rangel Tarrés;NPMSSP0 # esadir Catalunya
+Joan Rangel;NPMSSP0 # esadir Catalunya
+Joan Soteras Vigo;NPMSSP0 # esadir Catalunya
+Joan Soteras;NPMSSP0 # esadir Catalunya
+Joaquim Salarich Baucells;NPMSSP0 # esadir Catalunya
+Joaquín Benítez;NPMSSP0 # esadir Catalunya
+Joaquín Elías Gadea Francés;NPMSSP0 # esadir país desconegut
+Joaquín Elías Gadea;NPMSSP0 # esadir país desconegut
+Joaquín Luna Morales;NPMSSP0 # esadir Catalunya
+Joaquín Luna;NPMSSP0 # esadir Catalunya
+Johanni van Oostrum;NPFSSP0 # esadir República de Sud-àfrica
+John Hoybye;NPMSSP0 # esadir Dinamarca
+John Mac Master;NPMSSP0 # esadir Canadà
+John Storgårds;NPMSSP0 # esadir Finlàndia
+Jonas Gahr Støre;NPMSSP0 # esadir Noruega
+Jonas Mačiulis;NPMSSP0 # esadir Lituània
+Jonathan Carlsbogård;NPMSSP0 # esadir Suècia
+Jonathan Kimble Simmons;NPMSSP0 # esadir Estats Units
+Jonathan Woolgar;NPMSSP0 # esadir Regne Unit
+Joni Sahún;NPMSSP0 # esadir Catalunya
+Jordi Casacuberta Pérez;NPMSSP0 # esadir Catalunya
+Jordi Casacuberta;NPMSSP0 # esadir Catalunya
+Jordi Jiménez-Conde;NPMSSP0 # esadir Catalunya
+Jordi Pesarrodona;NPMSSP0 # esadir Catalunya
+Jordi Pàmias Grau;NPMSSP0 # esadir Catalunya
+Jordi Pàmias;NPMSSP0 # esadir Catalunya
+Jorge Losana García;NPMSSP0 # esadir Espanya
+Jorge Losana;NPMSSP0 # esadir Espanya
+Jose Corbacho;NPMSSP0 # esadir Catalunya
+Joseba Antxon Alonso Egurrola;NPMSSP0 # esadir Espanya
+Josef Škvorecký;NPMSSP0 # esadir República Txeca
+Josep Garganté Closa;NPMSSP0 # esadir Catalunya
+Josep Garganté;NPMSSP0 # esadir Catalunya
+Josep Gonzàlez-Cambray;NPMSSP0 # esadir Catalunya
+Josep Maixenchs Agustí;NPMSSP0 # esadir Catalunya
+Josep Maixenchs;NPMSSP0 # esadir Catalunya
+Josep Maria Durán Farré;NPMSSP0 # esadir Catalunya
+Josep Maria Durán;NPMSSP0 # esadir Catalunya
+Josep Maria Gay de Liébana Saludas;NPMSSP0 # esadir Catalunya
+Josep Maria Gay de Liébana;NPMSSP0 # esadir Catalunya
+Josep Olivé;NPMSSP0 # esadir Catalunya
+Josep Punga Tandu;NPMSSP0 # esadir Catalunya
+Josep Punga;NPMSSP0 # esadir Catalunya
+Josep Suñol Garriga;NPMSSP0 # esadir Catalunya
+Josep Suñol;NPMSSP0 # esadir Catalunya
+Josep Tabernero Caturla;NPMSSP0 # esadir Catalunya
+Josep Tabernero;NPMSSP0 # esadir Catalunya
+Josep-Maria Ureta;NPMSSP0 # esadir Catalunya
+Josep-Ramon Olivé Soler;NPMSSP0 # esadir Catalunya
+Josep-Ramon Olivé;NPMSSP0 # esadir Catalunya
+Josip Bozanić;NPMSSP0 # esadir Croàcia
+Josu Erkoreka;NPMSSP0 # esadir país desconegut
+Josu Jon Imaz;NPMSSP0 # esadir Espanya
+Josu Ternera;NPMSSP0 # esadir Espanya
+Josu Urrutikoetxea Bengoetxea;NPMSSP0 # esadir Espanya
+Josué Alvarado;NPMSSP0 # esadir El Salvador
+Josè Maria Lo Monaco;NPFSSP0 # esadir Itàlia
+José Coronado;NPMSSP0 # esadir Espanya
+José Creuheras Margenat;NPMSSP0 # esadir Catalunya
+José Creuheras;NPMSSP0 # esadir Catalunya
+José Gragera Amado;NPMSSP0 # esadir Espanya
+José Gragera;NPMSSP0 # esadir Espanya
+José Joaquín Pérez de Gregorio;NPMSSP0 # esadir Catalunya
+José Luis Ayllón Manso;NPMSSP0 # esadir Catalunya
+José Luis Ayllón;NPMSSP0 # esadir Catalunya
+José Manuel Bandrés Sánchez-Cruzat;NPMSSP0 # esadir Espanya
+José Manuel Bandrés;NPMSSP0 # esadir Espanya
+José Manuel Maza Martín;NPMSSP0 # esadir Espanya
+José Manuel Maza;NPMSSP0 # esadir Espanya
+José Manuel Regadera;NPMSSP0 # esadir Espanya
+José Mari Bakero;NPMSSP0 # esadir Espanya
+José María Bakero Escudero;NPMSSP0 # esadir Espanya
+José María Villalta Florez-Estrada;NPMSSP0 # esadir Costa Rica
+José María Villalta;NPMSSP0 # esadir Costa Rica
+José Miguel González Marcén;NPMSSP0 # esadir Espanya
+José Ramón Alexanko;NPMSSP0 # esadir Espanya
+José Yusty Bastarreche;NPMSSP0 # esadir Espanya
+José Yusty;NPMSSP0 # esadir Espanya
+Jozo Šimunović;NPMSSP0 # esadir Croàcia
+João Braz de Aviz;NPMSSP0 # esadir Brasil
+João Cancelo;NPMSSP0 # esadir Portugal
+João Félix;NPMSSP0 # esadir Portugal
+João Havelange;NPMSSP0 # esadir Brasil
+João Lourenço;NPMSSP0 # esadir Angola
+Juan Antonio Xiol Ríos;NPMSSP0 # esadir Catalunya
+Juan Antonio Xiol;NPMSSP0 # esadir Catalunya
+Juan Carlos Martel Bayod;NPMSSP0 # esadir Catalunya
+Juan Carlos Martel;NPMSSP0 # esadir Catalunya
+Juan Ignacio Cirac Sasturain;NPMSSP0 # esadir Catalunya
+Juan Ignacio Cirac;NPMSSP0 # esadir Catalunya
+Juan Lechín;NPMSSP0 # esadir Bolívia
+Juan María Atutxa Mendiola;NPMSSP0 # esadir Espanya
+Juan María Atutxa;NPMSSP0 # esadir Espanya
+Juan Pedro Yllanes Suárez;NPMSSP0 # esadir Espanya
+Juan Pedro Yllanes;NPMSSP0 # esadir Espanya
+Juan-José López Burniol;NPMSSP0 # esadir Catalunya
+Judith Alcalá González;NPFSSP0 # esadir Catalunya
+Judith Alcalá;NPFSSP0 # esadir Catalunya
+Judith Toronjo Nofuentes;NPFSSP0 # esadir Catalunya
+Judith Toronjo;NPFSSP0 # esadir Catalunya
+Jules Koundé;NPMSSP0 # esadir França
+Jules Olivier Kounde;NPMSSP0 # esadir França
+Julia Borchert;NPFSSP0 # esadir Alemanya
+Julio Antonio Villacorta García;NPMSSP0 # esadir Catalunya
+Julio Villacorta;NPMSSP0 # esadir Catalunya
+Julius Maada Wonie Bio;NPMSSP0 # esadir Sierra Leone
+Julián Barrio;NPMSSP0 # esadir Espanya
+Junius Richard Jayewardene;NPMSSP0 # esadir Sri Lanka
+Juraj Pospíšil;NPMSSP0 # esadir República Txeca
+Jusèp Boya;NPMSSP0 # esadir Catalunya
+Ján Carnogursky;NPMSSP0 # esadir Eslovàquia
+Ján Figeľ;NPMSSP0 # esadir Eslovàquia
+Jéssica Bouzas Maneiro;NPFSSP0 # esadir Espanya
+Jéssica Bouzas;NPFSSP0 # esadir Espanya
+Jóhanna Sigurðardóttir;NPFSSP0 # esadir Islàndia
+Júlia de Paz Solvas;NPFSSP0 # esadir Catalunya
+Júlia de Paz;NPFSSP0 # esadir Catalunya
+Júlia Otero Pérez;NPFSSP0 # esadir Catalunya
+Júlia Otero;NPFSSP0 # esadir Catalunya
+Júlio César Soares;NPMSSP0 # esadir Brasil
+Jānis Jurkāns;NPMSSP0 # esadir Letònia
+K. P. Oli;NPMSSP0 # esadir Nepal
+K. P. Sharma Oli;NPMSSP0 # esadir Nepal
+Kadi Diani;NPFSSP0 # esadir França
+Kadidiatou Diani;NPFSSP0 # esadir França
+Kahina Baholoul;NPFSSP0 # esadir França
+Karel Nováček;NPMSSP0 # esadir República Txeca
+Karel Čapek;NPMSSP0 # esadir República Txeca
+Karim Bouyakhrichan;NPMSSP0 # esadir Països Baixos
+Karl Ove Knausgård;NPMSSP0 # esadir Noruega
+Kasparas Jakučionis;NPMSSP0 # esadir Lituània
+Katerina Sukhomlínova;NPFSSP0 # esadir Ucraïna
+Katsiarina Andréieva;NPFSSP0 # esadir Bielorússia
+Kazimira Prunskienė;NPFSSP0 # esadir Lituània
+Kedir Fekadu;NPMSSP0 # esadir Etiòpia
+Kelly Isaiah Ogbebor;NPMSSP0 # esadir Catalunya
+Kelly Isaiah;NPMSSP0 # esadir Catalunya
+Kemal Kiliçdaroglu;NPMSSP0 # esadir Turquia
+Kenan İpek;NPMSSP0 # esadir Turquia
+Kengo wa Dondo;NPMSSP0 # esadir República Democràtica del Congo
+Kenneth David Kaunda;NPMSSP0 # esadir Zàmbia
+Kentarō Kobayashi;NPMSSP0 # esadir Japó
+Khadga Prasad Sharma Oli;NPMSSP0 # esadir Nepal
+Khaled Mashal;NPMSSP0 # esadir país desconegut
+Khalid al-Attiyah;NPMSSP0 # esadir Qatar
+Khalid al-Bakraoui;NPMSSP0 # esadir Bèlgica
+Khalid bin Abdulazid al-Saud;NPMSSP0 # esadir Aràbia Saudita
+Khalid bin Mohammad al-Attiyah;NPMSSP0 # esadir Qatar
+Khalid de l'Aràbia Saudita;NPMSSP0 # esadir Aràbia Saudita
+Khalifa Belqasim Haftar;NPMSSP0 # esadir Líbia
+Khalifa bin Salman Al Khalifa;NPMSSP0 # esadir Bahrain
+Khalifa Haftar;NPMSSP0 # esadir Líbia
+Kiko Femenía;NPMSSP0 # esadir País Valencià
+Kilmar Armando Ábrego García;NPMSSP0 # esadir El Salvador
+Kilmar Ábrego García;NPMSSP0 # esadir El Salvador
+Kilmar Ábrego;NPMSSP0 # esadir El Salvador
+Kirilo Budànov;NPMSSP0 # esadir Ucraïna
+Kirilo Timoixenko;NPMSSP0 # esadir Ucraïna
+Kizza Besigye;NPMSSP0 # esadir Uganda
+Klaas Stok;NPMSSP0 # esadir Països Baixos
+Klaus Ziehe;NPMSSP0 # esadir Alemanya
+Kolinda Grabar-Kitarović;NPFSSP0 # esadir Croàcia
+Konstandinos Kavafis;NPMSSP0 # esadir Grècia
+Konstandinos Petru Kavafis;NPMSSP0 # esadir Grècia
+Konstantín Gàbov;NPMSSP0 # esadir Rússia
+Konstantín Maloféiev;NPMSSP0 # esadir Rússia
+Kosta Perović;NPMSSP0 # esadir Sèrbia
+Kostiantín Dankévitx;NPMSSP0 # esadir Ucraïna
+Kostiantín Ivàsxenko;NPMSSP0 # esadir Ucraïna
+Kresimir Strazanac;NPMSSP0 # esadir Croàcia
+Krešimir Zubak;NPMSSP0 # esadir Bòsnia i Hercegovina
+Kristijan Jakić;NPMSSP0 # esadir Croàcia
+Kristine Opolais;NPFSSP0 # esadir Lituània
+Krzysztof Hołowczyc;NPMSSP0 # esadir Polònia
+Ku Ebbinge;NPMSSP0 # esadir Països Baixos
+Kōhei Uchimura;NPMSSP0 # esadir Japó
+Ladislav Krejčí;NPMSSP0 # esadir República Txeca
+Laia Vilaseca;NPFSSP0 # esadir Catalunya
+Lars Løkke Rasmussen;NPMSSP0 # esadir Dinamarca
+Laslo Djere;NPMSSP0 # esadir Sèrbia
+Latifa al-Maktoum;NPFSSP0 # esadir Emirats Àrabs Units
+Lazar Carević;NPMSSP0 # esadir Montenegro
+Leo Tindemans;NPMSSP0 # esadir Bèlgica
+Leonid Kojara;NPMSSP0 # esadir Ucraïna
+Lilou Lluís Valette;NPFSSP0 # esadir Catalunya del Nord
+Lilou Lluís;NPFSSP0 # esadir Catalunya del Nord
+Liudmila Navàlnaia;NPFSSP0 # esadir Rússia
+Liz Castro;NPFSSP0 # esadir Catalunya
+Ljube Boškoski;NPMSSP0 # esadir Macedònia del Nord
+Ljupčo Jordanovski;NPMSSP0 # esadir Macedònia del Nord
+Lluís Fatjó-Vilas;NPMSSP0 # esadir Catalunya
+Lluís Josep Comeron Martín;NPMSSP0 # esadir Catalunya
+Lluís Josep Comeron;NPMSSP0 # esadir Catalunya
+Lluís Llongueras Batlle;NPMSSP0 # esadir Catalunya
+Lluís Llongueras;NPMSSP0 # esadir Catalunya
+Lluís Tejedor Ballesteros;NPMSSP0 # esadir Catalunya
+Lluís Tejedor;NPMSSP0 # esadir Catalunya
+Lola García;NPFSSP0 # esadir Catalunya
+Lorenzo Bavaj;NPMSSP0 # esadir Itàlia
+Louie Barry;NPMSSP0 # esadir Regne Unit
+Louis Lansana Beavogui;NPMSSP0 # esadir República de Guinea
+Louis Sylvain Goma;NPMSSP0 # esadir República del Congo
+Louisa Lydell;NPFSSP0 # esadir Regne Unit
+Lu Yen-hsun;NPMSSP0 # esadir país desconegut
+Luca Dordolo;NPMSSP0 # esadir Itàlia
+Lucia Del Greco;NPFSSP0 # esadir Itàlia
+Luciana d'Intino;NPFSSP0 # esadir Itàlia
+Lucie Safárová;NPFSSP0 # esadir República Txeca
+Lucía Corrales Álvarez;NPFSSP0 # esadir illes Balears
+Lucía Corrales;NPFSSP0 # esadir illes Balears
+Luis Manuel Navajas Ramos;NPMSSP0 # esadir Espanya
+Luis Navajas;NPMSSP0 # esadir Espanya
+Luis Orlando Zelaya;NPMSSP0 # esadir Hondures
+Luis Álvarez-Vallina;NPMSSP0 # esadir Espanya
+Lluïsa Casagemas;NPFSSP0 # esadir Catalunya
+Luka Dončić;NPMSSP0 # esadir Eslovènia
+Luka Jović;NPMSSP0 # esadir Sèrbia
+Luka Mitrović;NPMSSP0 # esadir Sèrbia
+Luka Modrić;NPMSSP0 # esadir Croàcia
+Lukasz Golinski;NPMSSP0 # esadir Polònia
+Lukáš Hejda;NPMSSP0 # esadir República Txeca
+Lukáš Rosol;NPMSSP0 # esadir República Txeca
+László Csatáry;NPMSSP0 # esadir Hongria
+László Csizsik-Csatáry;NPMSSP0 # esadir Hongria
+Léo Baptistão;NPMSSP0 # esadir Brasil
+Léssia Orobets;NPFSSP0 # esadir Ucraïna
+Maada Bio;NPMSSP0 # esadir Sierra Leone
+Mahamat Idriss Déby;NPMSSP0 # esadir Txad
+Maija Kovaļevska;NPFSSP0 # esadir Letònia
+Maite Arroitajauregi;NPFSSP0 # esadir Espanya
+Maja Gojković;NPFSSP0 # esadir Sèrbia
+Maja Kocijancic;NPFSSP0 # esadir Eslovènia
+Majid Mousavi;NPMSSP0 # esadir Iran
+Makoto Tezuka;NPMSSP0 # esadir Japó
+Maksim Kuzminov;NPMSSP0 # esadir Rússia
+Maksim Màrtxenko;NPMSSP0 # esadir Ucraïna
+Malcolm Ranjith;NPMSSP0 # esadir Sri Lanka
+Malgorzata Gersdorf;NPFSSP0 # esadir Polònia
+Mamignan Touré;NPFSSP0 # esadir França
+Manel Alías Tort;NPMSSP0 # esadir Catalunya
+Manel Alías;NPMSSP0 # esadir Catalunya
+Manel Gasch Hurios;NPMSSP0 # esadir Catalunya
+Manel Pousa;NPMSSP0 # esadir Catalunya
+Manfred Reyes Villa;NPMSSP0 # esadir Bolívia
+Manfred Reyes;NPMSSP0 # esadir Bolívia
+Mansour bin Zayed;NPMSSP0 # esadir Emirats Àrabs Units
+Manu Reyes;NPMSSP0 # esadir Catalunya
+Manuel Reyes López;NPMSSP0 # esadir Catalunya
+Manuel Štrlek;NPMSSP0 # esadir Croàcia
+Mané Garrincha;NPMSSP0 # esadir Brasil
+Mao Zedong;NPMSSP0 # esadir Xina
+Mar Ampurdanès Gutiérrez;NPFSSP0 # esadir Catalunya
+Mar Ampurdanès;NPFSSP0 # esadir Catalunya
+Mar Serna;NPFSSP0 # esadir Catalunya
+Marc Sanjaume-Calvet;NPMSSP0 # esadir Catalunya
+Marc Sanjaume;NPMSSP0 # esadir Catalunya
+Marc Timón Barceló;NPMSSP0 # esadir Catalunya
+Marc Timón;NPMSSP0 # esadir Catalunya
+Marc Vivés Usón;NPMSSP0 # esadir Catalunya
+Marc Vivés;NPMSSP0 # esadir Catalunya
+Marcelo Brozović;NPMSSP0 # esadir Croàcia
+Marco Vratogna;NPMSSP0 # esadir Itàlia
+Marek Hilšer;NPMSSP0 # esadir República Txeca
+Margaret Lattimore;NPFSSP0 # esadir Estats Units
+Margarita Gasparyan;NPFSSP0 # esadir Rússia
+Maria del Mar Serna Calvo;NPFSSP0 # esadir Catalunya
+Maria Kalésnikava;NPFSSP0 # esadir Bielorússia
+Maria Kostourkova;NPFSSP0 # esadir Portugal
+Maria Sharapova;NPFSSP0 # esadir Rússia
+Mariana Bezuhla;NPFSSP0 # esadir Ucraïna
+Marija Pejcinovic;NPFSSP0 # esadir Croàcia
+Marija Pejčinović Burić;NPFSSP0 # esadir Croàcia
+Marin Mrcela;NPMSSP0 # esadir Croàcia
+Marin Sego;NPMSSP0 # esadir Croàcia
+Marin Čilić;NPMSSP0 # esadir Croàcia
+Marina Abramović;NPFSSP0 # esadir Sèrbia
+Marina Larregola;NPFSSP0 # esadir Catalunya
+Mario Ančić;NPMSSP0 # esadir Croàcia
+Mario Mandžukić;NPMSSP0 # esadir Croàcia
+Marit Bjørgen;NPFSSP0 # esadir Noruega
+Mariusz Błaszczak;NPMSSP0 # esadir Polònia
+Mariusz Kamiński;NPMSSP0 # esadir Polònia
+Mariusz Kwiecień;NPMSSP0 # esadir Polònia
+Mariàngela Taulé Delor;NPFSSP0 # esadir Catalunya
+Mariàngela Taulé;NPFSSP0 # esadir Catalunya
+Marjan Šarec;NPMSSP0 # esadir Eslovènia
+Marjana Lipovšek;NPFSSP0 # esadir Eslovènia
+Marko Dmitrović;NPMSSP0 # esadir Sèrbia
+Marko Jarić;NPMSSP0 # esadir Sèrbia
+Markus Haupt;NPMSSP0 # esadir Catalunya
+Markus Palcci;NPMSSP0 # esadir Itàlia
+Markéta Vondrousová;NPFSSP0 # esadir República Txeca
+Maroš Šefčovič;NPMSSP0 # esadir Eslovàquia
+Marta Irene Lois González;NPFSSP0 # esadir Espanya
+Marta Lois;NPFSSP0 # esadir Espanya
+Marta Pesqueira Caro;NPFSSP0 # esadir Catalunya
+Marta Pesqueira;NPFSSP0 # esadir Catalunya
+Marten Landström;NPMSSP0 # esadir Suècia
+Martin Kližan;NPMSSP0 # esadir Eslovàquia
+Martin Stropnický;NPMSSP0 # esadir República Txeca
+Martin Varju;NPMSSP0 # esadir Hongria
+Martin Wahlberg;NPMSSP0 # esadir Noruega
+Martí Zuviria;NPMSSP0 # esadir Catalunya
+Martín Merquelanz Castellanos;NPMSSP0 # esadir Espanya
+Martín Merquelanz;NPMSSP0 # esadir Espanya
+Mary J. Blige;NPFSSP0 # esadir Estats Units
+María Concepción Espejel Jorquera;NPFSSP0 # esadir Espanya
+María de los Ángeles Sánchez Conde;NPFSSP0 # esadir Espanya
+María del Mar Fernández Montero;NPFSSP0 # esadir Espanya
+María del Rosario Cayetana Fitz-James Stuart y de Silva;NPFSSP0 # esadir Espanya
+María Dolores García García;NPFSSP0 # esadir Catalunya
+María Katzarava;NPFSSP0 # esadir Mèxic
+María Leach;NPFSSP0 # esadir Catalunya
+María Pozuelo Castro;NPFSSP0 # esadir Catalunya
+María Pozuelo;NPFSSP0 # esadir Catalunya
+María Pry;NPFSSP0 # esadir Espanya
+María Rita Barberà Nolla;NPFSSP0 # esadir País Valencià
+Masoud Khalili;NPMSSP0 # esadir Afganistan
+Masters d'Augusta;NPMSO00 # esadir Estats Units
+Mateja Kežman;NPMSSP0 # esadir Sèrbia
+Mateo Kovačić;NPMSSP0 # esadir Croàcia
+Mathieu Kérékou;NPMSSP0 # esadir Benín
+Matthew Plenk;NPMSSP0 # esadir Estats Units
+Matthias Brändle;NPMSSP0 # esadir Àustria
+Matthieu Walendzik;NPMSSP0 # esadir França
+Matías Carnero;NPMSSP0 # esadir Catalunya
+Matías Janick;NPMSSP0 # esadir Espanya
+Matús Sutaj Estok;NPMSSP0 # esadir Eslovàquia
+Max Jhonny Fernández Saucedo;NPMSSP0 # esadir Bolívia
+Maxwell Scherrer Cabelino Andrade;NPMSSP0 # esadir Brasil
+Maxwell Scherrer;NPMSSP0 # esadir Brasil
+Maya Lahyani;NPFSSP0 # esadir Itàlia
+Mayu Fujiki;NPFSSP0 # esadir Japó
+Mayuko Fujiki;NPFSSP0 # esadir Japó
+Małgorzata Szumowska;NPFSSP0 # esadir Polònia
+Mehmet Ali Ağca;NPMSSP0 # esadir Turquia
+Meral Akşener;NPFSSP0 # esadir Turquia
+Mercedes Milá Mencos;NPFSSP0 # esadir Catalunya
+Mercedes Milá;NPFSSP0 # esadir Catalunya
+Mercè Aránega;NPFSSP0 # esadir Catalunya
+Mercè Sampietro;NPFSSP0 # esadir Catalunya
+Meshal al-Ahmad al-Jaber al-Sabah;NPMSSP0 # esadir Kuwait
+Meshal de Kuwait;NPMSSP0 # esadir Kuwait
+Mesut Yılmaz;NPMSSP0 # esadir Turquia
+Michael Schönwandt;NPMSSP0 # esadir Dinamarca
+Michael Stanley Whittingham;NPMSSP0 # esadir Regne Unit
+Michal Šimečka;NPMSSP0 # esadir Eslovàquia
+Michał Gołaś;NPMSSP0 # esadir Polònia
+Michał Jurecki;NPMSSP0 # esadir Polònia
+Michał Kwiatkowski;NPMSSP0 # esadir Polònia
+Michał Probierz;NPMSSP0 # esadir Polònia
+Michele Rech;NPMSSP0 # esadir Itàlia
+Michèle Pierre-Louis;NPFSSP0 # esadir Haití
+Mieczysław Moczar;NPMSSP0 # esadir Polònia
+Mieczysław Weinberg;NPMSSP0 # esadir Polònia
+Migna Touré;NPFSSP0 # esadir França
+Miguel Ferre Navarrete;NPMSSP0 # esadir Espanya
+Miguel Ferre;NPMSSP0 # esadir Espanya
+Miguel Garikoitz Aspiazu Rubina;NPMSSP0 # esadir Espanya
+Miguel Milá Sagnier;NPMSSP0 # esadir Catalunya
+Miguel Milá;NPMSSP0 # esadir Catalunya
+Miha Blazic;NPMSSP0 # esadir Eslovènia
+Mikaël Cherel;NPMSSP0 # esadir França
+Mikhail Kukushkin;NPMSSP0 # esadir Kazakhstan
+Mikhail Ovrutsky;NPMSSP0 # esadir Estats Units
+Mikhailo Fédorov;NPMSSP0 # esadir Ucraïna
+Mikhailo Koval;NPMSSP0 # esadir Ucraïna
+Mikola Bitxok;NPMSSP0 # esadir Ucraïna
+Mikola Katerintxuk;NPMSSP0 # esadir Ucraïna
+Mikola Olesxuk;NPMSSP0 # esadir Ucraïna
+Mikuláš Dzurinda;NPMSSP0 # esadir Eslovàquia
+Milan Babić;NPMSSP0 # esadir Croàcia
+Milan Bandić;NPMSSP0 # esadir Croàcia
+Milan Kučan;NPMSSP0 # esadir Eslovènia
+Milan Lukeš;NPMSSP0 # esadir República Txeca
+Milan Mojsilovic;NPMSSP0 # esadir Sèrbia
+Milan Smiljanić;NPMSSP0 # esadir Sèrbia
+Milan Đurić;NPMSSP0 # esadir Sèrbia
+Milan Škriniar;NPMSSP0 # esadir Eslovàquia
+Miljenko Jergović;NPMSSP0 # esadir Bòsnia i Hercegovina
+Milorad Mažić;NPMSSP0 # esadir Sèrbia
+Miloš Teodosić;NPMSSP0 # esadir Sèrbia
+Miloš Vučević;NPMSSP0 # esadir Sèrbia
+Miloš Zeman;NPMSSP0 # esadir República Txeca
+Miodrag Lekić;NPMSSP0 # esadir Montenegro
+Miodrag Vlahović;NPMSSP0 # esadir Montenegro
+Miquel Colomé Ferrer;NPMSSP0 # esadir Catalunya
+Miquel Colomé;NPMSSP0 # esadir Catalunya
+Miquel Àngel Fraile;NPMSSP0 # esadir Catalunya
+Miralem Pjanić;NPMSSP0 # esadir Bòsnia i Hercegovina
+Mircea Cărtărescu;NPMSSP0 # esadir Romania
+Mircea Dusa;NPMSSP0 # esadir Romania
+Mircea Geoană;NPMSSP0 # esadir Romania
+Mirga Gražinytė-Tyla;NPFSSP0 # esadir Lituània
+Miriam Moukhles;NPFSSP0 # esadir Catalunya
+Miriam Nogueras Camero;NPFSSP0 # esadir Catalunya
+Miriam Nogueras;NPFSSP0 # esadir Catalunya
+Mirko Alilović;NPMSSP0 # esadir Croàcia
+Mirko Palazzi;NPMSSP0 # esadir Itàlia
+Mirko Šarović;NPMSSP0 # esadir Bòsnia i Hercegovina
+Miroslav Đukić;NPMSSP0 # esadir Sèrbia
+Miroslav Štěpán;NPMSSP0 # esadir República Txeca
+Mirsad Hadzikadic;NPMSSP0 # esadir Bòsnia i Hercegovina
+Mirsad Terzić;NPMSSP0 # esadir Bòsnia i Hercegovina
+Mladen Bojanić;NPMSSP0 # esadir Montenegro
+Mladen Ivanić;NPMSSP0 # esadir Bòsnia i Hercegovina
+Mladen Markač;NPMSSP0 # esadir Croàcia
+Mladen Tcholitch;NPMSSP0 # esadir Sèrbia
+Mladen Žižović;NPMSSP0 # esadir Bòsnia i Hercegovina
+Mohamed Abdel Moneim al-Fayed;NPMSSP0 # esadir Egipte
+Mohamed Al-Fayed;NPMSSP0 # esadir Egipte
+Mohamed al-Zahawi;NPMSSP0 # esadir Líbia
+Mohamed el-Baradei;NPMSSP0 # esadir Egipte
+Mohamed el-Morabity;NPMSSP0 # esadir Marroc
+Mohamed Hamdan Dagalo;NPMSSP0 # esadir Sudan
+Mohamed Mohamud;NPMSSP0 # esadir Somàlia
+Mohamed Ould Abdallahi;NPMSSP0 # esadir Mauritània
+Mohamed Waheed Hassan;NPMSSP0 # esadir Maldives
+Mohamed Zahir de l'Afganistan;NPMSSP0 # esadir Afganistan
+Mohamed Zahir Shah;NPMSSP0 # esadir Afganistan
+Mohammad Ale-Hashem;NPMSSP0 # esadir Iran
+Mohammad Ali Ale-Hashem;NPMSSP0 # esadir Iran
+Mohammad Hassan Akhund;NPMSSP0 # esadir Afganistan
+Mohammad Jafar Montazeri;NPMSSP0 # esadir Iran
+Mohammad Javad Zarif Khonsari;NPMSSP0 # esadir Iran
+Mohammad Najibullah;NPMSSP0 # esadir Afganistan
+Mohammed bin Nayef bin Abdulaziz al-Saud;NPMSSP0 # esadir Aràbia Saudita
+Mohammed bin Nayef;NPMSSP0 # esadir Aràbia Saudita
+Mohammed Shia' al-Sudani;NPMSSP0 # esadir Iraq
+Mohammed Waheed;NPMSSP0 # esadir Maldives
+Momir Bulatović;NPMSSP0 # esadir Montenegro
+Momir Ilić;NPMSSP0 # esadir Sèrbia
+Momir Nikolić;NPMSSP0 # esadir Sèrbia
+Momčilo Krajišnik;NPMSSP0 # esadir Bòsnia i Hercegovina
+Momčilo Perišić;NPMSSP0 # esadir Sèrbia
+Monica Piccinini;NPFSSP0 # esadir Itàlia
+Monzer Akbik;NPMSSP0 # esadir Síria
+Morten Østergaard;NPMSSP0 # esadir Dinamarca
+Moshe Ya'alon;NPMSSP0 # esadir Israel
+Moshoeshoe II de Lesotho;NPMSSP0 # esadir Lesotho
+Moussa Wagué;NPMSSP0 # esadir Senegal
+Muhammad Mian Soomro;NPMSSP0 # esadir Pakistan
+Muhammad Saeed al-Sahhaf;NPMSSP0 # esadir Iraq
+Muhammad Zia ul-Haq;NPMSSP0 # esadir Pakistan
+Mukhtar Babayev;NPMSSP0 # esadir Azerbaidjan
+Muqrin bin Abdulaziz al-Saud;NPMSSP0 # esadir Aràbia Saudita
+Muqrin de l'Aràbia Saudita;NPMSSP0 # esadir Aràbia Saudita
+Mustafa Abdul Jalil;NPMSSP0 # esadir Líbia
+Mustafa Akıncı;NPMSSP0 # esadir Xipre del Nord
+Mutaib bin Abdullah bin Abdulaziz al-Saud;NPMSSP0 # esadir Aràbia Saudita
+Mutaib bin Abdullah;NPMSSP0 # esadir Aràbia Saudita
+Myrtò Papatanasiu;NPFSSP0 # esadir Grècia
+Mércia Viriato Licá;NPFSSP0 # esadir Moçambic
+Mércia Viriato;NPFSSP0 # esadir Moçambic
+Míceál O'Rourke;NPMSSP0 # esadir Irlanda
+Míchel González;NPMSSP0 # esadir Espanya
+Mónica Rikic;NPFSSP0 # esadir Catalunya
+Múte Egede;NPMSSP0 # esadir Dinamarca
+Múte Inequnaaluk Bourup Egede;NPMSSP0 # esadir Dinamarca
+Nadia Comăneci;NPFSSP0 # esadir Romania
+Nadine Weissmann;NPFSSP0 # esadir Alemanya
+Nahuel Pérez Biscayart;NPMSSP0 # esadir Argentina
+Nahuel Pérez;NPMSSP0 # esadir Argentina
+Naser Orić;NPMSSP0 # esadir Bòsnia i Hercegovina
+Nasir al-Wuhayshi;NPMSSP0 # esadir Iemen
+Nasser al-Khelaïfi;NPMSSP0 # esadir Qatar
+Natalia Osipova;NPFSSP0 # esadir Rússia
+Natalie Chee;NPFSSP0 # esadir Austràlia
+Nataša Pirc Musar;NPFSSP0 # esadir Eslovènia
+Natxo Insa Bohigues;NPMSSP0 # esadir País Valencià
+Natxo Insa;NPMSSP0 # esadir País Valencià
+Natàlia Iúrtxenko;NPFSSP0 # esadir Rússia
+Navi Pillay;NPFSSP0 # esadir República de Sud-àfrica
+Nawaf al-Ahmad al-Jaber al-Sabah;NPMSSP0 # esadir Kuwait
+Nawaf de Kuwait;NPMSSP0 # esadir Kuwait
+Nazi Paikidze-Barnes;NPFSSP0 # esadir Estats Units
+Nazí Paikidze;NPFSSP0 # esadir Estats Units
+Naîgnouma Coulibaly;NPFSSP0 # esadir Mali
+Nebojsa Vukanovic;NPMSSP0 # esadir Bòsnia i Hercegovina
+Nebojša Radmanović;NPMSSP0 # esadir Bòsnia i Hercegovina
+Nebojša Stefanović;NPMSSP0 # esadir Sèrbia
+Nechirvan Barzani;NPMSSP0 # esadir Iraq
+Nelson Martín Zavala Avellán;NPMSSP0 # esadir Equador
+Nelson Zavala;NPMSSP0 # esadir Equador
+Nemanja Ilić;NPMSSP0 # esadir Sèrbia
+Nemanja Matić;NPMSSP0 # esadir Sèrbia
+Nemanja Milunović;NPMSSP0 # esadir Sèrbia
+Nemanja Radulović;NPMSSP0 # esadir Sèrbia
+Nemanja Ubović;NPMSSP0 # esadir Sèrbia
+Nenad Nešić;NPMSSP0 # esadir Bòsnia i Hercegovina
+Nenad Zimonjić;NPMSSP0 # esadir Sèrbia
+Nicholas Altstaedt;NPMSSP0 # esadir Alemanya
+Nicolae Ceaușescu;NPMSSP0 # esadir Romania
+Nicușor Dan;NPMSSP0 # esadir Romania
+Niko Kovač;NPMSSP0 # esadir Croàcia
+Nikola Jokić;NPMSSP0 # esadir Sèrbia
+Nikola Karabatić;NPMSSP0 # esadir França
+Nikola Maksimović;NPMSSP0 # esadir Sèrbia
+Nikola Špirić;NPMSSP0 # esadir Bòsnia i Hercegovina
+Nils Muižnieks;NPMSSP0 # esadir Letònia
+Niño de Elche;NPMSSP0 # esadir País Valencià
+Norberto Rivera Carrera;NPMSSP0 # esadir Mèxic
+Norberto Rivera;NPMSSP0 # esadir Mèxic
+Norodom Sihanuk;NPMSSP0 # esadir Cambodja
+Nouri Abusahmain;NPMSSP0 # esadir Líbia
+Numan Kurtulmuş;NPMSSP0 # esadir Turquia
+Nuria Gago;NPFSSP0 # esadir Catalunya
+Nursultan Nazarbayev;NPMSSP0 # esadir Kazakhstan
+Nursultan Äbishuly Nazarbayev;NPMSSP0 # esadir Kazakhstan
+Núria Bendicho Giró;NPFSSP0 # esadir Catalunya
+Núria Bendicho;NPFSSP0 # esadir Catalunya
+Núria Pradas Andreu;NPFSSP0 # esadir Catalunya
+Núria Pradas;NPFSSP0 # esadir Catalunya
+Núria Tey;NPFSSP0 # esadir Catalunya
+Odilo Pedro Scherer;NPMSSP0 # esadir Brasil
+Oksana Markàrova;NPFSSP0 # esadir Ucraïna
+Ole Einar Bjørndalen;NPMSSP0 # esadir Noruega
+Ole Gunnar Solskjær;NPMSSP0 # esadir Noruega
+Oleh Liaixkó;NPMSSP0 # esadir Ucraïna
+Oleh Sentsov;NPMSSP0 # esadir Ucraïna
+Oleh Tiahnibok;NPMSSP0 # esadir Ucraïna
+Oleksandr Ianukóvitx;NPMSSP0 # esadir Ucraïna
+Oleksandr Khorunji;NPMSSP0 # esadir Ucraïna
+Oleksandr Sitx;NPMSSP0 # esadir Ucraïna
+Oleksandr Stàrukh;NPMSSP0 # esadir Ucraïna
+Oleksandr Vílkul;NPMSSP0 # esadir Ucraïna
+Oleksandr Xtupun;NPMSSP0 # esadir Ucraïna
+Oleksandra Molotkova;NPFSSP0 # esadir Ucraïna
+Oleksí Arestóvitx;NPMSSP0 # esadir Ucraïna
+Oleksí Kuleba;NPMSSP0 # esadir Ucraïna
+Olena Muraviova;NPFSSP0 # esadir Ucraïna
+Olga Sroubková;NPFSSP0 # esadir República Txeca
+Olga Tarnovska;NPFSSP0 # esadir Ucraïna
+Olha Balandiukh;NPFSSP0 # esadir Ucraïna
+Olha Stefaníxina;NPFSSP0 # esadir Ucraïna
+Oliver Ivanović;NPMSSP0 # esadir Kosovo
+Olivia Pérez Collellmir;NPFSSP0 # esadir Catalunya
+Olli Leppäniemi;NPMSSP0 # esadir Finlàndia
+Oriol Gès Royo;NPMSSP0 # esadir Catalunya
+Oriol Gès;NPMSSP0 # esadir Catalunya
+Oriol Pérez Treviño;NPMSSP0 # esadir Catalunya
+Oscar Isaac;NPMSSP0 # esadir Guatemala
+Otema Allimadi;NPMSSP0 # esadir Uganda
+Otto Kancel;NPMSSP0 # esadir Eslovàquia
+Oumarou Mamane;NPMSSP0 # esadir Níger
+Pablo Martín Páez Gavira;NPMSSP0 # esadir Espanya
+Pablo Sacerdotte;NPMSSP0 # esadir Argentina
+Pablo Sáinz-Villegas;NPMSSP0 # esadir Espanya
+Paco Martínez Soria;NPMSSP0 # esadir Espanya
+Paolo Fanale;NPMSSP0 # esadir Itàlia
+Pascual Iranzo Oliete;NPMSSP0 # esadir Catalunya
+Pascual Iranzo;NPMSSP0 # esadir Catalunya
+Patri Guijarro;NPFSSP0 # esadir illes Balears
+Patricia Guijarro Gutiérrez;NPFSSP0 # esadir illes Balears
+Patrick Muyaya Katembwe;NPMSSP0 # esadir República Democràtica del Congo
+Patrick Muyaya;NPMSSP0 # esadir República Democràtica del Congo
+Patrícia Gabancho Ghielmetti;NPFSSP0 # esadir Catalunya
+Patrícia Gabancho;NPFSSP0 # esadir Catalunya
+Patrícia Plaja;NPFSSP0 # esadir Catalunya
+Paul Modrich;NPMSSP0 # esadir Estats Units
+Paul Polivnick;NPMSSP0 # esadir Estats Units
+Paul-Joseph Mukungubila;NPMSSP0 # esadir República Democràtica del Congo
+Pavel Bořkovec;NPMSSP0 # esadir República Txeca
+Pavel Sporcl;NPMSSP0 # esadir República Txeca
+Pavel Telička;NPMSSP0 # esadir República Txeca
+Pavló Kirilenko;NPMSSP0 # esadir Ucraïna
+Pavló Klimkin;NPMSSP0 # esadir Ucraïna
+Paweł Kukiz;NPMSSP0 # esadir Polònia
+Paweł Pawlikowski;NPMSSP0 # esadir Polònia
+Paz Esteban López;NPFSSP0 # esadir Espanya
+Paz Esteban;NPFSSP0 # esadir Espanya
+Pedro Rubira Nieto;NPMSSP0 # esadir Espanya
+Pedro Rubira;NPMSSP0 # esadir Espanya
+Per Stig Møller;NPMSSP0 # esadir Dinamarca
+Pere Tàpias;NPMSSP0 # esadir Catalunya
+Petar Cikusa;NPMSSP0 # esadir Catalunya
+Petar Volgin;NPMSSP0 # esadir Bulgària
+Peter Kazimír;NPMSSP0 # esadir Eslovàquia
+Peter Matić;NPMSSP0 # esadir Àustria
+Petr Nečas;NPMSSP0 # esadir República Txeca
+Petró Andriúsxenko;NPMSSP0 # esadir Ucraïna
+Petró Poroixenko;NPMSSP0 # esadir Ucraïna
+Petró Simonenko;NPMSSP0 # esadir Ucraïna
+Philip Cutlip;NPMSSP0 # esadir Estats Units
+Pilar Aymerich Puig;NPFSSP0 # esadir Catalunya
+Pilar Aymerich;NPFSSP0 # esadir Catalunya
+Piotr Beczała;NPMSSP0 # esadir Polònia
+Plinia Azzena;NPFSSP0 # esadir Itàlia
+Plàcid Garcia-Planas Marcet;NPMSSP0 # esadir Catalunya
+Plàcid Garcia-Planas;NPMSSP0 # esadir Catalunya
+Porfirio Lobo Sosa;NPMSSP0 # esadir Hondures
+Porfirio Lobo;NPMSSP0 # esadir Hondures
+Priyanka Gandhi;NPFSSP0 # esadir Índia
+Péter Erdő;NPMSSP0 # esadir Hongria
+Péter Schmid;NPMSSP0 # esadir Hongria
+Pēteris Vasks;NPMSSP0 # esadir Letònia
+Quim Salarich;NPMSSP0 # esadir Catalunya
+Rachel Redmond;NPFSSP0 # esadir Regne Unit
+Rachid Benzine;NPMSSP0 # esadir país desconegut
+Rachid el-Morabity;NPMSSP0 # esadir Marroc
+Radek Stepánek;NPMSSP0 # esadir República Txeca
+Radosław Sikorski;NPMSSP0 # esadir Polònia
+Rafael Callejas;NPMSSP0 # esadir Hondures
+Rafael Leonardo Callejas Romero;NPMSSP0 # esadir Hondures
+Rafael Mozo Muelas;NPMSSP0 # esadir Espanya
+Rafael Mozo;NPMSSP0 # esadir Espanya
+Rafael Santos Borré Maury;NPMSSP0 # esadir Colòmbia
+Rafał Majka;NPMSSP0 # esadir Polònia
+Rafał Trzaskowski;NPMSSP0 # esadir Polònia
+Raffaele Pé;NPMSSP0 # esadir Itàlia
+Rahmon Nabiyev;NPMSSP0 # esadir Tadjikistan
+Raif Dizdarević;NPMSSP0 # esadir Bòsnia i Hercegovina
+Raif Dizdarević;NPMSSP0 # esadir Bòsnia i Hercegovina
+Raimonds Vējonis;NPMSSP0 # esadir Letònia
+Rajab Azzarouk;NPMSSP0 # esadir Líbia
+Ralph Döpper;NPMSSP0 # esadir Alemanya
+Ramon García-Bragado Acín;NPMSSP0 # esadir Catalunya
+Ramon García-Bragado;NPMSSP0 # esadir Catalunya
+Ramon Humet;NPMSSP0 # esadir Catalunya
+Ramūnas Karbauskis;NPMSSP0 # esadir Lituània
+Ranko Krivokapić;NPMSSP0 # esadir Montenegro
+Ranko Ostojić;NPMSSP0 # esadir Croàcia
+Rauf Denktaş;NPMSSP0 # esadir Xipre
+Raúl Alberto Cubas Grau;NPMSSP0 # esadir Paraguai
+Raúl Cubas;NPMSSP0 # esadir Paraguai
+Raül Agné Montull;NPMSSP0 # esadir Franja de Ponent
+Raül Agné;NPMSSP0 # esadir Franja de Ponent
+Refat Txubàrov;NPMSSP0 # esadir Crimea
+Renata Vorácová;NPFSSP0 # esadir República Txeca
+Reza Sayyad;NPMSSP0 # esadir Iran
+Ricardo Blázquez Pérez;NPMSSP0 # esadir Espanya
+Ricardo Blázquez;NPMSSP0 # esadir Espanya
+Rigoberta Bandini;NPFSSP0 # esadir Catalunya
+Rinat Akhmétov;NPMSSP0 # esadir Ucraïna
+Rita Barberà Nolla;NPFSSP0 # esadir País Valencià
+Rita Barberà;NPFSSP0 # esadir País Valencià
+Riyad al-Maliki;NPMSSP0 # esadir Palestina
+Ričardas Berankis;NPMSSP0 # esadir Lituània
+Robert Biedroń;NPMSSP0 # esadir Polònia
+Robert Guéï;NPMSSP0 # esadir Costa d'Ivori
+Robert Güerri;NPMSSP0 # esadir Catalunya
+Roberta Pasquinucci;NPFSSP0 # esadir Itàlia
+Roberto Bautista Agut;NPMSSP0 # esadir País Valencià
+Roberto Bautista;NPMSSP0 # esadir País Valencià
+Roberto Bou Martín;NPMSSP0 # esadir Catalunya
+Roberto Bou;NPMSSP0 # esadir Catalunya
+Roberto Carballés Baena;NPMSSP0 # esadir Espanya
+Roberto Carballés;NPMSSP0 # esadir Espanya
+Roberto De Biasio;NPMSSP0 # esadir Itàlia
+Robin Söderling;NPMSSP0 # esadir Suècia
+Rodion Pogossov;NPMSSP0 # esadir Rússia
+Roger Loppacher;NPMSSP0 # esadir Catalunya
+Roko Prkacin;NPMSSP0 # esadir Croàcia
+Rolands Šmits;NPMSSP0 # esadir Letònia
+Romain Garioud;NPMSSP0 # esadir França
+Roman Protassévitx;NPMSSP0 # esadir Bielorússia
+Ron Hockett;NPMSSP0 # esadir Estats Units
+Ronald Araújo;NPMSSP0 # esadir Uruguai
+Rosa María Seoane;NPFSSP0 # esadir Espanya
+Rosa Suriñach Frigola;NPFSSP0 # esadir Catalunya
+Rosa Suriñach;NPFSSP0 # esadir Catalunya
+Rosie la Rebladora;NPFSSP0 # esadir Estats Units
+Rosângela Lula da Silva;NPFSSP0 # esadir Brasil
+Roxana Bajdechi;NPFSSP0 # esadir Romania
+Roxana Mînzatu;NPFSSP0 # esadir Romania
+Roza Dereje;NPFSSP0 # esadir Etiòpia
+Roza Otunbayeva;NPFSSP0 # esadir Kirguizstan
+Rubèn Montañá;NPMSSP0 # esadir Catalunya
+Rui Rocha;NPMSSP0 # esadir Portugal
+Rusell Braun;NPMSSP0 # esadir Canadà
+Ruslan Kravtxenko;NPMSSP0 # esadir Ucraïna
+Ruslan Stefantxuk;NPMSSP0 # esadir Ucraïna
+Rustam Temirgalíev;NPMSSP0 # esadir Crimea
+Rustem Umérov;NPMSSP0 # esadir Ucraïna
+Ruža Tomašić;NPFSSP0 # esadir Croàcia
+Róbert Mazán;NPMSSP0 # esadir Eslovàquia
+Răzvan Raț;NPMSSP0 # esadir Romania
+Rūta Meilutytė;NPFSSP0 # esadir Lituània
+Saad al-Abdullah al-Salim al-Sabah;NPMSSP0 # esadir Kuwait
+Saad de Kuwait;NPMSSP0 # esadir Kuwait
+Sabine Staudinger;NPFSSP0 # esadir Alemanya
+Sadiq Abdulkarim;NPMSSP0 # esadir Líbia
+Saeed al-Sahaf;NPMSSP0 # esadir Iraq
+Saeed Atallah;NPMSSP0 # esadir Líban
+Saif Abukeshek;NPMSSP0 # esadir Catalunya
+Saixa Deníssova;NPFSSP0 # esadir Ucraïna
+Saleem Ashkar;NPMSSP0 # esadir país desconegut
+Salman bin Hamad bin Isa al-Khalifa;NPMSSP0 # esadir Bahrain
+Salman bin Ibrahim al-Khalifa;NPMSSP0 # esadir Bahrain
+Salman de Bahrain;NPMSSP0 # esadir Bahrain
+Salva Kiir Mayardit;NPMSSP0 # esadir Sudan del Sud
+Salva Kiir;NPMSSP0 # esadir Sudan del Sud
+Salvador Pániker Alemany;NPMSSP0 # esadir Catalunya
+Salvador Pániker;NPMSSP0 # esadir Catalunya
+Samir Handanović;NPMSSP0 # esadir Eslovènia
+Samuel Doria Medina Auza;NPMSSP0 # esadir Bolívia
+Samuel Doria;NPMSSP0 # esadir Bolívia
+Samuel Salazar;NPMSSP0 # esadir Catalunya
+Samuel SLZR;NPMSSP0 # esadir Catalunya
+Sandra Barneda Valls;NPFSSP0 # esadir Catalunya
+Sandra Barneda;NPFSSP0 # esadir Catalunya
+Sandro Gegechkori;NPMSSP0 # esadir Geòrgia
+Santos Borré;NPMSSP0 # esadir Colòmbia
+Sara Espígul Ginebra;NPFSSP0 # esadir Catalunya
+Sara Espígul;NPFSSP0 # esadir Catalunya
+Sargon II d’Assíria;NPMSSP0 # esadir país desconegut
+Sasha Molotkova;NPFSSP0 # esadir Ucraïna
+Saud al-Faisal;NPMSSP0 # esadir Aràbia Saudita
+Saud bin Faisal bin Abdulaziz al-Saud;NPMSSP0 # esadir Aràbia Saudita
+Scott Nygaard;NPMSSP0 # esadir Estats Units
+Sead Hajrović;NPMSSP0 # esadir Bòsnia i Hercegovina
+Sebastià Alzamora Martín;NPMSSP0 # esadir illes Balears
+Sebastià Alzamora;NPMSSP0 # esadir illes Balears
+Selahattin Demirtaş;NPMSSP0 # esadir Turquia
+Seon-hee Myong;NPFSSP0 # esadir Corea del Sud
+Serge Babayan;NPMSSP0 # esadir Armènia
+Sergei Diaghilev;NPMSSP0 # esadir Rússia
+Sergei Krylov;NPMSSP0 # esadir país desconegut
+Sergei Tikhanovsky;NPMSSP0 # esadir Bielorússia
+Sergey Ostrovsky;NPMSSP0 # esadir Israel
+Sergio Alegre Bielsa;NPMSSP0 # esadir Catalunya
+Sergio Alegre;NPMSSP0 # esadir Catalunya
+Sergio Macián de Greef;NPMSSP0 # esadir Catalunya
+Sergio Macián;NPMSSP0 # esadir Catalunya
+Serguei Furgal;NPMSSP0 # esadir Rússia
+Serguei Gaidukévitx;NPMSSP0 # esadir Bielorússia
+Serguei Glàziev;NPMSSP0 # esadir Rússia
+Serguei Gorkov;NPMSSP0 # esadir Rússia
+Serguei Guríev;NPMSSP0 # esadir Rússia
+Serguei Kaliakin;NPMSSP0 # esadir Bielorússia
+Serguei Khadjikurbànov;NPMSSP0 # esadir Rússia
+Serguei Kisliak;NPMSSP0 # esadir Rússia
+Serguei Sirankov;NPMSSP0 # esadir Bielorússia
+Serhí Bratxuk;NPMSSP0 # esadir Ucraïna
+Serhí Haidai;NPMSSP0 # esadir Ucraïna
+Serhí Kislítsia;NPMSSP0 # esadir Ucraïna
+Serhí Nikíforov;NPMSSP0 # esadir Ucraïna
+Serhí Ossatxuk;NPMSSP0 # esadir Ucraïna
+Seyran Ateş;NPFSSP0 # esadir Alemanya
+Seyyed Hossein Mousavi Eftekhari;NPMSSP0 # esadir Iran
+Sharma Oli;NPMSSP0 # esadir Nepal
+Sharon Chelimo Arusho;NPFSSP0 # esadir Kenya
+Sharon Chelimo;NPFSSP0 # esadir Kenya
+Shoko Asahara;NPMSSP0 # esadir Japó
+Siaka Probyn Stevens;NPMSSP0 # esadir Sierra Leone
+Sidi Mohamed Ould Abdallahi;NPMSSP0 # esadir Mauritània
+Sigmundur Davíð Gunnlaugsson;NPMSSP0 # esadir Islàndia
+Sigmundur Gunnlaugsson;NPMSSP0 # esadir Islàndia
+Simon Trpčeski;NPMSSP0 # esadir Macedònia del Nord
+Slavoj Žižek;NPMSSP0 # esadir Eslovènia
+Slobodan Minic;NPMSSP0 # esadir Bòsnia i Hercegovina
+Sonia Gainza Bernal;NPFSSP0 # esadir Catalunya
+Sonia Gainza;NPFSSP0 # esadir Catalunya
+Sonsoles Ónega Salcedo;NPFSSP0 # esadir Espanya
+Sonsoles Ónega;NPFSSP0 # esadir Espanya
+Sooronbay Jeenbekov;NPMSSP0 # esadir Kirguizstan
+Sridevi Kapoor;NPFSSP0 # esadir Índia
+Srđan Milić;NPMSSP0 # esadir Montenegro
+Stanley Whittingham;NPMSSP0 # esadir Regne Unit
+Stefan De Keersmaecker;NPMSSP0 # esadir Bèlgica
+Stefan Heibach;NPMSSP0 # esadir Alemanya
+Stefan Kießling;NPMSSP0 # esadir Alemanya
+Stefan Savić;NPMSSP0 # esadir Montenegro
+Stefan Vincke;NPMSSP0 # esadir Alemanya
+Stefan Šćepović;NPMSSP0 # esadir Sèrbia
+Steingrímur Jóhann Sigfússon;NPMSSP0 # esadir Islàndia
+Steingrímur Sigfússon;NPMSSP0 # esadir Islàndia
+Stepan Kraixenínnikov;NPMSSP0 # esadir Rússia
+Stepan Latípov;NPMSSP0 # esadir Bielorússia
+Stevan Jovetić;NPMSSP0 # esadir Montenegro
+Stjepan Kljuić;NPMSSP0 # esadir Bòsnia i Hercegovina
+Stjepan Mesić;NPMSSP0 # esadir Croàcia
+Strahinja Milić;NPMSSP0 # esadir Sèrbia
+Suleiman Kerímov;NPMSSP0 # esadir Rússia
+Sultan Ahmed al-Jaber;NPMSSP0 # esadir Emirats Àrabs Units
+Susanna Barranco Iglesias;NPFSSP0 # esadir Catalunya
+Susanna Barranco;NPFSSP0 # esadir Catalunya
+Sviatlana Tsikhanóuskaia;NPFSSP0 # esadir Bielorússia
+Svitlana Hrintxuk;NPFSSP0 # esadir Ucraïna
+Szymon Holownia;NPMSSP0 # esadir Polònia
+Sílvia Barroso Pallàs;NPFSSP0 # esadir Catalunya
+Sílvia Barroso;NPFSSP0 # esadir Catalunya
+Sílvia Marsó;NPFSSP0 # esadir Catalunya
+Sònia Farré Fidalgo;NPFSSP0 # esadir Catalunya
+Sònia Farré;NPFSSP0 # esadir Catalunya
+Sören Schomburg;NPMSSP0 # esadir Alemanya
+Sławomir Szmal;NPMSSP0 # esadir Polònia
+Tadej Pogačar;NPMSSP0 # esadir Eslovènia
+Tamim al-Thani;NPMSSP0 # esadir Qatar
+Tamim bin Hamad al-Thani;NPMSSP0 # esadir Qatar
+Tatiana Korotkévitx;NPFSSP0 # esadir Bielorússia
+Tawakkol Karman;NPFSSP0 # esadir Iemen
+Teresa Peramato Martín;NPFSSP0 # esadir Espanya
+Teresa Peramato;NPFSSP0 # esadir Espanya
+Tetiana Iablonska;NPFSSP0 # esadir Ucraïna
+Tetiana Seménova;NPFSSP0 # esadir Ucraïna
+Thandiwe Newton;NPFSSP0 # esadir Regne Unit
+Thomas Stimmel;NPMSSP0 # esadir Alemanya
+Thorbjørn Jagland;NPMSSP0 # esadir Noruega
+Tibor Pleiß;NPMSSP0 # esadir Alemanya
+Tihomir Orešković;NPMSSP0 # esadir Croàcia
+Tijana Ajduković;NPFSSP0 # esadir Sèrbia
+Tijana Postic;NPFSSP0 # esadir Bòsnia i Hercegovina
+Timothy Dolan;NPMSSP0 # esadir Estats Units
+Timothy Michael Dolan;NPMSSP0 # esadir Estats Units
+Tomasz Kędziora;NPMSSP0 # esadir Polònia
+Tomasz Rosiński;NPMSSP0 # esadir Polònia
+Tomaž Pandur;NPMSSP0 # esadir Eslovènia
+Tomislav Zubčić;NPMSSP0 # esadir Croàcia
+Tommy Remengesau;NPMSSP0 # esadir illes Palau
+Tomàs Pumarola Suñé;NPMSSP0 # esadir Catalunya
+Tomàs Pumarola;NPMSSP0 # esadir Catalunya
+Tomás Bocek;NPMSSP0 # esadir República Txeca
+Tomás Netopil;NPMSSP0 # esadir República Txeca
+Tomás Satoransky;NPMSSP0 # esadir República Txeca
+Tomás Smíd;NPMSSP0 # esadir República Txeca
+Tomás Soucek;NPMSSP0 # esadir República Txeca
+Tomás Ujfalusi;NPMSSP0 # esadir República Txeca
+Toni Kukoč;NPMSSP0 # esadir Croàcia
+Toni Tapalović;NPMSSP0 # esadir Alemanya
+Traian Băsescu;NPMSSP0 # esadir Romania
+Tristão da Cunha;NPMSSP0 # esadir Portugal
+Truls Mørk;NPMSSP0 # esadir Noruega
+Trương Tấn Sang;NPMSSP0 # esadir Vietnam
+Trường Chinh;NPMSSP0 # esadir Vietnam
+Tudor Baluta;NPMSSP0 # esadir Romania
+Tuja Knihtilä;NPFSSP0 # esadir Finlàndia
+Tāufaʻāhau Tupou IV;NPMSSP0 # esadir Tonga
+Tōru Takemitsu;NPMSSP0 # esadir Japó
+Uli Haller;NPFSSP0 # esadir Itàlia
+Uroš Đurđević;NPMSSP0 # esadir Sèrbia
+Ursula Kroeber Le Guin;NPFSSP0 # esadir Estats Units
+Vadim Liakh;NPMSSP0 # esadir Ucraïna
+Vahagn Khachaturyan;NPMSSP0 # esadir Armènia
+Vaira Vīķe-Freiberga;NPFSSP0 # esadir Letònia
+Vajiralongkorn de Tailàndia;NPMSSP0 # esadir Tailàndia
+Valentina Nafornița;NPFSSP0 # esadir Romania
+Valentí Pich Rosell;NPMSSP0 # esadir Catalunya
+Valentí Pich;NPMSSP0 # esadir Catalunya
+Valentín Anadón;NPMSSP0 # esadir Catalunya
+Valer Barna-Sabadus;NPMSSP0 # esadir Romania
+Valer Sabadus;NPMSSP0 # esadir Romania
+Valery Gergiev;NPMSSP0 # esadir Rússia
+Vasilije Micić;NPMSSP0 # esadir Sèrbia
+Velimir Perasović;NPMSSP0 # esadir Croàcia
+Vera Jourová;NPFSSP0 # esadir República Txeca
+Verónika Tsepkalo;NPFSSP0 # esadir Bielorússia
+Vesna Pusić;NPFSSP0 # esadir Croàcia
+Vesna Škare-Ožbolt;NPFSSP0 # esadir Croàcia
+Victòria de Marichalar;NPFSSP0 # esadir Espanya
+Victòria Frederica de Marichalar de Borbó;NPFSSP0 # esadir Espanya
+Viktor Tsyhankov;NPMSSP0 # esadir Ucraïna
+Viktoria Mircheva;NPFSSP0 # esadir Ucraïna
+Vinicius de Moraes;NPMSSP0 # esadir Brasil
+Vinko Puljić;NPMSSP0 # esadir Bòsnia i Hercegovina
+Viorica Dăncilă;NPFSSP0 # esadir Romania
+Virginijus Sinkevičius;NPMSSP0 # esadir Lituània
+Vitali Iarema;NPMSSP0 # esadir Ucraïna
+Vitali Kim;NPMSSP0 # esadir Ucraïna
+Vitali Zakhàrtxenko;NPMSSP0 # esadir Ucraïna
+Vittorio Prato;NPMSSP0 # esadir Itàlia
+Vladimír Brodziansky;NPMSSP0 # esadir Eslovàquia
+Vladimír Mečiar;NPMSSP0 # esadir Eslovàquia
+Vladímir Makei;NPMSSP0 # esadir Bielorússia
+Vladímir Tkatxenko;NPMSSP0 # esadir Rússia
+Vojislav Šešelj;NPMSSP0 # esadir Sèrbia
+Volodímir Kudritski;NPMSSP0 # esadir Ucraïna
+Volodímir Omelian;NPMSSP0 # esadir Ucraïna
+Véronique Gens;NPFSSP0 # esadir França
+Víctor Resco de Dios;NPMSSP0 # esadir Catalunya
+Víctor Resco;NPMSSP0 # esadir Catalunya
+Víktor Babariko;NPMSSP0 # esadir Bielorússia
+Víktor But;NPMSSP0 # esadir Rússia
+Víktor Kàrpov;NPMSSP0 # esadir Rússia
+Víktor Mikita;NPMSSP0 # esadir Ucraïna
+Vít Rakusan;NPMSSP0 # esadir República Txeca
+Võ Văn Thưởng;NPMSSP0 # esadir Vietnam
+Waldir Maranhao;NPMSSP0 # esadir Brasil
+Walid al-Muallem;NPMSSP0 # esadir Síria
+Walter Hayde Lini;NPMSSP0 # esadir Vanuatu
+Wassily Kandinsky;NPMSSP0 # esadir Rússia
+William Schwenck Gilbert;NPMSSP0 # esadir Regne Unit
+Wisława Szymborska;NPFSSP0 # esadir Polònia
+Wojciech Swiader;NPMSSP0 # esadir Polònia
+Wojciech Szczęsny;NPMSSP0 # esadir Polònia
+Wu Po-hsiung;NPMSSP0 # esadir Taiwan
+Wyne Kirabo;NPFSSP0 # esadir Uganda
+Włodzimierz Cimoszewicz;NPMSSP0 # esadir Polònia
+Xabi López-Arostegui;NPMSSP0 # esadir Espanya
+Xabier López-Arostegui Eskauriaza;NPMSSP0 # esadir Espanya
+Xavi Rabaseda;NPMSSP0 # esadir Catalunya
+Xavier Llebaria Samper;NPMSSP0 # esadir Catalunya
+Xavier Llebaria;NPMSSP0 # esadir Catalunya
+Xavier Mercadé Simó;NPMSSP0 # esadir Catalunya
+Xavier Mercadé;NPMSSP0 # esadir Catalunya
+Xavier Philipps;NPMSSP0 # esadir França
+Xevi Sala Puig;NPMSSP0 # esadir Catalunya
+Xevi Sala;NPMSSP0 # esadir Catalunya
+Xoán Manuel Rodríguez Bastida;NPMSSP0 # esadir Espanya
+Xoán Manuel Rodríguez;NPMSSP0 # esadir Espanya
+Yahia al-Houthi;NPMSSP0 # esadir Iemen
+Yaroslav Bozhko;NPMSSP0 # esadir Ucraïna
+Yasuko Sato;NPFSSP0 # esadir Japó
+Yaya Touré;NPMSSP0 # esadir Costa d'Ivori
+Yayoi Toriki;NPFSSP0 # esadir Japó
+Yaşar Kemal;NPMSSP0 # esadir Turquia
+Youn Yuh-jung;NPFSSP0 # esadir Corea del Sud
+Yumjaagiin Tsedenbal;NPMSSP0 # esadir Mongòlia
+Yunior García Aguilera;NPMSSP0 # esadir Cuba
+Yunior García;NPMSSP0 # esadir Cuba
+Yusuf Raza Gilani;NPMSSP0 # esadir Pakistan
+Zabihullah Mujahid;NPMSSP0 # esadir Afganistan
+Zaür Dadàiev;NPMSSP0 # esadir Rússia
+Zdeněk Štybar;NPMSSP0 # esadir República Txeca
+Zdravko Mrsic;NPMSSP0 # esadir Croàcia
+Zlatan Ibrahimović;NPMSSP0 # esadir Suècia
+Zlatko Mateša;NPMSSP0 # esadir Croàcia
+Zohrab Mnatsakanyan;NPMSSP0 # esadir Armènia
+Zoran Janković;NPMSSP0 # esadir Eslovènia
+Zoran Milanović;NPMSSP0 # esadir Croàcia
+Zuzana Čaputová;NPFSSP0 # esadir Eslovàquia
+Àfrica Zamorano Sanz;NPFSSP0 # esadir Catalunya
+Àfrica Zamorano;NPFSSP0 # esadir Catalunya
+Àngel Casas Mas;NPMSSP0 # esadir Catalunya
+Àngel Casas;NPMSSP0 # esadir Catalunya
+Álvaro Díaz-Mella;NPMSSP0 # esadir Espanya
+Álvaro José Díaz-Mella López;NPMSSP0 # esadir Espanya
+Ángela Cervantes Sorribas;NPFSSP0 # esadir Catalunya
+Ángela Cervantes;NPFSSP0 # esadir Catalunya
+Ángeles Sánchez Conde;NPFSSP0 # esadir Espanya
+Éder Balanta;NPMSSP0 # esadir Colòmbia
+Éder Fabián Álvarez Balanta;NPMSSP0 # esadir Colòmbia
+Éder Militao;NPMSSP0 # esadir Brasil
+Édouard Louis;NPMSSP0 # esadir França
+Ígor Guirkin;NPMSSP0 # esadir Rússia
+Íhor Térekhov;NPMSSP0 # esadir Ucraïna
+Íñigo Cavero Lataillade;NPMSSP0 # esadir Espanya
+Íñigo Cavero;NPMSSP0 # esadir Espanya
+Óscar Isaac Hernández;NPMSSP0 # esadir Guatemala
+Ľuboš Blaha;NPMSSP0 # esadir Eslovàquia
+Šefik Džaferović;NPMSSP0 # esadir Bòsnia i Hercegovina
+Šime Vrsaljko;NPMSSP0 # esadir Croàcia
+Štefan Harabin;NPMSSP0 # esadir Eslovàquia
+Željka Cvijanović;NPFSSP0 # esadir Bòsnia i Hercegovina
+Željko Komšić;NPMSSP0 # esadir Bòsnia i Hercegovina
+Željko Lučić;NPMSSP0 # esadir Sèrbia
+Željko Musa;NPMSSP0 # esadir Croàcia
+Željko Obradović;NPMSSP0 # esadir Sèrbia
+Carles Monguilod;NPMSSP0
+Eugenio Pino;NPMSSP0
+Victoria Álvarez;NPFSSP0
+Serafín Castellano;NPMSSP0
+Alagna-Valsesia;NPCSG00 # esadir estacions d'esquí
+Breuil-Cervínia;NPCSG00 # esadir estacions d'esquí
+Folgaria-Lavarone-Luserna;NPCSG00 # esadir estacions d'esquí
+Morzine-Avoriaz;NPCSG00 # esadir estacions d'esquí
+Saint-Lary-Soulan;NPCSG00 # esadir estacions d'esquí
+Valgrande-Pajares;NPCSG00 # esadir estacions d'esquí
+Piau-Engaly;NPCSG00 # esadir estacions d'esquí
+Tonale-Presena;NPCSG00 # esadir estacions d'esquí
+Super-Besse;NPCSG00 # esadir estacions d'esquí
+Luz-Ardiden;NPCSG00 # esadir estacions d'esquí
+Alba di Canazei;NPCSG00 # esadir estacions d'esquí
+Alto Campoo;NPCSG00 # esadir estacions d'esquí
+Aramón Formigal;NPCSG00 # esadir estacions d'esquí
+Aramón Panticosa;NPCSG00 # esadir estacions d'esquí
+Aramón Valdelinares;NPCSG00 # esadir estacions d'esquí
+Cavalese-Alpe Cermis;NPCSG00 # esadir estacions d'esquí
+Chiesa Valmalenco;NPCSG00 # esadir estacions d'esquí
+Gornaia Karussel;NPCSG00 # esadir estacions d'esquí
+Gressoney-La Trinité;NPCSG00 # esadir estacions d'esquí
+La Mauselaine;NPCSG00 # esadir estacions d'esquí
+La Plagne;NPCSG00 # esadir estacions d'esquí
+La Planche des Belles Filles;NPCSG00 # esadir estacions d'esquí
+La Rosière;NPCSG00 # esadir estacions d'esquí
+Espace San Bernardo;NPCSG00 # esadir estacions d'esquí
+Lech Zürs;NPCSG00 # esadir estacions d'esquí
+Les Deux Alpes;NPCSG00 # esadir estacions d'esquí
+Les Menuires;NPCSG00 # esadir estacions d'esquí
+Les Sybelles;NPCSG00 # esadir estacions d'esquí
+Madonna di Campiglio;NPCSG00 # esadir estacions d'esquí
+Muela de San Juan;NPCSG00 # esadir estacions d'esquí
+Orcières Merlette;NPCSG00 # esadir estacions d'esquí
+Pla de Negua;NPCSG00 # esadir estacions d'esquí
+Plateau de Beille;NPCSG00 # esadir estacions d'esquí
+Port Ainé;NPCSG00 # esadir estacions d'esquí
+Pra Loup;NPCSG00 # esadir estacions d'esquí
+Prato Nevoso;NPCSG00 # esadir estacions d'esquí
+Roza Khutor;NPCSG00 # esadir estacions d'esquí
+San Sicario;NPCSG00 # esadir estacions d'esquí
+Santa Caterina Valfurva;NPCSG00 # esadir estacions d'esquí
+Sauze d'Oulx;NPCSG00 # esadir estacions d'esquí
+Serre Chevalier;NPCSG00 # esadir estacions d'esquí
+Sierra de Béjar-La Covatilla;NPCSG00 # esadir estacions d'esquí
+St. Anton am Arlberg;NPCSG00 # esadir estacions d'esquí
+Station des Rousses;NPCSG00 # esadir estacions d'esquí
+Tuixent-la Vansa;NPCSG00 # esadir estacions d'esquí
+Val Gardena;NPCSG00 # esadir estacions d'esquí
+Zell am See;NPCSG00 # esadir estacions d'esquí
+Tots els Sants;NPMPO00
+Xavier Pericay;NPMSSP0
+Ramon Alcoberro;NPMSSP0
+Agustí Alcoberro;NPMSSP0
+Alcoberro i Pericay;NPCNSP0
 Komsomolsk de l'Amur;NPMSG00
 Alcalá Meco;NPCSG00
 Mas Marroch;NPMSG00
@@ -1266,7 +3452,6 @@ Ahmet Altan;NPMSSP0 # esadir
 Ahmet Necdet Sezer;NPMSSP0 # esadir
 Aida Garifullina;NPFSSP0 # esadir
 Aiko Miyawaki;NPFSSP0 # esadir
-Ailux;NPFSSP0 # esadir
 Ailyn Pérez;NPFSSP0 # esadir
 Ainhoa Garmendia;NPFSSP0 # esadir
 Aitor Arregi;NPMSSP0 # esadir
@@ -1363,7 +3548,6 @@ Ali Treki;NPMSSP0 # esadir
 Ali Yerlikaya;NPMSSP0 # esadir
 Ali Zeidan;NPMSSP0 # esadir
 Alice Coote;NPFSSP0 # esadir
-Alice;NPFSSP0 # esadir
 Alicia Giménez Bartlett;NPFSSP0 # esadir
 Alicia Pérez-Porro;NPFSSP0 # esadir
 Alicia Sanz;NPFSSP0 # esadir
@@ -1371,7 +3555,6 @@ Alina Grigore;NPFSSP0 # esadir
 Alina Pogostkina;NPFSSP0 # esadir
 Alison Balsom;NPFSSP0 # esadir
 Alisson Becker;NPMSSP0 # esadir
-Alizzz;NPMSSP0 # esadir
 Alois Alzheimer;NPMSSP0 # esadir
 Alonso Dezcallar;NPMSSP0 # esadir
 Alonso Ruizpalacios;NPMSSP0 # esadir
@@ -1474,7 +3657,6 @@ Anita Alvarez;NPFSSP0 # esadir
 Anita Hartig;NPFSSP0 # esadir
 Anja Harteros;NPFSSP0 # esadir
 Anja Kampe;NPFSSP0 # esadir
-Ankhesenamon;NPFSSP0 # esadir
 Ann Hallenberg;NPFSSP0 # esadir
 Anna Bon di Venezia;NPFSSP0 # esadir
 Anna Caterina Antonacci;NPFSSP0 # esadir
@@ -1591,12 +3773,10 @@ Aurélien Tchouaméni;NPMSSP0 # esadir
 Ava DuVernay;NPFSSP0 # esadir
 Avi Gabbay;NPMSSP0 # esadir
 Avichay Adraee;NPMSSP0 # esadir
-Awkwafina;NPFSSP0 # esadir
 Axel Kicillof;NPMSSP0 # esadir
 Axel Weber;NPMSSP0 # esadir
 Axel Witsel;NPMSSP0 # esadir
-Ay;NPMSSP0 # esadir
-Ayat;NPMSSP0 # esadir
+#Ay;NPMSSP0 # esadir
 Ayelet Shaked;NPFSSP0 # esadir
 Ayman Odeh;NPMSSP0 # esadir
 Aymeric Laporte;NPMSSP0 # esadir
@@ -1641,7 +3821,6 @@ Benjamin Cooke;NPMSSP0 # esadir
 Benjamin Dale;NPMSSP0 # esadir
 Benjamin Mkapa;NPMSSP0 # esadir
 Benjamin Schmid;NPMSSP0 # esadir
-Benjamin;NPMSSP0 # esadir
 Benoît Jacquot;NPMSSP0 # esadir
 Benoît Violier;NPMSSP0 # esadir
 Bernard Madoff;NPMSSP0 # esadir
@@ -1664,7 +3843,6 @@ Bianca Andreescu;NPFSSP0 # esadir
 Bill Nighy;NPMSSP0 # esadir
 Biniam Girmay;NPMSSP0 # esadir
 Birgitta Jónsdóttir;NPFSSP0 # esadir
-Bizarrap;NPMSSP0 # esadir
 Bjarni Benediktsson;NPMSSP0 # esadir
 Blaise Compaoré;NPMSSP0 # esadir
 Blanca Ovelar;NPFSSP0 # esadir
@@ -1710,7 +3888,6 @@ Bárbara Lennie;NPFSSP0 # esadir
 Bárbara Lluch;NPFSSP0 # esadir
 Béatrice Uria-Monzon;NPFSSP0 # esadir
 Bülent Ecevit;NPMSSP0 # esadir
-Ca7riel;NPMSSP0 # esadir
 Caeleb Dressel;NPMSSP0 # esadir
 Cai Guo-Qiang;NPMSSP0 # esadir
 Cai Qi;NPMSSP0 # esadir
@@ -1824,7 +4001,6 @@ Christianne Stotijn;NPFSSP0 # esadir
 Christina Landshamer;NPFSSP0 # esadir
 Christina Onassis;NPFSSP0 # esadir
 Christina Pluhar;NPFSSP0 # esadir
-Christo;NPMSSP0 # esadir
 Christoph Eschenbach;NPMSSP0 # esadir
 Christoph Kramer;NPMSSP0 # esadir
 Christoph Metzelder;NPMSSP0 # esadir
@@ -1866,7 +4042,6 @@ Clàudia Vives-Fierro;NPFSSP0 # esadir
 Clément Lenglet;NPMSSP0 # esadir
 Colette Maze;NPFSSP0 # esadir
 Colin Matthews;NPMSSP0 # esadir
-Colita;NPFSSP0 # esadir
 Conradin Kreutzer;NPMSSP0 # esadir
 Constance Wu;NPFSSP0 # esadir
 Constantin Trinks;NPMSSP0 # esadir
@@ -1982,14 +4157,12 @@ Dayron Robles;NPMSSP0 # esadir
 Dea Kulumbegashvili;NPFSSP0 # esadir
 Dean Spielmann;NPMSSP0 # esadir
 Deborah Voigt;NPFSSP0 # esadir
-Deco;NPMSSP0 # esadir
 Deco 4K;NPMSO00
 Deividas Dulkys;NPMSSP0 # esadir
 Dejan Bodiroga;NPMSSP0 # esadir
 Dejan Lovren;NPMSSP0 # esadir
 Delbert Mann;NPMSSP0 # esadir
 Demi Vollering;NPFSSP0 # esadir
-Demon;NPMSSP0 # esadir
 Deng Jiagui;NPMSSP0 # esadir
 Denis Gaultier;NPMSSP0 # esadir
 Denis Kozhukhin;NPMSSP0 # esadir
@@ -2024,7 +4197,6 @@ Diego Matheuz;NPMSSP0 # esadir
 Diego Ocampo;NPMSSP0 # esadir
 Diego Schwartzman;NPMSSP0 # esadir
 Dietmar Hopp;NPMSSP0 # esadir
-Dieudonné;NPMSSP0 # esadir
 Dika Mem;NPMSSP0 # esadir
 Dileita Mohamed Dileita;NPMSSP0 # esadir
 Dimitri Foulquier;NPMSSP0 # esadir
@@ -2040,7 +4212,6 @@ Djamel Mesbah;NPMSSP0 # esadir
 Dmitró Bulàtov;NPMSSP0 # esadir
 Dmitró Kuleba;NPMSSP0 # esadir
 Dmitró Txigrinski;NPMSSP0 # esadir
-Doechii;NPFSSP0 # esadir
 Dolly de Leon;NPFSSP0 # esadir
 Dolora Zajick;NPFSSP0 # esadir
 Domagoj Vida;NPMSSP0 # esadir
@@ -2057,7 +4228,6 @@ Dominika Cibulková;NPFSSP0 # esadir
 Dominique Lapierre;NPMSSP0 # esadir
 Dominique Mamberti;NPMSSP0 # esadir
 Dominique Visse;NPMSSP0 # esadir
-Dominnico;NPMSSP0 # esadir
 Don Winslow;NPMSSP0 # esadir
 Donald Wuerl;NPMSSP0 # esadir
 Donatella Di Pietrantonio;NPFSSP0 # esadir
@@ -2069,10 +4239,7 @@ Dragan Primorac;NPMSSP0 # esadir
 Drew Starkey;NPMSSP0 # esadir
 Dudi Sela;NPMSSP0 # esadir
 Dudu Aouate;NPMSSP0 # esadir
-Duffy;NPFSSP0 # esadir
-Dunga;NPMSSP0 # esadir
 Dwayne Croft;NPMSSP0 # esadir
-Dyango;NPMSSP0 # esadir
 Dylan Teuns;NPMSSP0 # esadir
 Dénes Dibusz;NPMSSP0 # esadir
 Désiré Doué;NPMSSP0 # esadir
@@ -2113,7 +4280,6 @@ Elena Petrová;NPFSSP0 # esadir
 Elena Poniatowska;NPFSSP0 # esadir
 Elena Trapé;NPFSSP0 # esadir
 Eleonora Buratto;NPFSSP0 # esadir
-Elgio;NPMSSP0 # esadir
 Elia Viviani;NPMSSP0 # esadir
 Eliahu Inbal;NPMSSP0 # esadir
 Eliaquim Mangala;NPMSSP0 # esadir
@@ -2222,7 +4388,6 @@ Eyal Zamir;NPMSSP0 # esadir
 Fabian Cancellara;NPMSSP0 # esadir
 Fabien Gabel;NPMSSP0 # esadir
 Fabienne Suter;NPFSSP0 # esadir
-Fabinho;NPMSSP0 # esadir
 Fabio Armiliato;NPMSSP0 # esadir
 Fabio Aru;NPMSSP0 # esadir
 Fabio Baggio;NPMSSP0 # esadir
@@ -2259,14 +4424,12 @@ Ferdinand Ries;NPMSSP0 # esadir
 Ferdinando Bertoni;NPMSSP0 # esadir
 Ferdinando Carulli;NPMSSP0 # esadir
 Ferland Mendy;NPMSSP0 # esadir
-Fernandinho;NPMSSP0 # esadir
 Fernando Filoni;NPMSSP0 # esadir
 Fernando Haddad;NPMSSP0 # esadir
 Fernando Meirelles;NPMSSP0 # esadir
 Fernando Méndez-Leite;NPMSSP0 # esadir
 Fernando Valdivielso;NPMSSP0 # esadir
 Fernando Villavicencio;NPMSSP0 # esadir
-Feroz;NPMSSP0 # esadir
 Ferran Barenblit;NPMSSP0 # esadir
 Ferzan Özpetek;NPMSSP0 # esadir
 Festus Mogae;NPMSSP0 # esadir
@@ -2468,7 +4631,6 @@ Giuseppe Valentini;NPMSSP0 # esadir
 Glen Powell;NPMSSP0 # esadir
 Gloria Macapagal-Arroyo;NPFSSP0 # esadir
 Godai Garcia;NPMSSP0 # esadir
-GOG;NPMSSP0 # esadir
 Goh Chok Tong;NPMSSP0 # esadir
 Golden Boy;NPMSSP0 # esadir
 Golshifteh Farahani;NPFSSP0 # esadir
@@ -2482,7 +4644,6 @@ Gottfried Reiche;NPMSSP0 # esadir
 Goukouni Oueddei;NPMSSP0 # esadir
 Grace Mugabe;NPFSSP0 # esadir
 Granville Bantock;NPMSSP0 # esadir
-Grasshopper;NPMSSP0 # esadir
 Greg Rutherford;NPMSSP0 # esadir
 Gregory Kunde;NPMSSP0 # esadir
 Grigori Iavlinski;NPMSSP0 # esadir
@@ -2505,7 +4666,6 @@ Guillermo García Calvo;NPMSSP0 # esadir
 Guillermo Moreno;NPMSSP0 # esadir
 Guillermo Osorno;NPMSSP0 # esadir
 Guiraut Riquier;NPMSSP0 # esadir
-Guitarricadelafuente;NPMSSP0 # esadir
 Gurbanguly Berdimuhamedow;NPMSSP0 # esadir
 Gustaf Sjökvist;NPMSSP0 # esadir
 Gustav Neidlinger;NPMSSP0 # esadir
@@ -2597,7 +4757,6 @@ Heorhiy Tsitaishvili;NPMSSP0 # esadir
 Herbert Lippert;NPMSSP0 # esadir
 Herbert Schuch;NPMSSP0 # esadir
 Herbert Tachezi;NPMSSP0 # esadir
-Hercules;NPMSSP0 # esadir
 Herman Strategier;NPMSSP0 # esadir
 Hervé Niquet;NPMSSP0 # esadir
 Herzi Halevi;NPMSSP0 # esadir
@@ -2613,7 +4772,6 @@ Hisao Tanaka;NPMSSP0 # esadir
 Hishammuddin Hussein;NPMSSP0 # esadir
 Hofesh Shechter;NPMSSP0 # esadir
 Hong Chau;NPFSSP0 # esadir
-Horemheb;NPMSSP0 # esadir
 Hossein Salami;NPMSSP0 # esadir
 Houari Boumédiène;NPMSSP0 # esadir
 Hovik Keuchkerian;NPMSSP0 # esadir
@@ -3039,7 +5197,6 @@ Kalu Uche;NPMSSP0 # esadir
 Kamil Syprzak;NPMSSP0 # esadir
 Kamisese Mara;NPMSSP0 # esadir
 Kaoru Mitoma;NPMSSP0 # esadir
-Kap;NPMSSP0 # esadir
 Karel Husa;NPMSSP0 # esadir
 Karel Mark Chichon;NPMSSP0 # esadir
 Karen Cargill;NPFSSP0 # esadir
@@ -3123,7 +5280,6 @@ Kocheril Raman Narayanan;NPMSSP0 # esadir
 Kodi Smit-McPhee;NPMSSP0 # esadir
 Koen Casteels;NPMSSP0 # esadir
 Koen Lenaerts;NPMSSP0 # esadir
-Koke;NPMSSP0 # esadir
 Konrad Jarnot;NPMSSP0 # esadir
 Konstantin Wolff;NPMSSP0 # esadir
 Konstantín Txúitxenko;NPMSSP0 # esadir
@@ -3171,6 +5327,7 @@ Laura Biagiotti;NPFSSP0 # esadir
 Laura Castelli;NPFSSP0 # esadir
 Laura Gómez-Lacueva;NPFSSP0 # esadir
 Laure Vega;NPFSSP0 # esadir
+Laura Fernández Vega;NPFSSP0 # esadir
 Laurent Berger;NPMSSP0 # esadir
 Laurent Blanc;NPMSSP0 # esadir
 Laurent Brochard;NPMSSP0 # esadir
@@ -3219,7 +5376,7 @@ Letsie III de Lesotho;NPMSSP0 # esadir
 Leung Chun-ying;NPMSSP0 # esadir
 Lev Mekhlis;NPMSSP0 # esadir
 Levente Molnár;NPMSSP0 # esadir
-Levi;NPMSSP0 # esadir
+#Levi;NPMSSP0 # esadir
 Levy Mwanawasa;NPMSSP0 # esadir
 Lex van Delden;NPMSSP0 # esadir
 Leymah Gbowee;NPFSSP0 # esadir
@@ -3232,12 +5389,10 @@ Li Zhanshu;NPMSSP0 # esadir
 Liamine Zéroual;NPMSSP0 # esadir
 Lianna Haroutounian;NPFSSP0 # esadir
 Lianne Dalziel;NPFSSP0 # esadir
-Liber;NPMSSP0 # esadir
 Lidia Vinyes Curtis;NPFSSP0 # esadir
 Lidón Muñoz;NPFSSP0 # esadir
 Lieke Martens;NPFSSP0 # esadir
 Lien Chan;NPMSSP0 # esadir
-Lildami;NPMSSP0 # esadir
 Lilli Paasikivi;NPFSSP0 # esadir
 Lily Collins;NPFSSP0 # esadir
 Lily Maisky;NPFSSP0 # esadir
@@ -3480,7 +5635,6 @@ Mariona Caldentey;NPFSSP0 # esadir
 Marius Brenciu;NPMSSP0 # esadir
 Marius Copil;NPMSSP0 # esadir
 Marius Flothuis;NPMSSP0 # esadir
-Mariza;NPFSSP0 # esadir
 Mark Cavendish;NPMSSP0 # esadir
 Mark Delavan;NPMSSP0 # esadir
 Mark Elder;NPMSSP0 # esadir
@@ -3495,7 +5649,6 @@ Markus Eiche;NPMSSP0 # esadir
 Marlies Schild;NPFSSP0 # esadir
 Marlis Petersen;NPFSSP0 # esadir
 Marlos Moreno;NPMSSP0 # esadir
-Marquinhos;NPMSSP0 # esadir
 Marria Pratts;NPFSSP0 # esadir
 Marta Mathéu;NPFSSP0 # esadir
 Martin Braithwaite;NPMSSP0 # esadir
@@ -3698,7 +5851,6 @@ Moisès Maicas;NPMSSP0 # esadir
 Mojca Erdmann;NPFSSP0 # esadir
 Mokgweetsi Masisi;NPMSSP0 # esadir
 Monica Green;NPFSSP0 # esadir
-Morad;NPMSSP0 # esadir
 Mordechai Vanunu;NPMSSP0 # esadir
 Morgan De Sanctis;NPMSSP0 # esadir
 Morgan Tsvangirai;NPMSSP0 # esadir
@@ -3728,7 +5880,6 @@ Myung-Whun Chung;NPMSSP0 # esadir
 Márton Fucsovics;NPMSSP0 # esadir
 Mátyás Seiber;NPMSSP0 # esadir
 Míriam Hatibi;NPFSSP0 # esadir
-Mísia;NPFSSP0 # esadir
 Mónica López;NPFSSP0 # esadir
 Nabih Berri;NPMSSP0 # esadir
 Nabil Ayouch;NPMSSP0 # esadir
@@ -3750,7 +5901,6 @@ Najim Laachraoui;NPMSSP0 # esadir
 Nalini Malani;NPFSSP0 # esadir
 Nana Akufo-Addo;NPMSSP0 # esadir
 Nancho Novo;NPMSSP0 # esadir
-Nani;NPMSSP0 # esadir
 Napoléon Coste;NPMSSP0 # esadir
 Narciso Ibáñez Serrador;NPMSSP0 # esadir
 Nariné Abgarian;NPFSSP0 # esadir
@@ -3766,19 +5916,16 @@ Natasha Mack;NPFSSP0 # esadir
 Natasha Richardson;NPFSSP0 # esadir
 Nathan Jawai;NPMSSP0 # esadir
 Nathan Milstein;NPMSSP0 # esadir
-Nature;NPMSSP0 # esadir
 Natàlia Estemírova;NPFSSP0 # esadir
 Nawaf Salam;NPMSSP0 # esadir
 Nawaz Sharif;NPMSSP0 # esadir
 Nazanín Armanian;NPFSSP0 # esadir
 Necmettin Erbakan;NPMSSP0 # esadir
-Nefertari;NPFSSP0 # esadir
 Neil Harbisson;NPMSSP0 # esadir
 Neil Shicoff;NPMSSP0 # esadir
 Nelson Goerner;NPMSSP0 # esadir
 Nelson Ávila;NPMSSP0 # esadir
 Nemanja Radoja;NPMSSP0 # esadir
-Neto;NPMSSP0 # esadir
 Netumbo Nandi-Ndaitwah;NPFSSP0 # esadir
 Ngozi Okonjo-Iweala;NPFSSP0 # esadir
 Ni Yulan;NPFSSP0 # esadir
@@ -3836,7 +5983,6 @@ Noémie Merlant;NPFSSP0 # esadir
 Nuccio Ordine;NPMSSP0 # esadir
 Nuno Dias;NPMSSP0 # esadir
 Núria Picas;NPFSSP0 # esadir
-Odette;NPFSSP0 # esadir
 Okka von der Damerau;NPFSSP0 # esadir
 Ola Gjeilo;NPMSSP0 # esadir
 Oladipo Diya;NPMSSP0 # esadir
@@ -3854,7 +6000,6 @@ Oliver Schnyder;NPMSSP0 # esadir
 Olivia Colman;gènere no-binari # esadir
 Olivier Peter;NPMSSP0 # esadir
 Olivier Py;NPMSSP0 # esadir
-Olivier;NPMSSP0 # esadir
 Olle Persson;NPMSSP0 # esadir
 Omar Abdel-Rahman;NPMSSP0 # esadir
 Omar Abdullah;NPMSSP0 # esadir
@@ -3877,10 +6022,7 @@ Otto Ketting;NPMSSP0 # esadir
 Otto Olsson;NPMSSP0 # esadir
 Otto Stich;NPMSSP0 # esadir
 Ottón Solís;NPMSSP0 # esadir
-Ouineta;NPFSSP0 # esadir
 Ousmane Sonko;NPMSSP0 # esadir
-Ovidie;NPFSSP0 # esadir
-Oz;NPMSSP0 # esadir
 Paavo Heininen;NPMSSP0 # esadir
 Pablo Machín;NPMSSP0 # esadir
 Pablo Piatti;NPMSSP0 # esadir
@@ -3951,7 +6093,6 @@ Pavel Svoboda;NPMSSP0 # esadir
 Pavlos Fyssas;NPMSSP0 # esadir
 Payal Kapadia;NPFSSP0 # esadir
 Paz Vega;NPFSSP0 # esadir
-Pedri;NPMSSP0 # esadir
 Pedro Martín-Calero;NPMSSP0 # esadir
 Pedro Opeka;NPMSSP0 # esadir
 Peng Liyuan;NPFSSP0 # esadir
@@ -4005,7 +6146,6 @@ Philippe Lazzarini;NPMSSP0 # esadir
 Philippe Mexès;NPMSSP0 # esadir
 Philippe Pierlot;NPMSSP0 # esadir
 Philippe Tabarot;NPMSSP0 # esadir
-Piaggio;NPMSSP0 # esadir
 Pier Luigi Celata;NPMSSP0 # esadir
 Piero Bellugi;NPMSSP0 # esadir
 Pierre Aubameyang;NPMSSP0 # esadir
@@ -4034,7 +6174,6 @@ Piotr Grabarczyk;NPMSSP0 # esadir
 Piotr Trochowski;NPMSSP0 # esadir
 Pippa Middleton;NPFSSP0 # esadir
 Pita Limjaroenrat;NPMSSP0 # esadir
-Pitingo;NPMSSP0 # esadir
 Pol Monen;NPMSSP0 # esadir
 Pol van Boekel;NPMSSP0 # esadir
 Prabowo Subianto;NPMSSP0 # esadir
@@ -4051,7 +6190,6 @@ Qasem Soleimani;NPMSSP0 # esadir
 Qian Qichen;NPMSSP0 # esadir
 Quincy Wilson;NPMSSP0 # esadir
 Quinn Simmons;NPMSSP0 # esadir
-Quino;NPMSSP0 # esadir
 Quvenzhané Wallis;NPFSSP0 # esadir
 Rachel Hurd-Wood;NPFSSP0 # esadir
 Rada Akbar;NPFSSP0 # esadir
@@ -4083,7 +6221,6 @@ Ramón Sáez Valcárcel;NPMSSP0 # esadir
 Ramón Vargas;NPMSSP0 # esadir
 Ranil Wickremesinghe;NPMSSP0 # esadir
 Raoni Metuktire;NPMSSP0 # esadir
-Raphael;NPMSSP0 # esadir
 Raphaël Varane;NPMSSP0 # esadir
 Rashid Khalidi;NPMSSP0 # esadir
 Rashid Ramzi;NPMSSP0 # esadir
@@ -4153,7 +6290,6 @@ Roberto Álamo;NPMSSP0 # esadir
 Robin Blaze;NPMSSP0 # esadir
 Robin Swann;NPMSSP0 # esadir
 Robin Ticciati;NPMSSP0 # esadir
-Robinho;NPMSSP0 # esadir
 Roc Blackblock;NPMSSP0 # esadir
 Rodica Radian-Gordon;NPFSSP0 # esadir
 Rodion Sxedrín;NPMSSP0 # esadir
@@ -4254,7 +6390,6 @@ Sani Abacha;NPMSSP0 # esadir
 Santi Millán;NPMSSP0 # esadir
 Santiago Peña;NPMSSP0 # esadir
 Santiago Sierra;NPMSSP0 # esadir
-Santos;NPMSSP0 # esadir
 Sara Baras;NPFSSP0 # esadir
 Sara Duterte;NPFSSP0 # esadir
 Sara Däbritz;NPFSSP0 # esadir
@@ -4319,7 +6454,6 @@ Siarhei Rutenka;NPMSSP0 # esadir
 Sibghatullah Mojaddedi;NPMSSP0 # esadir
 Siddhartha Mukherjee;NPMSSP0 # esadir
 Sidi Larbi Cherkaoui;NPMSSP0 # esadir
-Sidonie;NPFSSP0 # esadir
 Siegfried Matthus;NPMSSP0 # esadir
 Sigfrido Ranucci;NPMSSP0 # esadir
 Silvan Shalom;NPMSSP0 # esadir
@@ -4344,7 +6478,6 @@ Sirimavo Bandaranaike;NPFSSP0 # esadir
 Sitiveni Rabuka;NPMSSP0 # esadir
 Siv Jensen;NPFSSP0 # esadir
 Slobodan Praljak;NPMSSP0 # esadir
-Socunbohemio;NPMSSP0 # esadir
 Sofi Jeannin;NPFSSP0 # esadir
 Sofia de Wessex;NPFSSP0 # esadir
 Sofia Kenin;NPFSSP0 # esadir
@@ -4401,7 +6534,6 @@ Stéphanie d'Oustrac;NPFSSP0 # esadir
 Stéphanie Frappart;NPFSSP0 # esadir
 Sudarat Keyuraphan;NPFSSP0 # esadir
 Suhail Shaheen;NPMSSP0 # esadir
-Suharto;NPMSSP0 # esadir
 Suleiman Abu Ghaith;NPMSSP0 # esadir
 Sun Yang;NPMSSP0 # esadir
 Sun Yun-suan;NPMSSP0 # esadir
@@ -4457,7 +6589,6 @@ Terri Schiavo;NPFSSP0 # esadir
 Tesfaye Deriba;NPMSSP0 # esadir
 Tess Holliday;NPFSSP0 # esadir
 Tessa Thompson;NPFSSP0 # esadir
-Tetê;NPMSSP0 # esadir
 Thaksin Shinawatra;NPMSSP0 # esadir
 Than Shwe;NPMSSP0 # esadir
 Thanasi Kokkinakis;NPMSSP0 # esadir
@@ -4470,7 +6601,6 @@ Theo Walcott;NPMSSP0 # esadir
 Theobald Böhm;NPMSSP0 # esadir
 Theodor Kirchner;NPMSSP0 # esadir
 Theodor von Schacht;NPMSSP0 # esadir
-Theodora;NPFSSP0 # esadir
 Thiagus Petrus;NPMSSP0 # esadir
 Thibaut Pinot;NPMSSP0 # esadir
 Thierno Diallo;NPMSSP0 # esadir
@@ -4532,13 +6662,11 @@ Toni Nieminen;NPMSSP0 # esadir
 Toni Servillo;NPMSSP0 # esadir
 Tonny Vilhena;NPMSSP0 # esadir
 Topi Lehtipuu;NPMSSP0 # esadir
-Toquinho;NPMSSP0 # esadir
 Tornike Shengelia;NPMSSP0 # esadir
 Torsten Kerl;NPMSSP0 # esadir
 Toshio Hosokawa;NPMSSP0 # esadir
 Tran Duc Luong;NPMSSP0 # esadir
 Trent Alexander-Arnold;NPMSSP0 # esadir
-Triquell;NPMSSP0 # esadir
 Tristán Ulloa;NPMSSP0 # esadir
 Ture Rangström;NPMSSP0 # esadir
 Turgut Özal;NPMSSP0 # esadir
@@ -4614,8 +6742,6 @@ Virginia Torrecilla;NPFSSP0 # esadir
 Vitali Klitxkó;NPMSSP0 # esadir
 Vitali Milónov;NPMSSP0 # esadir
 Vitali Mutkó;NPMSSP0 # esadir
-Vitinha;NPMSSP0 # esadir
-Vitinho;NPMSSP0 # esadir
 Vittorio Gregotti;NPMSSP0 # esadir
 Vittorio Grigolo;NPMSSP0 # esadir
 Vittorio Taviani;NPMSSP0 # esadir
@@ -4695,7 +6821,6 @@ Xavier Marcé;NPMSSP0 # esadir
 Xavier Munford;NPMSSP0 # esadir
 Xesús Fraga;NPMSSP0 # esadir
 Xevi Xirgo;NPMSSP0 # esadir
-Ximbinha;NPMSSP0 # esadir
 Xiomara Castro;NPFSSP0 # esadir
 Xoel López;NPMSSP0 # esadir
 Xoán Bascuas;NPMSSP0 # esadir
@@ -4740,7 +6865,6 @@ Zanele Muholi;NPFSSP0 # esadir
 Zbigniew Ziobro;NPMSSP0 # esadir
 Zdravko Tolimir;NPMSSP0 # esadir
 Zeid Ra'ad al-Hussein;NPMSSP0 # esadir
-Zerocalcare;NPMSSP0 # esadir
 Zhang Chengdong;NPMSSP0 # esadir
 Zhang Gaoli;NPMSSP0 # esadir
 Zhang Zhan;NPFSSP0 # esadir
@@ -5995,9 +8119,9 @@ tote bag;NCFS000
 tote bags;NCFP000
 bossa tote;NCFS000
 bosses tote;NCFP000
-Faemino y Cansado;NPMNSP0
+Faemino y Cansado;NPMNSP0
 Josema Yuste;NPMSSP0
-Jorge Blass;NPMSSP0
+Jorge Blass;NPMSSP0
 Josep Gòrriz;NPMSSP0
 Gòrriz i Verdú;NPCNSP0
 Setze Jutges;NPMPO00
@@ -6083,7 +8207,7 @@ Teatre Apolo;NPMSO00
 golden visa;NCFS000
 golden visas;NCFP000
 Hoehn i Yahr;NPCNSP0
-Muñoz Peirats;NPCNSP0
+Muñoz Peirats;NPCNSP0
 Serguei Bubka;NPMSSP0
 Nandu Jubany;NPMSSP0
 cara b;NCFS000
@@ -6122,6 +8246,10 @@ Rafael Viravens;NPMSSP0
 Just Lipsi;NPMSSP0
 Saint Kitts;NPCSG00
 Saint Kitts i Nevis;NPCSG00
+Saint Christopher i Nevis;NPCSG00
+Saint Christopher;NPCSG00
+Saint Patrick;NPMSSP0
+Santa Helena;NPFSG00
 batx.;NCMN000
 Gonzalo Caballero;NPMSSP0
 Santa Anna;NPFSSP0
@@ -6542,7 +8670,7 @@ Grup PRISA;NPMSO00
 Ernest Folch;NPMSSP0
 Solé Tura;NPCNSP0
 Solé i Tura;NPCNSP0
-Leticia Asenjo;NPFSSP0
+Leticia Asenjo;NPFSSP0
 Aleksandr Nevski;NPMSSP0
 Alexandre Nevski;NPMSSP0
 Beni Melal;NPCSG00
@@ -8081,16 +10209,12 @@ Juan Cruz;NPMSSP0
 Royal Society;NPFSO00
 Royal Society of London;NPFSO00
 Mark Felt;NPMSSP0
-Kansafra;NPCSG00
-Vayk;NPCSG00
-Kornidzor;NPCSG00
 Andrei Tróixev;NPMSSP0
 Ararat Mirzoyan;NPMSSP0
 Víktor Sokolov;NPMSSP0
 Roman Starovoit;NPMSSP0
 Óscar Puente;NPMSSP0
 Ana Boadas;NPFSSP0
-Mastung;NPCSG00
 Igor Matovic;NPMSSP0
 Samvel Shahramanyan;NPMSSP0
 Port Royal;NPCSG00
@@ -8540,13 +10664,11 @@ Il barbiere di Siviglia;NPMSO00
 Don Pasquale;NPMSO00
 L'elisir d'amore;NPMSO00
 Lucia di Lammermoor;NPFSO00
-Pagliacci;NPMPO00
 Cavalleria rusticana;NPFSO00
 La fanciulla del West;NPFSO00
 Madama Butterfly;NPFSO00
 Manon Lescaut;NPFSO00
 Luisa Miller;NPFSO00
-Rigoletto;NPMSO00
 Un ballo in maschera;NPMSO00
 Deutsche Grammophon;NPCNO00
 Premier League;NPFSO00
@@ -9142,7 +11264,6 @@ Google Assistant	NCMS000
 Sant Silvestre	NCCS000
 Santa Coloma	NPCSG00
 Temporada Alta	NPCSO00
-Santa Mònica	NPCSO00
 Santa Claus	NPMSSP0
 Cole Porter	NPMSSP0
 Pax Romana	NCFS000
@@ -9470,7 +11591,7 @@ Elobey Grande	NPCNG00
 E. coli	NCFS000
 Escherichia coli	NCFS000
 escheríchia coli	NCFS000
-Espíritu Santo	NPCNG00
+Espiritu Santo	NPCSG00
 Estats Units	NPMPG00
 Països Baixos	NPMPG00
 Eth Portilhon	NPCSG00
@@ -9491,6 +11612,7 @@ Grand Canyon	NPMSG00
 Gran Canyó	NPMSG00
 Guangxi Zhuang	NPCNG00
 Hai Phong	NPCNG00
+Hải Phòng;NPCSG00 # topònims, original vietnamita
 Hindu Kush	NPCNG00
 Ho Chi Minh	NPCNG00
 Homo antecessor	NCMN000

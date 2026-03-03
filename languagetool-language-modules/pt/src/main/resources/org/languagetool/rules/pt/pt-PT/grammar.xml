@@ -3316,7 +3316,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
   <category id='REGIONALISMS_PT_PT' name='🇵🇹 Regionalismos'>
 
 
-      <rule id='BRASILEIRISMO_ATERRISAR' name='🇵🇹[Brasileirismo] aterrisar → aterrar'>
+      <rule id='BRASILEIRISMO_ATERRISAR' name='🇵🇹🇧🇷 aterrisar → aterrar'>
           <!-- Created by Tiago F. Santos , Portuguese rule, 2017-04-12 -->
           <pattern>
               <token regexp='yes'>aterri(?:z|ss?).+</token>
@@ -3326,7 +3326,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-      <rule id='BRASILEIRISMO_CONTROLO_CONTROLE' name='🇵🇹[Brasileirismo] controle → controlo'>
+      <rule id='BRASILEIRISMO_CONTROLO_CONTROLE' name='🇵🇹🇧🇷 controle → controlo'>
           <!-- Created by Marco A.G.Pinto , Portuguese rule -->
           <pattern>
               <token regexp="yes">(?:d|n|outr|pel)?os?|de|(?:alg|d|n)?(?:um|uns)|em</token>
@@ -3340,7 +3340,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-      <rule id='BRASILEIRISMO_CONTROLO_CONTROLE_SOB' name="🇵🇹[Brasileirismo] 'sob controle' → 'sob controlo'">
+      <rule id='BRASILEIRISMO_CONTROLO_CONTROLE_SOB' name="🇵🇹🇧🇷 'sob controle' → 'sob controlo'">
           <!-- Created by Marco A.G.Pinto , Portuguese rule -->
           <pattern>
               <token>sob</token>
@@ -3351,7 +3351,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-      <rule id='BRASILEIRISMO_DECOLAR' name='🇵🇹[Brasileirismo] decolar → descolar'>
+      <rule id='BRASILEIRISMO_DECOLAR' name='🇵🇹🇧🇷 decolar → descolar'>
           <!-- Created by Tiago F. Santos , Portuguese rule, 2017-04-12 -->
           <pattern>
               <token regexp='yes'>decol.+</token>
@@ -3361,7 +3361,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-      <rule id="EQUIPES" name="🇵🇹[Brasileirismo] equipes → equipas">
+      <rule id="EQUIPES" name="🇵🇹🇧🇷 equipes → equipas">
           <!-- Created by Marco A.G.Pinto , Portuguese rule -->
           <pattern>
               <token regexp="yes">(?:d|n|outr|pel)?[ao]s?|(?:alg|d|n)?(?:um(a|as)?|uns)|em|(?:sua|[nv]ossa|tua)s?</token>
@@ -3375,7 +3375,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-      <rule id='BRASILEIRISMO_EXPERIMENTO' name='🇵🇹[Brasileirismo] experimento → experiência'>
+      <rule id='BRASILEIRISMO_EXPERIMENTO' name='🇵🇹🇧🇷 experimento → experiência'>
           <!-- Created by Tiago F. Santos , Portuguese rule, 2017-04-12 -->
           <pattern>
               <token postag="[AD]..M[SP].+" postag_regexp='yes'/>
@@ -3389,7 +3389,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-     <rule id='BRASILEIRISMO_ESTAR_DE_SACO_CHEIO' name="🇵🇹[Brasileirismo] estar 'de saco cheio' → farto/saturado">
+     <rule id='BRASILEIRISMO_ESTAR_DE_SACO_CHEIO' name="🇵🇹🇧🇷 estar 'de saco cheio' → farto/saturado">
           <pattern>
               <token skip='2' postag='VM.+' postag_regexp='yes' inflected='yes' regexp='no'>estar</token>
               <marker>
@@ -3410,7 +3410,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-     <rule id='BRASILEIRISMO_MACHUCAR' name="🇵🇹[Brasileirismo] machucar → magoar/aleijar/ferir">
+     <rule id='BRASILEIRISMO_MACHUCAR' name="🇵🇹🇧🇷 machucar → magoar/aleijar/ferir">
           <pattern>
               <token inflected='yes' regexp='no'>machucar</token>
           </pattern>
@@ -3422,7 +3422,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-      <rule id='BRASILEIRISMO_PRIVADA' name="🇵🇹[Brasileirismo] 'privada sanitária', 'vaso sanitário' → retrete">
+      <rule id='BRASILEIRISMO_PRIVADA' name="🇵🇹🇧🇷 'privada sanitária', 'vaso sanitário' → retrete">
           <!-- Created by Tiago F. Santos , Portuguese rule, 2017-04-12 -->
           <pattern>
               <token regexp='yes'>privada|vaso</token>
@@ -3434,7 +3434,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-      <rule id='BRASILEIRISMO_REVISAR' name='🇵🇹[Brasileirismo] revisar → rever'>
+      <rule id='BRASILEIRISMO_REVISAR' name='🇵🇹🇧🇷 revisar → rever'>
           <!-- Created by Tiago F. Santos , Portuguese rule, 2017-04-12 -->
           <pattern>
               <token inflected='yes'>revisar</token>
@@ -3444,7 +3444,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-      <rule id="BRASILEIRISMO_SOBRADO" name="🇵🇹[Brasileirismo] sobrado → vivenda">
+      <rule id="BRASILEIRISMO_SOBRADO" name="🇵🇹🇧🇷 sobrado → vivenda">
           <!-- Created by Tiago F. Santos , Portuguese rule, 2017-04-12 -->
           <pattern>
               <token case_sensitive='yes'>sobrado
@@ -3455,7 +3455,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
   </rule>
 
 
-  <rule id='BRASILEIRISMO_TIMES' name='🇵🇹[Brasileirismo] time → equipa'>
+  <rule id='BRASILEIRISMO_TIMES' name='🇵🇹🇧🇷 time → equipa'>
       <!-- Created by Tiago F. Santos , Portuguese rule, 2017-04-12 -->
       <antipattern>
           <token regexp='yes'>part|full</token>
@@ -3471,7 +3471,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
   </rule>
 
 
-  <rule id='BRASILEIRISMO_XINGAR' name='🇵🇹[Brasileirismo] xingar → gozar'>
+  <rule id='BRASILEIRISMO_XINGAR' name='🇵🇹🇧🇷 xingar → gozar'>
       <!-- Created by Tiago F. Santos , Portuguese rule, 2017-04-12 -->
       <pattern case_sensitive='yes'>
           <token regexp='yes'>xing.+</token>

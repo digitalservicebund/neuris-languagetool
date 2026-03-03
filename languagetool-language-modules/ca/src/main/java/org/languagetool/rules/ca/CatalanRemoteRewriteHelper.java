@@ -141,6 +141,9 @@ public class CatalanRemoteRewriteHelper {
       "amb la frase, sense comentaris ni puntuació extra.",
     "CA_SPLIT_LONG_SENTENCE", "Aquesta frase és massa llarga. Divideix-la fent els mínims canvis possibles. " +
       "Respon només amb la frase dividida.",
+        "EN_NO_INFINITIU_CAUSAL", "Reescriu la frase canviant la construcció 'al no + infinitiu' o " +
+      "'en no + infinitiu' per 'com que...' o 'perquè...', fent els mínims canvis possibles. Respon amb la frase reescrita " +
+      "sense comentaris extra.",
   "CA_REMOTE_ESCOLTAR_SENTIR", "Reescriu aquesta frase canviant el verb 'escoltar' pel verb 'sentir', si està mal usat, és a dir, si no vol dir 'parar atenció, atendre o obeir'." +
       "No canviïs el verb si 'escoltar' vol dir 'parar atenció, atendre o obeir', i per tant està ben usat (p. ex., El vaig escoltar atentament)." +
       "Respon directament amb la frase reescrita, sense comentaris ni puntuació extra.");
@@ -182,5 +185,11 @@ public class CatalanRemoteRewriteHelper {
     "CA_REMOTE_ESCOLTAR_SENTIR", Map.ofEntries(
       Map.entry("Vaig escoltar que deien coses inversemblants.","Vaig sentir que deien coses inversemblants."),
       Map.entry("Vaig escoltar atentament les seves explicacions.","Vaig escoltar atentament les seves explicacions.")
-      ));
+      ),
+      "EN_NO_INFINITIU_CAUSAL", Map.ofEntries(
+        Map.entry("En no tenir efectes pràctics, vam decidir deixar-ho córrer.", "Com que no tenia efectes pràctics, vam decidir deixar-ho córrer."),
+        Map.entry("Al no tenir efectes pràctics, se suspèn la sessió.", "Com que no té efectes pràctics, se suspèn la sessió.")
+    )
+
+  );
 }
