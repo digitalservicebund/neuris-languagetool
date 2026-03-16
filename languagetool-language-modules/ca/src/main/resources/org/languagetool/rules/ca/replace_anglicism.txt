@@ -59,6 +59,7 @@ disc jockeys|disc-jockeys=discjòqueis	Podeu usar la grafia adaptada d'aquest an
 planning=plàning|planificació	Podeu usar la grafia adaptada d'aquest anglicisme.
 plannings=plànings|planificacions	Podeu usar la grafia adaptada d'aquest anglicisme.
 techno=tecno	Podeu usar la grafia adaptada d'aquest anglicisme.
+random=ràndom	Podeu usar la grafia adaptada d'aquest anglicisme.
 # anglicismes innecesaris
 venture capital|venture-capital=capital de risc
 home cinema|home-cinema=cinema domèstic|cinema a casa
@@ -501,3 +502,4 @@ frame=fotograma
 frames=fotogrames
 rebranding=redefinició de marca|actualització de marca|renovació de marca
 shutdown=tancament administratiu
+NATO=OTAN

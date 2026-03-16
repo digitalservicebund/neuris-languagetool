@@ -14,6 +14,7 @@
 
 # All correct words should be properly tagged in the tagger dictionary or in added.txt 
 
+papil·loma-virus+
 Navier-Stokes*
 set-ciències+
 tele-realitat+
@@ -1165,10 +1166,10 @@ pai-pai*
 pai-pais*
 Palais-Royal*
 Palau-sacosta*
-Palau-Sator*
+Palau-sator*
 #Palau-Saverdera*
 Palau-saverdera*
-Palau-Solità*
+#Palau-Solità*
 Palau-solità*
 Palau-surroca*
 Pana-sacs*

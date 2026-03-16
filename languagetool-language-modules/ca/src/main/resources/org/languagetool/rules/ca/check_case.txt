@@ -1129,7 +1129,6 @@ els Armilles Grogues
 dels Armilles Grogues
 als Armilles Grogues
 Teatre Goya
-Palau-saverdera
 Opus Dei
 finestra d'Overton
 IEA Oriol Martorell
@@ -2488,3 +2487,16 @@ pla Moves
 pla Ventcat
 pla Neucat
 pla Kanpai
+Lana Del Rey
+Thomas De Quincey
+Lorenzo Da Ponte
+República Islàmica de l'Iran
+Agència Internacional de l'Energia Atòmica
+Palau-sator
+Palau-sacosta
+Palau-saverdera
+Palau-solità
+Palau-surroca
+ministre d'Afers Estrangers
+ministra d'Afers Estrangers
+ministres d'Afers Estrangers

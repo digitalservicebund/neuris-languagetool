@@ -182,10 +182,17 @@ public class PronomsFeblesHelper {
   }
 
   public static String transformDavant(String inputPronom, String nextWord) {
+    nextWord = nextWord.toLowerCase();
     if (pApostropheNeeded.matcher(nextWord).matches()) {
       return transform(inputPronom, PronounPosition.DAVANT_APOS);
     } else {
-      return transform(inputPronom, PronounPosition.DAVANT);
+      String pronom = transform(inputPronom, PronounPosition.DAVANT);
+      // se senten, se cenyeix...
+      if (pronom.equals("es ")
+        && ((nextWord.startsWith("s") || nextWord.startsWith("ce") || nextWord.startsWith("ci")))) {
+        return "se ";
+      }
+      return pronom;
     }
   }
 

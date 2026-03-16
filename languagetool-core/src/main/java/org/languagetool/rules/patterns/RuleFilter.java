@@ -25,6 +25,7 @@ import org.languagetool.Language;
 import org.languagetool.rules.Rule;
 import org.languagetool.rules.RuleMatch;
 import org.languagetool.synthesis.Synthesizer;
+import org.languagetool.tagging.Tagger;
 import org.languagetool.tools.StringTools;
 
 import java.io.IOException;
@@ -145,6 +146,10 @@ public abstract class RuleFilter {
 
   public Synthesizer getSynthesizerFromRuleMatch(RuleMatch match) {
     return getLanguageFromRuleMatch(match).getSynthesizer();
+  }
+
+  public Tagger getTaggerFromRuleMatch(RuleMatch match) {
+    return getLanguageFromRuleMatch(match).getTagger();
   }
 
 

@@ -438,8 +438,7 @@ Ontake-San
 Orekhovo-Zujevo
 Pac-Man
 Palais-Royal
-Palau-Sator
-Palau-Solità
+Palau-sator
 Palau-sacosta
 Palau-saverdera
 Palau-solità
@@ -10703,3 +10702,6 @@ Zuid-Willemsvaart
 Île-de-Sein
 Œuf-en-Ternois
 Šaštín-Stráže
+Trentino-Südtirol
+Trás-os-Montes
+Rosselló-Pòrcel

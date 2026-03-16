@@ -130,6 +130,13 @@ public class MultitokenSpeller {
         }
       }
     }
+    for (WeightedSuggestion additionalSuggestion : getAdditionalSuggestions(word)) {
+      if (!additionalSuggestion.getWord().equals(originalWord)) {
+        weightedCandidates.add(additionalSuggestion);
+      } else {
+        return Collections.emptyList();
+      }
+    }
     if (weightedCandidates.isEmpty()) {
       return Collections.emptyList();
     }
@@ -145,7 +152,8 @@ public class MultitokenSpeller {
     }
     for (WeightedSuggestion weightedCandidate : weightedCandidates) {
       // keep only cadidates with the distance of the first candidate
-      if (weightedCandidate.getWeight() - weightFirstCandidate < 1) {
+      if (weightedCandidate.getWeight() - weightFirstCandidate < 1
+        && !results.contains(weightedCandidate.getWord())) {
         results.add(weightedCandidate.getWord());
       }
     }
@@ -337,6 +345,10 @@ public class MultitokenSpeller {
 
   protected boolean isException(String original, String candidate) {
     return false;
+  }
+
+  protected List<WeightedSuggestion> getAdditionalSuggestions(String originalWord) throws IOException {
+    return new ArrayList<>();
   }
 
 }

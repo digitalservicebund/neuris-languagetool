@@ -5915,10 +5915,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       -->
   </rule>
 
-  <rule id="VERB_2S_TO_VERB_3S_20260118_RARE" name="It is VMIP3S0">
+  <rule id="VERB_2S_TO_VERB_3S_20260310_RARE" name="It is VMIP3S0">
     <pattern>
       <token postag='(SPS00:)?[DP].+' postag_regexp='yes'/>
       <token min='1' max='2' postag='AQ.+|NC.+|VMP00.+' postag_regexp='yes'/>
+      <token min='0' max='1' postag='_PUNCT_COMMA' postag_regexp='no'/>
       <marker>
         <and>
           <token postag='VMIP3S0'/>
@@ -5938,6 +5939,36 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
              O sorriso convida à abertura e ao relaxamento.
              O desdobramento das cadeias musculares encontra seu espaço nas espirais.
              O movimento da mão tem sua fonte e sua força nos pés.
+      -->
+  </rule>
+
+  <rule id="VERB_3S_TO_NCAQ_20260310_RARE" name="It is not VMIP3S0">
+    <!-- The VMM02S0 exception below fixes: "A mulher precisa, mas" e "A mulher observa e o homem pensa." -->
+    <pattern>
+      <token postag='(SPS00:)?[DP].+' postag_regexp='yes'><exception scope='previous' regexp='yes'>que|e|ou</exception></token>
+      <token min='1' max='2' postag='AQ.+|NC.+|VMP00.+' postag_regexp='yes'/>
+      <token min='0' max='1' postag='_PUNCT_COMMA' postag_regexp='no'/>
+      <marker>
+        <and>
+          <token postag='VMIP3S0'/>
+          <token postag='AQ.+' postag_regexp='yes'/> <!-- NC.+ causes FPs -->
+        </and>
+      </marker>
+      <token postag='_PUNCT|SENT_END' postag_regexp='yes'><exception scope='previous' postag_regexp='yes' postag='VMM02S0|VMP00.+|NC.+'/></token>
+    </pattern>
+    <disambig action="remove" postag="VMIP3S0"/>
+    <!--
+    Examples:
+             Não seria também porventura possuir a capacidade de entender o semelhante e de compreender a dor alheia?
+             Desenvolveu o gosto pela literatura e devorou livros durante a vida inteira.
+             A primeira, além da base super estreita, tem um aramado quase tridimensional nas pernas.
+             Considerando a situação narrada, assinale a afirmativa correta.
+             Agradeço pela lembrança precisa.
+             O Expressionismo é a arte do instinto, trata-se de uma pintura dramática, subjetiva, “expressando” sentimentos humanos.
+             Talvez fossem as vozes, quem sabe uma desconfiança repentina?
+             Não é bom ler na sala escura.
+             Gosto de dormir numa cama macia.
+             O conceito se tornou um dos pilares da ecologia profunda.
       -->
   </rule>
 
@@ -6094,6 +6125,29 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
              Versátil, a peça vai desde o ambiente de trabalho até as ocasiões mais informais.
              Estes clientes são considerados pelos médicos como potenciais “problemas” em virtude do risco de litígio legal por erros médicos.
              Ela é uma das pessoas mais legais que eu conheço.
+      -->
+  </rule>
+
+  <rule id="NCAQ_SPS00DA_NCAQVMP_20260305_RARE" name="It is not VMP00.+">
+    <pattern>
+      <token postag='NC.+|AQ.+' postag_regexp='yes'/>
+      <token postag='SPS00:DA.+' postag_regexp='yes'/>
+      <marker>
+        <and>
+          <token postag='VMP00.+' postag_regexp='yes'><exception scope='next' postag_regexp='yes' postag='SPS.+'/></token>
+          <token postag='NC.+|AQ.+' postag_regexp='yes'><exception scope='next' postag_regexp='yes' postag='SPS.+'/></token>
+        </and>
+      </marker>
+    </pattern>
+    <disambig action="remove" postag="VMP00.+"/>
+    <!--
+    Examples:
+             Outras leis proibiram a venda de cargos públicos e a isenção tributária das camadas privilegiadas.
+             Esta tradição pode ser revivida no núcleo das charqueadas, por meio de visitas orientadas.
+             As restantes naus da Armada portuguesa ficariam em defesa do porto de Lisboa.
+             Conviveu com figuras proeminentes do partido, como Artur Bernardes Filho, Clóvis Salgado da Gama e Tristão da Cunha.
+             Também foram feitas várias obras de reparação nas oficinas, incluindo a substituição do telhado e de bocas de incêndio, e nos escritórios.
+             Com vários problemas internos na banda, houve especulações sobre o fim do conjunto.
       -->
   </rule>
 

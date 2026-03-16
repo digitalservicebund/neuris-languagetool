@@ -94,7 +94,7 @@ Copyright (C) 2012 Jaume Ortolà i Font
         </rule>
         <rule>
             <pattern>
-                <token postag="UNKNOWN" regexp="yes">&english_common;|&english_common_casesensitive;</token>
+                <token postag="UNKNOWN|NPCN000" postag_regexp="yes" regexp="yes">&english_common;|&english_common_casesensitive;</token>
                 <token regexp="yes">[a-z]+<exception regexp="yes">&english_no;|&english_forward;</exception></token>
             </pattern>
             <filter class="org.languagetool.rules.IsEnglishWordFilter" args="formPositions:2"/>
@@ -118,7 +118,7 @@ Copyright (C) 2012 Jaume Ortolà i Font
         <rule>
             <pattern>
                 <token regexp="yes">[a-z]+<exception regexp="yes">&english_no;</exception></token>
-                <token postag="UNKNOWN" regexp="yes">&english_common;|&english_common_casesensitive;<exception>in</exception></token>
+                <token  postag="UNKNOWN|NPCN000" postag_regexp="yes" regexp="yes">&english_common;|&english_common_casesensitive;<exception>in</exception></token>
             </pattern>
             <filter class="org.languagetool.rules.IsEnglishWordFilter" args="formPositions:1"/>
             <disambig action="add">
@@ -179,7 +179,7 @@ Copyright (C) 2012 Jaume Ortolà i Font
         </rule>
         <rule>
             <pattern>
-                <token postag="_english_ignore_|UNKNOWN" postag_regexp="yes" regexp="yes">[a-z]+<exception regexp="yes">saint|anti|&english_no;</exception></token>
+                <token postag="_english_ignore_|UNKNOWN|NPCN000" postag_regexp="yes" regexp="yes">[a-z]+<exception regexp="yes">saint|anti|&english_no;</exception></token>
                 <token spacebefore="no">-</token>
                 <token spacebefore="no" regexp="yes">[a-z]+<exception regexp="yes">&english_no;|&english_forward;</exception></token>
             </pattern>
@@ -194,7 +194,7 @@ Copyright (C) 2012 Jaume Ortolà i Font
             <pattern>
                 <token regexp="yes">[a-z]+<exception regexp="yes">saint|anti|&english_no;</exception></token>
                 <token spacebefore="no">-</token>
-                <token postag="_english_ignore_|UNKNOWN" postag_regexp="yes" spacebefore="no" regexp="yes">[a-z]+<exception regexp="yes">&english_no;|&english_forward;</exception></token>
+                <token postag="_english_ignore_|UNKNOWN|NPCN000" postag_regexp="yes" spacebefore="no" regexp="yes">[a-z]+<exception regexp="yes">&english_no;|&english_forward;</exception></token>
             </pattern>
             <filter class="org.languagetool.rules.IsEnglishWordFilter" args="formPositions:1,3"/>
             <disambig action="add">
@@ -6175,6 +6175,15 @@ Copyright (C) 2012 Jaume Ortolà i Font
             </marker>
         </pattern>
         <disambig action="remove" postag="AQ0CN0"/>
+    </rule>
+    <rule id="mestre" name="mestre (nom, no adjectiu) ">
+        <pattern>
+            <token><exception postag="NC.*" postag_regexp="yes"/></token>
+            <marker>
+                <token postag="NC.*" postag_regexp="yes" regexp="yes">mestre|mestra|mestres</token>
+            </marker>
+        </pattern>
+        <disambig action="remove" postag="AQ0CP0"/>
     </rule>
     <rule id="annual" name="desastre d'Annual">
         <pattern>
@@ -22218,6 +22227,18 @@ Copyright (C) 2012 Jaume Ortolà i Font
         </rule>
         <rule>
             <pattern>
+                <token regexp="yes">&anar_auxiliar;</token>
+                <marker>
+                    <token>fer</token>
+                </marker>
+                <token>fer</token>
+            </pattern>
+            <disambig action="add">
+                <wd pos="_allow_repeat"/>
+            </disambig>
+        </rule>
+        <rule>
+            <pattern>
                 <token spacebefore="no">/</token>
                 <marker>
                     <token case_sensitive="yes" spacebefore="no">a</token>
@@ -23116,7 +23137,7 @@ Copyright (C) 2012 Jaume Ortolà i Font
             <pattern>
                 <marker>
                     <token>-</token>
-                    <token regexp="yes" spacebefore="no">ista|isme|ir|ar|er|re|íssim|íssima|aci|àcia</token>
+                    <token regexp="yes" spacebefore="no">ista|isme|ir|ar|er|re|íssim|íssima|aci|àcia|dor|driu</token>
                 </marker>
             </pattern>
             <disambig action="immunize"/>

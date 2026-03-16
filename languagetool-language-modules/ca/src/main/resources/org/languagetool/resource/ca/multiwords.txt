@@ -1,5 +1,120 @@
 #Catalan multiwords file used for chunking
 #separatorRegExp=[\t;]
+Epic Nails;NPCNO00
+Arcadi Alibés;NPMSSP0
+Marta Torrecillas;NPFSSP0
+Jean-Louis Andral;NPMSSP0
+Ainhoa Grandes Massa;NPFSSP0
+Ainhoa Grandes;NPFSSP0
+Arrós de Cardós;NPCSG00
+Sant Martí Sesserres;NPCSG00
+Parròquia d'Hortó;NPFSG00
+Sant Martí d'Aravó;NPCSG00
+Tragó de Noguera;NPCSG00
+Gurp de la Conca;NPCSG00
+Pobleta de Bellveí;NPFSG00
+Sant Martí de Barcedana;NPCSG00
+Sant Llorenç des Cardassar;NPCSG00
+Sant Llorenç del Cardassar;NPCSG00
+Luis Rojas Marcos;NPMSSP0
+Rojas Marcos;NPCNSP0
+Joan Baptista Escorihuela;NPMSSP0
+Joan Baptista Escorigüela;NPMSSP0
+José María Nunes;NPMSSP0
+Alfredo Bryce Echenique;NPMSO00
+Alfredo Bryce;NPMSO00
+Bryce Echenique;NPMSO00
+Grandma Moses;NPFSSP0
+L'Osservatore Romano;NPMSO00
+Mojtaba Khamenei;NPMSSP0
+Mojtaba Hosseini Khamenei;NPMSSP0
+Partido de la Ciudadanía;NPMSO00
+Partit de la Ciutadania;NPMSO00
+Teatre Coliseum;NPMSO00
+William Strunk Jr.;NPMSSP0
+William Strunk;NPMSSP0
+Trás-os-Montes;NPCNG00
+Zhu Xi;NPMSSP0 #wikipedia
+Miguel de los Santos;NPMSSP0
+Luis Bustos;NPMSSP0
+André-Marie Mbida;NPMSSP0
+Eduardo Vañó;NPMSSP0
+Joan Ferrarons i Llagostera;NPMSSP0
+Joan Ferrarons;NPMSSP0
+Carles Dachs;NPMSSP0
+Ramon Monton;NPMSSP0
+Gian Marco Griffi;NPMSSP0
+Sant Miquel de Gonteres;NPCSG00
+Josep Bertomeu Moll;NPMSSP0
+Antoni Mahiques Lattur;NPMSSP0
+Josep Bertomeu;NPMSSP0
+Musée de Cluny;NPMSO00
+Musée national du Moyen Âge;NPMSO00
+Antoni Griera i Gaja;NPMSSP0
+Quatuor pour la fin du Temps;NPMSO00
+Xavier Aliaga Víllora;NPMSSP0
+Xavier Aliaga;NPMSSP0
+Lobo Antunes;NPCNSP0
+Musei Vaticani;NPMPO00
+Museus Vaticans;NPMPO00
+Francesc de Borja Moll;NPMSSP0
+Francesc de B. Moll;NPMSSP0
+ranya-rany ranya-rany;LOC_ADV
+Alba Vicente;NPFSSP0
+The Age of Empire;NPMSO00
+Aqua Alba;NPFSG00
+Escola Aqua Alba;NPFSO00
+Rei Sol;NPMSSP0
+Michel-Richard de Lalande;NPMSSP0
+Michel-Richard Delalande;NPMSSP0
+Sena-Saint-Denis;NPCSG00
+James Talarico;NPMSSP0
+Ali al-Thawadi;NPMSSP0
+Sukhoi Su;NPCNO00
+Ras Laffan;NPCSG00
+Hoy por hoy;NPCNO00
+Real Monasterio del Escorial;NPMSG00
+López de Urraca;NPCNSP0
+Diego de Almagro;NPMSSP0
+Vázquez de Acuña;NPCNSP0
+Diego de Ocampo;NPMSG00
+Nicolás de Ovando;NPMSSP0
+Urraca López de Haro;NPFSSP0
+López de Haro;NPCNSP0
+Pozuelo de Alarcón;NPCSG00
+Hugo de Urríes;NPMSSP0
+Hugo Jordán de Urríes;NPMSSP0
+Jorge de Oteiza;NPMSSP0
+Jorge Oteiza;NPMSSP0
+Fuentes de Ebro;NPCNG00
+Pedro Arbués;NPMSSP0
+Miranda de Ebro;NPCSG00
+Gonzalo de Illescas;NPMSSP0
+de Haro;NPCNSP0
+de Hoyos;NPCNSP0
+Joaquín de Ezpeleta;NPMSSP0
+Pedro de Arbués;NPMSSP0
+Museo de Arte Moderno;NPMSO00
+Museu d'Art Modern;NPMSO00
+Ramírez de Arellano;NPCNSP0
+Sociedad Económica de Amigos del País;NPFSO00
+Societat Econòmica d'Amics del País;NPFSO00
+Luis de Haro;NPMSSP0
+Diario de Ibiza;NPMXO00
+Arcipreste de Hita;NPMSSP0
+Núñez de Arce;NPCNSP0
+de Acevedo;NPCNSP0
+Cangas de Onís;NPCNG00
+Cangues d'Onís;NPCNG00
+Ruiz de Alarcón;NPCNSP0
+de Guzmán y de Ayala;NPCNSP0
+López de Ayala;NPCNSP0
+Campo de Alange;NPCNSP0
+Centro de Arte Reina Sofía;NPMSO00
+Centre d'Art Reina Sofia;NPMSO00
+South Africa;NPCSG00
+East Africa;NPCSG00
+West Africa;NPCSG00
 Santa Mònica;NPCSO00
 Santa Monica;NPCSG00 # esadir topònims, confusió amb Santa Mònica
 Santa Monica Pier;NPMSG00
@@ -1012,6 +1127,7 @@ Haitham Maleh;NPMSSP0 # esadir Síria
 Hakan Çalhanoğlu;NPMSSP0 # esadir Turquia
 Hakim Boularbah;NPMSSP0 # esadir Bèlgica
 Hamad al-Thani;NPMSSP0 # esadir Qatar
+Hamad bin Khalifa al-Thani;NPMSSP0 # esadir Qatar
 Hamad bin Isa Al Khalifa;NPMSSP0 # esadir Bahrain
 Hamad bin Khalifa Al Thani;NPMSSP0 # esadir Qatar
 Hamad de Bahrain;NPMSSP0 # esadir Bahrain
@@ -7620,6 +7736,8 @@ Martínez Sistach;NPCNSP0
 Manel Valdivieso;MPMSSP0
 Ernest Martínez Izquierdo;MPMSSP0
 Óssip Mandelstam;NPMSSP0
+Nadejda Mandelstam;NPFSSP0
+Mikhaïl Kalinin;NPMSSP0
 Nicolau Oresme;NPMSSP0
 Anna Sahun;NPFSSP0
 Dinamo de Bucarest;NPMSO00
@@ -11667,9 +11785,13 @@ Josep Miquel	NPMSSP0
 Miguel Bosé	NPMSSP0
 Miguel Delibes	NPMSSP0
 Antonio Machado	NPMSSP0
-Juan Miguel	NPMSSP0
-Vicente Miguel	NPMSSP0
-Antonio Miguel	NPMSSP0
+Juan Miguel;NPMSSP0
+Joan Miquel;NPMSSP0
+Vicente Miguel;NPMSSP0
+Vicent Miquel;NPMSSP0
+Vicenç Miquel;NPMSSP0
+Antonio Miguel;NPMSSP0
+Antoni Miquel;NPMSSP0
 María Luisa	NPFSSP0
 Pedro Luis	NPMSSP0
 Pere Lluís;NPMSSP0
