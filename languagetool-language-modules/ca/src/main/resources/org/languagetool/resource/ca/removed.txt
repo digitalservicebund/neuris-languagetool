@@ -25,3 +25,5 @@ Palau-Solità	Palau-Solità	NPCSG00
 Partido	Partido	NPCN000
 Salon	Salon	NPCN000
 Urriés	Urriés	NPCN000
+Zombie	Zombie	NPCN000
+Zombies	Zombies	NPCN000

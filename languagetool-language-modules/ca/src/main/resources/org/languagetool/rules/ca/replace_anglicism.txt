@@ -1,6 +1,8 @@
 # adaptacions
 #gay=gai
 #gays=gais
+zombie=zombi
+zombies=zombis
 OPEC=OPEP	Poseu usar les sigles en català de l'Organització de Països Exportadors de Petroli
 cringe=angúnia|vergonya|incomoditat
 gap=bretxa

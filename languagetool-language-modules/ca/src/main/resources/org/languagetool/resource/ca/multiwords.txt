@@ -1,5 +1,11 @@
 #Catalan multiwords file used for chunking
 #separatorRegExp=[\t;]
+Universitat Tsinghua;NPFSO00
+fund.;NCFS000
+Gholamreza Soleimani;NPMSSP0
+Banque de France;NPMSO00
+Luiz de Moura;NPMSSP0
+Luiz de Moura Castro;NPMSSP0
 Epic Nails;NPCNO00
 Arcadi Alibés;NPMSSP0
 Marta Torrecillas;NPFSSP0

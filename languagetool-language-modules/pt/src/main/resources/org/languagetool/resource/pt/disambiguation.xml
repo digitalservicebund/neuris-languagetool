@@ -6151,6 +6151,61 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       -->
   </rule>
 
+
+  <rulegroup id="CONTEXT_BASED" name="contexto">
+    <rule>
+      <pattern>
+        <marker>
+          <token regexp='yes' inflected='yes'>beijo|boceta|broxe|caralho|carícia|clítoris|clitóris|coito|cona|cunilíngua|cunnilingus|ejaculação|ejacular|erótico|esperma|esporra|excitação|foda|foder|fornicar|langonha|masturbação|masturbar|minete|orgasmo|pénis|queca|sensual|sexo|sexual|sexualmente|submisso|vagina</token>
+        </marker>
+      </pattern>
+      <disambig action="add">
+        <wd pos="_CONTEXTO_SEXUAL_EROTICO"/>
+      </disambig>
+    </rule>
+    <rule>
+      <pattern>
+        <marker>
+          <token postag_regexp='yes' postag='NC.+|AQ.+' regexp='yes' inflected='yes'>anorak|avental|bata|bermuda|blazer|blusa|blusão|calça|calça-jeans|calção|calcinha|camisa|camiseta|camisola|cardigã|cardigan|casaco|colete|cueca|farda|fato|figurino|fraque|gabardina|indumentária|jaqueta|jardineira|jeans|kimono|lingerie|macacão|parka|pijama|pullover|pulover|quimono|regata|roupa|roupão|saia|short|smoking|sobretudo|soutien|suéter|sutiã|t-shirt|terno|top|traje|tshirt|túnica|uniforme|vestido</token>
+        </marker>
+      </pattern>
+      <disambig action="add">
+        <wd pos="_CONTEXTO_VESTUARIO_VESTIR"/>
+      </disambig>
+    </rule>
+    <rule>
+      <pattern>
+        <marker>
+          <token postag_regexp='yes' postag='NC.+|AQ.+' regexp='yes' inflected='yes'>alpargata|bota|bota-cano-curto|bota-cano-longo|botim|botina|chinelinho|chinelo|chuteira|clog|collant|coturno|derby|espadrilha|flipflop|galocha|havaiana|loafer|luva|meia|meia-calça|meias-calças|mocassim|monkstrap|oxford|papete|rasteirinha|sandalia|sandália|sandália-rasa|sandalia-salto|sandália-salto|sapatilha|sapatilha-corrida|sapatilha-desportiva|sapatilha-futebol|sapato|sapato-desportivo|sapato-social|soca|tamanco|tamanco-madeira|tenis|tênis</token>
+        </marker>
+      </pattern>
+      <disambig action="add">
+        <wd pos="_CONTEXTO_CALCADO_CALCAR"/>
+      </disambig>
+    </rule>
+    <rule>
+      <pattern>
+        <marker>
+          <token postag_regexp='yes' postag='NC.+|AQ.+' regexp='yes' inflected='yes'>alojamento|anexo|apartamento|bungalô|casa|chácara|chalé|cobertura|condomínio|domicílio|duplex|edifício|estúdio|fazenda|flat|habitação|hostel|imóvel|kitnet|loft|mansão|moradia|penthouse|pousada|prédio|propriedade|quarto|quinta|quitinete|rancho|república|residência|sítio|triplex|vivenda</token>
+        </marker>
+      </pattern>
+      <disambig action="add">
+        <wd pos="_CONTEXTO_HABITACAO_IMOVEIS"/>
+      </disambig>
+    </rule>
+    <rule>
+      <pattern>
+        <marker>
+          <token postag_regexp='yes' postag='NC.+|AQ.+' regexp='yes' inflected='yes'>autocarro|automóvel|bicicleta|bonde|buggy|camião|caminhão|caminhonete|camioneta|carrinha|carro|carroça|carruagem|charrete|comboio|diligência|elétrico|funicular|furgão|furgoneta|kart|locomotiva|metrô|metro|microônibus|minibus|monotrilho|moto|motocicleta|motociclo|motoneta|mototáxi|ônibus|patinete|pickup|quadriciclo|reboque|scooter|segway|táxi|taxi|trailer|trem|triciclo|trotinete|van|viatura|VLT</token>
+        </marker>
+      </pattern>
+      <disambig action="add">
+        <wd pos="_CONTEXTO_VEICULOS_TERRESTRES"/>
+      </disambig>
+    </rule>
+  </rulegroup>
+
+
   <rule id="PORTA_HIFEN_SUBSTANTIVOPLURAL" name="Remove verbs in porta-Substantivo_Plural">
     <pattern>
       <marker>

@@ -132,7 +132,6 @@ public class PronomsFeblesHelper {
   public final static Pattern pPronomFeble = Pattern.compile("P0.{6}|PP3CN000|PP3NN000|PP3..A00|PP[123]CP000|PP3CSD00");
 
   final private static Map<String, String> reflexivePronoun = new HashMap<>();
-
   static {
     reflexivePronoun.put("1S", "em");
     reflexivePronoun.put("2S", "et");
@@ -256,11 +255,21 @@ public class PronomsFeblesHelper {
       }
     }
     String pronounToAdd = transform(pronounsStr, PronounPosition.NORMALIZED);
-    if (!pContainsReflexivePronoun.matcher(pronounsStr.toLowerCase()).matches()) {
+    if (!containsAnyReflexivePronoun(pronounsStr.toLowerCase())) {
       pronounToAdd = getReflexivePronoun(firstVerbPersonaNumber) + " " + pronounToAdd;
     }
     replacement = transformDavant(pronounToAdd, verbStr) + verbStr;
     return replacement;
+  }
+
+  private static boolean containsAnyReflexivePronoun(String pronounsStr) {
+    String[] normalizedPronouns = transform(pronounsStr.toLowerCase(), PronounPosition.NORMALIZED).split(" ");
+    for (String pronoun : normalizedPronouns) {
+      if (lReflexivePronouns.contains(pronoun)) {
+        return true;
+      }
+    }
+    return false;
   }
 
   public static String doAddPronounReflexiveEn(String pronounsStr, String verbStr, String firstVerbPersonaNumber,

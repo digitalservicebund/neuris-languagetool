@@ -18,11 +18,12 @@
  */
 package org.languagetool.tagging.ca;
 
-import morfologik.stemming.DictionaryLookup;
-import morfologik.stemming.IStemmer;
 import org.jetbrains.annotations.Nullable;
 import org.languagetool.*;
+import org.languagetool.chunking.ChunkTag;
+import org.languagetool.rules.SimpleReplaceDataLoader;
 import org.languagetool.tagging.BaseTagger;
+import org.languagetool.tagging.TaggedWord;
 import org.languagetool.tools.StringTools;
 
 import java.util.*;
@@ -32,7 +33,7 @@ import java.util.regex.Pattern;
 /**
  * Catalan Tagger
  *
- * @author Jaume Ortolà 
+ * @author Jaume Ortolà
  */
 public class CatalanTagger extends BaseTagger {
 
@@ -54,6 +55,10 @@ public class CatalanTagger extends BaseTagger {
   private static final List<String> ALLUPPERCASE_EXCEPTIONS = Arrays.asList("ARNAU", "CRISTIAN", "TOMÀS");
   private boolean isValencian;
 
+  private static final String endings = "a|ada|ades|am|ant|ar|ara|aran|arem|aren|ares|areu|aria|arien|aries|arà|aràs|aré|aríem|aríeu|assen|asses|assin|assis|at|ats|au|ava|aven|aves|e|ec|ega|eguda|egudes|eguem|eguen|eguera|egueren|egueres|egues|eguessen|eguesses|eguessin|eguessis|egueu|egui|eguin|eguis|egut|eguts|egué|eguérem|eguéreu|egués|eguéssem|eguésseu|eguéssim|eguéssiu|eguí|eix|eixem|eixen|eixent|eixeran|eixerem|eixeren|eixeres|eixereu|eixeria|eixerien|eixeries|eixerà|eixeràs|eixeré|eixeríem|eixeríeu|eixes|eixessen|eixesses|eixessin|eixessis|eixeu|eixi|eixia|eixien|eixies|eixin|eixis|eixo|eixé|eixérem|eixéreu|eixés|eixéssem|eixésseu|eixéssim|eixéssiu|eixí|eixíem|eixíeu|em|en|es|esc|esca|escuda|escudes|escut|escuts|esquem|esquen|esquera|esqueren|esqueres|esques|esquessen|esquesses|esquessin|esquessis|esqueu|esqui|esquin|esquis|esqué|esquérem|esquéreu|esqués|esquéssem|esquésseu|esquéssim|esquéssiu|esquí|essen|esses|essin|essis|eu|i|ia|ida|ides|ien|ies|iguem|igueu|im|in|int|ir|ira|iran|irem|iren|ires|ireu|iria|irien|iries|irà|iràs|iré|iríem|iríeu|is|isc|isca|isquen|isques|issen|isses|issin|issis|it|its|iu|ix|ixen|ixes|o|à|àrem|àreu|às|àssem|àsseu|àssim|àssiu|àvem|àveu|èixer|éixer|és|éssem|ésseu|éssim|éssiu|í|íem|íeu|írem|íreu|ís|íssem|ísseu|íssim|íssiu|ïs";
+  private static final Pattern desinencies_1conj_0 = Pattern.compile("(.+?)(" + endings + ")", Pattern.CASE_INSENSITIVE);
+  private static final Pattern desinencies_1conj_1 = Pattern.compile("(.+)(" + endings + ")", Pattern.CASE_INSENSITIVE);
+  private static final Map<String, List<String>> wrongVerbs = new SimpleReplaceDataLoader().loadWords("/ca/replace_verbs.txt");
 
   public CatalanTagger(Language language) {
     super("/ca/ca-ES" + JLanguageTool.DICTIONARY_FILENAME_EXTENSION,
@@ -116,6 +121,15 @@ public class CatalanTagger extends BaseTagger {
       }
       // filter for Valencian POS tags
       filterAnalyzedTokensInPlace(analyzedTokenList);
+      // incorrect verbs
+      boolean isIncorrectVerb = false;
+      if (analyzedTokenList.isEmpty()) {
+        List<AnalyzedToken> tagsForIncorrectVerbs = additionalTagsForIncorrectVerbs(originalWord, lowerWord);
+        if (!tagsForIncorrectVerbs.isEmpty()) {
+          addTokens(tagsForIncorrectVerbs, analyzedTokenList);
+          isIncorrectVerb = true;
+        }
+      }
       // if empty, add an analyzed token with no lemma and no postag
       if (analyzedTokenList.isEmpty()) {
         analyzedTokenList.add(new AnalyzedToken(originalWord, null, null));
@@ -124,10 +138,12 @@ public class CatalanTagger extends BaseTagger {
       if (containsTypographicApostrophe) {
         atr.setTypographicApostrophe();
       }
+      if (isIncorrectVerb) {
+        atr.setChunkTags(Collections.singletonList(new ChunkTag("_incorrect_verb_")));
+      }
       tokenReadings.add(atr);
       pos += originalWord.length();
     }
-
     return tokenReadings;
   }
 
@@ -278,7 +294,6 @@ public class CatalanTagger extends BaseTagger {
         }
       }
     }
-
     return null;
   }
 
@@ -308,4 +323,103 @@ public class CatalanTagger extends BaseTagger {
       || ALTRES_PREFIXOS.contains(wordStem + "o"));
   }
 
+
+  /*
+   * Get POS tags for incorrect verbs including inflected forms
+   */
+  private List<AnalyzedToken> additionalTagsForIncorrectVerbs(String originalWord, String lowerWord) {
+    List<AnalyzedToken> additionalTaggedTokens = new ArrayList<>();
+    String infinitive = null;
+    int i = 0;
+    while (i < 2 && additionalTaggedTokens.isEmpty()) {
+      Matcher m;
+      if (i == 0) {
+        m = desinencies_1conj_0.matcher(lowerWord);
+      } else {
+        m = desinencies_1conj_1.matcher(lowerWord);
+      }
+      if (m.matches()) {
+        List<String> lexemes = new ArrayList<>();
+        String lexeme = m.group(1);
+        lexemes.add(lexeme);
+        String desinence = m.group(2);
+        if (desinence.startsWith("e") || desinence.startsWith("é") || desinence.startsWith("i")
+          || desinence.startsWith("ï")) {
+          if (lexeme.endsWith("c")) {
+            lexeme = lexeme.substring(0, lexeme.length() - 1).concat("ç");
+          } else if (lexeme.endsWith("qu")) {
+            lexeme = lexeme.substring(0, lexeme.length() - 2).concat("c");
+          } else if (lexeme.endsWith("g")) {
+            lexeme = lexeme.substring(0, lexeme.length() - 1).concat("j");
+          } else if (lexeme.endsWith("gü")) {
+            lexeme = lexeme.substring(0, lexeme.length() - 2).concat("gu");
+          } else if (lexeme.endsWith("gu")) {
+            lexeme = lexeme.substring(0, lexeme.length() - 2).concat("g");
+          }
+          if (!lexemes.contains(lexeme)) {
+            lexemes.add(lexeme);
+          }
+        }
+        if (desinence.startsWith("ï")) {
+          desinence = "i" + desinence.substring(1);
+        }
+        infinitive = lexeme.concat("ar");
+        if (wrongVerbs.containsKey(infinitive)) {
+          additionalTaggedTokens = asAnalyzedTokenListWithLemma(originalWord, infinitive,
+            getWordTagger().tag("cant".concat(desinence)));
+        }
+        for (String lex : lexemes) {
+          if (additionalTaggedTokens.isEmpty()) {
+            infinitive = lex.concat("ir");
+            if (wrongVerbs.containsKey(infinitive)) {
+              additionalTaggedTokens = asAnalyzedTokenListWithLemma(originalWord, infinitive, getWordTagger().tag(
+                "serv".concat(desinence)));
+            }
+          }
+          if (additionalTaggedTokens.isEmpty() && lex.endsWith("g")) {
+            infinitive = lex.concat("uir");
+            if (wrongVerbs.containsKey(infinitive)) {
+              additionalTaggedTokens = asAnalyzedTokenListWithLemma(originalWord, infinitive, getWordTagger().tag(
+                "serv".concat(desinence)));
+            }
+          }
+        }
+        if (additionalTaggedTokens.isEmpty()) {
+          infinitive = lexeme.concat("èixer");
+          if (wrongVerbs.containsKey(infinitive)) {
+            additionalTaggedTokens = asAnalyzedTokenListWithLemma(originalWord, infinitive,
+              getWordTagger().tag("con".concat(desinence)));
+            if (additionalTaggedTokens.isEmpty()) {
+              additionalTaggedTokens = asAnalyzedTokenListWithLemma(originalWord, infinitive, getWordTagger().tag(
+                "desmer".concat(desinence)));
+            }
+          }
+        }
+      }
+      i++;
+    }
+    return additionalTaggedTokens;
+  }
+
+  /*
+   * Get analyzed token list with a new lemma
+   */
+  private List<AnalyzedToken> asAnalyzedTokenListWithLemma(String word, String lemma, List<TaggedWord> taggedWords) {
+    List<AnalyzedToken> aTokenList = new ArrayList<>();
+    if (taggedWords == null) {
+      return aTokenList;
+    }
+    List<AnalyzedToken> atl = asAnalyzedTokenListForTaggedWords(word, taggedWords);
+    for (AnalyzedToken at : atl) {
+      if (at.getPOSTag().startsWith("V")) {
+        // només verbs, no "cantada/NCFS000"
+        aTokenList.add(new AnalyzedToken(word, at.getPOSTag(), lemma));
+      }
+
+    }
+    return aTokenList;
+  }
+
 }
+
+

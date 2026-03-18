@@ -917,3 +917,4 @@ en barrena=en barrina
 Santa Colona de Farners=Santa Coloma de Farners
 Santa Colona de Gramenet=Santa Coloma de Gramenet
 Santa Colona=Santa Coloma	¿Volíeu dir "Santa Coloma"?
+bombo i platillo|bombo y platillo=bombo i platerets

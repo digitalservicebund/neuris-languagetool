@@ -8,6 +8,7 @@ CTranslate
 CUDA
 Coliseum
 Dimona
+Henkell
 Leavitt
 Miguel
 ONNX
@@ -18,6 +19,7 @@ Rosselló-Pòrcel
 Urriés
 Vicente
 afterhours
+antivaixell
 autocèntric
 autocèntrica
 autocèntrics
@@ -38,6 +40,8 @@ estalviable
 estalviables
 hiperteatralitat
 hiperteatralitats
+mastofauna
+mastofaunes
 neoconfuciana
 neoconfucianes
 neoconfucianista
@@ -50,6 +54,14 @@ polovtsiana
 polovtsianes
 polovtsians
 polovtsià
+prebèl·lic
+prebèl·lica
+prebèl·lics
+prebèl·liques
+probèl·lic
+probèl·lica
+probèl·lics
+probèl·liques
 ràndom
 sintient
 sintients

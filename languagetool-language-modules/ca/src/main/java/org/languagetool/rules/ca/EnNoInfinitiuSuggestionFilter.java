@@ -40,15 +40,20 @@ public class EnNoInfinitiuSuggestionFilter extends RuleFilter {
     String postagTempsVerbal = "";
     boolean isPassatPerifrastic = false;
     //boolean isPerfet = false;
-    if (!verbAfter.isUndefined()) {
-      postagTempsVerbal = verbAfter.getFirstVerbISPostag();
+    String verbAfterPostag = verbAfter.getFirstVerbISPostag();
+    String verbBeforePostag = verbBefore.getFirstVerbISPostag();
+    if (!verbAfter.isUndefined() && verbAfterPostag != null) {
+      postagTempsVerbal = verbAfterPostag;
       isPassatPerifrastic = verbAfter.isPassatPerifrastic();
       //isPerfet = verbAfter.isPerfet();
-    } else if (!verbBefore.isUndefined()) {
-      postagTempsVerbal = verbBefore.getFirstVerbISPostag();
+    } else if (!verbBefore.isUndefined() && verbBeforePostag != null) {
+      postagTempsVerbal = verbBeforePostag;
       isPassatPerifrastic = verbBefore.isPassatPerifrastic();
       //isPerfet = verbBefore.isPerfet();
     } else {
+      return null;
+    }
+    if (postagTempsVerbal == null) {
       return null;
     }
     // caldria incloure sempre l'oció 3S si no hi és.
@@ -75,7 +80,7 @@ public class EnNoInfinitiuSuggestionFilter extends RuleFilter {
     List<String> suggestions = new ArrayList<>();
     for (String synthVerb : synthVerbs) {
       StringBuilder suggestion = new StringBuilder();
-      if (!verbAfter.isUndefined()) {
+      if (!verbAfter.isUndefined() && verbAfterPostag != null) {
         suggestion.append("com que no ");
       } else {
         suggestion.append("perquè no ");

@@ -39,7 +39,7 @@ delf(í|ins)	dof(í|ins)	delf	dof	duc|comte|senyor|Alvèrnia|Vienès|ducat|comta
 #arxivament/arxiu
 #(?i)arxivaments?	(?i)arxius?	ivament	iu	denúncia|diligència|expedient|investigació|causa|procés	històric|municipal	acció o efecte d'arxivar	conjunt de documentació; edifici
 #colon/còlon
-(?i)colon	(?i)còlon	ol	òl	(?i)jueu|israel.*|palest.*|pagès|terratinent|serf|senyor	càncer|tumor|gangli|operar|operació|extirp.*|histol.*|recte|intestí|mucosa	membre d'una colònia	part de l'intestí
+(?i)colon	(?i)còlon	ol	òl	(?i)jueu|israel.*|palest.*|pagès|terratinent|serf|senyor	càncer|tumor|gangli|operar|operació|extirp.*|histol.*|recte|intestí|mucosa|irritable|antibiòtic|mèdic|metge	membre d'una colònia	part de l'intestí
 #vena/bena
 (?i)ven(a|es)	(?i)ben(a|es)	ve	be	sang.*|circul.*|subcostal|artèria	ull|ferida	vas sanguini	tira de teixit
 #constricció/contrició

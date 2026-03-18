@@ -12,6 +12,7 @@ CTranslate	CTranslate	NPCNO00
 CUDA	CUDA	NPCNO00
 Coliseum	Coliseum	NPMSO00
 Dimona	Dimona	NPCSG00
+Henkell	Henkell	NPCNSP0
 Leavitt	Leavitt	NPCNSP0
 Miguel	Miguel	NPCN000
 Miguel	Miguel	NPMSSP0
@@ -23,6 +24,7 @@ Rosselló-Pòrcel	Rosselló-Pòrcel	NPCNSP0
 Urriés	Urriés	NPCSG00
 Vicente	Vicente	NPCNSP0
 afterhours	afterhours	NCMN000
+antivaixell	antivaixell	AQ0CN0
 autocèntric	autocèntric	AQ0MS0
 autocèntrica	autocèntric	AQ0FS0
 autocèntrics	autocèntric	AQ0MP0
@@ -43,6 +45,8 @@ estalviable	estalviable	AQ0CS0
 estalviables	estalviable	AQ0CP0
 hiperteatralitat	hiperteatralitat	NCFS000
 hiperteatralitats	hiperteatralitat	NCFP000
+mastofauna	mastofauna	NCFS000
+mastofaunes	mastofauna	NCFP000
 neoconfuciana	neoconfucià	AQ0FS0
 neoconfucianes	neoconfucià	AQ0FP0
 neoconfucianista	neoconfucianista	AQ0CS0
@@ -55,6 +59,14 @@ polovtsiana	polovtsià	AQ0FS0
 polovtsianes	polovtsià	AQ0FP0
 polovtsians	polovtsià	AQ0MP0
 polovtsià	polovtsià	AQ0MS0
+prebèl·lic	prebèl·lic	AQ0MS0
+prebèl·lica	prebèl·lic	AQ0FS0
+prebèl·lics	prebèl·lic	AQ0MP0
+prebèl·liques	prebèl·lic	AQ0FP0
+probèl·lic	probèl·lic	AQ0MS0
+probèl·lica	probèl·lic	AQ0FS0
+probèl·lics	probèl·lic	AQ0MP0
+probèl·liques	probèl·lic	AQ0FP0
 ràndom	ràndom	AQ0CN0
 sintient	sintient	AQ0CS0
 sintients	sintient	AQ0CP0

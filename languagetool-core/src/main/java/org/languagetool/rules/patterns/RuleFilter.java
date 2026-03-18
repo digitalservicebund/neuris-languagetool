@@ -135,13 +135,16 @@ public abstract class RuleFilter {
 
   public Language getLanguageFromRuleMatch(RuleMatch match) {
     Rule rule = match.getRule();
-    Language language;
+    if (this.language != null) {
+      return language;
+    }
+    Language lang;
     if (rule instanceof AbstractPatternRule) {
-      language = ((PatternRule) match.getRule()).getLanguage();
+      lang = ((PatternRule) match.getRule()).getLanguage();
     } else {
       throw new RuntimeException("AbstractAdvancedSynthesizerFilter only works with pattern rules. " + rule.getFullId() + " is not a pattern rule");
     }
-    return language;
+    return lang;
   }
 
   public Synthesizer getSynthesizerFromRuleMatch(RuleMatch match) {
@@ -152,5 +155,13 @@ public abstract class RuleFilter {
     return getLanguageFromRuleMatch(match).getTagger();
   }
 
+  private Language language= null;
 
+  public Language getLanguage() {
+    return language;
+  };
+
+  public void setLanguage(Language language) {
+    this.language = language;
+  }
 }

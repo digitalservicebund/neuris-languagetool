@@ -80,6 +80,13 @@ public class VerbSynthesizer {
 
   private void setIndexes(int startPos) {
     int j = startPos;
+    // single participle
+    if (tokens[j].readingWithTagRegex(pParticiple) != null && !tokens[j].hasPosTag("_GV_") &&
+      !tokens[j].getChunkTags().contains(new ChunkTag("GV"))) {
+      iFirstVerb = iLastVerb = j;
+      numPronounsBefore = numPronounsAfter = 0;
+      return;
+    }
     // If it is not a verb, find the first one
     if (searchBackward) {
       while (j > 0 && !isVerb(j)) {
@@ -144,7 +151,6 @@ public class VerbSynthesizer {
     if (i < 0 || i > tokens.length - 1) {
       return false; // out of bounds
     }
-    // TODO: handle single participles
     return tokens[i].getChunkTags().contains(new ChunkTag("GV")) || tokens[i].readingWithTagRegex(pNonParticiple) != null
       || (tokens[i].readingWithTagRegex(pParticiple) != null && tokens[i].hasPosTag("_GV_"));
   }
@@ -153,7 +159,7 @@ public class VerbSynthesizer {
     if (i < 0 || i > tokens.length - 1) {
       return false; // out of bounds
     }
-    return tokens[i].getChunkTags().contains(new ChunkTag("GV"));
+    return tokens[i].getChunkTags().contains(new ChunkTag("GV")) || tokens[i].hasPosTag("_GV_");
   }
 
   public String synthesize() throws IOException {
@@ -268,13 +274,22 @@ public class VerbSynthesizer {
   }
 
   public boolean isFirstVerbIS() {
+    if (iFirstVerb == -1) {
+      return false;
+    }
     AnalyzedToken reading = tokens[iFirstVerb].readingWithTagRegex(pVerbIS);
     return reading != null;
   }
 
   public String getFirstVerbISPostag() {
+    if (iFirstVerb == -1) {
+      return null;
+    }
     AnalyzedToken reading = tokens[iFirstVerb].readingWithTagRegex(pVerbIS);
-    return reading.getPOSTag();
+    if (reading != null) {
+      return reading.getPOSTag();
+    }
+    return null;
   }
 
   private boolean isVerbIS(int i) {

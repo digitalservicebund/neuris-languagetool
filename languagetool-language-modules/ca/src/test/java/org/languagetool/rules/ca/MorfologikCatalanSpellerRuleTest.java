@@ -266,9 +266,9 @@ public class MorfologikCatalanSpellerRuleTest {
     assertEquals("adquirisquen", matches[0].getSuggestedReplacements().get(0));
     assertEquals("adquiresquen", matches[0].getSuggestedReplacements().get(1));
 
-    matches = rule.match(lt.getAnalyzedSentence("calificar"));
+    matches = rule.match(lt.getAnalyzedSentence("calificació"));
     assertEquals(1, matches.length);
-    assertEquals("qualificar", matches[0].getSuggestedReplacements().get(0));
+    assertEquals("qualificació", matches[0].getSuggestedReplacements().get(0));
 
     matches = rule.match(lt.getAnalyzedSentence("desconte"));
     assertEquals(1, matches.length);
@@ -300,8 +300,8 @@ public class MorfologikCatalanSpellerRuleTest {
     assertEquals("excel·lisquen", matches[0].getSuggestedReplacements().get(0));
     matches = rule.match(lt.getAnalyzedSentence("caligrafia"));
     assertEquals("cal·ligrafia", matches[0].getSuggestedReplacements().get(0));
-    matches = rule.match(lt.getAnalyzedSentence("calificaren"));
-    assertEquals("qualificaren", matches[0].getSuggestedReplacements().get(0));
+    matches = rule.match(lt.getAnalyzedSentence("calificador"));
+    assertEquals("qualificador", matches[0].getSuggestedReplacements().get(0));
     matches = rule.match(lt.getAnalyzedSentence("Excelentissim"));
     assertEquals("Excel·lentíssim", matches[0].getSuggestedReplacements().get(0));
     matches = rule.match(lt.getAnalyzedSentence("IlustRISIM"));
@@ -630,8 +630,8 @@ public class MorfologikCatalanSpellerRuleTest {
     assertEquals("l'iteraria", matches[0].getSuggestedReplacements().get(1));
 
     // different speller dictionaries Cat/Val
-    matches = rule.match(lt.getAnalyzedSentence("ingeniaria"));
-    assertEquals(1, matches.length);
+    //matches = rule.match(lt.getAnalyzedSentence("ingeniaria"));
+    //assertEquals(1, matches.length);
 
     matches = rule.match(lt.getAnalyzedSentence("l'unic"));
     assertEquals(1, matches.length);

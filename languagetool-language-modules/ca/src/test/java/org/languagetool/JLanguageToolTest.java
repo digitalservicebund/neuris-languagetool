@@ -293,15 +293,15 @@ public class JLanguageToolTest {
   @Test
   public void testSpecificXMLRule() throws IOException {
     for (Rule r: tool.getAllRules()) {
-      if (r.getId().equals("ESCOLTAR_SENTIR")) {
+      if (r.getId().startsWith("LIAR_SE_A")) {
         tool.enableRule(r.getId());
       } else {
         tool.disableRule(r.getId());
       }
     }
-    List<RuleMatch> matches = tool.check("Estic fart d'escoltar tothom parlant de mi.");
+    List<RuleMatch> matches = tool.check("Es van liar a pals.");
     assertEquals(1, matches.size());
-    assertEquals("[de sentir]", matches.get(0).getSuggestedReplacements().toString());
+    assertEquals("[Se les van heure a bastonades]", matches.get(0).getSuggestedReplacements().toString());
   }
 
 }
