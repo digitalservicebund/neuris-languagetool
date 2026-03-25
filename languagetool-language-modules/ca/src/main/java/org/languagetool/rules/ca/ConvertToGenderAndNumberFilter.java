@@ -76,11 +76,11 @@ public class ConvertToGenderAndNumberFilter extends RuleFilter {
         GenderAndNumberSplit splitPostag = splitGenderAndNumber(at);
         StringBuilder newPostag = new StringBuilder(splitPostag.prefix);
         if (splitPostag.prefix.startsWith("V")) {
-          newPostag.append(splitNounOrigPostag.number);
-          newPostag.append(splitPostag.gender);
+          newPostag.append(!desiredNumberOrigStr.isEmpty() ? desiredNumberOrigStr : splitNounOrigPostag.number);
+          newPostag.append(!desiredGenderOrigStr.isEmpty() ? desiredGenderOrigStr : splitPostag.gender);
         } else {
-          newPostag.append(splitPostag.gender);
-          newPostag.append(splitNounOrigPostag.number);
+          newPostag.append(!desiredGenderOrigStr.isEmpty() ? desiredGenderOrigStr : splitPostag.gender);
+          newPostag.append(!desiredNumberOrigStr.isEmpty() ? desiredNumberOrigStr : splitNounOrigPostag.number);
         }
         newPostag.append(splitPostag.suffix);
         AnalyzedToken at2 = new AnalyzedToken(at.getLemma(), newPostag.toString(), at.getLemma());

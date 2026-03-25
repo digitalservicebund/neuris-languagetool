@@ -918,3 +918,7 @@ Santa Colona de Farners=Santa Coloma de Farners
 Santa Colona de Gramenet=Santa Coloma de Gramenet
 Santa Colona=Santa Coloma	¿Volíeu dir "Santa Coloma"?
 bombo i platillo|bombo y platillo=bombo i platerets
+Gottlieb Frege=Gottlob Frege
+do et des=do ut des	Expressió llatina.
+títere con cabeza=canya dreta	L'expressió 'no deixar canya dreta' vol dir 'destruir-ho tot, no perdonar res'.
+a diestro i siniestro|a diestro y siniestro=a tort i a dret

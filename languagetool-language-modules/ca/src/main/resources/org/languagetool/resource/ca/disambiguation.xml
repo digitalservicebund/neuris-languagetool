@@ -118,7 +118,7 @@ Copyright (C) 2012 Jaume Ortolà i Font
         <rule>
             <pattern>
                 <token regexp="yes">[a-z]+<exception regexp="yes">&english_no;</exception></token>
-                <token  postag="UNKNOWN|NPCN000" postag_regexp="yes" regexp="yes">&english_common;|&english_common_casesensitive;<exception>in</exception></token>
+                <token postag="UNKNOWN|NPCN000" postag_regexp="yes" regexp="yes">&english_common;|&english_common_casesensitive;<exception>in</exception></token>
             </pattern>
             <filter class="org.languagetool.rules.IsEnglishWordFilter" args="formPositions:1"/>
             <disambig action="add">
@@ -2078,7 +2078,7 @@ Copyright (C) 2012 Jaume Ortolà i Font
             <pattern>
                 <token regexp="yes">a|per|de|amb|vers|devers</token>
                 <marker>
-                    <token regexp="yes">cals?<exception postag="NP.*" postag_regexp="yes"></exception></token>
+                    <token regexp="yes">cals?<exception postag="NP.*" postag_regexp="yes"/></token>
                 </marker>
             </pattern>
             <disambig action="replace" postag="contraccio"/>
@@ -7823,19 +7823,39 @@ Copyright (C) 2012 Jaume Ortolà i Font
             <wd lemma="dar"/>
         </disambig>
     </rule>
-    <rule id="menjar_substantiu" name="menjar substantiu">
-        <pattern>
-            <token postag="D[^R].[CM]S.*" postag_regexp="yes"><exception>tant</exception></token>
-            <marker>
-                <and>
-                    <token postag="N.*" postag_regexp="yes" regexp="yes">collar|parlar|avenir|menjar|berenar|sopar|esmorzar|dinar|beure|somriure|riure|solar|titular|pesar|lleure|despertar</token>
-                    <token postag="V.N.*" postag_regexp="yes"/>
-                </and>
-            </marker>
-            <token><exception postag="P[0P].*" postag_regexp="yes" regexp="yes">-.+</exception></token>
-        </pattern>
-        <disambig action="filter" postag="N.*"/>
-    </rule>
+    <rulegroup id="menjar_substantiu" name="menjar substantiu">
+        <rule>
+            <pattern>
+                <token postag="D[^R].[CM]S.*" postag_regexp="yes"><exception>tant</exception></token>
+                <marker>
+                    <and>
+                        <token postag="N.*" postag_regexp="yes" regexp="yes">collar|parlar|avenir|menjar|berenar|sopar|esmorzar|dinar|beure|somriure|riure|solar|titular|pesar|lleure|despertar</token>
+                        <token postag="V.N.*" postag_regexp="yes"/>
+                    </and>
+                </marker>
+                <token><exception postag="P[0P].*" postag_regexp="yes" regexp="yes">-.+</exception></token>
+            </pattern>
+            <disambig action="remove" postag="V.N.*"/>
+        </rule>
+        <rule>
+            <antipattern>
+                <token>de</token>
+                <token regexp="yes">manera|forma</token>
+            </antipattern>
+            <pattern>
+                <marker>
+                    <and>
+                        <token postag="N.*" postag_regexp="yes" regexp="yes">menjar|berenar|sopar|esmorzar|dinar|beure|somriure|riure|solar|titular|pesar|lleure|despertar</token>
+                        <token postag="V.N.*" postag_regexp="yes"/>
+                    </and>
+                </marker>
+                <token regexp="yes">de|d'</token>
+                <token postag="D.*" postag_regexp="yes"/>
+                <token postag="NC.*" postag_regexp="yes"/>
+            </pattern>
+            <disambig action="remove" postag="V.N.*"/>
+        </rule>
+    </rulegroup>
     <rule id="caldrevoler_nomparticipi" name="caldre/voler + nom/participi">
         <!-- cal/vol amistat -->
         <pattern>
@@ -9710,6 +9730,13 @@ Copyright (C) 2012 Jaume Ortolà i Font
         <disambig action="remove">
             <wd lemma="crear"/>
         </disambig>
+    </rule>
+    <rule id="gran_adjectiu" name="gran (adjectiu, no nom)">
+        <!-- TODO: en quins casos cal que sigui substantiu? -->
+        <pattern>
+            <token postag="AQ.*" postag_regexp="yes">gran</token>
+        </pattern>
+        <disambig action="remove" postag="NC.*"/>
     </rule>
     <rulegroup id="MONA" name="mona (nom o adjectiu)">
         <rule>
@@ -20266,7 +20293,7 @@ Copyright (C) 2012 Jaume Ortolà i Font
         </rule>
         <rule>
             <pattern>
-                <token regexp="yes">.*%|abans|després|compliment|complement|equivalent|part|comparació|diferents?|distint(s|a|es)?|nord|sud|oest|est|centre|doble|triple|precedent|millor|contraris?|fill(a|s|es)?</token>
+                <token regexp="yes">.*%|abans|després|compliment|complement|còmplices?|equivalent|part|comparació|diferents?|distint(s|a|es)?|nord|sud|oest|est|centre|doble|triple|precedent|millor|contraris?|fill(a|s|es)?</token>
                 <marker>
                     <token>de</token>
                 </marker>

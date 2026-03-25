@@ -80,10 +80,10 @@ public class EnNoInfinitiuSuggestionFilter extends RuleFilter {
     List<String> suggestions = new ArrayList<>();
     for (String synthVerb : synthVerbs) {
       StringBuilder suggestion = new StringBuilder();
-      if (!verbAfter.isUndefined() && verbAfterPostag != null) {
-        suggestion.append("com que no ");
-      } else {
+      if (!verbBefore.isUndefined() && verbBeforePostag != null) {
         suggestion.append("perquè no ");
+      } else {
+        suggestion.append("com que no ");
       }
       String pronounsAfter = verbSynthInfinitiu.getPronounsStrAfter();
       if (!pronounsAfter.isEmpty()) {

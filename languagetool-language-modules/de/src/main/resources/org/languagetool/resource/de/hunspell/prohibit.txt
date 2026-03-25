@@ -8925,6 +8925,8 @@ Zwischensole/N
 Feiertrage/N
 Wirtschaftswaise/N
 Wirtschaftswaiser
+Überparteileiche/N
+Vollmacheten
 Elementarschjudenversicherung #strange suggestion
 .*ministein   # statt ...ministerin
 .*farbend/A

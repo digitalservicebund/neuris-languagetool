@@ -179,6 +179,9 @@ public class SimpleReplaceVerbsRuleTest {
     
     matches = rule.match(lt.getAnalyzedSentence("permitisc"));
     assertEquals("permeto", matches[0].getSuggestedReplacements().get(0));
+
+    matches = rule.match(lt.getAnalyzedSentence("Influí en pràcticament tots els gèneres de la música dance des dels anys 70 fins ara."));
+    assertEquals(0, matches.length);
   }
 
 }

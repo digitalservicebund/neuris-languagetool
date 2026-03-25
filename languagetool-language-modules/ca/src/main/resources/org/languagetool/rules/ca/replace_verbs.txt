@@ -288,7 +288,6 @@ computeritzar|computerizar=assistir per ordinador
 comulgar=combregar
 conxavar|conchabar|conchavar|conxabar|compinxar|compinchar=conxorxar|confabular|complotar
 concretitzar=concretar
-contorsionar=fer contorsions|caragolar
 crusar=travessar|passar|creuar|encreuar
 customitzar=personalitzar
 denostar=bescantar|injuriar|infamar|insultar

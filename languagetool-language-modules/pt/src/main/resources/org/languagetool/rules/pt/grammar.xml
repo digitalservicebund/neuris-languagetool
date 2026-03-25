@@ -22920,6 +22920,27 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     <category id='CONFUSED_WORDS' name="❓ Confusão de Palavras">
 
 
+        <rule id='ESTAR_TER_CONFUSAO' name="❓ estar/ter">
+            <!-- ChatGPT 5 and new disambiguator for 2026+ -->
+            <antipattern> <!-- Expressões idiomáticas -->
+                <token inflected='yes'>estar</token>
+                <token>de</token>
+                <token regexp='yes'>arrasar|morrer|chorar|rir|rebentar|explodir|arrebentar|partir|estoirar|desesperar|enlouquecer|encantar|apaixonar|deslumbrar|irritar|enervar|dar|deitar</token>
+                <example>E as sobremesas também estão de arrasar.</example>
+                <example>Maltratado pelo seu dono, este cachorro estava de dar dó.</example>
+            </antipattern>
+            <pattern>
+                <token inflected='yes'>estar<exception>estado</exception></token>
+                <token regexp='yes'>de|que</token>
+                <token postag='VMN0.+' postag_regexp='yes'/>
+            </pattern>
+            <message>Possível confusão entre &quot;estar&quot; e &quot;ter&quot;.</message>
+            <suggestion><match no='1' postag='V.+' postag_regexp='yes'>ter</match> \2 \3</suggestion>
+            <example correction="tivemos de sair">Por isso <marker>estivemos de sair</marker>.</example>
+            <example>Onde está a ideia moral do estado de proteger e servir o cidadão?</example>
+        </rule>
+
+
         <rule id='TEMOS_TERMOS' name="❓ Temos/termos">
             <!-- ChatGPT 5 and new disambiguator for 2026+ -->
             <!-- Regra restringida a preposições para reduzir falsos positivos em "temos/termos" -->

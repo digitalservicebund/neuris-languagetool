@@ -18,6 +18,8 @@ Deq	Deq	NPCN000
 Der	Der	NPCN000
 Dimona	Dimona	NPCN000
 Española	Española	NPCN000
+Espresso	Espresso	NPCN000
+Kharq	Kharq	NPCSG00
 Létra	Létra	NPCN000
 Nakhitxevan	Nakhitxevan	NPCSG00
 Palau-Sator	Palau-Sator	NPCSG00
@@ -25,5 +27,6 @@ Palau-Solità	Palau-Solità	NPCSG00
 Partido	Partido	NPCN000
 Salon	Salon	NPCN000
 Urriés	Urriés	NPCN000
+Vieja	Vieja	NPCN000
 Zombie	Zombie	NPCN000
 Zombies	Zombies	NPCN000

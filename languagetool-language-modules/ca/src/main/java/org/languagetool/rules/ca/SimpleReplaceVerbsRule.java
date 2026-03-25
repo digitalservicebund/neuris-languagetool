@@ -95,13 +95,19 @@ public class SimpleReplaceVerbsRule extends AbstractSimpleReplaceRule {
     List<RuleMatch> ruleMatches = new ArrayList<>();
     AnalyzedTokenReadings[] tokens = sentence.getTokensWithoutWhitespace();
     for (int index = 1; index < tokens.length; index++) {
-      if (!tokens[index].getChunkTags().contains(incorrectVerbChunk) || tokens[index].hasPosTagStartingWith("NP")) {
+      if (!tokens[index].getChunkTags().contains(incorrectVerbChunk) || tokens[index].hasPosTagStartingWith("N")
+        || tokens[index].hasPosTagStartingWith("A")) {
         continue;
       }
       // synthesize replacements
-      // TODO maybe check for at==null, but we want to find all possible problems
       AnalyzedToken at = tokens[index].readingWithTagRegex(pVerb);
+      if (at == null) {
+        continue;
+      }
       List<String> replacementInfinitives = wrongWords.get(at.getLemma());
+      if (replacementInfinitives == null) {
+        continue;
+      }
       RuleMatch potentialRuleMatch = createRuleMatch(tokens[index], replacementInfinitives, sentence, at.getLemma());
       RuleMatch finalMatch;
       AdjustVerbSuggestionsFilter filter = new AdjustVerbSuggestionsFilter();

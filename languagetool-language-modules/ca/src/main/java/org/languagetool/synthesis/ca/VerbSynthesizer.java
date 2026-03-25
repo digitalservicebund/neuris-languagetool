@@ -69,7 +69,7 @@ public class VerbSynthesizer {
   }
 
   public void setPostag(String postag) {
-    this.newLemma = tokens[iFirstVerb].readingWithTagRegex(pVerb).getLemma();
+    this.newLemma = tokens[iLastVerb].readingWithTagRegex(pVerb).getLemma();
     this.newPostag = postag;
   }
 
@@ -126,7 +126,8 @@ public class VerbSynthesizer {
 
     int i = 1;
     int pronounsAfter = 0;
-    while (iLastVerb + i < tokens.length && !tokens[iLastVerb + i].isWhitespaceBefore() && tokens[iLastVerb + i].hasPosTagStartingWith("P")) {
+    while (iLastVerb + i < tokens.length && !tokens[iLastVerb + i].isWhitespaceBefore()
+      && tokens[iLastVerb + i].readingWithTagRegex(pPronomFeble) != null) {
       pronounsAfter++;
       i++;
     }
@@ -175,7 +176,7 @@ public class VerbSynthesizer {
     } else {
       for (int i = iFirstVerb; i <= iLastVerb; i++) {
         if (i == iFirstVerb) {
-          String[] synthesized = synth.synthesize(firstVerb, newPostag);
+          String[] synthesized = synth.synthesize(firstVerb, adjustPostagTolemma(firstVerb.getLemma(), newPostag));
           if (synthesized != null && synthesized.length > 0) {
             result.append(synthesized[0]);
           }

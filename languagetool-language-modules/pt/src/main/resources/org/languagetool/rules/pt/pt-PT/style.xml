@@ -87,6 +87,20 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     <category id="STYLE" name="🇵🇹🖌️ Regras de Estilo" type="style">
 
 
+      <rule id='HABILITAÇÕES_LITERÁRIAS_ACADÉMICAS' name="🇵🇹🖌️ Habilitações 'literárias' → 'académicas'" type='style' tone_tags='objective'>
+          <!-- ChatGPT 5 and new disambiguator for 2026+ -->
+          <pattern>
+              <token skip='1' regexp='yes'>habilitaç(ões|ão)</token>
+              <marker>
+                  <token regexp='yes'>literárias?</token>
+              </marker>
+          </pattern>
+          <message>Em português europeu, é mais corrente dizer &quot;habilitações académicas&quot;.</message>
+          <suggestion><match no='2' postag='AQ0F(.)0' postag_replace='NCF$1000'>académica</match></suggestion>
+          <example correction="académicas">Quais são as suas habilitações <marker>literárias</marker>?</example>
+      </rule>
+
+
       <rulegroup id="CONFUSAO_CAIXA_EMBALAGEM_FARMACOS" name="🇵🇹 Confusão: caixa/embalagem (fármacos)" tone_tags='objective'>
       <!-- ChatGPT 5 and new disambiguator for 2026+ -->
 
@@ -123,28 +137,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
           </rule>
 
       </rulegroup>
-
-
-      <rule id="PRAZER_GOSTO_V2" name="🇵🇹🤵 'prazer' → 'gosto' (uso formal)" type='style' tone_tags='formal'>
-          <!-- ChatGPT 5 and new disambiguator for 2026+ -->
-          <antipattern>
-              <token>prazer</token>
-              <token skip='-1' regexp='yes'>de|em|que</token>
-              <token regexp='yes' inflected='yes'>sexo|sexual|sexualmente|orgasmo|erótico|excitação|desejo|corpo|tocar|beijo|carícia|sensual|submisso|dominar|foder|fornicar|ejacular|ejaculação|esperma|esporra|langonha|coito|pénis|vagina|clítoris|clitóris|cona|boceta</token>
-              <example>Será que é possível uma mulher ter prazer em sentir-se submissa sexualmente?</example>
-          </antipattern>
-          <pattern>
-              <token skip='3' regexp='yes' inflected='yes'>ser|ter</token>
-              <marker>
-                  <token>prazer</token>
-              </marker>
-              <token regexp='yes'>de|em|que</token>
-          </pattern>
-          <message>Se não estiver relacionado com uma sensação física ou sexual, prefira &quot;gosto&quot;.</message>
-          <suggestion>gosto</suggestion>
-          <example correction="gosto">Terei o maior <marker>prazer</marker> em convidá-los.</example>
-          <example correction="gosto">É com enorme <marker>prazer</marker> que o recebemos.</example>
-      </rule>
 
 
     <rule id='CICLO_VICIOSO' name="🇵🇹 Calinada: 'ciclo' vicioso → 'círculo'" tone_tags='objective'>
@@ -3551,6 +3543,28 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rule>
 
 
+      <rule id="PRAZER_GOSTO_V2" name="🇵🇹🤵 'prazer' → 'gosto' (uso formal)" type='style' tone_tags='formal'>
+          <!-- ChatGPT 5 and new disambiguator for 2026+ -->
+          <antipattern>
+              <token>prazer</token>
+              <token skip='-1' regexp='yes'>de|em|que</token>
+              <token postag='_CONTEXTO_SEXUAL_EROTICO'/>
+              <example>Será que é possível uma mulher ter prazer em sentir-se submissa sexualmente?</example>
+          </antipattern>
+          <pattern>
+              <token skip='3' regexp='yes' inflected='yes'>ser|ter</token>
+              <marker>
+                  <token>prazer</token>
+              </marker>
+              <token regexp='yes'>de|em|que</token>
+          </pattern>
+          <message>Se não estiver relacionado com uma sensação física ou sexual, prefira &quot;gosto&quot;.</message>
+          <suggestion>gosto</suggestion>
+          <example correction="gosto">Terei o maior <marker>prazer</marker> em convidá-los.</example>
+          <example correction="gosto">É com enorme <marker>prazer</marker> que o recebemos.</example>
+      </rule>
+
+
     </category>
 
 
@@ -3914,19 +3928,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
             <message>Num contexto formal/científico, é preferível escrever &quot;-chave&quot;.</message>
             <suggestion>\1-chave</suggestion>
             <example correction="conceitos-chave">A entropia é um dos <marker>conceitos mais conhecidos</marker> na teoria.</example>
-        </rule>
-
-
-        <rule id='HABILITAÇÕES_LITERÁRIAS_ACADÉMICAS' name="🇵🇹 Habilitações 'literárias' → 'académicas'" type="style">
-            <pattern>
-                <token skip='4'>habilitações</token>
-                <marker>
-                    <token>literárias</token>
-                </marker>
-            </pattern>
-            <message>É mais corrente empregar o termo &quot;académicas&quot;.</message>
-            <suggestion><match no='2' postag='NCFP000' postag_regexp='yes'>académica</match></suggestion>
-            <example correction="académicas">Quais são as suas habilitações <marker>literárias</marker>?</example>
         </rule>
 
 

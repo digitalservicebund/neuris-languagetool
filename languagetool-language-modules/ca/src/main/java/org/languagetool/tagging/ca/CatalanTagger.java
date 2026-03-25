@@ -329,76 +329,88 @@ public class CatalanTagger extends BaseTagger {
    */
   private List<AnalyzedToken> additionalTagsForIncorrectVerbs(String originalWord, String lowerWord) {
     List<AnalyzedToken> additionalTaggedTokens = new ArrayList<>();
-    String infinitive = null;
-    int i = 0;
-    while (i < 2 && additionalTaggedTokens.isEmpty()) {
-      Matcher m;
-      if (i == 0) {
-        m = desinencies_1conj_0.matcher(lowerWord);
-      } else {
-        m = desinencies_1conj_1.matcher(lowerWord);
+    //enriure, enfotre...
+    if (lowerWord.startsWith("en")) {
+      List<TaggedWord> taggedWords = getWordTagger().tag(lowerWord.substring(2));
+      List<TaggedWord> selectedTaggedWords = new ArrayList<>();
+      String lemma = "";
+      for (TaggedWord taggedWord : taggedWords) {
+        if (taggedWord.getPosTag().startsWith("V")) {
+          selectedTaggedWords.add(new TaggedWord("en" + taggedWord.getLemma(), taggedWord.getPosTag()));
+          lemma = "en" + taggedWord.getLemma();
+        }
       }
-      if (m.matches()) {
-        List<String> lexemes = new ArrayList<>();
-        String lexeme = m.group(1);
-        lexemes.add(lexeme);
-        String desinence = m.group(2);
-        if (desinence.startsWith("e") || desinence.startsWith("é") || desinence.startsWith("i")
-          || desinence.startsWith("ï")) {
-          if (lexeme.endsWith("c")) {
-            lexeme = lexeme.substring(0, lexeme.length() - 1).concat("ç");
-          } else if (lexeme.endsWith("qu")) {
-            lexeme = lexeme.substring(0, lexeme.length() - 2).concat("c");
-          } else if (lexeme.endsWith("g")) {
-            lexeme = lexeme.substring(0, lexeme.length() - 1).concat("j");
-          } else if (lexeme.endsWith("gü")) {
-            lexeme = lexeme.substring(0, lexeme.length() - 2).concat("gu");
-          } else if (lexeme.endsWith("gu")) {
-            lexeme = lexeme.substring(0, lexeme.length() - 2).concat("g");
-          }
-          if (!lexemes.contains(lexeme)) {
-            lexemes.add(lexeme);
-          }
+      if (!selectedTaggedWords.isEmpty() && List.of("enfotre", "enriure").contains(lemma)) {
+        additionalTaggedTokens = asAnalyzedTokenListWithLemma(originalWord, lemma, selectedTaggedWords);
+        return additionalTaggedTokens;
+      }
+    }
+    for (Pattern pattern : List.of(desinencies_1conj_0, desinencies_1conj_1)) {
+      Matcher m = pattern.matcher(lowerWord);
+      if (!m.matches()) {
+        continue;
+      }
+      String baseLexeme = m.group(1);
+      String desinence = m.group(2);
+      String adjustedLexeme = baseLexeme;
+      List<String> lexemes = new ArrayList<>(List.of(baseLexeme));
+      if (desinence.startsWith("e") || desinence.startsWith("é")
+        || desinence.startsWith("i") || desinence.startsWith("ï")) {
+        adjustedLexeme = adjustLexemeForSoftVowel(baseLexeme);
+        if (!lexemes.contains(adjustedLexeme)) {
+          lexemes.add(adjustedLexeme);
         }
-        if (desinence.startsWith("ï")) {
-          desinence = "i" + desinence.substring(1);
-        }
-        infinitive = lexeme.concat("ar");
-        if (wrongVerbs.containsKey(infinitive)) {
-          additionalTaggedTokens = asAnalyzedTokenListWithLemma(originalWord, infinitive,
-            getWordTagger().tag("cant".concat(desinence)));
-        }
-        for (String lex : lexemes) {
-          if (additionalTaggedTokens.isEmpty()) {
-            infinitive = lex.concat("ir");
-            if (wrongVerbs.containsKey(infinitive)) {
-              additionalTaggedTokens = asAnalyzedTokenListWithLemma(originalWord, infinitive, getWordTagger().tag(
-                "serv".concat(desinence)));
-            }
-          }
-          if (additionalTaggedTokens.isEmpty() && lex.endsWith("g")) {
-            infinitive = lex.concat("uir");
-            if (wrongVerbs.containsKey(infinitive)) {
-              additionalTaggedTokens = asAnalyzedTokenListWithLemma(originalWord, infinitive, getWordTagger().tag(
-                "serv".concat(desinence)));
-            }
-          }
-        }
+      }
+      if (desinence.startsWith("ï")) {
+        desinence = "i" + desinence.substring(1);
+      }
+      additionalTaggedTokens = tryTag(originalWord, adjustedLexeme + "ar", "cant" + desinence);
+      for (String lex : lexemes) {
         if (additionalTaggedTokens.isEmpty()) {
-          infinitive = lexeme.concat("èixer");
-          if (wrongVerbs.containsKey(infinitive)) {
-            additionalTaggedTokens = asAnalyzedTokenListWithLemma(originalWord, infinitive,
-              getWordTagger().tag("con".concat(desinence)));
-            if (additionalTaggedTokens.isEmpty()) {
-              additionalTaggedTokens = asAnalyzedTokenListWithLemma(originalWord, infinitive, getWordTagger().tag(
-                "desmer".concat(desinence)));
-            }
-          }
+          additionalTaggedTokens = tryTag(originalWord, lex + "ir", "serv" + desinence);
+        }
+        if (additionalTaggedTokens.isEmpty() && lex.endsWith("g")) {
+          additionalTaggedTokens = tryTag(originalWord, lex + "uir", "serv" + desinence);
         }
       }
-      i++;
+      if (additionalTaggedTokens.isEmpty()) {
+        String eixer = baseLexeme + "èixer";
+        additionalTaggedTokens = tryTag(originalWord, eixer, "con" + desinence);
+        if (additionalTaggedTokens.isEmpty()) {
+          additionalTaggedTokens = tryTag(originalWord, eixer, "desmer" + desinence);
+        }
+      }
+      if (!additionalTaggedTokens.isEmpty()) {
+        break;
+      }
     }
     return additionalTaggedTokens;
+  }
+
+  private List<AnalyzedToken> tryTag(String originalWord, String infinitive, String conjugated) {
+    if (!wrongVerbs.containsKey(infinitive)) {
+      return Collections.emptyList();
+    }
+    return asAnalyzedTokenListWithLemma(originalWord, infinitive, getWordTagger().tag(conjugated));
+  }
+
+  private String adjustLexemeForSoftVowel(String lexeme) {
+    if (lexeme.endsWith("c"))   {
+      return lexeme.substring(0, lexeme.length() - 1) + "ç";
+    }
+    if (lexeme.endsWith("qu"))  {
+      return lexeme.substring(0, lexeme.length() - 2) + "c";
+    }
+    if (lexeme.endsWith("g"))   {
+      return lexeme.substring(0, lexeme.length() - 1) + "j";
+    }
+    if (lexeme.endsWith("gü"))  {
+      return lexeme.substring(0, lexeme.length() - 2) + "gu";
+    }
+    if (lexeme.endsWith("gu"))  {
+      return lexeme.substring(0, lexeme.length() - 2) + "g";
+    }
+    return lexeme;
   }
 
   /*
@@ -415,7 +427,6 @@ public class CatalanTagger extends BaseTagger {
         // només verbs, no "cantada/NCFS000"
         aTokenList.add(new AnalyzedToken(word, at.getPOSTag(), lemma));
       }
-
     }
     return aTokenList;
   }

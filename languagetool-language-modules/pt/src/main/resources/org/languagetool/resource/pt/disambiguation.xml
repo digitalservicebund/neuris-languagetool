@@ -6151,12 +6151,34 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       -->
   </rule>
 
+  <rule id="QUE_VNCAQ_PP_V_20260324_RARE" name="It is noun/adjective.+">
+    <pattern>
+      <token>que</token>
+      <marker>
+        <and>
+          <token postag='VMIP3S0|VMM02S0' postag_regexp='yes'/>
+          <token postag='NC.+|AQ.+' postag_regexp='yes'/>
+        </and>
+      </marker>
+      <token postag='PP.C.+' postag_regexp='yes'/>
+      <token postag='V.+' postag_regexp='yes'><exception postag_regexp='yes' postag='VMN0.+'/></token>
+    </pattern>
+    <disambig action="remove" postag="V.+"/>
+    <!--
+    Examples:
+             Que tinta vc usou?
+             Que idiota eu fui de emprestar-lhe dinheiro.
+             Que estrada você andou?
+             Dúvida: Que madeira vc utilizaria para substituir o mogno?
+             Que coroa você está vendo?
+      -->
+  </rule>
 
   <rulegroup id="CONTEXT_BASED" name="contexto">
     <rule>
       <pattern>
         <marker>
-          <token regexp='yes' inflected='yes'>beijo|boceta|broxe|caralho|carícia|clítoris|clitóris|coito|cona|cunilíngua|cunnilingus|ejaculação|ejacular|erótico|esperma|esporra|excitação|foda|foder|fornicar|langonha|masturbação|masturbar|minete|orgasmo|pénis|queca|sensual|sexo|sexual|sexualmente|submisso|vagina</token>
+          <token regexp='yes' inflected='yes'>beijo|boceta|broxe|caralho|carícia|clítoris|clitóris|coito|cona|cunilíngua|cunnilingus|dildo|ejaculação|ejacular|erótico|esperma|esporra|excitação|foda|foder|fornicar|langonha|masturbação|masturbar|minete|orgasmo|pénis|preservativo|queca|sensual|sexo|sexual|sexualmente|submisso|vagina|vibrador</token>
         </marker>
       </pattern>
       <disambig action="add">

@@ -3494,3 +3494,4 @@ Lublín=Lublin
 Saratov=Saràtov
 Užhorod=Újhorod
 Grand=Gran
+Kharq=Kharg

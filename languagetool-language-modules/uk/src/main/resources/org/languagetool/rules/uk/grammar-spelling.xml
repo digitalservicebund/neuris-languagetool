@@ -1649,10 +1649,12 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
 
     <rule id="invalid_apostrophe" name="Неправильний символ апострофа">
       <regexp>([а-яіїєґ'-]*[бвджзклмнпрстфхш])[&quot;”‟`´]([єїюя][а-яіїєґ'-]*)</regexp>
-      <message>Можливо вжито неправильний символ апострофа?</message>
+      <message>Можливо вжито неправильний символ апострофа? (рекомендовані варіанти: U+02BC - лінгвістично правильний, U+2019 - типографічний, U+0027 - прямий)</message>
+      <suggestion>\1ʼ\2</suggestion>
+      <suggestion>\1’\2</suggestion>
       <suggestion>\1'\2</suggestion>
-      <example correction="прим'ятий">він <marker>прим"ятий</marker>.</example>
-      <example correction="прим'ятий">він <marker>прим´ятий</marker>.</example>
+      <example correction="примʼятий|прим’ятий|прим'ятий">він <marker>прим"ятий</marker>.</example>
+      <example correction="примʼятий|прим’ятий|прим'ятий">він <marker>прим´ятий</marker>.</example>
     </rule>
 
   </category>
