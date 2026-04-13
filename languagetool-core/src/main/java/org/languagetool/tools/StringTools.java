@@ -85,7 +85,7 @@ public final class StringTools {
   private static final Pattern XML_COMMENT_PATTERN = compile("<!--.*?-->", DOTALL);
   private static final Pattern XML_PATTERN = compile("(?<!<)<[^<>]+>", DOTALL);
   private static final Pattern PUNCTUATION_PATTERN = compile("[\\p{IsPunctuation}']", DOTALL);
-  private static final Pattern PUNCT_AND_SYMBOL_PATTERN = compile("[\\p{Punct}\\p{IsPunctuation}]");
+  private static final Pattern PUNCT_AND_SYMBOL_PATTERN = compile("[\\p{IsPunctuation}\\p{S}']");
   private static final Pattern NOT_WORD_CHARACTER = compile("[^\\p{L}]", DOTALL);
   private static final Pattern NOT_WORD_STR = compile("[^\\p{L}]+", DOTALL);
   private static final Pattern PATTERN = compile("(?U)[^\\p{Space}\\p{Alnum}\\p{Punct}]");

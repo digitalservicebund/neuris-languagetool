@@ -6,6 +6,7 @@ Berruguete
 Boole
 Buchanan
 Bülow
+Coímbra
 Dolly
 Dubái
 Euromaidán
@@ -435,6 +436,8 @@ dickensiana
 dickensianas
 dickensiano
 dickensianos
+dreno
+drenos
 exfiltra
 exfiltraba
 exfiltrabais
@@ -815,6 +818,8 @@ exfíltreteme
 exfíltretenos
 externalizable
 externalizables
+fibroglandular
+fibroglandulares
 inframental
 inframentales
 lito
@@ -823,6 +828,8 @@ macroiglesia
 macroiglesias
 maître
 maîtres
+meso
+mesos
 metre
 metres
 mánager

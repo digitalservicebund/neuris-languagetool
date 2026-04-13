@@ -16031,6 +16031,7 @@ Petr Pavel
 Jennifer Hermoso
 Jenni Hermoso
 # START SCIENTIFIC NAMES
+Melanerpes formicivorus
 Camellia sinensis
 Dianthus caryophyllus
 Candida albicans
@@ -30165,3 +30166,32 @@ David Friedberg
 Théâtre royal de la Monnaie
 Théâtre de la Monnaie
 South Pars
+Tippi Hedren
+Rod Taylor
+Woody Woodpecker
+Daffy Duck
+Victor J. Glover
+Victor Jerome Glover
+Victor Glover
+Reid Wiseman
+Gregory Reid Wiseman
+Christina Koch
+Christina Hammock Koch
+Jeremy Hansen
+Jeremy Roger Hansen
+Sciences Po Paris
+Sciences Po
+Claude Mythos
+OpenAI Codex
+OpenCode
+Amazon Q Developer
+Emilia Pérez
+Rachin Ravindra
+John F. Clauser
+John Francis Clauser
+Afrika Bambaataa
+New York Philharmonic
+New York Philharmonic Orchestra
+Marie-Louise Eta
+Hedda Hopper
+Eric Swalwell

@@ -94,7 +94,7 @@ public class JLanguageToolTest {
 
     matches = tool.check("Com no te vaig a estimar?");
     assertEquals(1, matches.size());
-    assertEquals("Com vols que no t'estime", matches.get(0).getSuggestedReplacements().get(0));
+    assertEquals("vols que no t'estime", matches.get(0).getSuggestedReplacements().get(0));
 
     List<RuleMatch> matches2 = tool.check("Aquestes frases per a probar.");
     assertEquals(1, matches2.size());
@@ -155,7 +155,7 @@ public class JLanguageToolTest {
   public void testAdaptSuggestions() throws IOException {
     List<RuleMatch> matches = tool.check(
       "Els valencians hem sigut valencians des que Jaume I creà el regne de València i poc a poc es conformà una nova identitat política (que en l'edat mitjana, per exemple, no entrava en contradicció amb la consciència clara que teníem un origen i una llengua comuns amb els catalans).");
-    assertEquals(matches.get(0).getSuggestedReplacements().toString(), "[a poc a poc]");
+    assertEquals(matches.get(0).getSuggestedReplacements().toString(), "[a poc]");
 
     matches = tool.check("A nivell d'ensenyament superior.");
     assertEquals(matches.get(0).getSuggestedReplacements().toString(),
@@ -292,16 +292,16 @@ public class JLanguageToolTest {
    */
   @Test
   public void testSpecificXMLRule() throws IOException {
-    for (Rule r: tool.getAllRules()) {
+    /*for (Rule r: tool.getAllRules()) {
       if (r.getId().startsWith("LIAR_SE_A")) {
         tool.enableRule(r.getId());
       } else {
         tool.disableRule(r.getId());
       }
-    }
-    List<RuleMatch> matches = tool.check("Es van liar a pals.");
+    }*/
+    List<RuleMatch> matches = tool.check("Moldejant-les", JLanguageTool.Level.PICKY);
     assertEquals(1, matches.size());
-    assertEquals("[Se les van heure a bastonades]", matches.get(0).getSuggestedReplacements().toString());
+    assertEquals("[Modelant-les, Afaiçonant-les]", matches.get(0).getSuggestedReplacements().toString());
   }
 
 }

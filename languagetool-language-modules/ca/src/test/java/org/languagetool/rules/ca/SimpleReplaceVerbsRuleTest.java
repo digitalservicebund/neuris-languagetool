@@ -182,6 +182,15 @@ public class SimpleReplaceVerbsRuleTest {
 
     matches = rule.match(lt.getAnalyzedSentence("Influí en pràcticament tots els gèneres de la música dance des dels anys 70 fins ara."));
     assertEquals(0, matches.length);
+
+    matches = rule.match(lt.getAnalyzedSentence("Moldejant-les"));
+    assertEquals("[Modelant-les, Afaiçonant-les]", matches[0].getSuggestedReplacements().toString());
+
+    matches = rule.match(lt.getAnalyzedSentence("Me s'ha ocurrit."));
+    assertEquals("[Se m'ha ocorregut]", matches[0].getSuggestedReplacements().toString());
+
+    matches = rule.match(lt.getAnalyzedSentence("Com te s'ha ocurrit."));
+    assertEquals("[se t'ha ocorregut]", matches[0].getSuggestedReplacements().toString());
   }
 
 }

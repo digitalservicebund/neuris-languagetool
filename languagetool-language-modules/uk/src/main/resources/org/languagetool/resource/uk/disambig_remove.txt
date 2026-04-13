@@ -8,6 +8,7 @@
 бабів бабіти verb:imperf:past:m
 бабієм бабіти verb:imperf:pres:p:1:subst
 багатії багатий adj:p:.*:long
+багатим багатити verb:imperf:pres:p:1:subst
 багряним багрянити verb:imperf:pres:p:1:subst
 бай баяти verb:imperf:impr:s:2:arch
 байдужій байдужіти verb:imperf:impr:s:2
@@ -21,6 +22,7 @@
 білій біліти verb:imperf:impr:s:2
 білій-білій біліти-біліти verb:imperf:impr:s:2
 білім білити verb:imperf:impr:p:1
+Білорусі Білорус noun:anim:m:v_mis:prop:lname
 блакитній блакитніти verb:imperf:impr:s:2
 благоустрою благоустроїти verb:perf:futr:s:1:bad
 борозни борознити verb:imperf:impr:s:2
@@ -51,6 +53,10 @@
 веселій веселіти verb:imperf:impr:s:2
 вибори вибороти verb:perf:impr:s:2
 виграним вигранити verb:perf:futr:p:1:subst
+видає видати verb:imperf:pres:s:3:arch
+видають видати verb:imperf:pres:p:3:arch
+видала видати verb:imperf:past:f:arch
+видало видати verb:imperf:past:n:arch
 видів видіти verb:imperf:past:m:arch
 вилізлий вилізлий adj:m:v_naz:.*
 виникла виниклий adj:f:.*
@@ -94,6 +100,7 @@
 Гай гаяти verb:imperf:impr:s:2
 гарматні гарматня noun:inanim:f:v_.*:arch
 Ганна Ганн noun:anim:m:v_...:prop:lname
+Гани ганити verb:imperf:impr:s:2:subst|гана noun:inanim:f:v_rod
 гарячим гарячити verb:imperf:pres:p:1:subst
 гарячу гарячити verb:imperf:pres:s:1
 героїв героїти verb:imperf:past:m
@@ -169,6 +176,7 @@
 евакуйовано евакуювати verb:imperf:impers        # добрий лише :perf
 Європи європи noun:inanim:p:v_.*                # маємо добрий :prop з великої
 ексе екс noun:anim:m:v_kly:slang
+експортну експортнути verb:perf:futr:s:1:slang
 жалю жалити verb:imperf:pres:s:1
 Женю женити verb:perf:futr:s:1
 жести жесть noun:inanim:f:v_rod:up19:slang
@@ -185,8 +193,13 @@
 загинула загинулий adj:f:.*
 заграв заграва noun:inanim:p:v_rod
 загрози загрозити verb:perf:impr:s:2
+задню заднити verb:perf:futr:s:1:arch
+заздрять заздріти verb:perf:futr:p:3:arch
 закривав закривавити verb:perf:impr:s:2
+зале зал noun:inanim:m:v_kly
+зале заля noun:inanim:f:v_kly:alt
 залі заля noun:inanim:f:.*
+замало замати verb:perf:past:n:arch
 замах зам noun:anim:p:v_mis:bad
 заміж заміжжя noun:inanim:p:v_rod
 заможній заможніти verb:imperf:impr:s:2
@@ -203,6 +216,7 @@
 збірні збірня noun:inanim:f:.*
 збори збороти verb:perf:impr:s:2
 звели звеліти verb:perf:impr:s:2
+звір звірити verb:perf:impr:s:2
 згасне згасний adj:n:.*
 згоди згодити verb:perf:impr:s:2:xp2
 згори згоріти verb:perf:impr:s:2
@@ -290,6 +304,7 @@
 мати мата noun:inanim:.*
 меблі мебля noun:inanim:f:v_.*
 Мене Мен noun:inanim:m:v_kly:prop:geo
+Мені Мен noun:inanim:m:v_mis:prop:geo|Мень noun:anim:m:v_mis:prop:lname
 мер мерти verb:imperf:past:m
 мережу мережити verb:imperf:pres:s:1
 Мерло мерти verb:imperf:past:n
@@ -315,7 +330,10 @@
 Морено морити verb:imperf:impers
 морю морити verb:imperf:pres:s:1
 мости мостити verb:imperf:impr:s:2
+мости мость noun:anim:f:v_rod:up19:arch
+мості мость noun:anim:f:v_.*:arch
 мужній мужніти verb:imperf:impr:s:2
+мудрим мудрити verb:imperf:pres:p:1:arch:subst
 мусів мус noun:inanim:p:v_rod
 мутній мутніти verb:imperf:impr:s:2
 м'якшим м'якшити verb:imperf:pres:p:1:subst
@@ -334,6 +352,7 @@
 невидержко невидержка noun:inanim:f:v_kly
 недобрий недобрити verb:perf:impr:s:2
 недогляди недоглядіти verb:perf:impr:s:2:xp2
+недопустимо недопустити verb:perf:futr:p:1:bad
 нікчемній нікчемніти verb:imperf:impr:s:2
 неможна неможний adj:f:v_...:arch
 німій німіти verb:imperf:impr:s:2
@@ -349,6 +368,7 @@
 одягну одягний adj:f:.*
 огороди огородити verb:perf:impr:s:2
 озерним озернити verb:perf:futr:p:1:subst
+окріп окріпнути verb:perf:past:m:bad
 округлим округлити verb:perf:futr:p:1:subst
 опади опасти verb:perf:impr:s:2
 опалим опалити verb:perf:futr:p:1:subst
@@ -379,6 +399,7 @@
 підряди підрядити verb:perf:impr:s:2
 пікне пікний adj:n:.*
 пішли післати verb:perf:impr:s:2:bad
+пішов пішва noun:inanim:p:v_rod:arch
 плів пліва noun:inanim:p:v_rod
 плоди плодити verb:imperf:impr:s:2
 плюгавим плюгавити verb:imperf:pres:p:1:subst
@@ -525,6 +546,7 @@
 сталим сталити verb:imperf:pres:p:1:subst
 старим старити verb:imperf:pres:p:1:subst
 старій старіти verb:imperf:impr:s:2
+статус-кво статус-кво noun:inanim:m:.*:bad
 ствердну стверднути verb:perf:futr:s:1
 страви стравити verb:perf:impr:s:2:xp1
 суворій суворіти verb:imperf:impr:s:2
@@ -541,6 +563,7 @@
 темним темнити verb:imperf:pres:p:1:subst
 темній-темній темніти-темніти verb:imperf:impr:s:2
 темній темніти verb:imperf:impr:s:2
+темною темна noun:inanim:f:v_oru:arch
 теплій тепліти verb:imperf:impr:s:2
 терни тернути verb:perf:impr:s:2
 тим тим .*arch
@@ -608,6 +631,7 @@
 щавлю щавити verb:imperf:pres:s:1
 шар шарити verb:imperf:impr:s:2
 шарів шаріти verb:imperf:past:m
+Шарієм шаріти verb:imperf:pres:p:1:subst
 шлем слати verb:imperf:pres:p:1:subst:xp1
 щасливим щасливити verb:imperf:pres:p:1:subst
 щирим щирити verb:imperf:pres:p:1:subst

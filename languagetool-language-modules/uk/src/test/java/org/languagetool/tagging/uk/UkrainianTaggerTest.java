@@ -182,6 +182,18 @@ public class UkrainianTaggerTest {
     assertNotTagged("УКРАЇ");
   }
 
+
+  @Test
+  public void testCompoundNumr() throws IOException {
+    TestTools.myAssert("п'ятсотдвадцятип'ятиріччя", "п'ятсотдвадцятип'ятиріччя/[п'ятсотдвадцятип'ятиріччя]noun:inanim:n:v_naz|п'ятсотдвадцятип'ятиріччя/[п'ятсотдвадцятип'ятиріччя]noun:inanim:n:v_rod|п'ятсотдвадцятип'ятиріччя/[п'ятсотдвадцятип'ятиріччя]noun:inanim:n:v_zna", tokenizer, tagger);
+    TestTools.myAssert("п’ятсотдвадцятип'ятирі́ччям", "п'ятсотдвадцятип'ятиріччям/[п'ятсотдвадцятип'ятиріччя]noun:inanim:n:v_oru", tokenizer, tagger);
+    TestTools.myAssert("шістдесятип’ятимільйо́нний", "шістдесятип'ятимільйонний/[шістдесятип'ятимільйонний]adj:m:v_naz:numr|шістдесятип'ятимільйонний/[шістдесятип'ятимільйонний]adj:m:v_zna:rinanim:numr", tokenizer, tagger);
+    TestTools.myAssert("стодвадцятип’ятирі́чний", "стодвадцятип'ятирічний/[стодвадцятип'ятирічний]adj:m:v_naz|стодвадцятип'ятирічний/[стодвадцятип'ятирічний]adj:m:v_zna:rinanim", tokenizer, tagger);
+    TestTools.myAssert("кількадесятитисячної", "кількадесятитисячної/[кількадесятитисячний]adj:f:v_rod:numr", tokenizer, tagger);
+    TestTools.myAssert("Тридцятидвохрічний", "Тридцятидвохрічний/[Тридцятидвохрічний]adj:m:v_naz|Тридцятидвохрічний/[Тридцятидвохрічний]adj:m:v_zna:rinanim", tokenizer, tagger);
+    assertNotTagged("агатомільйонних");
+  }
+
   @Test
   public void testDynamicTaggingNumericPair() throws IOException {
     // numr-numr
@@ -376,7 +388,19 @@ public class UkrainianTaggerTest {
     TestTools.myAssert("\"заступницю\"-колаборантку", "\"заступницю\"-колаборантку/[заступниця-колаборантка]noun:anim:f:v_zna", tokenizer, tagger);
   }
 
+
+  @Test
+  public void testHypenPrefixes() throws IOException {
+    TestTools.myAssert("псевдо-ФОП", "псевдо-ФОП/[псевдо-ФОП]noun:anim:f:v_dav:nv:abbr|псевдо-ФОП/[псевдо-ФОП]noun:anim:f:v_mis:nv:abbr"
+        + "|псевдо-ФОП/[псевдо-ФОП]noun:anim:f:v_naz:nv:abbr|псевдо-ФОП/[псевдо-ФОП]noun:anim:f:v_oru:nv:abbr"
+        + "|псевдо-ФОП/[псевдо-ФОП]noun:anim:f:v_rod:nv:abbr|псевдо-ФОП/[псевдо-ФОП]noun:anim:f:v_zna:nv:abbr"
+        + "|псевдо-ФОП/[псевдо-ФОП]noun:anim:m:v_naz:abbr|псевдо-ФОП/[псевдо-ФОП]noun:anim:p:v_dav:nv:abbr"
+        + "|псевдо-ФОП/[псевдо-ФОП]noun:anim:p:v_mis:nv:abbr|псевдо-ФОП/[псевдо-ФОП]noun:anim:p:v_naz:nv:abbr"
+        + "|псевдо-ФОП/[псевдо-ФОП]noun:anim:p:v_oru:nv:abbr|псевдо-ФОП/[псевдо-ФОП]noun:anim:p:v_rod:nv:abbr"
+        + "|псевдо-ФОП/[псевдо-ФОП]noun:anim:p:v_zna:nv:abbr", tokenizer, tagger);
+  }
   
+
   @Test
   public void testDynamicTaggingFixedParts() throws IOException {
     TestTools.myAssert("пів-України", "пів-України/[пів-України]noun:inanim:p:v_dav:prop:geo:nv:up92|пів-України/[пів-України]noun:inanim:p:v_mis:prop:geo:nv:up92"

@@ -238,7 +238,7 @@ class CompoundTagger {
         return null;
 
 //      String lemma = leftWord + "-" + rightWdList.get(0).getLemma();
-      String extraTag = StringTools.isCapitalizedWord(rightWord) ? "" : ":bad";
+      String extraTag = Character.isUpperCase(rightWord.charAt(0)) ? "" : ":bad";
       rightWdList = PosTagHelper.adjust(rightWdList, leftWord + "-", null, extraTag);
       return ukrainianTagger.asAnalyzedTokenListForTaggedWordsInternal(word, rightWdList);
     }

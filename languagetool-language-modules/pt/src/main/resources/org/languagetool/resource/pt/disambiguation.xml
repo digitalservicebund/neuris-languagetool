@@ -671,11 +671,12 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     <!-- Created by Tiago F. Santos, Portuguese rule, 2019-02-27 -->
     <antipattern> <!-- It can be both a verb and a non-verb -->
       <token postag='RG'/>
-      <token postag='VMIP2S0|VMN02S0' postag_regexp='yes'/>
-      <token postag='NC.+|AQ.+' postag_regexp='yes'><exception postag_regexp='yes' postag='RG|NP.+'/></token>
+      <token postag='VMIP2S0|VMN02S0|VMM03S0' postag_regexp='yes'/>
+      <token postag='NC.+|AQ.+|_PUNCT|SENT_END' postag_regexp='yes'><exception postag_regexp='yes' postag='RG|NP.+'/></token>
       <!-- "inclusive certas organizações" -->
       <!-- "Quanto vales Bruno Fernandes?" -->
       <!-- "Agora sabes porquê." -->
+      <!-- "Ela me disse que se juntaria a nós mais tarde." -->
     </antipattern>
     <rule>
       <pattern>

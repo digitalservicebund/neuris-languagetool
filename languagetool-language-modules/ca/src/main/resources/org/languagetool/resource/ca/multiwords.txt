@@ -1,5 +1,57 @@
 #Catalan multiwords file used for chunking
 #separatorRegExp=[\t;]
+Juan José Linz;NPMSSP0
+Juan J. Linz;NPMSSP0
+Juan Linz;NPMSSP0
+Louis-Gabriel Suchet;NPMSSP0
+New York Philharmonic;NPFSO00
+New York Philharmonic Orchestra;NPFSO00
+Eine kleine Nachtmusik;NPFSO00
+Sant Jeroni de Cotalba;NPMSG00
+Cartoixa de Valldecrist;NPFSG00
+Cartoixa de l'Annunciata;NPFSG00
+Annunciata de Porta Coeli;NPFSG00
+Afrika Bambaataa;NPMSSP0
+John Francis Clauser;NPMSSP0
+John F. Clauser;NPMSSP0
+Emilia Pérez;NPFSSP0
+Rachin Ravindra;NPMSSP0
+Iphigénie en Aulide;NPFSO00
+Iphigénie en Tauride;NPFSO00
+Freida McFadden;NPFSSP0
+Sarah Cohen;NPFSSP0
+Ágatha Ruiz de la Prada;NPFSSP0
+Llegenda àuria;NPFSO00
+Legenda aurea;NPFSO00
+Legenda sanctorum;NPFSO00
+Jacopo da Varazze;NPMSSP0
+Jacopo da Varagine;NPMSSP0
+Jaume de Voràgine;NPMSSP0
+Josep Maria Albaigès;NPMSSP0
+Sciences Po;NPMSO00
+Sciences Po Paris;NPMSO00
+Lunar Orbiter;NPMSO00
+Lunar Reconnaissance Orbiter;NPMSO00
+Feria de Abril;NPFSO00
+Sundiata Keita;NPMSSP0
+Charles-Jean de la Vallée-Poussin;NPMSSP0
+de la Vallée-Poussin;NPCNSP0
+David Bessis;NPMSSP0
+Omnilingual ASR;NPMSO00
+Josep Maria Farràs;NPMSSP0
+Albert Castellón;NPMSSP0
+Pont Euxí;NPMSG00
+pinot noir;AQ0CN0
+Pinot Noir;AQ0CN0
+Pagos de Anguix;NPCNO00
+Turró i Darder;NPCNSP0
+Ramon Turró;NPMSSP0
+Cristòfor Colom;NPMSSP0
+L'Esprit Nouveau;NPMSO00
+Woody Woodpecker;NPMSSP0
+Daffy Duck;NPMSSP0
+La Tour d'Argent;NPFSO00
+Tour d'Argent;NPFSO00
 Ramon Pelegero;NPMSSP0
 Rudolf Kalman;NPMSSP0
 happy flower;AQ0CN0
@@ -9969,6 +10021,7 @@ Svetlana Aleksiévitx;NPFSSP0
 Mikola Líssenko;NPMSSP0
 Mili Balàkirev;NPMSSP0
 Modest Mussorgski;NPMSSP0
+Modest Mússorgski;NPMSSP0
 Mstislav Rostropóvitx;NPMSSP0
 Nikita Mikhalkov;NPMSSP0
 Nikolai Miaskovski;NPMSSP0
@@ -11812,6 +11865,8 @@ Pedro Luis	NPMSSP0
 Pere Lluís;NPMSSP0
 Antonio Luis	NPMSSP0
 Antoni Lluís;NPMSSP0
+Sant Lluís;NPMSSP0
+sant Lluís;NPMSSP0
 Juan Luis	NPMSSP0
 Joan Lluís;NPMSSP0
 Joventut de Badalona	NPMSO00
@@ -13091,6 +13146,7 @@ apolat de sodi	NCMS000
 a bene placito;_Latin_
 a capite ad calcem;_Latin_
 a contrario;_Latin_
+a divinis;LOC_ADV
 a Deucalione;_Latin_
 a falsis principiis proficisci;_Latin_
 #a fortiori;_Latin_

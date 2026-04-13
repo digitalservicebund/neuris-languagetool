@@ -74,4 +74,21 @@ public class CatalanTest extends LanguageSpecificTest {
     assertEquals("Matches across rules in a rule group", 1, matches.size());
     assertEquals("Match ID", "REP_NO_OBSTANT_AIXO[1]", matches.get(0).getRule().getFullId());
   }
+
+  @Test
+  public void testTrimMatchEnds() throws IOException {
+    // SOLVENTAR_LA_PAPELETA: the verb prefix "Van" is common to error and all suggestions,
+    // so the underline should be trimmed to "solventar la papeleta" only.
+    Language lang = Catalan.getInstance();
+    JLanguageTool lt = new JLanguageTool(lang);
+    lt.enableRule("SOLVENTAR_LA_PAPELETA");
+    List<RuleMatch> matches = lt.check("Van solventar la papeleta.");
+    assertEquals(1, matches.size());
+    RuleMatch match = matches.get(0);
+    String sentence = "Van solventar la papeleta.";
+    String underlined = sentence.substring(match.getFromPos(), match.getToPos());
+    assertEquals("solventar la papeleta", underlined);
+    List<String> suggestions = match.getSuggestedReplacements();
+    assertEquals("[sortir del pas, eixir del pas, treure les castanyes del foc, salvar els mobles]", suggestions.toString());
+  }
 }

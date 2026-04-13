@@ -97,6 +97,12 @@ public class ApostophationHelper {
 
   public static String getPrepositionAndDeterminer(String newForm, String genderNumber, String preposition) {
     String apos = ""; // s'apostrofa o no
+    if (genderNumber.startsWith("C")) {
+      genderNumber = "M" + genderNumber.charAt(1);
+    }
+    if (genderNumber.endsWith("N")) {
+      genderNumber = genderNumber.charAt(0) + "S";
+    }
     if (!preposition.isEmpty()) {
       //a=a d=de per=p
       preposition = preposition.substring(0, 1).toLowerCase();

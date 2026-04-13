@@ -716,25 +716,22 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
                 <example correction="">Ele <marker>vai chegar</marker> a tempo.</example>
             </rule>
         </rulegroup>
-        <!-- CUMPRIR OS COMPROMISSOS honrar os compromissos -->
-        <rule id='HONRAR_COMPROMISSOS' name="Honrar compromissos" tags="picky">
-            <!--      Created by Marco A.G.Pinto, Portuguese rule 2021-09-22 (25-JUN-2021+)      -->
-            <!--
-            Vou cumprir os compromissos. → Vou honrar os compromissos.
-            Vou cumprir os meus compromissos. → Vou honrar os meus compromissos.
-            -->
+
+
+        <rule id='HONRAR_COMPROMISSOS' name="'Cumprir' compromissos → honrar" type='style' tags='picky'>
+            <!-- ChatGPT 5 and new disambiguator for 2026+ -->
             <pattern>
                 <marker>
-                    <token inflected='yes'>cumprir</token>
+                    <token skip='2' inflected='yes'>cumprir</token>
                 </marker>
-                <token min="0" max="1" regexp="yes">os?</token>
-                <token min="0" max="1" postag='DP.+' postag_regexp='yes'/>
                 <token regexp="yes">compromissos?</token>
             </pattern>
-            <message>É mais correto usar: <suggestion><match no='1' postag='V.+' postag_regexp='yes'>honrar</match></suggestion>.</message>
+            <message>Pode usar uma forma mais enfática:</message>
+            <suggestion><match no='1' postag='V.+' postag_regexp='yes'>honrar</match></suggestion>
             <example correction="honrar">Vou <marker>cumprir</marker> os compromissos.</example>
             <example>Vou honrar os meus compromissos.</example>
         </rule>
+
 
         <rule id='IMAGEM_DE_SATELITE' name="Imagem satélite → Imagem de satélite" tags="picky">
             <!--      Created by Tiago F. Santos, 2019-09-07      -->
@@ -3690,10 +3687,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
 
-    <category id='FORMAL' name='Linguagem formal' type='style' tone_tags="formal">
+    <category id='FORMAL' name='🤵 Linguagem formal' type='style' tone_tags="formal">
 
 
-        <rulegroup id='LENTO_MOROSO' name="Lento → moroso" type='style' tone_tags='formal'>
+        <rulegroup id='LENTO_MOROSO' name="🤵 Lento → moroso" type='style' tone_tags='formal'>
             <!-- ChatGPT 5 and new disambiguator for 2026+ -->
 
             <rule> <!-- #1: lentidão → morosidade -->
@@ -3740,7 +3737,62 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rulegroup>
 
 
-        <rule id='UNS_ALGUNS_UMAS_ALGUMAS' name="uns/umas → alguns/algumas" type='style' tone_tags='formal'>
+        <rule id='PASSAR_POR_DIFICULDADES' name="🤵 'Passar' [situação negativa] → 'passar por'/enfrentar" type='style' tone_tags='formal'>
+            <!-- ChatGPT 5 and new disambiguator for 2026+ -->
+            <pattern>
+                <marker>
+                    <token skip='1' inflected='yes'>passar<exception scope='next' postag='SPS.+|DA.+' postag_regexp='yes'/></token>
+                </marker>
+                <token regexp='yes' inflected='yes'>dificuldade|problema|crise|adversidade|contratempo|percalço|sofrimento|angústia|aflição|privação|carência</token>
+            </pattern>
+            <message>Em registos formais, prefira &quot;passar por [situação]&quot; ou &quot;enfrentar [situação]&quot;.</message>
+            <suggestion>\1 por</suggestion>
+            <suggestion><match no='1' postag='V.+' postag_regexp='yes'>enfrentar</match></suggestion>
+            <example correction="Passei por|Enfrentei"><marker>Passei</marker> dificuldades.</example>
+            <example correction="Passei por|Enfrentei"><marker>Passei</marker> grandes dificuldades.</example>
+            <example correction="Passei por|Enfrentei"><marker>Passei</marker> várias dificuldades.</example>
+            <example correction="Passei por|Enfrentei"><marker>Passei</marker> muitas dificuldades.</example>
+            <example>Alguém na minha frente estava discutindo com o inspetor, então eu pude passar sem problemas.</example>
+            <example>Quando perdemos isso ou quando passamos o problema para outra pessoa.</example>
+            <example>Os seus últimos anos de vida foram passados em sofrimento e viagens constantes ao estrangeiro.</example>
+            <example>Podemos passar pelo problema sem dificuldade.</example>
+            <example>Podemos passar por problemas sem vacilar.</example>
+        </rule>
+
+
+        <rule id='DURANTE_ESTE_O_PRESENTE' name="🤵 Forma administrativa: 'presente' + expressão temporal" type='style' tone_tags='formal'>
+            <!-- ChatGPT 5 and new disambiguator for 2026+ -->
+            <pattern>
+                <token>durante</token>
+                <marker>
+                    <token regexp='yes'>est[ae]</token>
+                </marker>
+                <token regexp='yes'>mês|ano|semestre|trimestre|período|ciclo|exercício|dia|intervalo|prazo|lapso|momento|instante|semana|data|fase|época</token>
+            </pattern>
+            <message>Em contexto formal, use &quot;presente&quot; com períodos de tempo (&quot;presente mês&quot;, &quot;presente semana&quot;). Em linguagem comum, prefira &quot;este/esta&quot;.</message>
+            <suggestion><match no='2' postag='DD0(.)S0' postag_replace='DA0$1S0'>o</match> presente</suggestion>
+            <example correction="a presente">Vou tratar disso durante <marker>esta</marker> semana.</example>
+            <example correction="o presente">Vou tratar disso durante <marker>este</marker> mês.</example>
+        </rule>
+
+
+        <rule id='NAO_DEIXAR_QUE_PERMITIR' name="🤵 Não 'deixar' que → permitir" type='style' tone_tags='formal'>
+            <!-- ChatGPT 5 and new disambiguator for 2026+ -->
+            <pattern>
+                <token>não</token>
+                <token min='0' max='1' regexp='yes' inflected='yes'>poder|dever</token>
+                <marker>
+                    <token inflected='yes'>deixar</token>
+                </marker>
+                <token>que</token>
+            </pattern>
+            <message>A expressão &quot;permitir&quot; é mais formal e direta do que &quot;deixar que&quot;.</message>
+            <suggestion><match no='3' postag='V.+' postag_regexp='yes'>permitir</match></suggestion>
+            <example correction="permitir">Não posso <marker>deixar</marker> que ele faça isso.</example>
+        </rule>
+
+
+        <rule id='UNS_ALGUNS_UMAS_ALGUMAS' name="🤵 uns/umas → alguns/algumas" type='style' tone_tags='formal'>
             <!-- ChatGPT 5 and new disambiguator for 2026+ -->
             <pattern>
                 <token regexp='yes' inflected='yes'>fazer|haver</token>
@@ -3756,7 +3808,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='PROXIMO_ZERO_PRATICAMENTE_NULO' name="próximo do zero → quase inexistente/praticamente nulo" type='style' tone_tags='formal'>
+        <rule id='PROXIMO_ZERO_PRATICAMENTE_NULO' name="🤵 próximo do zero → quase inexistente/praticamente nulo" type='style' tone_tags='formal'>
             <!-- ChatGPT 5 and new disambiguator for 2026+ -->
             <pattern>
                 <token postag='NC.+' postag_regexp='yes'>
@@ -3781,7 +3833,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='COMO_SEGUNDO_CONFORME' name="Como/segundo → conforme" type='style' tone_tags='formal'>
+        <rule id='COMO_SEGUNDO_CONFORME' name="🤵 Como/segundo → conforme" type='style' tone_tags='formal'>
             <!-- ChatGPT 5 and new disambiguator for 2026+ -->
             <pattern>
                 <marker>
@@ -3829,7 +3881,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='FAZER_PROCEDER' name="Formalização: fazer → proceder a (atos administrativos)" type='style' tone_tags='formal'>
+        <rule id='FAZER_PROCEDER' name="🤵 fazer → proceder a (atos administrativos)" type='style' tone_tags='formal'>
             <!-- ChatGPT 5 and new disambiguator for 2026+ -->
 
             <pattern>
@@ -3906,7 +3958,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rule id='DECIDIR_DELIBERAR' name="Decidir → deliberar (órgão colegiado)" type='style' tone_tags='formal'>
+        <rule id='DECIDIR_DELIBERAR' name="🤵 Decidir → deliberar (órgão colegiado)" type='style' tone_tags='formal'>
             <!-- ChatGPT 5 and new disambiguator for 2026+ -->
 
             <pattern>
@@ -3926,7 +3978,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rulegroup id='SOBRE_QUAL_QUAIS_INFLACIONADO' name="Construção 'sobre qual/quais' inflacionada" type='style' tone_tags='formal'>
+        <rulegroup id='SOBRE_QUAL_QUAIS_INFLACIONADO' name="🤵 Construção 'sobre qual/quais' inflacionada" type='style' tone_tags='formal'>
             <!-- ChatGPT 5 and new disambiguator for 2026+ -->
 
             <rule> <!-- #1: Comparativos/superlativos irregulares (adjetivos) -->
@@ -4913,45 +4965,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
                 <example>Com uma machadinha, desfere vários golpes na cabeça do chefe Wilmesdorf que desaba morto no chão da sala.</example>
             </rule>
         </rulegroup>
-
-
-        <!-- VESTIR calçar -->
-        <rule id='CONFUSÃO_VESTIR_CALÇAR' name="[Confusão] vestir/calçar" tags='picky' tone_tags="formal">
-            <antipattern>
-                <token>vestidos</token>
-                <token min="0" max="1" negate="yes" regexp="yes">botas?|chinelos?|galochas?|luvas?|meias?|peúgas?|sandálias?|sapatilhas?|sapatos?|ténis</token>
-                <token postag='_PUNCT'/>
-            </antipattern>
-            <antipattern>
-                <token inflected="yes" skip="2">vestir</token>
-                <token regexp="yes">meias?</token>
-                <token min="0">-</token>
-                <token regexp="yes">calças?</token>
-                <example>vesti a meia-calça</example>
-            </antipattern>
-            <antipattern>
-                <token inflected="yes">vestir</token>
-                <token postag="_PUNCT|_QUOT" postag_regexp="yes"/>
-                <example>As roupas que vestimos, os sapatos que usamos.</example>
-            </antipattern>
-            <pattern>
-                <marker>
-                    <token inflected="yes">vestir
-                        <exception regexp="yes">vestidos?|vestes</exception>
-                    </token>
-                </marker>
-                <token min="0" max="2" negate="yes" regexp="yes">botas?|chinelos?|galochas?|luvas?|meias?|peúgas?|sandálias?|sapatilhas?|sapatos?|t[éê]nis</token>
-                <token regexp="yes">botas?|chinelos?|galochas?|meias?|peúgas?|sandálias?|sapatilhas?|sapatos?|t[éê]nis</token>
-            </pattern>
-            <message>Prefira o verbo &quot;calçar&quot; nas extremidades dos membros do corpo.</message>
-            <suggestion><match no='1' postag='V.+' postag_regexp='yes'>calçar</match></suggestion>
-            <example correction="calçar">Vou <marker>vestir</marker> os sapatos.</example>
-            <example>Vou calçar os sapatos.</example>
-            <example>Não se esqueça de calçar as meias.</example>
-
-            <example>Kullervo abriu a arca que continha seus tesouros, deixando ver galas soberbas, vestidos esplêndidos, meias bordadas com fios de ouro, cintos e broches de prata.</example>
-            <example>Vence a indústria do luxo, porque a disputa hoje é sobre os melhores e piores vestidos, sapatos, acessórios, publicados exaustivamente pela imprensa internacional e, claro, repercutidos aqui no Brasil.</example>
-        </rule>
 
 
         <rule id='DIFERENTES' name="Ser diferente → Diferir" tags='picky'>
@@ -12381,44 +12394,45 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rulegroup>
 
 
-        <rule id='TORNAR_MAIS_FORTE' name="Tornar mais forte → Fortalecer" tone_tags="objective">
+        <rulegroup id='TORNAR_MAIS_FORTE_FRACO' name="Tornar mais forte/fraco → fortalecer/enfraquecer" tone_tags='objective'>
             <!--IDEA shorten_it-->
-            <!-- Created by Marco A.G.Pinto, Portuguese rule 2022-11-22 (Checked/Enhanced) (25-JUL-2022+) -->
-            <!--
-      As regras vão tornar mais forte o acordo. → As regras vão fortalecer o acordo.
-      -->
-            <pattern>
-                <marker>
-                    <token inflected='yes'>tornar</token>
-                    <token min="0" max="1">mais</token>
-                    <token regexp='yes'>fortes?</token>
-                </marker>
-                <token><exception postag_regexp='no' postag='SPS00'/></token>
-            </pattern>
-            <message>&simplify_msg;</message>
-            <suggestion><match no='1' postag='V.+' postag_regexp='yes'>fortalecer</match></suggestion>
-            <example correction="fortalecer">As regras vão <marker>tornar mais forte</marker> o acordo.</example>
-        </rule>
+            <!-- ChatGPT 5 and new disambiguator for 2026+ -->
 
+            <rule> <!-- fortalecer -->
+                <pattern>
+                    <marker>
+                        <token inflected='yes'>tornar
+                           <exception scope='previous' postag_regexp='yes' postag='PP.C.+'/>
+                           <exception postag_regexp='yes' postag='V.+:PP.C.+'/></token>
+                        <token min='0' max='1'>mais</token>
+                        <token skip='2' regexp='yes'>fortes?</token>
+                    </marker>
+                    <token postag='N.+|AQ.+' postag_regexp='yes'><exception scope='previous' postag='CC'/></token>
+                </pattern>
+                <message>&simplify_msg;</message>
+                <suggestion><match no='1' postag='V.+' postag_regexp='yes'>fortalecer</match></suggestion>
+                <example correction="fortalecer">As regras vão <marker>tornar mais forte</marker> o acordo.</example>
+                <example>Isso vai fortalecer o seu estudo sobre a matéria.</example>
+            </rule>
 
-        <rule id='TORNAR_MAIS_FRACO' name="Tornar mais fraco → Enfraquecer" tone_tags="objective">
-            <!--IDEA shorten_it-->
-            <!-- Created by Marco A.G.Pinto, Portuguese rule 2022-11-22 (Checked/Enhanced) (25-JUL-2022+) -->
-            <!--
-      As regras vão tornar mais fraco o acordo. → As regras vão enfraquecer o acordo.
-      -->
-            <pattern>
-                <marker>
-                    <token inflected='yes'>tornar</token>
-                    <token min="0" max="1">mais</token>
-                    <token regexp='yes'>frac[ao]s?</token>
-                </marker>
-                <token><exception postag_regexp='no' postag='SPS00'/></token>
-            </pattern>
-            <message>&simplify_msg;</message>
-            <suggestion><match no='1' postag='V.+' postag_regexp='yes'>enfraquecer</match></suggestion>
-            <example correction="enfraquecer">As regras vão <marker>tornar mais fraco</marker> o acordo.</example>
-        </rule>
+            <rule> <!-- enfraquecer -->
+                 <pattern>
+                    <marker>
+                        <token inflected='yes'>tornar
+                           <exception scope='previous' postag_regexp='yes' postag='PP.C.+'/>
+                           <exception postag_regexp='yes' postag='V.+:PP.C.+'/></token>
+                        <token min='0' max='1'>mais</token>
+                        <token skip='2' regexp='yes'>frac[ao]s?</token>
+                    </marker>
+                    <token postag='N.+|AQ.+' postag_regexp='yes'><exception scope='previous' postag='CC'/></token>
+                 </pattern>
+                 <message>&simplify_msg;</message>
+                 <suggestion><match no='1' postag='V.+' postag_regexp='yes'>enfraquecer</match></suggestion>
+                 <example correction="enfraquecer">As regras vão <marker>tornar mais fraco</marker> o acordo.</example>
+                <example>Isso vai enfraquecer o seu estudo sobre a matéria.</example>
+            </rule>
+
+        </rulegroup>
 
 
         <rule id='TRABALHO_PAGO_REMUNERADO' name="Trabalho 'pago'/'remunerado'" tone_tags="objective">
@@ -19780,418 +19794,22 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
         </rule>
 
 
-        <rulegroup id='VER_OBSERVAR_CONSTATAR' name="🎓 Ver → Observar/Constatar" type="style" tags="picky" tone_tags="academic" is_goal_specific="true">
-            <antipattern>
-                <token case_sensitive="yes">VI</token>
-                <example>Constantino VI no ano 790 da nossa era.</example>
-            </antipattern>
-            <antipattern>
-                <token inflected='yes' skip='-1'>ver</token>
-                <token regexp='yes'>filmes?|vídeos?|séries?|mensagem|mensagens|cenas?|televisão|tv|lado</token>
-            </antipattern>
-            <antipattern>
-                <token>via</token>
-                <token regexp='yes'>d[eoa]s?</token>
-            </antipattern>
-            <antipattern>
-                <token>não</token>
-                <token inflected='yes'>ver</token>
-            </antipattern>
-            <!--
-            Ela não pode ter me visto na festa.
-            Você se importaria em vir e me ver no sábado?
-            Por que não deu para você vir no sábado?
-            Deixe-me ver o seu pulso.
-            Do topo podia-se ver o rio.
-            Deixe-me ver a lista.
-            Estava muito nublado para ver o avião.
-            Eu gostaria de ver o senhor Kosugi.
-            Eu gostaria de ver o mundo antigo.
-            Dá para ver a diferença?
-            Acabei de ver o seu amigo.
-            -->
-            <rule>
-                <antipattern>
-                    <token postag='V.+|CC' postag_regexp='yes'/>
-                    <token min="0" max="1" regexp='yes' spacebefore='no'>&tracos_de_separacao;</token>
-                    <token postag='PP.+|DA.+|PD.+|SPS00' postag_regexp='yes'/>
-                    <token inflected='yes'>ver</token>
-                </antipattern>
-
-                <!--
-                Veja a palavra no dicionário.
-                A ver a liberdade que lhes era retirada.
-                Na forma como via o curso que o panorama cultural português levava.
-                Eu não consigo ver as palavras no quadro.
-                Muitos canadenses valorizam o multiculturalismo e veem o Canadá como sendo inerentemente multicultural.
-                Esta noite pode-se ver a Lua cheia.
-                Eu vi o John na biblioteca.
-                Tom planeja ver a Mary na segunda.
-                Você já viu a figura pintada por Picasso?
-                Veja os cursos avaliados!
-                Podemos ver o porto inteiro do prédio.
-                Não vejo o porquê precisarmos disso.
-                Acho pouco provável que alienígenas parecidos com os que vemos nos filmes já tenham visitado nosso planeta.
-                -->
-                <antipattern>
-                    <token inflected='yes'>ver</token>
-                    <token postag='DA.+|DI.+|DP.+|PP.+' postag_regexp='yes'/>
-                    <token postag='AQ.+|NC.+|NP.+' postag_regexp='yes'/>
-                    <token postag='SPS00.DA.*|CS|V.+' postag_regexp='yes'/>
-                </antipattern>
-
-                <!--
-                Com você é verão o ano inteiro.
-                Aproveitamos e almoçamos em um restaurante ali na praça, a dica aqui é ver os pratos do dia.
-                Foram ver o amigo defunto pela última vez no velório.
-                O Tom foi ver a Mary três dias depois daquilo.
-                Tu foste ver o Tom?
-                -->
-                <antipattern>
-                    <token inflected='yes'>ser</token>
-                    <token regexp='yes'>ver|verão</token>
-                </antipattern>
-
-                <!--
-                O estilo de combate assemelha-se ao de guerrilha visto os radicais estarem entrincheirados.
-                Era visto pela ditadura militar que se instalou no país, em 1964, como um elemento subversivo.
-                Kennedy também foi mal-visto pelos comandantes militares dos Estados Unidos.
-                Ou o nativo visto pelo prisma do etnógrafo?
-                Ninguém tem visto o Tom por um tempo.
-                Pensei que já tivesse visto o Tom em algum lugar.
-                Disposto a desfazer o mal entendido entre a ciência e a religião, conseguiu ser mal visto pelos representantes de ambas.
-                Era visto nas mãos de todos os japoneses em paradas.
-                -->
-                <antipattern>
-                    <token negate="yes" inflected='yes'>ser</token>
-                    <token regexp='yes'>vist[ao]s?</token>
-                    <token negate_pos="yes" postag='SPS00.DA.*' postag_regexp='yes'/>
-                    <token min="1" max="2" postag='NP.+|AQ.+|NC.+|V.+' postag_regexp='yes'>
-                        <exception postag_regexp='yes' postag='CS|RG'/>
-                    </token>
-                    <token postag='SPS.+|CS|V.+|CC|RM|RG' postag_regexp='yes'/>
-                </antipattern>
-
-                <!-- MARCOAGPINTO 2022-01-24/25 (1-JAN-2022+) *START* -->
-                <!--
-                HITS IN 600000 SENTENCES:
-                BEFORE:2236
-                AFTER:2164
-                -->
-                <!--
-                Para mais informações, veja a página número 16.
-                Você viu o livro de receitas que eu escrevi?
-                Veja a nota de rodapé na página 5.
-                Veja na linha seguinte.
-                -->
-                <antipattern>
-                    <token inflected='yes'>ver</token>
-                    <token regexp='yes'>[ao]s?|d[ao]s?|n[ao]s?</token>
-                    <token regexp='yes'>abstracts?|anexos?|assuntos?|bíblias?|bibliotecas?|capítulos?|códigos?|conclusão|conclusões|dicionários?|documentários?|filmes?|folhas?|índices?|introdução|introduções|linhas?|livros?|narrativas?|notas?|páginas?|parágrafos?|resumos?|rodapés?|screenshots?|secção|secções|subcapítulos?|títulos?|tópicos?</token>
-                </antipattern>
-                <!-- MARCOAGPINTO 2022-01-24/25 (1-JAN-2022+) *END* -->
-
-                <!-- MARCOAGPINTO 2022-01-24 (1-JAN-2022+) *START* -->
-                <!--
-                HITS IN 600000 SENTENCES:
-                BEFORE:2452
-                AFTER:2215
-                -->
-                <!--
-                Você já viu o Monte Fuji? É indescritivelmente lindo.
-                Também quero ver o Sam, curto algumas musicas dele.
-                Eu não deveria ter ido ver o Tom.
-                Há quatro meses que não vejo a Maria.
-                -->
-                <antipattern>
-                    <token inflected='yes'>ver</token>
-                    <token min="0" max="1" negate="yes" regexp='yes'>[ao]s?|de|d[ao]s?|n[ao]s?|em</token>
-                    <token regexp='yes'>[ao]s?|de|d[ao]s?|n[ao]s?|em</token>
-                    <token postag='NP.+' postag_regexp='yes'/>
-                </antipattern>
-
-                <!--
-                Você viu o que o Tom fez à Mary?
-                Deus vê o que o Diabo esconde.
-                Veja o que o Tom tem a dizer sobre tudo isso.
-                -->
-                <antipattern>
-                    <token inflected='yes'>ver</token>
-                    <token regexp='yes'>[ao]s?</token>
-                    <token>que</token>
-                    <token min="0" max="1" negate="yes" regexp='yes'>[ao]s?|de|d[ao]s?|n[ao]s?|em</token>
-                    <token regexp='yes'>[ao]s?|de|d[ao]s?|n[ao]s?|em</token>
-                    <token postag='NP.+' postag_regexp='yes'/>
-                </antipattern>
-                <!-- MARCOAGPINTO 2022-01-24 (1-JAN-2022+) *END* -->
-
-                <!-- MARCOAGPINTO 2022-02-06 (1-JAN-2022+) *START* -->
-                <!--
-                Fico na cama a olhar para o relógio a ver a hora a aproximar.
-                -->
-                <antipattern>
-                    <token inflected='yes'>ver</token>
-                    <token regexp='yes'>[ao]s?</token>
-                    <token regexp='yes'>&expressoes_de_tempo;</token>
-                    <token regexp='yes'>[ao]s?</token>
-                </antipattern>
-                <!-- MARCOAGPINTO 2022-02-06 (1-JAN-2022+) *END* -->
-
-                <!-- MARCOAGPINTO 2022-03-22 (1-JAN-2022+) *START* -->
-                <!--
-                TO ACTIVATE THE RULE IN WORDINESS.TXT FOR THE BROWSER ADD-ON
-                ver a diferença > distinguir
-                -->
-                <antipattern>
-                    <token>ver</token>
-                    <token>a</token>
-                    <token>diferença</token>
-                </antipattern>
-                <!-- MARCOAGPINTO 2022-03-22 (1-JAN-2022+) *END* -->
-                <antipattern>
-                    <token inflected='yes'>ver</token>
-                    <token>o</token>
-                    <token>que</token>
-                </antipattern>
-                <antipattern>
-                    <token inflected='yes'>ver</token>
-                    <token postag='D.+|SPS00:DA.+' postag_regexp='yes' min='0' max='2'/>
-                    <token regexp='yes'>&vocativos;|rostos?|anúncios?|notícias?</token>
-                    <example>Fui ver meus amigos.</example>
-                </antipattern>
-                <antipattern>
-                    <token inflected='yes'>ver</token>
-                    <token postag='SPS00:DA0FS0'/>
-                    <token>internet</token>
-                    <example>Não se pode acreditar em tudo que vemos pela internet.</example>
-                </antipattern>
-                <antipattern>
-                    <token inflected='yes'>ver</token>
-                    <token>à</token>
-                </antipattern>
-                <antipattern>
-                    <token regexp='yes'>tô|tá|tão</token>
-                    <token inflected='yes'>ver</token>
-                    <example>Não tô vendo nada.</example>
-                </antipattern>
-                <antipattern>
-                    <token postag='AO.+' postag_regexp='yes'/>
-                    <token>via</token>
-                    <example>Retirei a segunda via do cartão.</example>
-                </antipattern>
-                <antipattern>
-                    <token postag='NC.S.+' postag_regexp='yes'/>
-                    <token>via</token>
-                    <example>Retirei a 2ª via do cartão.</example>
-                </antipattern>
-                <antipattern>
-                    <token regexp='yes'>\d+|uma|duas|principal|principais</token>
-                    <token regexp='yes'>via|vias</token>
-                    <example>Retirei 01 via do cartão.</example>
-                </antipattern>
-                <antipattern>
-                    <token regexp='yes'>&pronomes_obliquos;</token>
-                    <token inflected='yes'>ver</token>
-                    <example>Te vi chegar em casa ontem.</example>
-                </antipattern>
-                <antipattern>
-                    <token postag_regexp="yes" postag="V.+:PP.+"/>
-                    <token inflected='yes'>ver</token>
-                    <example>Deixa-me ver isso aqui.</example>
-                </antipattern>
-                <antipattern>
-                    <token inflected='yes'>ver</token>
-                    <token postag='PP.+' postag_regexp='yes'/>
-                    <example>Vi você chegar em casa ontem.</example>
-                </antipattern>
-                <antipattern>
-                    <token>o</token>
-                    <token>que</token>
-                    <token inflected='yes'>ver</token>
-                    <token regexp='yes'>&contracoes_MS;|&contracoes_FS;|&contracoes_MP;|&contracoes_FP;</token>
-                    <example>Não sei o que ele vê nela.</example>
-                </antipattern>
-                <antipattern>
-                    <token>já</token>
-                    <token inflected='yes'>ver</token>
-                    <example>Já vi esse filme antes.</example>
-                </antipattern>
-                <antipattern>
-                    <token inflected='yes'>ver</token>
-                    <token>a</token>
-                    <token>hora</token>
-                    <example>Não via a hora de chegar em casa.</example>
-                </antipattern>
-                <antipattern>
-                    <token inflected='yes'>ver</token>
-                    <token>no</token>
-                    <token>olho</token>
-                    <example>Hoje vejo no olho dele que há algo de errado.</example>
-                </antipattern>
-                <antipattern>
-                    <token inflected='yes'>ver</token>
-                    <token>o</token>
-                    <token>melhor</token>
-                    <example>Hoje vejo o melhor em mim.</example>
-                </antipattern>
-                <antipattern>
-                    <token inflected='yes'>ver</token>
-                    <token>a</token>
-                    <token>vida</token>
-                    <example>Há tantas formas de ver a vida...</example>
-                </antipattern>
-                <antipattern>
-                    <token regexp='yes' inflected='yes'>estar|ir</token>
-                    <token inflected='yes'>ver</token>
-                    <example>Não está vendo que ela está infeliz?</example>
-                    <example>Você vai ver o que é bom.</example>
-                </antipattern>
-                <antipattern>
-                    <token postag='SPS00|SPS00:DA0FS0' postag_regexp='yes'/>
-                    <token regexp='yes'>vias?</token>
-                    <example>Por via das dúvidas, é melhor irmos juntas.</example>
-                    <example>Acabei a encontrando na via principal.</example>
-                </antipattern>
-                <antipattern>
-                    <token>via</token>
-                    <token>de</token>
-                    <token>regra</token>
-                    <example>Via de regra, sempre dá errado.</example>
-                </antipattern>
-                <antipattern>
-                    <token inflected='yes'>ver</token>
-                    <token postag='DA.+|SPS00.DA.*' postag_regexp='yes'/>
-                    <token regexp='yes'>vídeos?|looks?</token>
-                    <example>Veja o vídeo e tire suas conclusões.</example>
-                </antipattern>
-                <antipattern>
-                    <token inflected='yes'>ver</token>
-                    <token postag='DA.+|SPS00.DA.*' postag_regexp='yes' skip='-1'/>
-                    <token regexp='yes'>vídeos?|looks?|tamanhos?|dimensão|dimensões</token>
-                    <example>Veja o caso da criança que fugiu!</example>
-                    <example>Veja o tamanho disso!</example>
-                </antipattern>
-                <antipattern>
-                    <token regexp='yes' inflected='yes'>querer|ser</token>
-                    <token inflected='yes'>ver</token>
-                    <example>Quero ver o que ele fará depois de perder tudo.</example>
-                    <example>Ele é visto como o herói da família.</example>
-                </antipattern>
-                <antipattern>
-                    <token>nunca</token>
-                    <token inflected='yes'>ver</token>
-                    <example>Nunca vi isso na vida.</example>
-                </antipattern>
-                <antipattern>
-                    <token postag='SENT_START'/>
-                    <token>veja</token>
-                    <example>Veja os comentários.</example>
-                </antipattern>
-                <antipattern>
-                    <token postag='VMP00.+' postag_regexp='yes'/>
-                    <token>via</token>
-                    <token postag='(SPS00:)?[DP][ADIPRT].+' postag_regexp='yes'/>
-                    <example>Eles são frequentemente obtidos via as atividades ilegais.</example>
-                </antipattern>
-                <pattern>
-                    <marker>
-                        <token inflected='yes'>ver
-                            <exception regexp='yes' inflected='yes'>vestir|ir|virar|vender</exception>
-                            <exception regexp='yes'>verdes?|vir</exception>
-                        </token>
-                    </marker>
-                    <token postag='DA.+|SPS00.DA.*' postag_regexp='yes'/>
-                    <token negate_pos="yes" postag='AQ.+|AO.+' postag_regexp='yes'/>
-                </pattern>
-                <message>Num contexto formal, é preferível escrever &quot;observar&quot; ou &quot;constatar&quot;.</message>
-                <suggestion><match no='1' postag='V.+' postag_regexp='yes'>observar</match></suggestion>
-                <suggestion><match no='1' postag='V.+' postag_regexp='yes'>constatar</match></suggestion>
-                <suggestion><match no='1' postag='V.+' postag_regexp='yes'>conferir</match></suggestion>
-                <suggestion><match no='1' postag='V.+' postag_regexp='yes'>avistar</match></suggestion>
-                <suggestion><match no='1' postag='V.+' postag_regexp='yes'>perceber</match></suggestion>
-                <example correction="observar|constatar|conferir|avistar|perceber">É fácil como podem <marker>ver</marker> na figura.</example>
-
-                <example>Ela não pode ter me visto na festa.</example>
-                <example>Você se importaria em vir e me ver no sábado?</example>
-                <example>Por que não deu para você vir no sábado?</example>
-                <example>Deixe-me ver o seu pulso.</example>
-                <example>Do topo podia-se ver o rio.</example>
-                <example>Deixe-me ver a lista.</example>
-<!--                <example>Estava muito nublado para ver o avião.</example> -->
-                <example>Eu gostaria de ver o senhor Kosugi.</example>
-                <example>Eu gostaria de ver o mundo antigo.</example>
-                <example>Dá para ver a diferença?</example>
-                <example>Acabei de ver o seu amigo.</example>
-
-                <example>Veja a palavra no dicionário.</example>
-                <example>A ver a liberdade que lhes era retirada.</example>
-                <example>Na forma como via o curso que o panorama cultural português levava.</example>
-                <example>Eu não consigo ver as palavras no quadro.</example>
-                <example>Muitos canadenses valorizam o multiculturalismo e veem o Canadá como sendo inerentemente multicultural.</example>
-                <example>Esta noite pode-se ver a Lua cheia.</example>
-                <example>Eu vi o John na biblioteca.</example>
-                <example>Tom planeja ver a Mary na segunda.</example>
-                <example>Você já viu a figura pintada por Picasso?</example>
-                <example>Veja os cursos avaliados!</example>
-<!--                <example>Podemos ver o porto inteiro do prédio.</example> -->
-                <example>Não vejo o porquê precisarmos disso.</example>
-                <example>Acho pouco provável que alienígenas parecidos com os que vemos nos filmes já tenham visitado nosso planeta.</example>
-
-                <example>Com você é verão o ano inteiro.</example>
-                <example>Aproveitamos e almoçamos em um restaurante ali na praça, a dica aqui é ver os pratos do dia.</example>
-                <example>Foram ver o amigo defunto pela última vez no velório.</example>
-                <example>O Tom foi ver a Mary três dias depois daquilo.</example>
-                <example>Tu foste ver o Tom?</example>
-
-                <example>O estilo de combate assemelha-se ao de guerrilha visto os radicais estarem entrincheirados.</example>
-                <example>Era visto pela ditadura militar que se instalou no país, em 1964, como um elemento subversivo.</example>
-                <example>Kennedy também foi mal-visto pelos comandantes militares dos Estados Unidos.</example>
-                <example>Ou o nativo visto pelo prisma do etnógrafo?</example>
-                <example>Ninguém tem visto o Tom por um tempo.</example>
-                <example>Pensei que já tivesse visto o Tom em algum lugar.</example>
-                <example>Disposto a desfazer o mal entendido entre a ciência e a religião, conseguiu ser mal visto pelos representantes de ambas.</example>
-                <example>Era visto nas mãos de todos os japoneses em paradas.</example>
-
-                <example>Para mais informações, veja a página número 16.</example>
-                <example>Você viu o livro de receitas que eu escrevi?</example>
-                <example>Veja a nota de rodapé na página 5.</example>
-                <example>Veja na linha seguinte.</example>
-
-                <example>Você já viu o Monte Fuji? É indescritivelmente lindo.</example>
-                <example>Também quero ver o Sam, curto algumas musicas dele.</example>
-                <example>Eu não deveria ter ido ver o Tom.</example>
-                <example>Há quatro meses que não vejo a Maria.</example>
-
-                <example>Você viu o que o Tom fez à Mary?</example>
-                <example>Deus vê o que o Diabo esconde.</example>
-                <example>Veja o que o Tom tem a dizer sobre tudo isso.</example>
-
-                <example>Vou ver a diferença.</example>
-            </rule>
-            <rule>
-                <antipattern>
-                    <token>via</token>
-                    <token postag='SPS00:D.*' postag_regexp='yes'/>
-                    <example>oficialmente por via da internet</example>
-                </antipattern>
-                <pattern>
-                    <marker>
-                        <token inflected='yes'>ver
-                            <exception regexp='yes' inflected='yes'>vestir|ir|virar|vender</exception>
-                            <exception regexp='yes'>verdes?|vir</exception>
-                        </token>
-                    </marker>
-                    <token postag='DA.+|SPS00.DA.*' postag_regexp='yes'/>
-                    <token regexp='yes'>notícias?|jornal|anúncios?|folhetos?|cartaze?s?|panfletos?|placas?|jornais|revistas?|internet</token>
-                </pattern>
-                <message>Num contexto formal, é preferível usar o verbo &quot;ler&quot; ou &quot;assistir&quot;.</message>
-                <suggestion><match no='1' postag='V.+' postag_regexp='yes'>ler</match></suggestion>
-                <suggestion><match no='1' postag='V.+' postag_regexp='yes'>assistir</match></suggestion>
-                <suggestion><match no='1' postag='V.+' postag_regexp='yes'>descobrir</match></suggestion>
-                <suggestion><match no='1' postag='V.+' postag_regexp='yes'>observar</match></suggestion>
-                <example correction="Lemos|Assistimos|Descobrimos|Observamos"><marker>Vimos</marker> no jornal o que aconteceu.</example>
-            </rule>
-        </rulegroup>
+        <rule id='VER_OBSERVAR_CONSTATAR_V2' name="🎓 Ver → observar/constatar" type='style' tone_tags='academic' is_goal_specific='true'>
+            <!-- ChatGPT 5 and new disambiguator for 2026+ -->
+            <!-- This rule used to have thousands of FPs. It is now very strict using the most common academic used words -->
+            <pattern>
+                <marker>
+                    <token skip='1' inflected='yes'>ver</token>
+                </marker>
+                <token skip='1' regexp='yes'>que|n[ao]s?|em</token>
+                <token postag='NC.+|AQ.+' postag_regexp='yes' regexp='yes' inflected='yes'>dado|resultado|figura|tabela|gráfico|estudo|análise|evidência|amostra|variável|modelo|experiência|ensaio|distribuição|correlação</token>
+            </pattern>
+            <message>Em contexto formal/científico, prefira &quot;observar&quot; ou &quot;constatar&quot;.</message>
+            <suggestion><match no='1' postag='V.+' postag_regexp='yes'>observar</match></suggestion>
+            <suggestion><match no='1' postag='V.+' postag_regexp='yes'>constatar</match></suggestion>
+            <example correction="observar|constatar">É fácil como podem <marker>ver</marker> na figura.</example>
+            <example correction="observar|constatar">Podemos <marker>ver</marker> que há correlação.</example>
+        </rule>
 
 
         <rule id='CERTA_CERTO_DADA_DADO' name="🤵 'Certa' altura → dada" type='style' tone_tags='formal'>

@@ -8927,6 +8927,9 @@ Wirtschaftswaise/N
 Wirtschaftswaiser
 Überparteileiche/N
 Vollmacheten
+Kirchblüte/N
+Kirchbäume/N
+Kirchbaumblüte/N
 Elementarschjudenversicherung #strange suggestion
 .*ministein   # statt ...ministerin
 .*farbend/A

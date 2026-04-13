@@ -532,11 +532,7 @@ public class UkrainianHybridDisambiguationTest {
     TestTools.myAssert("Держдепартамент", "/[null]SENT_START Держдепартамент/[Держдепартамент]noun:inanim:m:v_naz:prop|Держдепартамент/[Держдепартамент]noun:inanim:m:v_zna:prop",
         tokenizer, sentenceTokenizer, tagger, disambiguator);
 
-    TestTools.myAssert("вікіпедія", "/[null]SENT_START вікіпедія/[вікіпедія]noun:inanim:f:v_naz:bad",
-        tokenizer, sentenceTokenizer, tagger, disambiguator);
-
-    // technically plural is not :bad but it's tricky to take it off
-    TestTools.myAssert("вікіпедіях", "/[null]SENT_START вікіпедіях/[вікіпедія]noun:inanim:p:v_mis:bad",
+    TestTools.myAssert("держземагентства", "/[null]SENT_START держземагентства/[держземагентство]noun:inanim:n:v_rod:bad",
         tokenizer, sentenceTokenizer, tagger, disambiguator);
   }
 
@@ -559,9 +555,89 @@ public class UkrainianHybridDisambiguationTest {
         + "  /[null]null мами/[мама]noun:anim:f:v_rod|мами/[мама]noun:anim:p:v_naz",
         tokenizer, sentenceTokenizer, tagger, disambiguator);
     TestTools.myAssert("прийняв її до уваги", "/[null]SENT_START прийняв/[прийняти]verb:perf:past:m"
-        + "  /[null]null її/[вона]noun:unanim:f:v_rod:pron:pers:3|її/[вона]noun:unanim:f:v_zna:pron:pers:3|її/[її]adj:n:v_dav:nv:pron:pos|її/[її]adj:n:v_naz:nv:pron:pos|її/[її]adj:n:v_oru:nv:pron:pos|її/[її]adj:n:v_rod:nv:pron:pos|її/[її]adj:n:v_zna:nv:pron:pos|її/[її]adj:p:v_dav:nv:pron:pos|її/[її]adj:p:v_naz:nv:pron:pos|її/[її]adj:p:v_oru:nv:pron:pos|її/[її]adj:p:v_rod:nv:pron:pos|її/[її]adj:p:v_zna:rinanim:nv:pron:pos"
+        + "  /[null]null її/[вона]noun:unanim:f:v_rod:pron:pers:3|її/[вона]noun:unanim:f:v_zna:pron:pers:3"
         + "  /[null]null до/[до]prep  /[null]null уваги/[увага]noun:inanim:f:v_rod|уваги/[увага]noun:inanim:p:v_naz|уваги/[увага]noun:inanim:p:v_zna",
         tokenizer, sentenceTokenizer, tagger, disambiguator);
+  }
+
+  
+  @Test
+  public void testYih() throws IOException {
+    TestTools.myAssert("їх кількість.",
+        "/[null]SENT_START"
+        + " їх/[вони]noun:unanim:p:v_rod:pron:pers:3|їх/[вони]noun:unanim:p:v_zna:pron:pers:3"
+        + "  /[null]null кількість/[кількість]noun:inanim:f:v_naz|кількість/[кількість]noun:inanim:f:v_zna"
+        + " ./[null]null",
+        tokenizer, sentenceTokenizer, tagger, disambiguator);
+    
+    TestTools.myAssert("їх забули.",
+        "/[null]SENT_START"
+        + " їх/[вони]noun:unanim:p:v_rod:pron:pers:3|їх/[вони]noun:unanim:p:v_zna:pron:pers:3"
+        + "  /[null]null забули/[забути]verb:perf:past:p"
+        + " ./[null]null",
+        tokenizer, sentenceTokenizer, tagger, disambiguator);
+    
+    TestTools.myAssert("ми досліджуємо їх, вони",
+        "/[null]SENT_START"
+        + " ми/[ми]noun:anim:p:v_naz:pron:pers:1"
+        + "  /[null]null досліджуємо/[досліджувати]verb:imperf:pres:p:1"
+        + "  /[null]null їх/[вони]noun:unanim:p:v_rod:pron:pers:3|їх/[вони]noun:unanim:p:v_zna:pron:pers:3"
+        + " ,/[null]null"
+        + "  /[null]null вони/[вони]noun:unanim:p:v_naz:pron:pers:3",
+        tokenizer, sentenceTokenizer, tagger, disambiguator);
+    
+    TestTools.myAssert("Загнав їх у кут.",
+        "/[null]SENT_START"
+        + " Загнав/[загнати]verb:perf:past:m"
+        + "  /[null]null їх/[вони]noun:unanim:p:v_rod:pron:pers:3|їх/[вони]noun:unanim:p:v_zna:pron:pers:3"
+        + "  /[null]null у/[у]prep  /[null]null кут/[кут]noun:inanim:m:v_naz|кут/[кут]noun:inanim:m:v_zna"
+        + " ./[null]null",
+        tokenizer, sentenceTokenizer, tagger, disambiguator);
+    
+    TestTools.myAssert("Загнав їх.",
+        "/[null]SENT_START"
+        + " Загнав/[загнати]verb:perf:past:m"
+        + "  /[null]null їх/[вони]noun:unanim:p:v_rod:pron:pers:3|їх/[вони]noun:unanim:p:v_zna:pron:pers:3"
+        + " ./[null]null",
+        tokenizer, sentenceTokenizer, tagger, disambiguator);
+    
+    TestTools.myAssert("що їх не знали",
+        "/[null]SENT_START"
+        + " що/[що]conj:subord|що/[що]noun:inanim:n:v_naz:pron:int:rel|що/[що]noun:inanim:n:v_zna:pron:int:rel"
+        + "  /[null]null їх/[вони]noun:unanim:p:v_rod:pron:pers:3|їх/[вони]noun:unanim:p:v_zna:pron:pers:3"
+        + "  /[null]null"
+        + " не/[не]part"
+        + "  /[null]null знали/[знати]verb:imperf:past:p",
+        tokenizer, sentenceTokenizer, tagger, disambiguator);
+    
+    TestTools.myAssert("Загнав його у кут.",
+        "/[null]SENT_START"
+        + " Загнав/[загнати]verb:perf:past:m"
+        + "  /[null]null його/[воно]noun:unanim:n:v_rod:pron:pers:3|його/[воно]noun:unanim:n:v_zna:pron:pers:3|його/[він]noun:unanim:m:v_rod:pron:pers:3|його/[він]noun:unanim:m:v_zna:pron:pers:3"
+        + "  /[null]null у/[у]prep  /[null]null кут/[кут]noun:inanim:m:v_naz|кут/[кут]noun:inanim:m:v_zna"
+        + " ./[null]null",
+        tokenizer, sentenceTokenizer, tagger, disambiguator);
+    
+    TestTools.myAssert("примусили її сказати.",
+        "/[null]SENT_START"
+        + " примусили/[примусити]verb:perf:past:p"
+        + "  /[null]null її/[вона]noun:unanim:f:v_rod:pron:pers:3|її/[вона]noun:unanim:f:v_zna:pron:pers:3"
+        + "  /[null]null сказати/[сказати]verb:perf:inf"
+        + " ./[null]null",
+        tokenizer, sentenceTokenizer, tagger, disambiguator);
+    
+    TestTools.myAssert("на його душу.",
+        "/[null]SENT_START"
+        + " на/[на]prep"
+        + "  /[null]null його/[воно]noun:unanim:n:v_rod:pron:pers:3|його/[воно]noun:unanim:n:v_zna:pron:pers:3|його/[він]noun:unanim:m:v_rod:pron:pers:3|його/[він]noun:unanim:m:v_zna:pron:pers:3|його/[його]adj:f:v_zna:nv:pron:pos|його/[його]adj:m:v_dav:nv:pron:pos|його/[його]adj:m:v_mis:nv:pron:pos|його/[його]adj:m:v_rod:nv:pron:pos"
+        + "  /[null]null душу/[душ]noun:inanim:m:v_dav|душу/[душ]noun:inanim:m:v_mis|душу/[душ]noun:inanim:m:v_rod|душу/[душа]noun:inanim:f:v_zna"
+        + " ./[null]null",
+        tokenizer, sentenceTokenizer, tagger, disambiguator);
+    
+    // TODO: ignore these
+    //  та її не надто швидка хода
+    // триватимуть його не дуже успішні реформи
+    // Це була її не перша спроба
   }
 
   @Test

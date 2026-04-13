@@ -393,19 +393,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     </rulegroup>
 
 
-    <rule id='ALUGAR_CASA' name="🇵🇹 'alugar' imóvel → 'arrendar'" type='style' tone_tags="objective">
-        <pattern>
-            <marker>
-                <token skip='4' inflected='yes'>alugar</token>
-            </marker>
-            <token regexp='yes' inflected='yes'>apartamento|casa|habitação|imóvel|moradia|vivenda</token>
-        </pattern>
-        <message>Se não pretende realçar o tipo de imóvel, considere <suggestion><match no='1' postag='V.+' postag_regexp='yes'>arrendar</match></suggestion>.</message>
-        <example correction="arrendar">Vou <marker>alugar</marker> uma casa em Lisboa.</example>
-        <example correction="Arrendei"><marker>Aluguei</marker> um apartamento em Lisboa.</example>
-    </rule>
-
-
 <rulegroup id='ORDINAL_ABREVIATION' name="🇵🇹 Abreviatura de ordinais: 1º → 1.º" tone_tags="formal">
     <!--  Created by Tiago F. Santos, 20-07-2017 -->
     <url>https://ciberduvidas.iscte-iul.pt/artigos/rubricas/idioma/ainda-sobre-a-abreviatura-do-numeral-ordinal-com-ou-sem-o-sobrescrito-sublinhado/2680</url>
@@ -496,6 +483,47 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 
     <category id='FORMAL_SPEECH_PT_PT' name='🇵🇹 Linguagem Formal' type='register' tone_tags="formal">
+
+
+      <rule id='COM_OS_MELHORES_CUMPRIMENTOS' name="🇵🇹🤵 Uniformização de despedidas formais" type='style' tone_tags='formal'>
+          <!-- ChatGPT 5 and new disambiguator for 2026+ -->
+          <pattern>
+              <token postag='SENT_START'/>
+              <marker>
+                  <token min='0' max='1' regexp='yes'>obrigad[ao]</token>
+                  <token min='0' max='1'>e</token>
+                  <token min='0' max='1'>os</token>
+                  <token min='0' max='1' postag='_PUNCT_COMMA'/>
+                  <token min='0' max='1'>melhores</token>
+                  <token>cumprimentos</token>
+              </marker>
+              <token postag='SENT_END|_PUNCT' postag_regexp='yes'/>
+          </pattern>
+          <message>Para manter um tom formal, utilize &quot;Com os melhores cumprimentos&quot; como fórmula de despedida.</message>
+          <suggestion>Com os melhores cumprimentos</suggestion>
+          <example correction="Com os melhores cumprimentos"><marker>Obrigado e cumprimentos</marker>.</example>
+          <example correction="Com os melhores cumprimentos"><marker>Obrigada e cumprimentos</marker>.</example>
+          <example correction="Com os melhores cumprimentos"><marker>Obrigado, cumprimentos</marker>.</example>
+          <example correction="Com os melhores cumprimentos"><marker>Obrigado e os melhores cumprimentos</marker>.</example>
+          <example correction="Com os melhores cumprimentos"><marker>Cumprimentos</marker>.</example>
+          <example correction="Com os melhores cumprimentos"><marker>Melhores cumprimentos</marker>.</example>
+          <example correction="Com os melhores cumprimentos"><marker>Os melhores cumprimentos</marker>.</example>
+      </rule>
+
+
+      <rule id='ALUGAR_CASA' name="🇵🇹🤵 'alugar' imóvel → 'arrendar'" type='style' tone_tags='formal'>
+          <!-- ChatGPT 5 and new disambiguator for 2026+ -->
+          <pattern>
+              <marker>
+                  <token skip='4' inflected='yes'>alugar</token>
+              </marker>
+              <token postag='_CONTEXTO_HABITACAO_IMOVEIS'/>
+          </pattern>
+          <message>Em português europeu, &quot;arrendar&quot; é geralmente preferido para imóveis.</message>
+          <suggestion><match no='1' postag='V.+' postag_regexp='yes'>arrendar</match></suggestion>
+          <example correction="arrendar">Vou <marker>alugar</marker> uma casa em Lisboa.</example>
+          <example correction="Arrendei"><marker>Aluguei</marker> um apartamento em Lisboa.</example>
+      </rule>
 
 
         <rulegroup id='INFORMALITIES' name="🇵🇹👔 Evitar linguagem informal" default="on" tags="picky" tone_tags="formal">
@@ -2319,6 +2347,15 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
         <!-- Inserted global antipatterns for all subrules on top. -->
 
+        <antipattern> <!-- Expressão idiomática bíblica -->
+            <token regexp='yes'>[dn]?o</token>
+            <token>senhor</token>
+            <token>teu</token>
+            <token>deus</token>
+            <example>Não pronunciar o nome do Senhor teu Deus em vão.</example>
+            <example>Porque eu, o SENHOR teu Deus, sou Deus zeloso.</example>
+        </antipattern>
+
         <antipattern>
             <token regexp='no'>de</token> <!-- Add more words as they are found -->
             <token regexp='yes'>vocês?</token>
@@ -3688,28 +3725,32 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
       </rule>
 
 
-    <rule id='CONCLUIR_UM_CURSO' name="🇵🇹🎓 'acabar/terminar' um curso → 'concluir'" type='style' tone_tags='academic'>
-        <!-- Used ChatGPT 4o for enhancements and extra accuracy -->
-        <pattern>
-            <marker>
-                <token skip='4' regexp="yes" inflected='yes'>acabar|finalizar|terminar<exception scope='next' postag_regexp='yes' postag='V.+'/></token>
-            </marker>
-            <token inflected='yes' regexp="yes">aprendizagem|bacharela[dt]o|certificação|curso|doutorado|doutoramento|ensino|especialização|estágio|estudo|faculdade|formação|graduação|grau|licenciatura|MBA|mestrado|PhD|pós-doutoramento|pós-graduação|universidade<exception scope="previous" regexp="yes">às?|aos?|em|n[ao]s?</exception></token>
-        </pattern>
-        <message>Em situações formais, como currículos, discursos ou correspondência oficial, &quot;concluir&quot; é mais apropriado.</message>
-        <suggestion><match no='1' postag='V.+' postag_regexp='yes'>concluir</match></suggestion>
-        <example correction="concluir">Vou <marker>acabar</marker> o meu doutoramento.</example>
-        <example correction="concluiu">Ele <marker>terminou</marker> um mestrado em gestão.</example>
-        <example correction="concluiu">A Ana <marker>terminou</marker> o seu grande PhD em gestão.</example>
-        <example correction="concluiu">O Rui <marker>acabou</marker> hoje o PhD.</example>
-        <example>Desativada no final dos anos 40, a escola acabou ocupada pela Faculdade de Medicina de Ribeirão Preto.</example>
-        <example>Ele acabou de sair da universidade.</example>
-        <example>Meu irmão acabou de ser efetivado na universidade onde dá aula.</example>
-        <example>A empresa acaba de reformular seus cursos online gratuitos, em parceria com a FGV Online.</example>
-        <example>Ele acaba de concluir a faculdade.</example>
-        <example>O livro acaba com sua ida à faculdade.</example>
-        <example>Muitos estudantes foram presos e a polícia se empenhava em acabar com as ocupações em universidades.</example>
-    </rule>
+      <rule id='CONCLUIR_UM_CURSO' name="🇵🇹🎓 'acabar/terminar' um curso → 'concluir'" type='style' tone_tags='academic'>
+          <!-- ChatGPT 5 and new disambiguator for 2026+ -->
+          <pattern>
+              <marker>
+                  <!-- skip='4' gives the best results -->
+                  <token skip='4' regexp='yes' inflected='yes'>acabar|finalizar|terminar
+                      <exception scope='next' regexp='no'>com</exception>
+                      <exception scope='next' postag_regexp='yes' postag='V.+'/></token>
+              </marker>
+              <token inflected='yes' regexp='yes'>aprendizagem|bacharelado|bacharelato|certificação|curso|doutorado|doutoramento|ensino|especialização|estágio|estudo|faculdade|formação|graduação|grau|licenciatura|MBA|mestrado|PhD|pós-doutoramento|pós-graduação|universidade|disciplina
+                  <exception scope='previous' regexp='yes'>às?|aos?|em|n[ao]s?|pel[ao]s?</exception></token>
+          </pattern>
+          <message>Em contextos académicos formais, &quot;concluir&quot; é geralmente preferido a &quot;acabar&quot;, &quot;terminar&quot; ou &quot;finalizar&quot;.</message>
+          <suggestion><match no='1' postag='V.+' postag_regexp='yes'>concluir</match></suggestion>
+          <example correction="concluir">Vou <marker>acabar</marker> o meu doutoramento.</example>
+          <example correction="concluiu">Ele <marker>terminou</marker> um mestrado em gestão.</example>
+          <example correction="concluiu">A Ana <marker>terminou</marker> o seu grande PhD em gestão.</example>
+          <example correction="concluiu">O Rui <marker>acabou</marker> hoje o PhD.</example>
+          <example>Desativada no final dos anos 40, a escola acabou ocupada pela Faculdade de Medicina de Ribeirão Preto.</example>
+          <example>Ele acabou de sair da universidade.</example>
+          <example>Meu irmão acabou de ser efetivado na universidade onde dá aula.</example>
+          <example>A empresa acaba de reformular seus cursos online gratuitos, em parceria com a FGV Online.</example>
+          <example>Ele acaba de concluir a faculdade.</example>
+          <example>O livro acaba com sua ida à faculdade.</example>
+          <example>Muitos estudantes foram presos e a polícia se empenhava em acabar com as ocupações em universidades.</example>
+      </rule>
 
 
       <rulegroup id='PESQUISA_INVESTIGAÇÃO' name="🇵🇹🎓 Pesquisar → investigar" type='style' tone_tags='academic' tags='picky'>

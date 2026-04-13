@@ -240,7 +240,7 @@ public class Portuguese extends LanguageWithModel {
     id2prio.put("UNPAIRED_BRACKETS", -5);
     id2prio.put("PROFANITY", -6);
     id2prio.put("PT_BARBARISMS_REPLACE", -10);
-    id2prio.put("BARBARISMS_PT_PT_V3", -10);
+    id2prio.put("BARBARISMS_PT_PT_V4", -10);
     id2prio.put("PT_PT_SIMPLE_REPLACE", -11);  // for pt-PT, not lower than speller, not sure why
     id2prio.put("PT_REDUNDANCY_REPLACE", -12);
     id2prio.put("PT_WORDINESS_REPLACE", -13);

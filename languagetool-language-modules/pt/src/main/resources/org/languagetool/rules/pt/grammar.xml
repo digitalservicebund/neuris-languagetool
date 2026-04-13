@@ -22920,6 +22920,59 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
     <category id='CONFUSED_WORDS' name="❓ Confusão de Palavras">
 
 
+        <rulegroup id="CONFUSÃO_VESTIR_CALÇAR" name="❓ vestir/calçar">
+            <!-- ChatGPT 5 and new disambiguator for 2026+ -->
+            <!-- Had to use exception NC.+|AQ.+ in the verbs vestir/calçar due to wrong disambiguation in some cases - 2026-04-06 -->
+
+            <rule> <!-- #1a: item + vestir -->
+                <pattern>
+                    <token skip='2' postag='_CONTEXTO_CALCADO_CALCAR'/>
+                    <marker>
+                        <token postag_regexp='yes' postag='V.+' inflected='yes'>vestir<exception postag_regexp='yes' postag='NC.+|AQ.+'/></token>
+                    </marker>
+                </pattern>
+                <message>Prefira o verbo &quot;calçar&quot; nas extremidades dos membros do corpo.</message>
+                <suggestion><match no='2' postag='V.+' postag_regexp='yes'>calçar</match></suggestion>
+                <example correction="calçar">Esses são os sapatos que vou <marker>vestir</marker>.</example>
+            </rule>
+            <rule> <!-- #1b: vestir + item -->
+                <pattern>
+                    <marker>
+                        <token skip='2' postag_regexp='yes' postag='V.+' inflected='yes'>vestir<exception postag_regexp='yes' postag='NC.+|AQ.+'/></token>
+                    </marker>
+                    <token postag='_CONTEXTO_CALCADO_CALCAR'/>
+                </pattern>
+                <message>Prefira o verbo &quot;calçar&quot; nas extremidades dos membros do corpo.</message>
+                <suggestion><match no='1' postag='V.+' postag_regexp='yes'>calçar</match></suggestion>
+                <example correction="calçar">Vou <marker>vestir</marker> os sapatos.</example>
+            </rule>
+
+            <rule> <!-- #2a: item + calçar -->
+                <pattern>
+                    <token skip='2' postag='_CONTEXTO_VESTUARIO_VESTIR'/>
+                    <marker>
+                        <token postag_regexp='yes' postag='V.+' inflected='yes'>calçar<exception postag_regexp='yes' postag='NC.+|AQ.+'/></token>
+                    </marker>
+                </pattern>
+                <message>Prefira o verbo &quot;vestir&quot; para peças de roupa.</message>
+                <suggestion><match no='2' postag='V.+' postag_regexp='yes'>vestir</match></suggestion>
+                <example correction="vestir">Esse é o blusão que vou <marker>calçar</marker>.</example>
+            </rule>
+            <rule> <!-- #2b: calçar + item -->
+                <pattern>
+                    <marker>
+                        <token skip='2' postag_regexp='yes' postag='V.+' inflected='yes'>calçar<exception postag_regexp='yes' postag='NC.+|AQ.+'/></token>
+                    </marker>
+                    <token postag='_CONTEXTO_VESTUARIO_VESTIR'/>
+                </pattern>
+                <message>Prefira o verbo &quot;vestir&quot; para peças de roupa.</message>
+                <suggestion><match no='1' postag='V.+' postag_regexp='yes'>vestir</match></suggestion>
+                <example correction="vestir">Vou <marker>calçar</marker> o blusão.</example>
+            </rule>
+
+        </rulegroup>
+
+
         <rule id='ESTAR_TER_CONFUSAO' name="❓ estar/ter">
             <!-- ChatGPT 5 and new disambiguator for 2026+ -->
             <antipattern> <!-- Expressões idiomáticas -->

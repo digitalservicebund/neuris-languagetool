@@ -78033,6 +78033,15 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token regexp="yes">!|\?|,|;</token>
                 </antipattern>
                 <antipattern>
+                    <token regexp="yes" case_sensitive="yes">Mo|Di|Mi|Do|Fr|Sa|So|ca|etc|usw|Abt|Bros|Corp|Co|Abk|Jan|Feb|Mär|Apr|Mai|Jun|Jul|Aug|Sep|Okt|Nov|Dez</token>
+                    <token>.</token>
+                    <token>,</token>
+                </antipattern>
+                <antipattern>
+                    <token>;</token>
+                    <token>-</token>
+                </antipattern>
+                <antipattern>
                     <token postag=".*ABK.*|UNKNOWN" postag_regexp="yes"/>
                     <token>.</token>
                     <token regexp="yes">!|\?|,|;</token>

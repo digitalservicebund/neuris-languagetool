@@ -3,6 +3,7 @@
 # File Encoding: UTF-8
 # Format: fullform baseform postags (tab separated)
 Ahmedabad	Ahmedabad	NPCNG00
+Coimbra	Coimbra	NPCNG00
 Dubai	Dubai	NPCNG00
 Torquemada	Torquemada	NPCNG00
 betatalasemia	betatalasemia	NCFS000

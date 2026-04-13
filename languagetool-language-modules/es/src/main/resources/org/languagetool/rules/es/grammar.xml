@@ -5409,6 +5409,13 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         </rulegroup>
         <rulegroup id="SE_CREO2" name="confusión: se creo/creó">
             <antipattern>
+                <token>atención</token>
+                <token min="0" max="2"/>
+                <token>incremento</token>
+                <token regexp="yes">en|de</token>
+                <example>Llama la atención incremento en el volumen en los tejidos blandos.</example>
+            </antipattern>
+            <antipattern>
                 <token>modelo</token>
                 <token regexp="yes">[A-Z0-9].*</token>
                 <example>Se realizó estudio solicitado mediante Unidad de Tomografía de la marca: PHILIPS modelo ACCESS. </example>
@@ -6648,6 +6655,12 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </rule>
         </rulegroup>
         <rulegroup id="SUBJUNTIVO_INCORRECTO" name="verbo en modo subjuntivo incorrecto">
+            <antipattern case_sensitive="yes">
+                <token postag="SENT_START"/>
+                <token regexp="yes">Lesiones|Contusiones</token>
+                <token postag="A.*" postag_regexp="yes"/>
+                <example>Contusiones hemorrágica conocidas a nivel frontal.</example>
+            </antipattern>
             <antipattern>
                 <token postag="DA.*" postag_regexp="yes" min="0" max="1"/>
                 <token postag="NC.*" postag_regexp="yes"/>
@@ -6889,6 +6902,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <message>Posible confusión: "<match no="3"/>" es un verbo en modo subjuntivo, improbable en este contexto.</message>
                 <suggestion><match no="3" postag="(V.)S(.*)" postag_regexp="yes" postag_replace="$1I$2"/></suggestion>
                 <example correction="duele|duelo">Me <marker>duela</marker> la garganta.</example>
+                <example>Sin evidencia de lesiones intra o extraaxiales aparentes por este método de imagen.</example>
             </rule>
             <rule>
                 <pattern>
@@ -7003,6 +7017,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example>- Ganes o pierdas, ¡te encantará!</example>
                 <example>Sin importar cuánto lo piense no comprendo cómo ella obtuvo esa información secreta.</example>
                 <example>Placas de ateroma blandas y calcificadas en aorta abdominal e ilíacas.</example>
+                <example>Sin evidencia de lesiones intra o extraaxiales aparentes por este método de imagen.</example>
             </rule>
         </rulegroup>
         <rulegroup id="SUBJUNTIVO_FUTURO" name="confusión cantara/cantará">
@@ -7383,6 +7398,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <message>Si es imperativo, el pronombre va detrás del verbo.</message>
                 <suggestion><match no="2" postag="VMSP1S0" postag_regexp="yes" postag_replace="VMM03S0:PP1CP000"/></suggestion>
                 <example correction="Avísenos"><marker>Nos avise</marker> cuanto antes.</example>
+                <example>El conducto pancreático principal muestra calibre y trayecto normal.</example>
             </rule>
             <rule>
                 <antipattern>
@@ -7497,6 +7513,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example>Tomar parte en cuantas actividades organice la asociación.</example>
                 <example>O revise la puntuación.</example>
                 <example>Archivo de la lista de correo en mail-archive.com</example>
+                <example>El conducto pancreático principal muestra calibre y trayecto normal.</example>
                 <!--<example>Cada uno exprese su opinión.</example>
                 ambigous: ¡Sí! ¡Gane dos veces seguidas! -->
             </rule>
@@ -10224,7 +10241,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example correction="está">Ella <marker>esta</marker> casada y tiene tres hijos.</example>
                 <example correction="está">como saber si mi hipoteca <marker>esta</marker> metida en esa primera titulación</example>
                 <example correction="Está"><marker>Esta</marker> ausente en "Jade con Beck" y "El Wood", hasta ahora.</example>
-                <!--   "Jade vota a Beck" should be tagged as an independent entity 
+                <!--   "Jade vota a Beck" should be tagged as an independent entity
                     <example correction="Está"><marker>Esta</marker> ausente en "Jade vota a Beck" y "El Wood", hasta ahora.</example>-->
                 <example correction="está">Se siente bien aunque todavia <marker>esta</marker> verde.</example>
                 <example correction="está">El comentario ha sido enviado y ahora <marker>esta</marker> pendiente de revisión. </example>
@@ -14569,7 +14586,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 </pattern>
                 <message>Siglas de "tecnologías de la información y de la comunicación".</message>
                 <suggestion>TIC</suggestion>
-                <url>https://www.fundeu.es/recomendacion/las-tic-mejor-que-las-tics-o-las-tics/</url>
+                <url>https://rae.es/leia/consultas/estaria-bien-escribir-t-i-c-tecnologias-de-la-informacion-y</url>
                 <example correction="TIC">El desarrollo de las <marker>tics</marker>.</example>
                 <example correction="TIC">El desarrollo de las <marker>tic</marker>.</example>
                 <example correction="TIC">El desarrollo de las <marker>Tic</marker>.</example>
@@ -15462,7 +15479,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 </pattern>
                 <message>Normalmente se escribe junto y en minúsculas. "Wi-Fi" es posible como nombre de marca registrada.</message>
                 <suggestion><match no="1" case_conversion="alllower"/><match no="3" case_conversion="alllower"/></suggestion>
-                <url>https://www.fundeu.es/recomendacion/wifi-como-termino-espanol-545/</url>
+                <url>https://dle.rae.es/wifi</url>
                 <example correction="wifi">Aquí no llega el <marker>wi-fi</marker>.</example>
                 <example correction="wifi">Aquí no llega el <marker>Wi-Fi</marker>.</example>
             </rule>
@@ -15545,7 +15562,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                     <token>beta</token>
                     <token spacebefore="no">-</token>
                     <token inflected="yes" regexp="yes">talasemia|2-microglobulina|antagonista|feniletilamina|fructofuranosidasa|fructosidasa</token>
-                    <example>Tenemos un  paciente con beta-talasemia.</example>
+                    <example>Tenemos un paciente con beta-talasemia.</example>
                 </antipattern>
                 <pattern>
                     <token>beta</token>
@@ -15861,7 +15878,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             <example correction="TikTok"><marker>Tik tok</marker> es un servicio para compartir vídeos.</example>
         </rule>
         <rulegroup id="SUPER" name="super/súper/super-">
-            <url>https://www.fundeu.es/recomendacion/super-superestrella-superheroe-coalicion-prefijo-815/</url>
+            <url>https://rae.es/dpd/super-</url>
             <antipattern>
                 <token inflected="yes" regexp="yes">super .*</token>
             </antipattern>
@@ -15982,7 +15999,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             </rule>
         </rulegroup>
         <rulegroup id="HIPER" name="híper/hiper-">
-            <url>https://www.fundeu.es/recomendacion/super-superestrella-superheroe-coalicion-prefijo-815/</url>
+            <url>https://rae.es/dpd/hiper-</url>
             <rule>
                 <pattern>
                     <token regexp="yes">hiper|híper</token>
@@ -16610,6 +16627,14 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             <example>¿Tomas café?</example>
         </rule>
         <rulegroup id="SINGLE_CHARACTER" name="carácter único en minúscula">
+            <antipattern case_sensitive="no">
+                <token regexp="yes">tipo|categoría</token>
+                <token regexp="yes">[a-d]</token>
+                <token min="0" max="3"/>
+                <token regexp="yes">del|de|según</token>
+                <token>ACR</token>
+                <example>Mamas con un patrón fibroglandular homogéneo tipo b del ACR.</example>
+            </antipattern>
             <!-- copied and adapted from English rule -->
             <antipattern>
                 <token regexp="yes">[a-z]</token>
@@ -19095,6 +19120,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example>se ha observado que bajo pruebas genéticas poseen porcentajes pequeños</example>
                 <example>Organizadas bajo forma mercantil.</example>
                 <example>El derecho muestra desviación en valgo.</example>
+                <example>Los espacios articulares del meso y retro pie se encuentra dentro de límites normales.</example>
+                <example>Se extiende en el cuadrante superior derecho con trayecto del dreno que atraviesa la pared abdominal.</example>
             </rule>
             <rule>
                 <!-- catch-all rule without suggestions-->
@@ -23762,6 +23789,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <example>No es la primera vez que saco buena nota en el examen.</example>
                 <example>Pago media corona, y tengo entrada.</example>
                 <example>Que este momento valga, porque, francamente... es todo lo que tenemos.</example>
+                <example>Se observa en región axilar izquierda tejido fibroglandular.</example>
                 <!--
                 La eternidad dura harto.
                 Ella fue al concierto acompañada de una amiga.
@@ -30120,6 +30148,13 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             <example correction="con">El gobierno cumple <marker>son</marker> su función.</example>
         </rule>
         <rulegroup id="ANO" name="ano/año">
+            <antipattern>
+                <token regexp="yes">músculo|músculos|esfínter|esfínteres|elevador|dolor|lesión|lesiones|fisura|cáncer|tumor|absceso|inflamación|región|zona|canal|margen|pared|trayecto|afectación|alteración|evalución|cambio|cambios</token>
+                <token regexp="yes">del|en|de</token>
+                <token min="0" max="1">el</token>
+                <token>ano</token>
+                <example>Se muestra extensión extraprostática en donde contacta con el músculo elevador del ano de lado izquierdo.</example>
+            </antipattern>
             <rule>
                 <antipattern>
                     <token>-</token>
@@ -32276,6 +32311,15 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
             <antipattern>
                 <token postag="SENT_START"/>
                 <token regexp="yes" min="0" max="3">\p{P}</token>
+                <token postag="RG" regexp="yes">ecográficamente|radiológicamente|clínicamente|histológicamente|sonográficamente|mamográficamente|experimentalmente</token>
+                <token min="0" max="1">se</token>
+                <token postag="V.*" postag_regexp="yes"/>
+                <example>Ecográficamente corresponde con isoecoico al tejido mamario.</example>
+                <example>Experimentalmente se comprobó la hipótesis inicial.</example>
+            </antipattern>
+            <antipattern>
+                <token postag="SENT_START"/>
+                <token regexp="yes" min="0" max="3">\p{P}</token>
                 <token regexp="yes" postag="RG">.*mente</token>
                 <token regexp="yes">de|del|y|o|e|u|que|por</token>
             </antipattern>
@@ -33372,6 +33416,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
         </rulegroup>
         <rulegroup id="PUNTO_EN_ABREVIATURAS" name="Punto en abreviaturas: pág., núm., etc." default="on">
             <url>https://languagetool.org/insights/es/publicacion/abreviaturas/</url>
+            <antipattern>
+                <token regexp="yes">Ib|IIa|IIb</token>
+                <example>Se advierten ganglios  con eje corto de hasta 6.6 mm en nivel Ib derecho.</example>
+            </antipattern>
             <antipattern>
                 <token/>
                 <token spacebefore="no" regexp="yes">\.|…</token>
@@ -35441,7 +35489,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
                 <!--NUMBER_DAYS_MONTH[11]-->
                 <antipattern>
                     <token regexp="yes">31\.(11|0?[469])</token>
-                    <token regexp="yes">UH|HU|mm|cm|ml|mg|g|kg|%</token>
+                    <token regexp="yes">UH|HU|mm|cm|ml|mg|g|kg|%|cc</token>
                     <example>En el centro muestra una densidad de 31.6 UH a considerar absceso de etiología.</example>
                 </antipattern>
                 <antipattern>
