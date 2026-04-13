@@ -1,8 +1,4 @@
-FROM alpine:3.23
-RUN apk add --no-cache openjdk21-jre gcompat libstdc++
-
-RUN adduser -u 10000 -h /home/languagetool -D languagetool
-USER languagetool
+FROM cgr.dev/chainguard/jre@sha256:9f3bd12dad2597103dadb6f5b661ad2b547266e11e6973c1b8b4f8843ff55cf6
 
 WORKDIR /home/languageTool
 
