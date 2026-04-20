@@ -2113,6 +2113,8 @@ Hannah Arendt
 Francis Bacon
 Jacques Derrida
 Willard Van Orman Quine
+Willard V. Quine
+Willard Quine
 Karl Popper
 George Berkeley
 John Dewey
@@ -22320,7 +22322,6 @@ Sébastien Nicolas de Chamfort
 Andrea Alciato
 Dave Ramsey
 Rolf Schock
-Willard V. Quine
 Michael Dummett
 Dana S. Scott
 Saul A. Kripke
@@ -30195,3 +30196,10 @@ New York Philharmonic Orchestra
 Marie-Louise Eta
 Hedda Hopper
 Eric Swalwell
+Mercatus Center
+Zanny Minton Beddoes
+Gregor Samsa
+Barron's
+Barron’s
+Chatbot Arena
+Minnie Mouse
