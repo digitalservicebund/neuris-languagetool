@@ -1,3 +1,5 @@
+Fork archived because not used anymore.
+
 ## LanguageTool
 
 **LanguageTool** is open-source proofreading software for English, Spanish, French, German,
